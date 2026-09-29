@@ -1,0 +1,687 @@
+{
+  "startedAt": "2026-09-29T01:31:42.458Z",
+  "baseUrl": "http://127.0.0.1:8766/",
+  "browser": "Microsoft Edge / Playwright headless",
+  "sourceHashes": {
+    "index.html": "6f2d095f4850115e7b7d3695153320ac32b44c5b92d0d09eb06437368d98a62b",
+    "player.js": "bcb7370e94beadac183c214b1ccad3666c636d881ed2bf69374f2f7ae1767a7c",
+    "film.js": "bd88d19d4c945d01fcb3bfe3ae1aa957aaf03f0ac3011b8d44fa7b8c85819ffc",
+    "assets.html": "794b5505a2cec104d810901d768b8705a057e04bf1dfe99d35c0be6df003c30c",
+    "state-previews.js": "ef137d30c08eab6e798aada3a4ba27994f70ef0184e8e0145fd2ed616679acdd"
+  },
+  "checks": [
+    {
+      "name": "desktop: initially paused without autoplay",
+      "status": "PASS",
+      "evidence": {
+        "before": {
+          "frame": 90,
+          "chapter": "01 / WAKE",
+          "seek": 90,
+          "playName": "Play motion film",
+          "mutePressed": "false",
+          "time": "00:03 / 00:45"
+        },
+        "after": {
+          "frame": 90,
+          "chapter": "01 / WAKE",
+          "seek": 90,
+          "playName": "Play motion film",
+          "mutePressed": "false",
+          "time": "00:03 / 00:45"
+        }
+      }
+    },
+    {
+      "name": "desktop: no horizontal overflow",
+      "status": "PASS",
+      "evidence": {
+        "viewport": 1440,
+        "documentWidth": 1440,
+        "bodyWidth": 1440,
+        "canvasBox": {
+          "x": 188,
+          "y": 70.203125,
+          "width": 540,
+          "height": 939.59375,
+          "top": 70.203125,
+          "right": 728,
+          "bottom": 1009.796875,
+          "left": 188
+        }
+      }
+    },
+    {
+      "name": "desktop: controls visible and labelled",
+      "status": "PASS",
+      "evidence": [
+        {
+          "id": "play",
+          "label": "Play motion film",
+          "disabled": false
+        },
+        {
+          "id": "restart",
+          "label": "Restart",
+          "disabled": false
+        },
+        {
+          "id": "mute",
+          "label": "Sound on",
+          "disabled": false
+        },
+        {
+          "id": "seek",
+          "label": "Seek through the 45 second film",
+          "disabled": false
+        },
+        {
+          "id": "0",
+          "label": "01 WAKE",
+          "disabled": false
+        },
+        {
+          "id": "225",
+          "label": "02 BUILD",
+          "disabled": false
+        },
+        {
+          "id": "450",
+          "label": "03 SWARM",
+          "disabled": false
+        },
+        {
+          "id": "675",
+          "label": "04 SYNC",
+          "disabled": false
+        },
+        {
+          "id": "900",
+          "label": "05 SPECTRUM",
+          "disabled": false
+        },
+        {
+          "id": "1125",
+          "label": "06 REVEAL",
+          "disabled": false
+        },
+        {
+          "id": "A",
+          "label": "Download film",
+          "disabled": false
+        },
+        {
+          "id": "A",
+          "label": "Asset library",
+          "disabled": false
+        }
+      ]
+    },
+    {
+      "name": "desktop: keyboard reaches controls with visible focus",
+      "status": "PASS",
+      "evidence": [
+        {
+          "id": "play",
+          "visible": true,
+          "outlineWidth": "2px",
+          "outlineStyle": "solid"
+        },
+        {
+          "id": "restart",
+          "visible": true,
+          "outlineWidth": "2px",
+          "outlineStyle": "solid"
+        },
+        {
+          "id": "mute",
+          "visible": true,
+          "outlineWidth": "2px",
+          "outlineStyle": "solid"
+        },
+        {
+          "id": "seek",
+          "visible": true,
+          "outlineWidth": "2px",
+          "outlineStyle": "solid"
+        }
+      ]
+    },
+    {
+      "name": "desktop: Play starts at frame zero and advances",
+      "status": "PASS",
+      "evidence": {
+        "firstFrames": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "firstRequestedFrames": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "after": {
+          "frame": 12,
+          "chapter": "01 / WAKE",
+          "seek": 12,
+          "playName": "Pause motion film",
+          "mutePressed": "false",
+          "time": "00:00 / 00:45"
+        }
+      }
+    },
+    {
+      "name": "desktop: Pause freezes frame",
+      "status": "PASS",
+      "evidence": {
+        "before": {
+          "frame": 12,
+          "chapter": "01 / WAKE",
+          "seek": 12,
+          "playName": "Play motion film",
+          "mutePressed": "false",
+          "time": "00:00 / 00:45"
+        },
+        "after": {
+          "frame": 12,
+          "chapter": "01 / WAKE",
+          "seek": 12,
+          "playName": "Play motion film",
+          "mutePressed": "false",
+          "time": "00:00 / 00:45"
+        }
+      }
+    },
+    {
+      "name": "desktop: Spectrum chapter jump updates chapter and seek",
+      "status": "PASS",
+      "evidence": {
+        "frame": 900,
+        "chapter": "05 / SPECTRUM",
+        "seek": 900,
+        "playName": "Play motion film",
+        "mutePressed": "false",
+        "time": "00:30 / 00:45"
+      }
+    },
+    {
+      "name": "desktop: meaningful Spectrum frame renders",
+      "status": "PASS",
+      "evidence": {
+        "width": 1080,
+        "height": 1920,
+        "frame": 1050,
+        "distinctSampleColors": 220,
+        "nonBackgroundSamples": 3884,
+        "samples": 8360
+      }
+    },
+    {
+      "name": "desktop: Restart returns near zero and plays",
+      "status": "PASS",
+      "evidence": {
+        "frame": 3,
+        "chapter": "01 / WAKE",
+        "seek": 3,
+        "playName": "Pause motion film",
+        "mutePressed": "false",
+        "time": "00:00 / 00:45"
+      }
+    },
+    {
+      "name": "desktop: mute toggles aria-pressed and label",
+      "status": "PASS",
+      "evidence": {
+        "before": "false",
+        "muted": {
+          "pressed": "true",
+          "label": "Sound off"
+        },
+        "unmuted": {
+          "pressed": "false",
+          "label": "Sound on"
+        }
+      }
+    },
+    {
+      "name": "desktop: seek reaches final frame",
+      "status": "PASS",
+      "evidence": {
+        "frame": 1349,
+        "chapter": "06 / REVEAL",
+        "seek": 1349,
+        "playName": "Play motion film",
+        "mutePressed": "false",
+        "time": "00:44 / 00:45"
+      }
+    },
+    {
+      "name": "mobile: reduced motion also starts paused without autoplay",
+      "status": "PASS",
+      "evidence": {
+        "before": {
+          "frame": 90,
+          "chapter": "01 / WAKE",
+          "seek": 90,
+          "playName": "Play motion film",
+          "mutePressed": "false",
+          "time": "00:03 / 00:45"
+        },
+        "after": {
+          "frame": 90,
+          "chapter": "01 / WAKE",
+          "seek": 90,
+          "playName": "Play motion film",
+          "mutePressed": "false",
+          "time": "00:03 / 00:45"
+        },
+        "reducedMotion": true
+      }
+    },
+    {
+      "name": "mobile: no horizontal overflow",
+      "status": "PASS",
+      "evidence": {
+        "viewport": 390,
+        "documentWidth": 390,
+        "bodyWidth": 390,
+        "canvasBox": {
+          "x": 24,
+          "y": 24,
+          "width": 342,
+          "height": 608,
+          "top": 24,
+          "right": 366,
+          "bottom": 632,
+          "left": 24
+        }
+      }
+    },
+    {
+      "name": "mobile: controls visible and labelled",
+      "status": "PASS",
+      "evidence": [
+        {
+          "id": "play",
+          "label": "Play motion film",
+          "disabled": false
+        },
+        {
+          "id": "restart",
+          "label": "Restart",
+          "disabled": false
+        },
+        {
+          "id": "mute",
+          "label": "Sound on",
+          "disabled": false
+        },
+        {
+          "id": "seek",
+          "label": "Seek through the 45 second film",
+          "disabled": false
+        },
+        {
+          "id": "0",
+          "label": "01 WAKE",
+          "disabled": false
+        },
+        {
+          "id": "225",
+          "label": "02 BUILD",
+          "disabled": false
+        },
+        {
+          "id": "450",
+          "label": "03 SWARM",
+          "disabled": false
+        },
+        {
+          "id": "675",
+          "label": "04 SYNC",
+          "disabled": false
+        },
+        {
+          "id": "900",
+          "label": "05 SPECTRUM",
+          "disabled": false
+        },
+        {
+          "id": "1125",
+          "label": "06 REVEAL",
+          "disabled": false
+        },
+        {
+          "id": "A",
+          "label": "Download film",
+          "disabled": false
+        },
+        {
+          "id": "A",
+          "label": "Asset library",
+          "disabled": false
+        }
+      ]
+    },
+    {
+      "name": "mobile: keyboard reaches controls with visible focus",
+      "status": "PASS",
+      "evidence": [
+        {
+          "id": "play",
+          "visible": true,
+          "outlineWidth": "2px",
+          "outlineStyle": "solid"
+        },
+        {
+          "id": "restart",
+          "visible": true,
+          "outlineWidth": "2px",
+          "outlineStyle": "solid"
+        },
+        {
+          "id": "mute",
+          "visible": true,
+          "outlineWidth": "2px",
+          "outlineStyle": "solid"
+        },
+        {
+          "id": "seek",
+          "visible": true,
+          "outlineWidth": "2px",
+          "outlineStyle": "solid"
+        }
+      ]
+    },
+    {
+      "name": "mobile: chapter navigation and canvas rendering",
+      "status": "PASS",
+      "evidence": {
+        "after": {
+          "frame": 900,
+          "chapter": "05 / SPECTRUM",
+          "seek": 900,
+          "playName": "Play motion film",
+          "mutePressed": "false",
+          "time": "00:30 / 00:45"
+        },
+        "canvas": {
+          "width": 1080,
+          "height": 1920,
+          "frame": 1050,
+          "distinctSampleColors": 220,
+          "nonBackgroundSamples": 3884,
+          "samples": 8360
+        }
+      }
+    },
+    {
+      "name": "desktop: Asset library link opens with all images loaded",
+      "status": "PASS",
+      "evidence": {
+        "images": [
+          {
+            "src": "graphics/calibration-frame.svg",
+            "alt": "Calibration reticle diagram",
+            "complete": true,
+            "width": 1080,
+            "height": 1920
+          },
+          {
+            "src": "graphics/orbital-diagram.svg",
+            "alt": "Three-plane orbital diagram",
+            "complete": true,
+            "width": 1080,
+            "height": 1920
+          },
+          {
+            "src": "graphics/topology-map.svg",
+            "alt": "Connected node topology",
+            "complete": true,
+            "width": 1080,
+            "height": 1920
+          },
+          {
+            "src": "graphics/oscilloscope-trace.svg",
+            "alt": "Oscilloscope trace",
+            "complete": true,
+            "width": 1080,
+            "height": 1920
+          },
+          {
+            "src": "graphics/terminal-module.svg",
+            "alt": "Observe build verify terminal",
+            "complete": true,
+            "width": 1080,
+            "height": 1920
+          },
+          {
+            "src": "graphics/spectrum-stripe.svg",
+            "alt": "Discrete rainbow spectrum",
+            "complete": true,
+            "width": 1080,
+            "height": 1920
+          },
+          {
+            "src": "output/stills/keyframe-0090.png",
+            "alt": "Wake storyboard frame",
+            "complete": true,
+            "width": 1080,
+            "height": 1920
+          },
+          {
+            "src": "output/stills/keyframe-0315.png",
+            "alt": "Build storyboard frame",
+            "complete": true,
+            "width": 1080,
+            "height": 1920
+          },
+          {
+            "src": "output/stills/keyframe-0540.png",
+            "alt": "Swarm storyboard frame",
+            "complete": true,
+            "width": 1080,
+            "height": 1920
+          },
+          {
+            "src": "output/stills/keyframe-0765.png",
+            "alt": "Synchronize storyboard frame",
+            "complete": true,
+            "width": 1080,
+            "height": 1920
+          },
+          {
+            "src": "output/stills/keyframe-0990.png",
+            "alt": "Spectrum storyboard frame",
+            "complete": true,
+            "width": 1080,
+            "height": 1920
+          },
+          {
+            "src": "output/stills/keyframe-1260.png",
+            "alt": "Cavelux reveal storyboard frame",
+            "complete": true,
+            "width": 1080,
+            "height": 1920
+          }
+        ],
+        "dimensions": {
+          "viewport": 1440,
+          "documentWidth": 1440
+        },
+        "canvases": [
+          {
+            "state": "normal",
+            "label": "Normal Clawd with two regular black rectangular eyes and no aura",
+            "width": 540,
+            "height": 380,
+            "pixel": [
+              193,
+              247,
+              4,
+              255
+            ]
+          },
+          {
+            "state": "working",
+            "label": "Working Clawd with open spiral eyes and a moving green code aura",
+            "width": 540,
+            "height": 380,
+            "pixel": [
+              192,
+              248,
+              5,
+              255
+            ]
+          },
+          {
+            "state": "ultracode",
+            "label": "Ultracode Clawd with an animated flowing rainbow wave",
+            "width": 540,
+            "height": 380,
+            "pixel": [
+              61,
+              225,
+              202,
+              255
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile: Asset library images load without horizontal overflow",
+      "status": "PASS",
+      "evidence": {
+        "viewport": 390,
+        "documentWidth": 390,
+        "images": [
+          {
+            "src": "graphics/calibration-frame.svg",
+            "complete": true,
+            "width": 1080
+          },
+          {
+            "src": "graphics/orbital-diagram.svg",
+            "complete": true,
+            "width": 1080
+          },
+          {
+            "src": "graphics/topology-map.svg",
+            "complete": true,
+            "width": 1080
+          },
+          {
+            "src": "graphics/oscilloscope-trace.svg",
+            "complete": true,
+            "width": 1080
+          },
+          {
+            "src": "graphics/terminal-module.svg",
+            "complete": true,
+            "width": 1080
+          },
+          {
+            "src": "graphics/spectrum-stripe.svg",
+            "complete": true,
+            "width": 1080
+          },
+          {
+            "src": "output/stills/keyframe-0090.png",
+            "complete": true,
+            "width": 1080
+          },
+          {
+            "src": "output/stills/keyframe-0315.png",
+            "complete": true,
+            "width": 1080
+          },
+          {
+            "src": "output/stills/keyframe-0540.png",
+            "complete": true,
+            "width": 1080
+          },
+          {
+            "src": "output/stills/keyframe-0765.png",
+            "complete": true,
+            "width": 1080
+          },
+          {
+            "src": "output/stills/keyframe-0990.png",
+            "complete": true,
+            "width": 1080
+          },
+          {
+            "src": "output/stills/keyframe-1260.png",
+            "complete": true,
+            "width": 1080
+          }
+        ],
+        "reducedMotionPreviewsStatic": true
+      }
+    },
+    {
+      "name": "both surfaces: no browser exceptions or HTTP errors",
+      "status": "PASS",
+      "evidence": {
+        "pageErrors": [],
+        "badResponses": [],
+        "failedRequests": [
+          {
+            "surface": "desktop",
+            "url": "http://127.0.0.1:8766/audio/master.wav",
+            "failure": {
+              "errorText": "net::ERR_ABORTED"
+            }
+          },
+          {
+            "surface": "mobile",
+            "url": "http://127.0.0.1:8766/audio/master.wav",
+            "failure": {
+              "errorText": "net::ERR_ABORTED"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "screenshots": [
+    "C:\\Users\\jared\\.codex\\visualizations\\2026\\09\\29\\01a0ea97-8016-7c91-8112-655302cb1db6\\cavelux-motion-film\\output\\ui-checks\\desktop-spectrum.png",
+    "C:\\Users\\jared\\.codex\\visualizations\\2026\\09\\29\\01a0ea97-8016-7c91-8112-655302cb1db6\\cavelux-motion-film\\output\\ui-checks\\mobile-spectrum.png"
+  ],
+  "pageErrors": [],
+  "failedRequests": [
+    {
+      "surface": "desktop",
+      "url": "http://127.0.0.1:8766/audio/master.wav",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "surface": "mobile",
+      "url": "http://127.0.0.1:8766/audio/master.wav",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    }
+  ],
+  "badResponses": [],
+  "browserVersion": "154.0.4258.37",
+  "finishedAt": "2026-09-29T01:31:46.779Z",
+  "summary": {
+    "passed": 19,
+    "failed": 0
+  },
+  "unverified": [
+    "Audible output and audiovisual synchronization",
+    "Download link contents",
+    "Full 45-second playback and exported MP4",
+    "Other browsers, locales, and RTL layouts"
+  ]
+}

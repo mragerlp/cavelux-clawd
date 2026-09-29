@@ -1,0 +1,374 @@
+{
+  "surface": "Local browser + actual backend route handlers with disk KV adapter; not hosted evidence",
+  "url": "http://127.0.0.1:8787/studio",
+  "startedAt": "2026-09-29T02:08:46.187Z",
+  "sourceHashes": {
+    "backend.mjs": "3d0483efcb0eb0f6184727221dc47e34b9dd4b35f3311fde06d0f8dd3a41d988",
+    "ui.js": "2bfcc639a21812320c94e76329cf8b48aabb62771c6401f709d9c10f71913030",
+    "styles.css": "749b3b0d994aa9a2b7e5ad97e65a8ed0c6bfea20764c4ee85fa5fc3cac879215",
+    "build.mjs": "32fc6aca323f0b8ca7d4f73663de280187463c68bf4feb04371b029a8c9b0047",
+    "server.mjs": "c8b9784d8f40b41a5c1f7427e1ba8b18b6d8a6d441956f26fe17c7f91b219f8a",
+    "../motion/film.js": "56904950df434bf7ae17097ef5b34eec9bcc5f022c8698d7584cc3ac64c3de9d"
+  },
+  "checks": [
+    {
+      "name": "initial state is normal and remains paused",
+      "status": "PASS",
+      "evidence": {
+        "first": {
+          "state": "normal",
+          "eyeSpeed": 1,
+          "scale": 1,
+          "background": "dark",
+          "aura": true,
+          "time": 3,
+          "playing": false
+        },
+        "second": {
+          "state": "normal",
+          "eyeSpeed": 1,
+          "scale": 1,
+          "background": "dark",
+          "aura": true,
+          "time": 3,
+          "playing": false
+        }
+      }
+    },
+    {
+      "name": "state selection changes actual rendered pixels",
+      "status": "PASS",
+      "evidence": {
+        "normal": "87d770d59cd8cb4413e32f4882cd0fe6efc70b01696cc0ba3da3e6f59d323972",
+        "working": "57fd1f69015bb79508838dd64db90b0ab3f97d2990a2683018443d6401af6838",
+        "ultracode": "abb594c6a584798ed35477164ac683d9f19d9110d74c3c8da98674a9fba5ac4f"
+      }
+    },
+    {
+      "name": "play advances time and pause freezes it",
+      "status": "PASS",
+      "evidence": {
+        "moving": {
+          "state": "ultracode",
+          "eyeSpeed": 1,
+          "scale": 1,
+          "background": "dark",
+          "aura": true,
+          "time": 3.2326,
+          "playing": true
+        },
+        "stopped": {
+          "state": "ultracode",
+          "eyeSpeed": 1,
+          "scale": 1,
+          "background": "dark",
+          "aura": true,
+          "time": 3.2535,
+          "playing": false
+        },
+        "later": {
+          "state": "ultracode",
+          "eyeSpeed": 1,
+          "scale": 1,
+          "background": "dark",
+          "aura": true,
+          "time": 3.2535,
+          "playing": false
+        }
+      }
+    },
+    {
+      "name": "timeline scrub sets exact paused time and wave phase changes pixels",
+      "status": "PASS",
+      "evidence": {
+        "first": "348d7bb9e572b3e242fa020da57d33d3bf162a6d195189e7c376428838f37743",
+        "second": "c156cf9bad4764c699ecb2dde4b21a33d53b39c72a7635e4cfe6e47946caa6f0",
+        "time": 5
+      }
+    },
+    {
+      "name": "eye speed changes working eye pixels at the same time",
+      "status": "PASS",
+      "evidence": {
+        "still": "c774e1b5a3d6962644ca76ab092a9df72ca3678562f4d2737e1586e93bcb3f8b",
+        "moving": "e6490a0c42107e89503c4e1edf8b90be4283fa991960c7d6f11c3dc0de1eabd9"
+      }
+    },
+    {
+      "name": "scale and aura controls alter real canvas output",
+      "status": "PASS",
+      "evidence": {
+        "small": "85089a2a0fc6936b3785cd5ff71a5a6c8ab90c5340f70460d38f76d7aba5cfe5",
+        "large": "dae953e14fee069c08cd2b75f14ad43bbce06b8a300adde0698a196bc44e41ef",
+        "clean": "87a9a949dc4a052c25fc80055c03d28825f74f0da7bbad394b918f77e66beecc"
+      }
+    },
+    {
+      "name": "background modes change pixels and transparent corner has zero alpha",
+      "status": "PASS",
+      "evidence": {
+        "dark": "dae953e14fee069c08cd2b75f14ad43bbce06b8a300adde0698a196bc44e41ef",
+        "light": "ac1b1073b955f74be952f3502c7654943f158819d1c43dee38652f8e73c11ef4",
+        "transparentCorner": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "PNG export downloads a real transparent1080x760 image",
+      "status": "PASS",
+      "evidence": {
+        "filename": "cavelux-clawd-working.png",
+        "bytes": 356958,
+        "width": 1080,
+        "height": 760,
+        "corner": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "JSON export contains the selected preset settings",
+      "status": "PASS",
+      "evidence": {
+        "schemaVersion": 1,
+        "name": "Untitled look",
+        "settings": {
+          "state": "working",
+          "eyeSpeed": 2,
+          "scale": 1.4,
+          "background": "transparent",
+          "aura": true,
+          "time": 3.25
+        }
+      }
+    },
+    {
+      "name": "save preset then reload and restore through real disk-backed API",
+      "status": "PASS",
+      "evidence": {
+        "expected": {
+          "state": "working",
+          "eyeSpeed": 2,
+          "scale": 1.4,
+          "background": "transparent",
+          "aura": true,
+          "time": 3.25,
+          "playing": false
+        },
+        "restored": {
+          "state": "working",
+          "eyeSpeed": 2,
+          "scale": 1.4,
+          "background": "transparent",
+          "aura": true,
+          "time": 3.25,
+          "playing": false
+        },
+        "diskConfirmed": true
+      }
+    },
+    {
+      "name": "write failures show an error and preserve the unsaved look",
+      "status": "PASS",
+      "evidence": {
+        "message": "Could not save this preset. Test storage unavailable.",
+        "statePreserved": true
+      }
+    },
+    {
+      "name": "preset deletion persists after reload",
+      "status": "PASS",
+      "evidence": {
+        "deleted": "Browser evidence 1790647727987"
+      }
+    },
+    {
+      "name": "read failures remain visible and retry recovers",
+      "status": "PASS",
+      "evidence": {
+        "recovered": true
+      }
+    },
+    {
+      "name": "desktop controls are labelled, keyboard reachable and within viewport",
+      "status": "PASS",
+      "evidence": {
+        "labels": [
+          {
+            "id": "play",
+            "label": "Play character animation",
+            "disabled": false
+          },
+          {
+            "id": "timeline",
+            "label": "Animation timeline in seconds",
+            "disabled": false
+          },
+          {
+            "id": "reset-time",
+            "label": "Return timeline to zero",
+            "disabled": false
+          },
+          {
+            "id": "export-png",
+            "label": "Export PNG ↓",
+            "disabled": false
+          },
+          {
+            "id": "export-json",
+            "label": "Export preset ↓",
+            "disabled": false
+          },
+          {
+            "id": "state-normal",
+            "label": "01\nNormal\nRegular eyes",
+            "disabled": false
+          },
+          {
+            "id": "state-working",
+            "label": "02\nWorking\nCode in orbit",
+            "disabled": false
+          },
+          {
+            "id": "state-ultracode",
+            "label": "03\nUltracode\nFull spectrum",
+            "disabled": false
+          },
+          {
+            "id": "eye-speed",
+            "label": "Eye rotation",
+            "disabled": false
+          },
+          {
+            "id": "scale",
+            "label": "Character scale",
+            "disabled": false
+          },
+          {
+            "id": "background",
+            "label": "Carbon\nPaper\nTransparent",
+            "disabled": false
+          },
+          {
+            "id": "aura",
+            "label": "Show code aura",
+            "disabled": false
+          },
+          {
+            "id": "new-preset",
+            "label": "New preset +",
+            "disabled": false
+          },
+          {
+            "id": "preset-name",
+            "label": "Preset name",
+            "disabled": false
+          },
+          {
+            "id": "save-preset",
+            "label": "Save",
+            "disabled": false
+          },
+          {
+            "id": "retry-presets",
+            "label": "Retry loading presets",
+            "disabled": false
+          }
+        ],
+        "focused": [
+          {
+            "id": "brand-link",
+            "visible": true
+          },
+          {
+            "id": "source-link",
+            "visible": true
+          },
+          {
+            "id": "play",
+            "visible": true
+          },
+          {
+            "id": "timeline",
+            "visible": true
+          },
+          {
+            "id": "reset-time",
+            "visible": true
+          }
+        ],
+        "size": {
+          "width": 1440,
+          "scroll": 1440
+        }
+      }
+    },
+    {
+      "name": "mobile reduced-motion starts paused without horizontal overflow",
+      "status": "PASS",
+      "evidence": {
+        "first": {
+          "state": "normal",
+          "eyeSpeed": 1,
+          "scale": 1,
+          "background": "dark",
+          "aura": true,
+          "time": 3,
+          "playing": false
+        },
+        "size": {
+          "width": 390,
+          "scroll": 390,
+          "reduced": true
+        }
+      }
+    },
+    {
+      "name": "asset-load failure shows an explicit retry screen",
+      "status": "PASS",
+      "evidence": {
+        "retryRecovered": true
+      }
+    },
+    {
+      "name": "no uncaught browser errors",
+      "status": "PASS",
+      "evidence": []
+    },
+    {
+      "name": "tested source bytes remain current",
+      "status": "PASS",
+      "evidence": {
+        "backend.mjs": "3d0483efcb0eb0f6184727221dc47e34b9dd4b35f3311fde06d0f8dd3a41d988",
+        "ui.js": "2bfcc639a21812320c94e76329cf8b48aabb62771c6401f709d9c10f71913030",
+        "styles.css": "749b3b0d994aa9a2b7e5ad97e65a8ed0c6bfea20764c4ee85fa5fc3cac879215",
+        "build.mjs": "32fc6aca323f0b8ca7d4f73663de280187463c68bf4feb04371b029a8c9b0047",
+        "server.mjs": "c8b9784d8f40b41a5c1f7427e1ba8b18b6d8a6d441956f26fe17c7f91b219f8a",
+        "../motion/film.js": "56904950df434bf7ae17097ef5b34eec9bcc5f022c8698d7584cc3ac64c3de9d"
+      }
+    }
+  ],
+  "screenshots": [
+    "desktop-studio.png",
+    "mobile-studio.png"
+  ],
+  "errors": [],
+  "unverified": [
+    "Actual hosted Charming permissions and persistent KV",
+    "Hosted CSP and download behavior",
+    "Other browsers",
+    "RTL and localization: this interface is English-only"
+  ],
+  "finishedAt": "2026-09-29T02:08:50.004Z",
+  "summary": {
+    "passed": 18,
+    "failed": 0
+  }
+}

@@ -1,0 +1,88 @@
+[aist#0:0/pcm_s24le @ 0000012021612d80] Guessed Channel Layout: stereo
+Input #0, wav, from 'C:\Users\jared\.codex\visualizations\2026\09\29\01a0ea97-8016-7c91-8112-655302cb1db6\cavelux-motion-film\audio\premaster.wav':
+  Duration: 00:00:45.00, bitrate: 2304 kb/s
+  Stream #0:0: Audio: pcm_s24le ([1][0][0][0] / 0x0001), 48000 Hz, stereo, s32 (24 bit), 2304 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s24le (native) -> pcm_s16le (native))
+Output #0, null, to 'pipe:':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0: Audio: pcm_s16le, 192000 Hz, stereo, s16, 6144 kb/s
+    Metadata:
+      encoder         : Lavc63.1.101 pcm_s16le
+size=N/A time=00:00:28.00 bitrate=N/A speed=53.4x elapsed=0:00:00.52    
+[Parsed_loudnorm_0 @ 0000012021610f80] 
+{
+	"input_i" : "-17.68",
+	"input_tp" : "-3.49",
+	"input_lra" : "6.40",
+	"input_thresh" : "-27.78",
+	"output_i" : "-14.80",
+	"output_tp" : "-1.50",
+	"output_lra" : "3.80",
+	"output_thresh" : "-24.86",
+	"normalization_type" : "dynamic",
+	"target_offset" : "-1.20"
+}
+[out#0/null @ 000001202159b100] video:0KiB audio:33750KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+size=N/A time=00:00:45.00 bitrate=N/A speed=56.6x elapsed=0:00:00.79    
+
+SECOND PASS
+[aist#0:0/pcm_s24le @ 000001c5858371c0] Guessed Channel Layout: stereo
+Input #0, wav, from 'C:\Users\jared\.codex\visualizations\2026\09\29\01a0ea97-8016-7c91-8112-655302cb1db6\cavelux-motion-film\audio\premaster.wav':
+  Duration: 00:00:45.00, bitrate: 2304 kb/s
+  Stream #0:0: Audio: pcm_s24le ([1][0][0][0] / 0x0001), 48000 Hz, stereo, s32 (24 bit), 2304 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s24le (native) -> pcm_s24le (native))
+Output #0, wav, to 'C:\Users\jared\.codex\visualizations\2026\09\29\01a0ea97-8016-7c91-8112-655302cb1db6\cavelux-motion-film\audio\master.wav':
+  Metadata:
+    ISFT            : Lavf63.1.101
+  Stream #0:0: Audio: pcm_s24le ([1][0][0][0] / 0x0001), 48000 Hz, stereo, s32 (24 bit), 2304 kb/s
+    Metadata:
+      encoder         : Lavc63.1.101 pcm_s24le
+[Parsed_loudnorm_0 @ 000001c587587f00] 
+{
+	"input_i" : "-17.55",
+	"input_tp" : "-3.50",
+	"input_lra" : "6.30",
+	"input_thresh" : "-27.61",
+	"output_i" : "-15.87",
+	"output_tp" : "-1.82",
+	"output_lra" : "6.40",
+	"output_thresh" : "-25.93",
+	"normalization_type" : "linear",
+	"target_offset" : "-0.13"
+}
+[out#0/wav @ 000001c5857c9000] video:0KiB audio:12656KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.000787%
+size=   12656KiB time=00:00:45.00 bitrate=2304.0kbits/s speed= 597x elapsed=0:00:00.07    
+
+INDEPENDENT MEASUREMENT
+Input #0, wav, from 'C:\Users\jared\.codex\visualizations\2026\09\29\01a0ea97-8016-7c91-8112-655302cb1db6\cavelux-motion-film\audio\master.wav':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Duration: 00:00:45.00, bitrate: 2304 kb/s
+  Stream #0:0: Audio: pcm_s24le ([1][0][0][0] / 0x0001), 48000 Hz, stereo, s32 (24 bit), 2304 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s24le (native) -> pcm_s16le (native))
+Output #0, null, to 'pipe:':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0: Audio: pcm_s16le, 192000 Hz, stereo, s16, 6144 kb/s
+    Metadata:
+      encoder         : Lavc63.1.101 pcm_s16le
+size=N/A time=00:00:27.00 bitrate=N/A speed=52.8x elapsed=0:00:00.51    
+[Parsed_loudnorm_0 @ 00000184697d0840] 
+{
+	"input_i" : "-16.00",
+	"input_tp" : "-1.81",
+	"input_lra" : "6.30",
+	"input_thresh" : "-26.10",
+	"output_i" : "-14.81",
+	"output_tp" : "-1.50",
+	"output_lra" : "3.80",
+	"output_thresh" : "-24.86",
+	"normalization_type" : "dynamic",
+	"target_offset" : "-1.19"
+}
+[out#0/null @ 000001846975d700] video:0KiB audio:33750KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+size=N/A time=00:00:45.00 bitrate=N/A speed=56.4x elapsed=0:00:00.79    

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920" fill="none" role="img" aria-labelledby="title description">
+  <title id="title">Calibration frame</title>
+  <desc id="description">Open scientific frame, measurement ticks, and a sparse center target. Transparent portrait overlay.</desc>
+  <g id="corner-brackets" stroke="#F0F0E8" stroke-width="2">
+    <path id="corner-top-left" d="M140 446V390H196"/>
+    <path id="corner-top-right" d="M884 390H940V446"/>
+    <path id="corner-bottom-left" d="M140 1054V1110H196"/>
+    <path id="corner-bottom-right" d="M884 1110H940V1054"/>
+  </g>
+  <g id="edge-ticks" stroke="#F0F0E8" stroke-width="1" opacity="0.35">
+    <path id="ticks-top" d="M340 390V398M440 390V398M540 390V406M640 390V398M740 390V398"/>
+    <path id="ticks-bottom" d="M340 1102V1110M440 1102V1110M540 1094V1110M640 1102V1110M740 1102V1110"/>
+    <path id="ticks-left" d="M140 550H148M140 650H148M140 750H156M140 850H148M140 950H148"/>
+    <path id="ticks-right" d="M932 550H940M932 650H940M924 750H940M932 850H940M932 950H940"/>
+  </g>
+  <g id="center-reticle" transform="translate(540 750)" stroke="#92FA11" stroke-width="2">
+    <path id="reticle-cross" d="M-26 0H-8M8 0H26M0-26V-8M0 8V26"/>
+    <path id="reticle-corners" d="M-62-46V-62H-46M46-62H62V-46M62 46V62H46M-46 62H-62V46" opacity="0.6"/>
+  </g>
+  <g id="registration-squares" fill="#F0F0E8" opacity="0.55">
+    <rect id="registration-left" x="134" y="1194" width="12" height="12"/>
+    <rect id="registration-right" x="934" y="1194" width="12" height="12"/>
+  </g>
+</svg>

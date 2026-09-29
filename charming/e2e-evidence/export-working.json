@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "name": "Untitled look",
+  "settings": {
+    "state": "working",
+    "eyeSpeed": 2,
+    "scale": 1.4,
+    "background": "transparent",
+    "aura": true,
+    "time": 3.25
+  }
+}

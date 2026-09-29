@@ -1,0 +1,1842 @@
+{
+  "description": "Local migration snapshot. Every source entry is matched by SHA-256 to at least one stored repository file when complete=true.",
+  "method": "SHA-256 over raw file bytes; archive members read without extraction. Duplicate content shares a repository copy.",
+  "complete": true,
+  "source_file_count": 89,
+  "archive_member_count": 121,
+  "unique_source_content_count": 94,
+  "missing_entry_count": 0,
+  "source_folders": [
+    {
+      "source_folder": "cavelux-motion-film",
+      "files": [
+        {
+          "source_path": "DELIVERY.json",
+          "bytes": 1753,
+          "sha256": "7b0c6394691cc150938a321ce9381e3e3697272aa76f5c0d514c4a8fea244bba",
+          "repository_paths": [
+            "archive/motion-v2/DELIVERY.json"
+          ]
+        },
+        {
+          "source_path": "IMAGEGEN-PROMPTS.md",
+          "bytes": 1298,
+          "sha256": "533ca801703e34e2de05b8f63406d0fac3f07ed8af371e33be2b59071c53e4ca",
+          "repository_paths": [
+            "archive/motion-v1/IMAGEGEN-PROMPTS.md",
+            "archive/motion-v2/IMAGEGEN-PROMPTS.md",
+            "motion/IMAGEGEN-PROMPTS.md"
+          ]
+        },
+        {
+          "source_path": "README.md",
+          "bytes": 2088,
+          "sha256": "f5205f5b025e1489fff055a841da5cbced4c276df5ff89db0390317a0847c734",
+          "repository_paths": [
+            "archive/motion-v2/README.md"
+          ]
+        },
+        {
+          "source_path": "STORYBOARD.md",
+          "bytes": 4401,
+          "sha256": "bf96415c5a0628d36ba6e5ad6b5a7854eaf743e4f93d849eede19a9d08c4c3e4",
+          "repository_paths": [
+            "archive/motion-v2/STORYBOARD.md"
+          ]
+        },
+        {
+          "source_path": "assets.html",
+          "bytes": 6006,
+          "sha256": "794b5505a2cec104d810901d768b8705a057e04bf1dfe99d35c0be6df003c30c",
+          "repository_paths": [
+            "archive/motion-v2/assets.html",
+            "motion/assets.html"
+          ]
+        },
+        {
+          "source_path": "film.js",
+          "bytes": 19856,
+          "sha256": "bd88d19d4c945d01fcb3bfe3ae1aa957aaf03f0ac3011b8d44fa7b8c85819ffc",
+          "repository_paths": [
+            "archive/motion-v2/film.js"
+          ]
+        },
+        {
+          "source_path": "index.html",
+          "bytes": 4548,
+          "sha256": "6f2d095f4850115e7b7d3695153320ac32b44c5b92d0d09eb06437368d98a62b",
+          "repository_paths": [
+            "archive/motion-v1/index.html",
+            "archive/motion-v2/index.html",
+            "motion/index.html"
+          ]
+        },
+        {
+          "source_path": "player.js",
+          "bytes": 2010,
+          "sha256": "bcb7370e94beadac183c214b1ccad3666c636d881ed2bf69374f2f7ae1767a7c",
+          "repository_paths": [
+            "archive/motion-v1/player.js",
+            "archive/motion-v2/player.js",
+            "motion/player.js"
+          ]
+        },
+        {
+          "source_path": "render.mjs",
+          "bytes": 9556,
+          "sha256": "09226a17a77da0d84dd544964de0724dcf389c9ace872a6a2d0307c0694705fd",
+          "repository_paths": [
+            "archive/motion-v1/render.mjs",
+            "archive/motion-v2/render.mjs"
+          ]
+        },
+        {
+          "source_path": "server.mjs",
+          "bytes": 5010,
+          "sha256": "01fc59315ea1dec5b3bb785e63fb16bbe9426e9d3f75645991df5a02823adb51",
+          "repository_paths": [
+            "archive/motion-v1/server.mjs",
+            "archive/motion-v2/server.mjs",
+            "motion/server.mjs"
+          ]
+        },
+        {
+          "source_path": "state-previews.js",
+          "bytes": 818,
+          "sha256": "ef137d30c08eab6e798aada3a4ba27994f70ef0184e8e0145fd2ed616679acdd",
+          "repository_paths": [
+            "archive/motion-v2/state-previews.js",
+            "motion/state-previews.js"
+          ]
+        },
+        {
+          "source_path": "validate-character-states.mjs",
+          "bytes": 18470,
+          "sha256": "18e3e1b3950b86223ed3aa7e6c929bd3b3f720423c8e72b76e04ca3a9fea35e2",
+          "repository_paths": [
+            "archive/motion-v2/validate-character-states.mjs"
+          ]
+        },
+        {
+          "source_path": "validate-ui.mjs",
+          "bytes": 16688,
+          "sha256": "3399e6e726578711c68ac65f81535b08d28cc619449b0029e027d891df019d84",
+          "repository_paths": [
+            "archive/motion-v2/validate-ui.mjs"
+          ]
+        },
+        {
+          "source_path": "verify.mjs",
+          "bytes": 3488,
+          "sha256": "7ad82337898484595dea88bddfa8075ea39a9b89e1f9be364ddd68f750430980",
+          "repository_paths": [
+            "archive/motion-v1/verify.mjs",
+            "archive/motion-v2/verify.mjs",
+            "motion/verify.mjs"
+          ]
+        },
+        {
+          "source_path": "audio/README.md",
+          "bytes": 1689,
+          "sha256": "b7b1a984d225f79cd61c12c1a3bd3fb40089c63c20c54fb1c9031a07b761e49a",
+          "repository_paths": [
+            "archive/motion-v1/audio/README.md",
+            "archive/motion-v2/audio/README.md",
+            "motion/audio/README.md"
+          ]
+        },
+        {
+          "source_path": "audio/generate_audio.py",
+          "bytes": 18337,
+          "sha256": "4b9dd37d66181413bc086c5b840b1522f46605bcdda968ed9b88d9548a9e47b8",
+          "repository_paths": [
+            "motion/audio/generate_audio.py"
+          ]
+        },
+        {
+          "source_path": "audio/manifest.json",
+          "bytes": 4473,
+          "sha256": "9a44a98d32468eb82816f7d2d88891cfa2f12392215a2f5f120f5017c61ff311",
+          "repository_paths": [
+            "archive/motion-v1/audio/manifest.json",
+            "archive/motion-v2/audio/manifest.json",
+            "motion/audio/manifest.json"
+          ]
+        },
+        {
+          "source_path": "audio/master.wav",
+          "bytes": 12960102,
+          "sha256": "d6594c6518354d71f4fd01ec9040abfb473afac4fff432c9ea9f1d7285972b35",
+          "repository_paths": [
+            "motion/audio/master.wav"
+          ]
+        },
+        {
+          "source_path": "audio/mastering-log.txt",
+          "bytes": 3890,
+          "sha256": "c547f824b100916072105cf041c329722175a7779686c3e88177995b45c7bcbe",
+          "repository_paths": [
+            "motion/audio/mastering-log.txt"
+          ]
+        },
+        {
+          "source_path": "audio/premaster.wav",
+          "bytes": 12960044,
+          "sha256": "c08b1138a9a9d442d44a92410e6ce7096199b9e582d4ad5bc6fa9c995ef0c220",
+          "repository_paths": [
+            "motion/audio/premaster.wav"
+          ]
+        },
+        {
+          "source_path": "audio/score.wav",
+          "bytes": 12960044,
+          "sha256": "3332fe8b39920cab6faf9053dfe2c55be75b5faf5c2c4d68dfe4e388d0f2fc65",
+          "repository_paths": [
+            "motion/audio/score.wav"
+          ]
+        },
+        {
+          "source_path": "audio/sfx.wav",
+          "bytes": 12960044,
+          "sha256": "a88c40afee416f3e14d6e497f030e7ba46beb050e68649565d795c846283db06",
+          "repository_paths": [
+            "motion/audio/sfx.wav"
+          ]
+        },
+        {
+          "source_path": "brand/CAVELUX_wordmark_glitch.png",
+          "bytes": 102630,
+          "sha256": "f9608715edc258e9e8bb865c477cf615aa698607a6939214cbca92ffd488ee6d",
+          "repository_paths": [
+            "motion/brand/CAVELUX_wordmark_glitch.png"
+          ]
+        },
+        {
+          "source_path": "brand/CVL_eyeglyph.svg",
+          "bytes": 1425,
+          "sha256": "8c8f49c5e73cb0f4359013f6c4e086bab0766e3aa9dc4d440c5a70b61ffd0b96",
+          "repository_paths": [
+            "motion/brand/CVL_eyeglyph.svg"
+          ]
+        },
+        {
+          "source_path": "brand/CVL_mark_voxel_eye.png",
+          "bytes": 111722,
+          "sha256": "7b1f35a8e5899773fed6b9d142cfcc2a03c43a259bb02047027dae739053252b",
+          "repository_paths": [
+            "motion/brand/CVL_mark_voxel_eye.png"
+          ]
+        },
+        {
+          "source_path": "brand/CVL_mark_voxel_swirl.png",
+          "bytes": 149925,
+          "sha256": "c63afbeb2a1521e459927ffd76450c411d13ed827ccb7cddf1fd675317398453",
+          "repository_paths": [
+            "motion/brand/CVL_mark_voxel_swirl.png"
+          ]
+        },
+        {
+          "source_path": "brand/CVL_mark_voxel_transparent.png",
+          "bytes": 275206,
+          "sha256": "aec1177f3c42383729f7ef949756de9ebaef8750382a854f70413ace0447c9d9",
+          "repository_paths": [
+            "motion/brand/CVL_mark_voxel_transparent.png"
+          ]
+        },
+        {
+          "source_path": "graphics/assets.json",
+          "bytes": 2932,
+          "sha256": "5b40e908259c9158298536e66bb259fc423fd40436ba154d4038e2e6e92aadbf",
+          "repository_paths": [
+            "archive/motion-v1/graphics/assets.json",
+            "archive/motion-v2/graphics/assets.json",
+            "motion/graphics/assets.json"
+          ]
+        },
+        {
+          "source_path": "graphics/calibration-frame.svg",
+          "bytes": 1624,
+          "sha256": "2f6e4788fa97342d6903cca38cc0e0630265d267a8d14e255c16aee3f6c13a64",
+          "repository_paths": [
+            "motion/graphics/calibration-frame.svg"
+          ]
+        },
+        {
+          "source_path": "graphics/orbital-diagram.svg",
+          "bytes": 1648,
+          "sha256": "a234628411685e4a5bff4e6af8e039851d5975074ecc1d7eb224968f3c13cb26",
+          "repository_paths": [
+            "motion/graphics/orbital-diagram.svg"
+          ]
+        },
+        {
+          "source_path": "graphics/oscilloscope-trace.svg",
+          "bytes": 1262,
+          "sha256": "6403b750980726dbab75516409e81b0f308cbeb9c948ef9605d07333a954813c",
+          "repository_paths": [
+            "motion/graphics/oscilloscope-trace.svg"
+          ]
+        },
+        {
+          "source_path": "graphics/spectrum-stripe.svg",
+          "bytes": 1385,
+          "sha256": "cd3b65b20b93230577ee8d56a58a10fda5f917ce35983d793ee946c08e78e543",
+          "repository_paths": [
+            "motion/graphics/spectrum-stripe.svg"
+          ]
+        },
+        {
+          "source_path": "graphics/terminal-module.svg",
+          "bytes": 1767,
+          "sha256": "68699322535565f1c8d24ecee8057b85772899be4b217f85f119e2e5a7313bbe",
+          "repository_paths": [
+            "motion/graphics/terminal-module.svg"
+          ]
+        },
+        {
+          "source_path": "graphics/topology-map.svg",
+          "bytes": 1838,
+          "sha256": "fe9d3d9723cb0e45910e7b53f233d9980ebcdec12a025c77c9e14447b447cfaf",
+          "repository_paths": [
+            "motion/graphics/topology-map.svg"
+          ]
+        },
+        {
+          "source_path": "output/cavelux-clawd-states-v2.mp4",
+          "bytes": 10179905,
+          "sha256": "eb69612a5c71ef343840743c8412262dcb0fe411dd888aa9485220cffb2f5908",
+          "repository_paths": [
+            "archive/motion-v2/output/cavelux-clawd-states-v2.mp4",
+            "archive/motion-v2/output/cavelux-from-signal-to-spectrum.mp4",
+            "motion/output/cavelux-clawd-states-v2.mp4"
+          ]
+        },
+        {
+          "source_path": "output/cavelux-from-signal-to-spectrum.mp4",
+          "bytes": 10179905,
+          "sha256": "eb69612a5c71ef343840743c8412262dcb0fe411dd888aa9485220cffb2f5908",
+          "repository_paths": [
+            "archive/motion-v2/output/cavelux-clawd-states-v2.mp4",
+            "archive/motion-v2/output/cavelux-from-signal-to-spectrum.mp4",
+            "motion/output/cavelux-clawd-states-v2.mp4"
+          ]
+        },
+        {
+          "source_path": "output/cover.png",
+          "bytes": 397680,
+          "sha256": "736d825bcaa909f959fbc70dc889d207d6ee9bb3993f792b03a2763c4369d3f2",
+          "repository_paths": [
+            "archive/motion-v2/output/cover.png",
+            "motion/output/cover.png"
+          ]
+        },
+        {
+          "source_path": "output/encoded-spectrum-check.png",
+          "bytes": 258105,
+          "sha256": "552a835e41b1bfc3f5e4774947a99a651b0be8e48bfdf6b990c063e0a387ef09",
+          "repository_paths": [
+            "archive/motion-v2/output/encoded-spectrum-check.png"
+          ]
+        },
+        {
+          "source_path": "output/character-checks/normal-0090.png",
+          "bytes": 184865,
+          "sha256": "46a0d992e520920e37c87b900d67cb273bdda81c965c618d17f631bc2230129a",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/normal-0090.png",
+            "motion/output/character-checks/normal-0090.png"
+          ]
+        },
+        {
+          "source_path": "output/character-checks/preview-normal-3s.png",
+          "bytes": 71679,
+          "sha256": "135cc485a7db896c312949cf14125479e9575111833df750891476e2db84047d",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/preview-normal-3s.png",
+            "motion/output/character-checks/preview-normal-3s.png"
+          ]
+        },
+        {
+          "source_path": "output/character-checks/preview-ultracode-3s.png",
+          "bytes": 49564,
+          "sha256": "ceddf28648da69dbc3951bf210119cecc4322165792053b0d76374b66a4e567d",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/preview-ultracode-3s.png"
+          ]
+        },
+        {
+          "source_path": "output/character-checks/preview-ultracode-4s.png",
+          "bytes": 49441,
+          "sha256": "c15d16084f06cad1db091d73ab634667c5bd3754893e295ee6207dbdca5ae4b0",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/preview-ultracode-4s.png"
+          ]
+        },
+        {
+          "source_path": "output/character-checks/preview-ultracode-5s.png",
+          "bytes": 49448,
+          "sha256": "3ec68ea000062ba60d96fee953cb102411fb3c7a71729994af09658ab32db87c",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/preview-ultracode-5s.png"
+          ]
+        },
+        {
+          "source_path": "output/character-checks/preview-working-3s.png",
+          "bytes": 83308,
+          "sha256": "f27e5bd97bc59fed209beaa49b956ab31ed39826040f07147cf8704f237f1f56",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/preview-working-3s.png"
+          ]
+        },
+        {
+          "source_path": "output/character-checks/preview-working-4s.png",
+          "bytes": 82963,
+          "sha256": "20f66962c5b04e7abc7cdde2a51d431963ce03aa7fb6810bcc6385dc1d308c8b",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/preview-working-4s.png"
+          ]
+        },
+        {
+          "source_path": "output/character-checks/preview-working-5s.png",
+          "bytes": 82997,
+          "sha256": "d70a9b4cd675dceb269ac1efa22bc31943d69f89a7d888ed165df8814ccbb184",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/preview-working-5s.png"
+          ]
+        },
+        {
+          "source_path": "output/character-checks/repeat-frame-pixels.json",
+          "bytes": 621,
+          "sha256": "f269ed35ada7a287299b182a89ada098016ad83923ea1bd8ed85d8caa57877d2",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/repeat-frame-pixels.json"
+          ]
+        },
+        {
+          "source_path": "output/character-checks/results.json",
+          "bytes": 63597,
+          "sha256": "296c64ee538d40e883866b1bf3e77282eca89e43565b596ecec094d5548a6acf",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/results.json"
+          ]
+        },
+        {
+          "source_path": "output/character-checks/state-library.png",
+          "bytes": 111520,
+          "sha256": "695dcd6d398d39eff8d6785cc7d6d30c3bc75a4e1b55b8bcb8f8d69d212f38ef",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/state-library.png"
+          ]
+        },
+        {
+          "source_path": "output/character-checks/ultracode-0990.png",
+          "bytes": 153961,
+          "sha256": "cc714f6580cf2ae0d02aaf6384afcd65ef86aa7e440954fde043897603948fad",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/ultracode-0990.png"
+          ]
+        },
+        {
+          "source_path": "output/character-checks/ultracode-1020.png",
+          "bytes": 154119,
+          "sha256": "bf793899e03ec635ab38113b7bcf5bfbb199beedf5d94c14b8d81d156dddae78",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/ultracode-1020.png"
+          ]
+        },
+        {
+          "source_path": "output/character-checks/ultracode-1050.png",
+          "bytes": 153472,
+          "sha256": "ab3d1cb1b9046021c48217fd0482e760ac840123da990bdeb4eedac3b8513839",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/ultracode-1050.png"
+          ]
+        },
+        {
+          "source_path": "output/character-checks/visual-review.json",
+          "bytes": 1264,
+          "sha256": "b7a5e4b0d278d70ceebc6a6602870868735653e79e15f2926e00e34e1038fb89",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/visual-review.json",
+            "motion/output/character-checks/visual-review.json"
+          ]
+        },
+        {
+          "source_path": "output/character-checks/working-build-0315.png",
+          "bytes": 117410,
+          "sha256": "19b7f87e8a12be389c48eaca1f9cef753e6639e75d2e6a977e110468e462ac26",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/working-build-0315.png"
+          ]
+        },
+        {
+          "source_path": "output/character-checks/working-swarm-0540.png",
+          "bytes": 249388,
+          "sha256": "f88a3c81d5fa356b42ff92b1b159ed00afa704d2e82b0b64f86c6ee4a7629b81",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/working-swarm-0540.png"
+          ]
+        },
+        {
+          "source_path": "output/character-checks/working-sync-0765.png",
+          "bytes": 236306,
+          "sha256": "65e740d662eb74b2ee599d91b1365633215fac7676bc8882884d38cf7d11b595",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/working-sync-0765.png"
+          ]
+        },
+        {
+          "source_path": "output/stills/keyframe-0090.png",
+          "bytes": 317999,
+          "sha256": "943481c0d2c8b768f9b4e0aa9d905c54f16746825650f18ffae54dd93e9cbad5",
+          "repository_paths": [
+            "archive/motion-v2/output/stills/keyframe-0090.png",
+            "motion/output/stills/keyframe-0090.png"
+          ]
+        },
+        {
+          "source_path": "output/stills/keyframe-0315.png",
+          "bytes": 203095,
+          "sha256": "4621ff5c0087a2b5be2001bded3f756a2087489a9e5fccda8b4eb7ff22fba52c",
+          "repository_paths": [
+            "archive/motion-v2/output/stills/keyframe-0315.png"
+          ]
+        },
+        {
+          "source_path": "output/stills/keyframe-0540.png",
+          "bytes": 391478,
+          "sha256": "ed1174cb37e0c2fdba50fc60ddc0b21ef54851c4b09ab2d276c63a1b540d76d0",
+          "repository_paths": [
+            "archive/motion-v2/output/stills/keyframe-0540.png"
+          ]
+        },
+        {
+          "source_path": "output/stills/keyframe-0765.png",
+          "bytes": 360692,
+          "sha256": "6fb7ca69209035e84397fef57a1fb9656431d9708b2c07949e48d009c8618aec",
+          "repository_paths": [
+            "archive/motion-v2/output/stills/keyframe-0765.png"
+          ]
+        },
+        {
+          "source_path": "output/stills/keyframe-0990.png",
+          "bytes": 280551,
+          "sha256": "92b2eca18a8b739a6c526163068a79b2b71df133d2674e3b82870a73ec9bddf7",
+          "repository_paths": [
+            "archive/motion-v2/output/stills/keyframe-0990.png"
+          ]
+        },
+        {
+          "source_path": "output/stills/keyframe-1260.png",
+          "bytes": 397545,
+          "sha256": "89b4a7555da25e1ae99f558921bbf3fd6097ab840cd76ff445e0bc73428c4bff",
+          "repository_paths": [
+            "archive/motion-v2/output/stills/keyframe-1260.png",
+            "motion/output/stills/keyframe-1260.png"
+          ]
+        },
+        {
+          "source_path": "output/ui-checks/desktop-spectrum.png",
+          "bytes": 119193,
+          "sha256": "bc88872ba01383448e1852e797b3b63816225e7a4748b29f0d27809e46fe4cb4",
+          "repository_paths": [
+            "archive/motion-v2/output/ui-checks/desktop-spectrum.png"
+          ]
+        },
+        {
+          "source_path": "output/ui-checks/mobile-spectrum.png",
+          "bytes": 67531,
+          "sha256": "0cd1ddb3937c28020562fe99bc64499d69a38519cbb962b6471956685bc89f99",
+          "repository_paths": [
+            "archive/motion-v2/output/ui-checks/mobile-spectrum.png"
+          ]
+        },
+        {
+          "source_path": "output/ui-checks/results.json",
+          "bytes": 17356,
+          "sha256": "88bc59960b011bbc41f43c555b5550328405a6d6bb7c36bbee9aad7a70f38ab0",
+          "repository_paths": [
+            "archive/motion-v2/output/ui-checks/results.json"
+          ]
+        },
+        {
+          "source_path": "sprites/01-idle.png",
+          "bytes": 463877,
+          "sha256": "b3783681219e905dfa922f753aff5d9496e11333cef9cde4b0f6e433166ae074",
+          "repository_paths": [
+            "archive/clean-variations/01-idle.png",
+            "motion/sprites/01-idle.png"
+          ]
+        },
+        {
+          "source_path": "sprites/02-focused.png",
+          "bytes": 457916,
+          "sha256": "3286787110b9c3a6f0382c9f99bc4e82532fa89670ac52312ea58d77ae8ac376",
+          "repository_paths": [
+            "archive/clean-variations/02-focused.png",
+            "motion/sprites/02-focused.png"
+          ]
+        },
+        {
+          "source_path": "sprites/03-wink.png",
+          "bytes": 459945,
+          "sha256": "fe5a04cfff82e3ae7cf2f6756c409dc0b02981d9c272cae978b06e0b87716470",
+          "repository_paths": [
+            "archive/clean-variations/03-wink.png",
+            "motion/sprites/03-wink.png"
+          ]
+        },
+        {
+          "source_path": "sprites/04-celebrate.png",
+          "bytes": 434953,
+          "sha256": "be000b55b5b1dc68c0bb002102f6d476fda84774cd2c1a90ef6ae54f770753a7",
+          "repository_paths": [
+            "archive/clean-variations/04-celebrate.png",
+            "motion/sprites/04-celebrate.png"
+          ]
+        },
+        {
+          "source_path": "sprites/05-spectrum.png",
+          "bytes": 480068,
+          "sha256": "94f195e271965b3de7c724851597cb730a321a186e38d1bc74f80846fc74374e",
+          "repository_paths": [
+            "motion/sprites/05-spectrum.png"
+          ]
+        },
+        {
+          "source_path": "sprites/06-normal.png",
+          "bytes": 437919,
+          "sha256": "a3c6fe2437d4b75cc39ebe96d8f8f07f134eba695f15a1679784a2a04d6aad1c",
+          "repository_paths": [
+            "motion/sprites/06-normal.png"
+          ]
+        },
+        {
+          "source_path": "sprites/NORMAL-PROMPT.md",
+          "bytes": 1675,
+          "sha256": "28a33aadc4af1d12ab11936139ff2d09e37978798072179038db5c6297448a14",
+          "repository_paths": [
+            "archive/motion-v2/sprites/NORMAL-PROMPT.md",
+            "motion/sprites/NORMAL-PROMPT.md"
+          ]
+        },
+        {
+          "source_path": "sprites/POSE-PROMPTS.md",
+          "bytes": 7482,
+          "sha256": "c99ddeeef6d2bbb0b7b29e680a5f37ed1a40257c938dfecb7dbcffd85ece764f",
+          "repository_paths": [
+            "archive/clean-variations/prompts.md",
+            "archive/motion-v1/sprites/POSE-PROMPTS.md",
+            "archive/motion-v2/sprites/POSE-PROMPTS.md",
+            "motion/sprites/POSE-PROMPTS.md"
+          ]
+        },
+        {
+          "source_path": "sprites/states.json",
+          "bytes": 771,
+          "sha256": "11ae03f0f284e05b9468df92a4f68cc66d0d0fd3e14de9511b17aede3d6ec4a0",
+          "repository_paths": [
+            "archive/motion-v2/sprites/states.json"
+          ]
+        }
+      ]
+    },
+    {
+      "source_folder": "cavelux-clawd-clean-variations",
+      "files": [
+        {
+          "source_path": "01-idle.png",
+          "bytes": 463877,
+          "sha256": "b3783681219e905dfa922f753aff5d9496e11333cef9cde4b0f6e433166ae074",
+          "repository_paths": [
+            "archive/clean-variations/01-idle.png",
+            "motion/sprites/01-idle.png"
+          ]
+        },
+        {
+          "source_path": "02-focused.png",
+          "bytes": 457916,
+          "sha256": "3286787110b9c3a6f0382c9f99bc4e82532fa89670ac52312ea58d77ae8ac376",
+          "repository_paths": [
+            "archive/clean-variations/02-focused.png",
+            "motion/sprites/02-focused.png"
+          ]
+        },
+        {
+          "source_path": "03-wink.png",
+          "bytes": 459945,
+          "sha256": "fe5a04cfff82e3ae7cf2f6756c409dc0b02981d9c272cae978b06e0b87716470",
+          "repository_paths": [
+            "archive/clean-variations/03-wink.png",
+            "motion/sprites/03-wink.png"
+          ]
+        },
+        {
+          "source_path": "04-celebrate.png",
+          "bytes": 434953,
+          "sha256": "be000b55b5b1dc68c0bb002102f6d476fda84774cd2c1a90ef6ae54f770753a7",
+          "repository_paths": [
+            "archive/clean-variations/04-celebrate.png",
+            "motion/sprites/04-celebrate.png"
+          ]
+        },
+        {
+          "source_path": "prompts.md",
+          "bytes": 7482,
+          "sha256": "c99ddeeef6d2bbb0b7b29e680a5f37ed1a40257c938dfecb7dbcffd85ece764f",
+          "repository_paths": [
+            "archive/clean-variations/prompts.md",
+            "archive/motion-v1/sprites/POSE-PROMPTS.md",
+            "archive/motion-v2/sprites/POSE-PROMPTS.md",
+            "motion/sprites/POSE-PROMPTS.md"
+          ]
+        }
+      ]
+    },
+    {
+      "source_folder": "generated-images",
+      "files": [
+        {
+          "source_path": "cavelux-clawd-ultracode.png",
+          "bytes": 684482,
+          "sha256": "1d1e2d92b2331c8f763299ecbb2b12af5027a8d836d081ebecee9fc834872cff",
+          "repository_paths": [
+            "archive/early-concepts/rainbow-aura.png"
+          ]
+        },
+        {
+          "source_path": "exec-442c9df1-b46d-4417-8d71-6ad53c4d532d.png",
+          "bytes": 495925,
+          "sha256": "111344745d1a1b6587648904a3e099ab944e85e8713ffc85f83a0dccdefdabdb",
+          "repository_paths": [
+            "archive/early-concepts/clean-variation-concept.png"
+          ]
+        },
+        {
+          "source_path": "exec-6486fcea-8151-41f6-8ccb-1b0f2c46c272.png",
+          "bytes": 480068,
+          "sha256": "94f195e271965b3de7c724851597cb730a321a186e38d1bc74f80846fc74374e",
+          "repository_paths": [
+            "motion/sprites/05-spectrum.png"
+          ]
+        },
+        {
+          "source_path": "exec-6a517cb3-8ca4-43a7-8367-997be02b93c5.png",
+          "bytes": 459945,
+          "sha256": "fe5a04cfff82e3ae7cf2f6756c409dc0b02981d9c272cae978b06e0b87716470",
+          "repository_paths": [
+            "archive/clean-variations/03-wink.png",
+            "motion/sprites/03-wink.png"
+          ]
+        },
+        {
+          "source_path": "exec-864853a3-7866-42d5-b3ab-5e016848ef93.png",
+          "bytes": 684482,
+          "sha256": "1d1e2d92b2331c8f763299ecbb2b12af5027a8d836d081ebecee9fc834872cff",
+          "repository_paths": [
+            "archive/early-concepts/rainbow-aura.png"
+          ]
+        },
+        {
+          "source_path": "exec-88c77c44-6df6-4a88-8ee6-772757eb1962.png",
+          "bytes": 463877,
+          "sha256": "b3783681219e905dfa922f753aff5d9496e11333cef9cde4b0f6e433166ae074",
+          "repository_paths": [
+            "archive/clean-variations/01-idle.png",
+            "motion/sprites/01-idle.png"
+          ]
+        },
+        {
+          "source_path": "exec-c0bfd4eb-a568-415d-8a1d-a3f7d43b82ea.png",
+          "bytes": 457916,
+          "sha256": "3286787110b9c3a6f0382c9f99bc4e82532fa89670ac52312ea58d77ae8ac376",
+          "repository_paths": [
+            "archive/clean-variations/02-focused.png",
+            "motion/sprites/02-focused.png"
+          ]
+        },
+        {
+          "source_path": "exec-e0826636-7376-4677-a657-4c2a277d1e0a.png",
+          "bytes": 434953,
+          "sha256": "be000b55b5b1dc68c0bb002102f6d476fda84774cd2c1a90ef6ae54f770753a7",
+          "repository_paths": [
+            "archive/clean-variations/04-celebrate.png",
+            "motion/sprites/04-celebrate.png"
+          ]
+        },
+        {
+          "source_path": "exec-ea232b11-71a2-4744-b529-df59c18bb9bf.png",
+          "bytes": 437919,
+          "sha256": "a3c6fe2437d4b75cc39ebe96d8f8f07f134eba695f15a1679784a2a04d6aad1c",
+          "repository_paths": [
+            "motion/sprites/06-normal.png"
+          ]
+        }
+      ]
+    },
+    {
+      "source_folder": "user-reference",
+      "files": [
+        {
+          "source_path": "clawd.png",
+          "bytes": 19657,
+          "sha256": "4f3ffb0ad433a277bd92d3826d41768ddc17d23a7e8340ff19f79590dcb4e083",
+          "repository_paths": [
+            "references/anthropic-clawd-user-reference.png"
+          ]
+        }
+      ]
+    }
+  ],
+  "source_archives": [
+    {
+      "source_archive": "cavelux-motion-kit.zip",
+      "archive_sha256": "6100ad320c0f8aa7d78a7d215ead525c69fde78f17099dbdb2344755c37ad556",
+      "files": [
+        {
+          "source_path": "cavelux-motion-film/assets.html",
+          "bytes": 5428,
+          "sha256": "c99fc53058aa6c6026c682f278081a211c278b175d1cde59c7c6bce852ba1a3e",
+          "repository_paths": [
+            "archive/motion-v1/assets.html"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/DELIVERY.json",
+          "bytes": 1208,
+          "sha256": "0bb9a520d881b332107eb28a1588ad2aa38a60cfacf971199a64e7d5ddef077a",
+          "repository_paths": [
+            "archive/motion-v1/DELIVERY.json"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/film.js",
+          "bytes": 13357,
+          "sha256": "8caa9caaa109b53ce8920ed3dc8f38748edec8dc40ef8742645a7303e812a4d8",
+          "repository_paths": [
+            "archive/motion-v1/film.js"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/IMAGEGEN-PROMPTS.md",
+          "bytes": 1298,
+          "sha256": "533ca801703e34e2de05b8f63406d0fac3f07ed8af371e33be2b59071c53e4ca",
+          "repository_paths": [
+            "archive/motion-v1/IMAGEGEN-PROMPTS.md",
+            "archive/motion-v2/IMAGEGEN-PROMPTS.md",
+            "motion/IMAGEGEN-PROMPTS.md"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/index.html",
+          "bytes": 4548,
+          "sha256": "6f2d095f4850115e7b7d3695153320ac32b44c5b92d0d09eb06437368d98a62b",
+          "repository_paths": [
+            "archive/motion-v1/index.html",
+            "archive/motion-v2/index.html",
+            "motion/index.html"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/player.js",
+          "bytes": 2010,
+          "sha256": "bcb7370e94beadac183c214b1ccad3666c636d881ed2bf69374f2f7ae1767a7c",
+          "repository_paths": [
+            "archive/motion-v1/player.js",
+            "archive/motion-v2/player.js",
+            "motion/player.js"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/README.md",
+          "bytes": 1807,
+          "sha256": "e3c2f946846a29d16a45052c79a29f3eb661b2cf9afe1c87e5013c7ce7caee98",
+          "repository_paths": [
+            "archive/motion-v1/README.md"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/render.mjs",
+          "bytes": 9556,
+          "sha256": "09226a17a77da0d84dd544964de0724dcf389c9ace872a6a2d0307c0694705fd",
+          "repository_paths": [
+            "archive/motion-v1/render.mjs",
+            "archive/motion-v2/render.mjs"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/server.mjs",
+          "bytes": 5010,
+          "sha256": "01fc59315ea1dec5b3bb785e63fb16bbe9426e9d3f75645991df5a02823adb51",
+          "repository_paths": [
+            "archive/motion-v1/server.mjs",
+            "archive/motion-v2/server.mjs",
+            "motion/server.mjs"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/STORYBOARD.md",
+          "bytes": 4135,
+          "sha256": "cadaa799598ea352fff1fdebfa19802c4fec28db9e98d14fba2a6fad21238b62",
+          "repository_paths": [
+            "archive/motion-v1/STORYBOARD.md"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/validate-ui.mjs",
+          "bytes": 15319,
+          "sha256": "4c0b4713c4ee7f275313cd9feea868f4b177a0efb657f1302df5a7eb780db7e6",
+          "repository_paths": [
+            "archive/motion-v1/validate-ui.mjs"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/verify.mjs",
+          "bytes": 3488,
+          "sha256": "7ad82337898484595dea88bddfa8075ea39a9b89e1f9be364ddd68f750430980",
+          "repository_paths": [
+            "archive/motion-v1/verify.mjs",
+            "archive/motion-v2/verify.mjs",
+            "motion/verify.mjs"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/audio/generate_audio.py",
+          "bytes": 18337,
+          "sha256": "4b9dd37d66181413bc086c5b840b1522f46605bcdda968ed9b88d9548a9e47b8",
+          "repository_paths": [
+            "motion/audio/generate_audio.py"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/audio/manifest.json",
+          "bytes": 4473,
+          "sha256": "9a44a98d32468eb82816f7d2d88891cfa2f12392215a2f5f120f5017c61ff311",
+          "repository_paths": [
+            "archive/motion-v1/audio/manifest.json",
+            "archive/motion-v2/audio/manifest.json",
+            "motion/audio/manifest.json"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/audio/master.wav",
+          "bytes": 12960102,
+          "sha256": "d6594c6518354d71f4fd01ec9040abfb473afac4fff432c9ea9f1d7285972b35",
+          "repository_paths": [
+            "motion/audio/master.wav"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/audio/README.md",
+          "bytes": 1689,
+          "sha256": "b7b1a984d225f79cd61c12c1a3bd3fb40089c63c20c54fb1c9031a07b761e49a",
+          "repository_paths": [
+            "archive/motion-v1/audio/README.md",
+            "archive/motion-v2/audio/README.md",
+            "motion/audio/README.md"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/audio/score.wav",
+          "bytes": 12960044,
+          "sha256": "3332fe8b39920cab6faf9053dfe2c55be75b5faf5c2c4d68dfe4e388d0f2fc65",
+          "repository_paths": [
+            "motion/audio/score.wav"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/audio/sfx.wav",
+          "bytes": 12960044,
+          "sha256": "a88c40afee416f3e14d6e497f030e7ba46beb050e68649565d795c846283db06",
+          "repository_paths": [
+            "motion/audio/sfx.wav"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/brand/CAVELUX_wordmark_glitch.png",
+          "bytes": 102630,
+          "sha256": "f9608715edc258e9e8bb865c477cf615aa698607a6939214cbca92ffd488ee6d",
+          "repository_paths": [
+            "motion/brand/CAVELUX_wordmark_glitch.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/brand/CVL_eyeglyph.svg",
+          "bytes": 1425,
+          "sha256": "8c8f49c5e73cb0f4359013f6c4e086bab0766e3aa9dc4d440c5a70b61ffd0b96",
+          "repository_paths": [
+            "motion/brand/CVL_eyeglyph.svg"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/brand/CVL_mark_voxel_eye.png",
+          "bytes": 111722,
+          "sha256": "7b1f35a8e5899773fed6b9d142cfcc2a03c43a259bb02047027dae739053252b",
+          "repository_paths": [
+            "motion/brand/CVL_mark_voxel_eye.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/brand/CVL_mark_voxel_swirl.png",
+          "bytes": 149925,
+          "sha256": "c63afbeb2a1521e459927ffd76450c411d13ed827ccb7cddf1fd675317398453",
+          "repository_paths": [
+            "motion/brand/CVL_mark_voxel_swirl.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/brand/CVL_mark_voxel_transparent.png",
+          "bytes": 275206,
+          "sha256": "aec1177f3c42383729f7ef949756de9ebaef8750382a854f70413ace0447c9d9",
+          "repository_paths": [
+            "motion/brand/CVL_mark_voxel_transparent.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/graphics/assets.json",
+          "bytes": 2932,
+          "sha256": "5b40e908259c9158298536e66bb259fc423fd40436ba154d4038e2e6e92aadbf",
+          "repository_paths": [
+            "archive/motion-v1/graphics/assets.json",
+            "archive/motion-v2/graphics/assets.json",
+            "motion/graphics/assets.json"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/graphics/calibration-frame.svg",
+          "bytes": 1624,
+          "sha256": "2f6e4788fa97342d6903cca38cc0e0630265d267a8d14e255c16aee3f6c13a64",
+          "repository_paths": [
+            "motion/graphics/calibration-frame.svg"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/graphics/orbital-diagram.svg",
+          "bytes": 1648,
+          "sha256": "a234628411685e4a5bff4e6af8e039851d5975074ecc1d7eb224968f3c13cb26",
+          "repository_paths": [
+            "motion/graphics/orbital-diagram.svg"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/graphics/oscilloscope-trace.svg",
+          "bytes": 1262,
+          "sha256": "6403b750980726dbab75516409e81b0f308cbeb9c948ef9605d07333a954813c",
+          "repository_paths": [
+            "motion/graphics/oscilloscope-trace.svg"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/graphics/spectrum-stripe.svg",
+          "bytes": 1385,
+          "sha256": "cd3b65b20b93230577ee8d56a58a10fda5f917ce35983d793ee946c08e78e543",
+          "repository_paths": [
+            "motion/graphics/spectrum-stripe.svg"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/graphics/terminal-module.svg",
+          "bytes": 1767,
+          "sha256": "68699322535565f1c8d24ecee8057b85772899be4b217f85f119e2e5a7313bbe",
+          "repository_paths": [
+            "motion/graphics/terminal-module.svg"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/graphics/topology-map.svg",
+          "bytes": 1838,
+          "sha256": "fe9d3d9723cb0e45910e7b53f233d9980ebcdec12a025c77c9e14447b447cfaf",
+          "repository_paths": [
+            "motion/graphics/topology-map.svg"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/cavelux-from-signal-to-spectrum.mp4",
+          "bytes": 9676668,
+          "sha256": "97a0fd5da9bd32290ff5ef87d41fce1d650c2ed6e376877b36f77e512153419c",
+          "repository_paths": [
+            "archive/motion-v1/output/cavelux-from-signal-to-spectrum.mp4"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/cover.png",
+          "bytes": 397972,
+          "sha256": "cad8e683185ab3644bb523217207f858086f5170cbfa0395d7962d5ff6b80ca0",
+          "repository_paths": [
+            "archive/motion-v1/output/cover.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/encoded-spectrum-check.png",
+          "bytes": 297010,
+          "sha256": "b77a18ffa4b141e59d404077cd47215ac4e298da924f53493e8676115f3081b5",
+          "repository_paths": [
+            "archive/motion-v1/output/encoded-spectrum-check.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/stills/keyframe-0090.png",
+          "bytes": 328351,
+          "sha256": "6a9172d192fe1927a9ba1cc62ab7cd572c80201fd511c7db396425e2bdecd3c3",
+          "repository_paths": [
+            "archive/motion-v1/output/stills/keyframe-0090.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/stills/keyframe-0315.png",
+          "bytes": 193024,
+          "sha256": "0361bab04d7c67dafaceca41e4164b86466b1fcb56678499a3033ce58ffb0323",
+          "repository_paths": [
+            "archive/motion-v1/output/stills/keyframe-0315.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/stills/keyframe-0540.png",
+          "bytes": 386148,
+          "sha256": "aab467fb474cbdf45e63073a09865211bbd5bb4ab8eadd2d5a4f7d17472b253a",
+          "repository_paths": [
+            "archive/motion-v1/output/stills/keyframe-0540.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/stills/keyframe-0765.png",
+          "bytes": 348908,
+          "sha256": "42ede0e29ce45bd12e0d831a4933be5c0678c3c63519bff48156e3a0fa9fb6db",
+          "repository_paths": [
+            "archive/motion-v1/output/stills/keyframe-0765.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/stills/keyframe-0990.png",
+          "bytes": 429383,
+          "sha256": "50a8325b38f151c2cca61a6ed91acaf974906e1b38fca633aa54d5f7dadc8273",
+          "repository_paths": [
+            "archive/motion-v1/output/stills/keyframe-0990.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/stills/keyframe-1260.png",
+          "bytes": 397994,
+          "sha256": "72d50a295498f8f11f0bd9503b2d12dae37cdb2510e746e431391dc967975750",
+          "repository_paths": [
+            "archive/motion-v1/output/stills/keyframe-1260.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/ui-checks/desktop-spectrum.png",
+          "bytes": 136601,
+          "sha256": "a79dee494302a243fbc3d1b57cab18a24d4eafba35435b0feb148d2711be2aee",
+          "repository_paths": [
+            "archive/motion-v1/output/ui-checks/desktop-spectrum.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/ui-checks/mobile-spectrum.png",
+          "bytes": 73453,
+          "sha256": "d1cbb917ebc77209d269de33144bc9f8b04a6f5cdb4596003c737907668fc9e2",
+          "repository_paths": [
+            "archive/motion-v1/output/ui-checks/mobile-spectrum.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/ui-checks/results.json",
+          "bytes": 17764,
+          "sha256": "0b353abe55ebf3ea65a267997eaf8a9e8a5be4c65d6d985bd172ef96485ff6d1",
+          "repository_paths": [
+            "archive/motion-v1/output/ui-checks/results.json"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/sprites/01-idle.png",
+          "bytes": 463877,
+          "sha256": "b3783681219e905dfa922f753aff5d9496e11333cef9cde4b0f6e433166ae074",
+          "repository_paths": [
+            "archive/clean-variations/01-idle.png",
+            "motion/sprites/01-idle.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/sprites/02-focused.png",
+          "bytes": 457916,
+          "sha256": "3286787110b9c3a6f0382c9f99bc4e82532fa89670ac52312ea58d77ae8ac376",
+          "repository_paths": [
+            "archive/clean-variations/02-focused.png",
+            "motion/sprites/02-focused.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/sprites/03-wink.png",
+          "bytes": 459945,
+          "sha256": "fe5a04cfff82e3ae7cf2f6756c409dc0b02981d9c272cae978b06e0b87716470",
+          "repository_paths": [
+            "archive/clean-variations/03-wink.png",
+            "motion/sprites/03-wink.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/sprites/04-celebrate.png",
+          "bytes": 434953,
+          "sha256": "be000b55b5b1dc68c0bb002102f6d476fda84774cd2c1a90ef6ae54f770753a7",
+          "repository_paths": [
+            "archive/clean-variations/04-celebrate.png",
+            "motion/sprites/04-celebrate.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/sprites/05-spectrum.png",
+          "bytes": 480068,
+          "sha256": "94f195e271965b3de7c724851597cb730a321a186e38d1bc74f80846fc74374e",
+          "repository_paths": [
+            "motion/sprites/05-spectrum.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/sprites/POSE-PROMPTS.md",
+          "bytes": 7482,
+          "sha256": "c99ddeeef6d2bbb0b7b29e680a5f37ed1a40257c938dfecb7dbcffd85ece764f",
+          "repository_paths": [
+            "archive/clean-variations/prompts.md",
+            "archive/motion-v1/sprites/POSE-PROMPTS.md",
+            "archive/motion-v2/sprites/POSE-PROMPTS.md",
+            "motion/sprites/POSE-PROMPTS.md"
+          ]
+        }
+      ]
+    },
+    {
+      "source_archive": "cavelux-motion-kit-v2.zip",
+      "archive_sha256": "40569374a9b222c0693fa7b86300df819ffd76404e7bd40d43dcbf9aebbe7acb",
+      "files": [
+        {
+          "source_path": "cavelux-motion-film/assets.html",
+          "bytes": 6006,
+          "sha256": "794b5505a2cec104d810901d768b8705a057e04bf1dfe99d35c0be6df003c30c",
+          "repository_paths": [
+            "archive/motion-v2/assets.html",
+            "motion/assets.html"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/DELIVERY.json",
+          "bytes": 1753,
+          "sha256": "7b0c6394691cc150938a321ce9381e3e3697272aa76f5c0d514c4a8fea244bba",
+          "repository_paths": [
+            "archive/motion-v2/DELIVERY.json"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/film.js",
+          "bytes": 19856,
+          "sha256": "bd88d19d4c945d01fcb3bfe3ae1aa957aaf03f0ac3011b8d44fa7b8c85819ffc",
+          "repository_paths": [
+            "archive/motion-v2/film.js"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/IMAGEGEN-PROMPTS.md",
+          "bytes": 1298,
+          "sha256": "533ca801703e34e2de05b8f63406d0fac3f07ed8af371e33be2b59071c53e4ca",
+          "repository_paths": [
+            "archive/motion-v1/IMAGEGEN-PROMPTS.md",
+            "archive/motion-v2/IMAGEGEN-PROMPTS.md",
+            "motion/IMAGEGEN-PROMPTS.md"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/index.html",
+          "bytes": 4548,
+          "sha256": "6f2d095f4850115e7b7d3695153320ac32b44c5b92d0d09eb06437368d98a62b",
+          "repository_paths": [
+            "archive/motion-v1/index.html",
+            "archive/motion-v2/index.html",
+            "motion/index.html"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/player.js",
+          "bytes": 2010,
+          "sha256": "bcb7370e94beadac183c214b1ccad3666c636d881ed2bf69374f2f7ae1767a7c",
+          "repository_paths": [
+            "archive/motion-v1/player.js",
+            "archive/motion-v2/player.js",
+            "motion/player.js"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/README.md",
+          "bytes": 2088,
+          "sha256": "f5205f5b025e1489fff055a841da5cbced4c276df5ff89db0390317a0847c734",
+          "repository_paths": [
+            "archive/motion-v2/README.md"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/render.mjs",
+          "bytes": 9556,
+          "sha256": "09226a17a77da0d84dd544964de0724dcf389c9ace872a6a2d0307c0694705fd",
+          "repository_paths": [
+            "archive/motion-v1/render.mjs",
+            "archive/motion-v2/render.mjs"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/server.mjs",
+          "bytes": 5010,
+          "sha256": "01fc59315ea1dec5b3bb785e63fb16bbe9426e9d3f75645991df5a02823adb51",
+          "repository_paths": [
+            "archive/motion-v1/server.mjs",
+            "archive/motion-v2/server.mjs",
+            "motion/server.mjs"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/state-previews.js",
+          "bytes": 818,
+          "sha256": "ef137d30c08eab6e798aada3a4ba27994f70ef0184e8e0145fd2ed616679acdd",
+          "repository_paths": [
+            "archive/motion-v2/state-previews.js",
+            "motion/state-previews.js"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/STORYBOARD.md",
+          "bytes": 4401,
+          "sha256": "bf96415c5a0628d36ba6e5ad6b5a7854eaf743e4f93d849eede19a9d08c4c3e4",
+          "repository_paths": [
+            "archive/motion-v2/STORYBOARD.md"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/validate-character-states.mjs",
+          "bytes": 18470,
+          "sha256": "18e3e1b3950b86223ed3aa7e6c929bd3b3f720423c8e72b76e04ca3a9fea35e2",
+          "repository_paths": [
+            "archive/motion-v2/validate-character-states.mjs"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/validate-ui.mjs",
+          "bytes": 16688,
+          "sha256": "3399e6e726578711c68ac65f81535b08d28cc619449b0029e027d891df019d84",
+          "repository_paths": [
+            "archive/motion-v2/validate-ui.mjs"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/verify.mjs",
+          "bytes": 3488,
+          "sha256": "7ad82337898484595dea88bddfa8075ea39a9b89e1f9be364ddd68f750430980",
+          "repository_paths": [
+            "archive/motion-v1/verify.mjs",
+            "archive/motion-v2/verify.mjs",
+            "motion/verify.mjs"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/audio/generate_audio.py",
+          "bytes": 18337,
+          "sha256": "4b9dd37d66181413bc086c5b840b1522f46605bcdda968ed9b88d9548a9e47b8",
+          "repository_paths": [
+            "motion/audio/generate_audio.py"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/audio/manifest.json",
+          "bytes": 4473,
+          "sha256": "9a44a98d32468eb82816f7d2d88891cfa2f12392215a2f5f120f5017c61ff311",
+          "repository_paths": [
+            "archive/motion-v1/audio/manifest.json",
+            "archive/motion-v2/audio/manifest.json",
+            "motion/audio/manifest.json"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/audio/master.wav",
+          "bytes": 12960102,
+          "sha256": "d6594c6518354d71f4fd01ec9040abfb473afac4fff432c9ea9f1d7285972b35",
+          "repository_paths": [
+            "motion/audio/master.wav"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/audio/README.md",
+          "bytes": 1689,
+          "sha256": "b7b1a984d225f79cd61c12c1a3bd3fb40089c63c20c54fb1c9031a07b761e49a",
+          "repository_paths": [
+            "archive/motion-v1/audio/README.md",
+            "archive/motion-v2/audio/README.md",
+            "motion/audio/README.md"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/audio/score.wav",
+          "bytes": 12960044,
+          "sha256": "3332fe8b39920cab6faf9053dfe2c55be75b5faf5c2c4d68dfe4e388d0f2fc65",
+          "repository_paths": [
+            "motion/audio/score.wav"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/audio/sfx.wav",
+          "bytes": 12960044,
+          "sha256": "a88c40afee416f3e14d6e497f030e7ba46beb050e68649565d795c846283db06",
+          "repository_paths": [
+            "motion/audio/sfx.wav"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/brand/CAVELUX_wordmark_glitch.png",
+          "bytes": 102630,
+          "sha256": "f9608715edc258e9e8bb865c477cf615aa698607a6939214cbca92ffd488ee6d",
+          "repository_paths": [
+            "motion/brand/CAVELUX_wordmark_glitch.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/brand/CVL_eyeglyph.svg",
+          "bytes": 1425,
+          "sha256": "8c8f49c5e73cb0f4359013f6c4e086bab0766e3aa9dc4d440c5a70b61ffd0b96",
+          "repository_paths": [
+            "motion/brand/CVL_eyeglyph.svg"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/brand/CVL_mark_voxel_eye.png",
+          "bytes": 111722,
+          "sha256": "7b1f35a8e5899773fed6b9d142cfcc2a03c43a259bb02047027dae739053252b",
+          "repository_paths": [
+            "motion/brand/CVL_mark_voxel_eye.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/brand/CVL_mark_voxel_swirl.png",
+          "bytes": 149925,
+          "sha256": "c63afbeb2a1521e459927ffd76450c411d13ed827ccb7cddf1fd675317398453",
+          "repository_paths": [
+            "motion/brand/CVL_mark_voxel_swirl.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/brand/CVL_mark_voxel_transparent.png",
+          "bytes": 275206,
+          "sha256": "aec1177f3c42383729f7ef949756de9ebaef8750382a854f70413ace0447c9d9",
+          "repository_paths": [
+            "motion/brand/CVL_mark_voxel_transparent.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/graphics/assets.json",
+          "bytes": 2932,
+          "sha256": "5b40e908259c9158298536e66bb259fc423fd40436ba154d4038e2e6e92aadbf",
+          "repository_paths": [
+            "archive/motion-v1/graphics/assets.json",
+            "archive/motion-v2/graphics/assets.json",
+            "motion/graphics/assets.json"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/graphics/calibration-frame.svg",
+          "bytes": 1624,
+          "sha256": "2f6e4788fa97342d6903cca38cc0e0630265d267a8d14e255c16aee3f6c13a64",
+          "repository_paths": [
+            "motion/graphics/calibration-frame.svg"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/graphics/orbital-diagram.svg",
+          "bytes": 1648,
+          "sha256": "a234628411685e4a5bff4e6af8e039851d5975074ecc1d7eb224968f3c13cb26",
+          "repository_paths": [
+            "motion/graphics/orbital-diagram.svg"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/graphics/oscilloscope-trace.svg",
+          "bytes": 1262,
+          "sha256": "6403b750980726dbab75516409e81b0f308cbeb9c948ef9605d07333a954813c",
+          "repository_paths": [
+            "motion/graphics/oscilloscope-trace.svg"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/graphics/spectrum-stripe.svg",
+          "bytes": 1385,
+          "sha256": "cd3b65b20b93230577ee8d56a58a10fda5f917ce35983d793ee946c08e78e543",
+          "repository_paths": [
+            "motion/graphics/spectrum-stripe.svg"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/graphics/terminal-module.svg",
+          "bytes": 1767,
+          "sha256": "68699322535565f1c8d24ecee8057b85772899be4b217f85f119e2e5a7313bbe",
+          "repository_paths": [
+            "motion/graphics/terminal-module.svg"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/graphics/topology-map.svg",
+          "bytes": 1838,
+          "sha256": "fe9d3d9723cb0e45910e7b53f233d9980ebcdec12a025c77c9e14447b447cfaf",
+          "repository_paths": [
+            "motion/graphics/topology-map.svg"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/cavelux-from-signal-to-spectrum.mp4",
+          "bytes": 10179905,
+          "sha256": "eb69612a5c71ef343840743c8412262dcb0fe411dd888aa9485220cffb2f5908",
+          "repository_paths": [
+            "archive/motion-v2/output/cavelux-clawd-states-v2.mp4",
+            "archive/motion-v2/output/cavelux-from-signal-to-spectrum.mp4",
+            "motion/output/cavelux-clawd-states-v2.mp4"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/cover.png",
+          "bytes": 397680,
+          "sha256": "736d825bcaa909f959fbc70dc889d207d6ee9bb3993f792b03a2763c4369d3f2",
+          "repository_paths": [
+            "archive/motion-v2/output/cover.png",
+            "motion/output/cover.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/encoded-spectrum-check.png",
+          "bytes": 258105,
+          "sha256": "552a835e41b1bfc3f5e4774947a99a651b0be8e48bfdf6b990c063e0a387ef09",
+          "repository_paths": [
+            "archive/motion-v2/output/encoded-spectrum-check.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/character-checks/normal-0090.png",
+          "bytes": 184865,
+          "sha256": "46a0d992e520920e37c87b900d67cb273bdda81c965c618d17f631bc2230129a",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/normal-0090.png",
+            "motion/output/character-checks/normal-0090.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/character-checks/preview-normal-3s.png",
+          "bytes": 71679,
+          "sha256": "135cc485a7db896c312949cf14125479e9575111833df750891476e2db84047d",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/preview-normal-3s.png",
+            "motion/output/character-checks/preview-normal-3s.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/character-checks/preview-ultracode-3s.png",
+          "bytes": 49564,
+          "sha256": "ceddf28648da69dbc3951bf210119cecc4322165792053b0d76374b66a4e567d",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/preview-ultracode-3s.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/character-checks/preview-ultracode-4s.png",
+          "bytes": 49441,
+          "sha256": "c15d16084f06cad1db091d73ab634667c5bd3754893e295ee6207dbdca5ae4b0",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/preview-ultracode-4s.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/character-checks/preview-ultracode-5s.png",
+          "bytes": 49448,
+          "sha256": "3ec68ea000062ba60d96fee953cb102411fb3c7a71729994af09658ab32db87c",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/preview-ultracode-5s.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/character-checks/preview-working-3s.png",
+          "bytes": 83308,
+          "sha256": "f27e5bd97bc59fed209beaa49b956ab31ed39826040f07147cf8704f237f1f56",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/preview-working-3s.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/character-checks/preview-working-4s.png",
+          "bytes": 82963,
+          "sha256": "20f66962c5b04e7abc7cdde2a51d431963ce03aa7fb6810bcc6385dc1d308c8b",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/preview-working-4s.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/character-checks/preview-working-5s.png",
+          "bytes": 82997,
+          "sha256": "d70a9b4cd675dceb269ac1efa22bc31943d69f89a7d888ed165df8814ccbb184",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/preview-working-5s.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/character-checks/repeat-frame-pixels.json",
+          "bytes": 621,
+          "sha256": "f269ed35ada7a287299b182a89ada098016ad83923ea1bd8ed85d8caa57877d2",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/repeat-frame-pixels.json"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/character-checks/results.json",
+          "bytes": 63597,
+          "sha256": "296c64ee538d40e883866b1bf3e77282eca89e43565b596ecec094d5548a6acf",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/results.json"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/character-checks/state-library.png",
+          "bytes": 111520,
+          "sha256": "695dcd6d398d39eff8d6785cc7d6d30c3bc75a4e1b55b8bcb8f8d69d212f38ef",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/state-library.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/character-checks/ultracode-0990.png",
+          "bytes": 153961,
+          "sha256": "cc714f6580cf2ae0d02aaf6384afcd65ef86aa7e440954fde043897603948fad",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/ultracode-0990.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/character-checks/ultracode-1020.png",
+          "bytes": 154119,
+          "sha256": "bf793899e03ec635ab38113b7bcf5bfbb199beedf5d94c14b8d81d156dddae78",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/ultracode-1020.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/character-checks/ultracode-1050.png",
+          "bytes": 153472,
+          "sha256": "ab3d1cb1b9046021c48217fd0482e760ac840123da990bdeb4eedac3b8513839",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/ultracode-1050.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/character-checks/visual-review.json",
+          "bytes": 1264,
+          "sha256": "b7a5e4b0d278d70ceebc6a6602870868735653e79e15f2926e00e34e1038fb89",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/visual-review.json",
+            "motion/output/character-checks/visual-review.json"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/character-checks/working-build-0315.png",
+          "bytes": 117410,
+          "sha256": "19b7f87e8a12be389c48eaca1f9cef753e6639e75d2e6a977e110468e462ac26",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/working-build-0315.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/character-checks/working-swarm-0540.png",
+          "bytes": 249388,
+          "sha256": "f88a3c81d5fa356b42ff92b1b159ed00afa704d2e82b0b64f86c6ee4a7629b81",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/working-swarm-0540.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/character-checks/working-sync-0765.png",
+          "bytes": 236306,
+          "sha256": "65e740d662eb74b2ee599d91b1365633215fac7676bc8882884d38cf7d11b595",
+          "repository_paths": [
+            "archive/motion-v2/output/character-checks/working-sync-0765.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/stills/keyframe-0090.png",
+          "bytes": 317999,
+          "sha256": "943481c0d2c8b768f9b4e0aa9d905c54f16746825650f18ffae54dd93e9cbad5",
+          "repository_paths": [
+            "archive/motion-v2/output/stills/keyframe-0090.png",
+            "motion/output/stills/keyframe-0090.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/stills/keyframe-0315.png",
+          "bytes": 203095,
+          "sha256": "4621ff5c0087a2b5be2001bded3f756a2087489a9e5fccda8b4eb7ff22fba52c",
+          "repository_paths": [
+            "archive/motion-v2/output/stills/keyframe-0315.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/stills/keyframe-0540.png",
+          "bytes": 391478,
+          "sha256": "ed1174cb37e0c2fdba50fc60ddc0b21ef54851c4b09ab2d276c63a1b540d76d0",
+          "repository_paths": [
+            "archive/motion-v2/output/stills/keyframe-0540.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/stills/keyframe-0765.png",
+          "bytes": 360692,
+          "sha256": "6fb7ca69209035e84397fef57a1fb9656431d9708b2c07949e48d009c8618aec",
+          "repository_paths": [
+            "archive/motion-v2/output/stills/keyframe-0765.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/stills/keyframe-0990.png",
+          "bytes": 280551,
+          "sha256": "92b2eca18a8b739a6c526163068a79b2b71df133d2674e3b82870a73ec9bddf7",
+          "repository_paths": [
+            "archive/motion-v2/output/stills/keyframe-0990.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/stills/keyframe-1260.png",
+          "bytes": 397545,
+          "sha256": "89b4a7555da25e1ae99f558921bbf3fd6097ab840cd76ff445e0bc73428c4bff",
+          "repository_paths": [
+            "archive/motion-v2/output/stills/keyframe-1260.png",
+            "motion/output/stills/keyframe-1260.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/ui-checks/desktop-spectrum.png",
+          "bytes": 119193,
+          "sha256": "bc88872ba01383448e1852e797b3b63816225e7a4748b29f0d27809e46fe4cb4",
+          "repository_paths": [
+            "archive/motion-v2/output/ui-checks/desktop-spectrum.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/ui-checks/mobile-spectrum.png",
+          "bytes": 67531,
+          "sha256": "0cd1ddb3937c28020562fe99bc64499d69a38519cbb962b6471956685bc89f99",
+          "repository_paths": [
+            "archive/motion-v2/output/ui-checks/mobile-spectrum.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/output/ui-checks/results.json",
+          "bytes": 17356,
+          "sha256": "88bc59960b011bbc41f43c555b5550328405a6d6bb7c36bbee9aad7a70f38ab0",
+          "repository_paths": [
+            "archive/motion-v2/output/ui-checks/results.json"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/sprites/01-idle.png",
+          "bytes": 463877,
+          "sha256": "b3783681219e905dfa922f753aff5d9496e11333cef9cde4b0f6e433166ae074",
+          "repository_paths": [
+            "archive/clean-variations/01-idle.png",
+            "motion/sprites/01-idle.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/sprites/05-spectrum.png",
+          "bytes": 480068,
+          "sha256": "94f195e271965b3de7c724851597cb730a321a186e38d1bc74f80846fc74374e",
+          "repository_paths": [
+            "motion/sprites/05-spectrum.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/sprites/06-normal.png",
+          "bytes": 437919,
+          "sha256": "a3c6fe2437d4b75cc39ebe96d8f8f07f134eba695f15a1679784a2a04d6aad1c",
+          "repository_paths": [
+            "motion/sprites/06-normal.png"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/sprites/NORMAL-PROMPT.md",
+          "bytes": 1675,
+          "sha256": "28a33aadc4af1d12ab11936139ff2d09e37978798072179038db5c6297448a14",
+          "repository_paths": [
+            "archive/motion-v2/sprites/NORMAL-PROMPT.md",
+            "motion/sprites/NORMAL-PROMPT.md"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/sprites/POSE-PROMPTS.md",
+          "bytes": 7482,
+          "sha256": "c99ddeeef6d2bbb0b7b29e680a5f37ed1a40257c938dfecb7dbcffd85ece764f",
+          "repository_paths": [
+            "archive/clean-variations/prompts.md",
+            "archive/motion-v1/sprites/POSE-PROMPTS.md",
+            "archive/motion-v2/sprites/POSE-PROMPTS.md",
+            "motion/sprites/POSE-PROMPTS.md"
+          ]
+        },
+        {
+          "source_path": "cavelux-motion-film/sprites/states.json",
+          "bytes": 771,
+          "sha256": "11ae03f0f284e05b9468df92a4f68cc66d0d0fd3e14de9511b17aede3d6ec4a0",
+          "repository_paths": [
+            "archive/motion-v2/sprites/states.json"
+          ]
+        }
+      ]
+    },
+    {
+      "source_archive": "cavelux-clawd-clean-variations.zip",
+      "archive_sha256": "c02caef268d834ef6a258a6ddd76ec9211bf9d8ce9c55eade50d17db3115f24b",
+      "files": [
+        {
+          "source_path": "01-idle.png",
+          "bytes": 463877,
+          "sha256": "b3783681219e905dfa922f753aff5d9496e11333cef9cde4b0f6e433166ae074",
+          "repository_paths": [
+            "archive/clean-variations/01-idle.png",
+            "motion/sprites/01-idle.png"
+          ]
+        },
+        {
+          "source_path": "02-focused.png",
+          "bytes": 457916,
+          "sha256": "3286787110b9c3a6f0382c9f99bc4e82532fa89670ac52312ea58d77ae8ac376",
+          "repository_paths": [
+            "archive/clean-variations/02-focused.png",
+            "motion/sprites/02-focused.png"
+          ]
+        },
+        {
+          "source_path": "03-wink.png",
+          "bytes": 459945,
+          "sha256": "fe5a04cfff82e3ae7cf2f6756c409dc0b02981d9c272cae978b06e0b87716470",
+          "repository_paths": [
+            "archive/clean-variations/03-wink.png",
+            "motion/sprites/03-wink.png"
+          ]
+        },
+        {
+          "source_path": "04-celebrate.png",
+          "bytes": 434953,
+          "sha256": "be000b55b5b1dc68c0bb002102f6d476fda84774cd2c1a90ef6ae54f770753a7",
+          "repository_paths": [
+            "archive/clean-variations/04-celebrate.png",
+            "motion/sprites/04-celebrate.png"
+          ]
+        },
+        {
+          "source_path": "prompts.md",
+          "bytes": 7482,
+          "sha256": "c99ddeeef6d2bbb0b7b29e680a5f37ed1a40257c938dfecb7dbcffd85ece764f",
+          "repository_paths": [
+            "archive/clean-variations/prompts.md",
+            "archive/motion-v1/sprites/POSE-PROMPTS.md",
+            "archive/motion-v2/sprites/POSE-PROMPTS.md",
+            "motion/sprites/POSE-PROMPTS.md"
+          ]
+        }
+      ]
+    }
+  ]
+}

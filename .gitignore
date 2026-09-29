@@ -1,0 +1,12 @@
+node_modules/
+charming/.local/
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+.env
+.env.local
+*.tmp
+*.log
+motion/output/.*.rendering.mp4
+charming/.local/

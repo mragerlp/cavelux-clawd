@@ -1,0 +1,6 @@
+# Preserve artwork, media, and historical source bytes across checkouts.
+# Newly authored text uses UTF-8 and LF; Git does not rewrite existing endings.
+* -text whitespace=blank-at-eol,space-before-tab,cr-at-eol
+# Historic snapshots and the original encoder transcript retain verbatim bytes.
+archive/** -whitespace
+motion/audio/mastering-log.txt -whitespace

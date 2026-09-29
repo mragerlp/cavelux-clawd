@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920" fill="none" role="img" aria-labelledby="title description">
+  <title id="title">Oscilloscope trace</title>
+  <desc id="description">A stepped digital signal across a restrained measuring grid. Decorative signal, not recorded telemetry.</desc>
+  <g id="signal-grid" stroke="#F0F0E8" stroke-width="1" opacity="0.16">
+    <path id="grid-horizontal" d="M140 610H940M140 750H940M140 890H940"/>
+    <path id="grid-vertical" d="M140 570V930M300 570V930M460 570V930M620 570V930M780 570V930M940 570V930"/>
+  </g>
+  <g id="signal-calibration" stroke="#F0F0E8" stroke-width="1.5" opacity="0.6">
+    <path id="calibration-left" d="M140 596V624M126 610H154M140 876V904M126 890H154"/>
+    <path id="calibration-right" d="M940 596V624M926 610H954M940 876V904M926 890H954"/>
+    <path id="baseline-ticks" d="M220 744V756M380 744V756M540 744V756M700 744V756M860 744V756"/>
+  </g>
+  <path id="signal-trace" d="M140 750H244V710H300V750H364V610H420V890H476V750H564V710H612V750H700V650H748V850H796V750H940" stroke="#92FA11" stroke-width="3" stroke-linejoin="miter"/>
+  <rect id="signal-head" x="936" y="746" width="8" height="8" fill="#92FA11"/>
+</svg>

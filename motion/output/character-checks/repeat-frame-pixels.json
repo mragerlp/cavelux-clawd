@@ -1,0 +1,28 @@
+{
+  "frame": 990,
+  "comparisons": [
+    {
+      "from": 1,
+      "to": 2,
+      "changedPixels": 0,
+      "maxChannelDelta": 0,
+      "totalChannelDelta": 0,
+      "bounds": null,
+      "samples": []
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "changedPixels": 0,
+      "maxChannelDelta": 0,
+      "totalChannelDelta": 0,
+      "bounds": null,
+      "samples": []
+    }
+  ],
+  "pngHashes": [
+    "a35e36ef2f1656f597079596602b3f5de8c4a45ab31ac8111fb0c75b7de7de2e",
+    "a35e36ef2f1656f597079596602b3f5de8c4a45ab31ac8111fb0c75b7de7de2e",
+    "a35e36ef2f1656f597079596602b3f5de8c4a45ab31ac8111fb0c75b7de7de2e"
+  ]
+}

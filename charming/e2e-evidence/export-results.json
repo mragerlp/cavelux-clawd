@@ -1,0 +1,158 @@
+{
+  "surface": "Local browser with injected documented Charming helper responses; not hosted upload or opening evidence",
+  "startedAt": "2026-09-29T02:08:50.257Z",
+  "sourceHash": "2bfcc639a21812320c94e76329cf8b48aabb62771c6401f709d9c10f71913030",
+  "checks": [
+    {
+      "name": "native PNG uploads a File to the fixed key then signs and opens it",
+      "status": "PASS",
+      "evidence": [
+        {
+          "method": "upload",
+          "key": "clawd-export.png",
+          "isFile": true,
+          "name": "cavelux-clawd-normal.png",
+          "type": "image/png",
+          "bytes": 245841,
+          "signature": [
+            137,
+            80,
+            78,
+            71,
+            13,
+            10,
+            26,
+            10
+          ],
+          "json": null
+        },
+        {
+          "method": "getUrl",
+          "key": "clawd-export.png"
+        },
+        {
+          "method": "openLink",
+          "url": "https://example.invalid/clawd-export.png?temporary=local-test"
+        }
+      ]
+    },
+    {
+      "name": "native JSON uploads the selected settings and reuses its fixed key",
+      "status": "PASS",
+      "evidence": [
+        {
+          "method": "upload",
+          "key": "clawd-preset.json",
+          "isFile": true,
+          "name": "cavelux-clawd-ultracode.json",
+          "type": "application/json",
+          "bytes": 192,
+          "signature": [
+            123,
+            10,
+            32,
+            32,
+            34,
+            115,
+            99,
+            104
+          ],
+          "json": {
+            "schemaVersion": 1,
+            "name": "Untitled look",
+            "settings": {
+              "state": "ultracode",
+              "eyeSpeed": 1,
+              "scale": 1,
+              "background": "dark",
+              "aura": true,
+              "time": 3
+            }
+          }
+        },
+        {
+          "method": "getUrl",
+          "key": "clawd-preset.json"
+        },
+        {
+          "method": "openLink",
+          "url": "https://example.invalid/clawd-preset.json?temporary=local-test"
+        }
+      ]
+    },
+    {
+      "name": "upload failure stops signing and opening and shows an inline error",
+      "status": "PASS",
+      "evidence": {
+        "message": "PNG export failed. Upload unavailable"
+      }
+    },
+    {
+      "name": "URL failure never claims an artifact is ready",
+      "status": "PASS",
+      "evidence": {
+        "message": "Preset JSON export failed. URL unavailable"
+      }
+    },
+    {
+      "name": "host opening failure keeps the generated link and retry does not upload again",
+      "status": "PASS",
+      "evidence": [
+        {
+          "method": "upload",
+          "key": "clawd-export.png",
+          "isFile": true,
+          "name": "cavelux-clawd-normal.png",
+          "type": "image/png",
+          "bytes": 245841,
+          "signature": [
+            137,
+            80,
+            78,
+            71,
+            13,
+            10,
+            26,
+            10
+          ],
+          "json": null
+        },
+        {
+          "method": "getUrl",
+          "key": "clawd-export.png"
+        },
+        {
+          "method": "openLink",
+          "url": "https://example.invalid/clawd-export.png?temporary=local-test"
+        },
+        {
+          "method": "getUrl",
+          "key": "clawd-export.png"
+        },
+        {
+          "method": "openLink",
+          "url": "https://example.invalid/clawd-export.png?temporary=local-test"
+        }
+      ]
+    },
+    {
+      "name": "read-only viewers use a Blob download without a native asset write",
+      "status": "PASS",
+      "evidence": {
+        "filename": "cavelux-clawd-normal.png",
+        "nativeCalls": []
+      }
+    },
+    {
+      "name": "native export has no uncaught browser errors",
+      "status": "PASS",
+      "evidence": []
+    }
+  ],
+  "errors": [],
+  "summary": {
+    "passed": 7,
+    "failed": 0
+  },
+  "finishedAt": "2026-09-29T02:08:52.301Z"
+}

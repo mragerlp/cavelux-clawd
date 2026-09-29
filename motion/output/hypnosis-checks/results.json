@@ -1,0 +1,259 @@
+{
+  "startedAt": "2026-09-29T02:08:40.536Z",
+  "root": "C:\\Users\\jared\\.codex\\visualizations\\2026\\09\\29\\01a0ea97-8016-7c91-8112-655302cb1db6\\cavelux-clawd\\motion",
+  "checks": [
+    {
+      "name": "normal isolated black-eye motion",
+      "status": "PASS",
+      "evidence": {
+        "state": "normal",
+        "times": [
+          0.2,
+          0.65
+        ],
+        "heroBefore": {
+          "x": 168.967032967033,
+          "y": 132.8571428571429,
+          "width": 382.065934065934,
+          "height": 234.28571428571425
+        },
+        "heroAfter": {
+          "x": 168.967032967033,
+          "y": 132.8571428571429,
+          "width": 382.065934065934,
+          "height": 234.28571428571425
+        },
+        "eyes": [
+          {
+            "blackBefore": 941,
+            "blackAfter": 941,
+            "changed": 0
+          },
+          {
+            "blackBefore": 910,
+            "blackAfter": 910,
+            "changed": 0
+          }
+        ],
+        "outsideEyeBlackChanges": 0
+      }
+    },
+    {
+      "name": "working isolated black-eye motion",
+      "status": "PASS",
+      "evidence": {
+        "state": "working",
+        "times": [
+          0.2,
+          0.65
+        ],
+        "heroBefore": {
+          "x": 169.03367818622053,
+          "y": 132.85714285714283,
+          "width": 381.93264362755895,
+          "height": 234.28571428571433
+        },
+        "heroAfter": {
+          "x": 169.03367818622053,
+          "y": 132.85714285714283,
+          "width": 381.93264362755895,
+          "height": 234.28571428571433
+        },
+        "eyes": [
+          {
+            "blackBefore": 6939,
+            "blackAfter": 6800,
+            "changed": 3869
+          },
+          {
+            "blackBefore": 6979,
+            "blackAfter": 6840,
+            "changed": 3869
+          }
+        ],
+        "outsideEyeBlackChanges": 0
+      }
+    },
+    {
+      "name": "ultracode isolated black-eye motion",
+      "status": "PASS",
+      "evidence": {
+        "state": "ultracode",
+        "times": [
+          0.2,
+          0.65
+        ],
+        "heroBefore": {
+          "x": 169.73269062226115,
+          "y": 132.85714285714283,
+          "width": 380.5346187554777,
+          "height": 234.28571428571433
+        },
+        "heroAfter": {
+          "x": 169.73269062226115,
+          "y": 132.85714285714283,
+          "width": 380.5346187554777,
+          "height": 234.28571428571433
+        },
+        "eyes": [
+          {
+            "blackBefore": 7280,
+            "blackAfter": 7216,
+            "changed": 3656
+          },
+          {
+            "blackBefore": 7293,
+            "blackAfter": 7113,
+            "changed": 3680
+          }
+        ],
+        "outsideEyeBlackChanges": 0
+      }
+    },
+    {
+      "name": "dark to transparent background preserves export alpha on the same canvas",
+      "status": "PASS",
+      "evidence": {
+        "dark": [
+          18,
+          20,
+          18,
+          255
+        ],
+        "transparent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "light": [
+          235,
+          236,
+          226,
+          255
+        ],
+        "visiblePixels": 69977,
+        "alpha": true
+      }
+    },
+    {
+      "name": "scale control and range clamping change actual body bounds",
+      "status": "PASS",
+      "evidence": {
+        "small": {
+          "x": 283.5868131868132,
+          "y": 203.14285714285714,
+          "width": 152.82637362637362,
+          "height": 93.71428571428571
+        },
+        "large": {
+          "x": 92.55384615384622,
+          "y": 86.00000000000006,
+          "width": 534.8923076923076,
+          "height": 327.9999999999999
+        },
+        "clampedScale": 1.4,
+        "clampedSpeed": 3
+      }
+    },
+    {
+      "name": "working eyeSpeed zero freezes actual eye pixels",
+      "status": "PASS",
+      "evidence": {
+        "changed": 0,
+        "blackPixels": 13816,
+        "doubleSpeedMismatches": 0,
+        "phaseA": 0,
+        "phaseB": 0
+      }
+    },
+    {
+      "name": "ultracode eyeSpeed zero freezes actual eye pixels",
+      "status": "PASS",
+      "evidence": {
+        "changed": 0,
+        "blackPixels": 14427,
+        "doubleSpeedMismatches": 0,
+        "phaseA": 0,
+        "phaseB": 0
+      }
+    },
+    {
+      "name": "working aura can be disabled independently of eye motion",
+      "status": "PASS",
+      "evidence": [
+        {
+          "aura": true,
+          "outsideGreen": 460,
+          "eyePhase": 1.105,
+          "descriptorAura": "green-code"
+        },
+        {
+          "aura": false,
+          "outsideGreen": 0,
+          "eyePhase": 1.105,
+          "descriptorAura": "none"
+        }
+      ]
+    },
+    {
+      "name": "character-only embedding honors three asset URL overrides without brand or film canvas",
+      "status": "PASS",
+      "evidence": {
+        "hasFilmCanvas": false,
+        "initialFrame": null,
+        "descriptor": {
+          "state": "working",
+          "eyeMode": "friendly-spiral",
+          "aura": "none",
+          "sprite": "working",
+          "frame": null,
+          "chapter": null,
+          "preview": true,
+          "rainbowPhase": 0,
+          "auraPhase": 0,
+          "eyeMotion": "counter-rotating-pixel-spirals",
+          "eyeSpeed": 2,
+          "eyePhase": 2.21,
+          "eyeBounds": [
+            {
+              "x": 219.74396700534078,
+              "y": 141.51152148475967,
+              "width": 142.97299489092532,
+              "height": 142.97299489092532
+            },
+            {
+              "x": 357.28303810373393,
+              "y": 141.51152148475967,
+              "width": 142.97299489092532,
+              "height": 142.97299489092532
+            }
+          ],
+          "heroBounds": {
+            "x": 169.03367818622053,
+            "y": 132.85714285714283,
+            "width": 381.93264362755895,
+            "height": 234.28571428571433
+          },
+          "auraBounds": null,
+          "opacity": 1,
+          "background": "transparent",
+          "scale": 1,
+          "auraEnabled": false
+        },
+        "cornerAlpha": 0,
+        "requests": [
+          "http://127.0.0.1:8766/sprites/01-idle.png?studio-contract=1",
+          "http://127.0.0.1:8766/sprites/05-spectrum.png?studio-contract=1",
+          "http://127.0.0.1:8766/sprites/06-normal.png?studio-contract=1"
+        ],
+        "errors": []
+      }
+    }
+  ],
+  "finishedAt": "2026-09-29T02:08:41.668Z",
+  "summary": {
+    "passed": 9,
+    "failed": 0
+  }
+}

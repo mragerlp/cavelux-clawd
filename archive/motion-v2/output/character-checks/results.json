@@ -1,0 +1,2392 @@
+{
+  "startedAt": "2026-09-29T01:30:59.794Z",
+  "url": "http://127.0.0.1:8766/?export",
+  "browser": "Microsoft Edge / Playwright headless",
+  "sourceHashes": {
+    "film.js": "bd88d19d4c945d01fcb3bfe3ae1aa957aaf03f0ac3011b8d44fa7b8c85819ffc",
+    "player.js": "bcb7370e94beadac183c214b1ccad3666c636d881ed2bf69374f2f7ae1767a7c",
+    "index.html": "6f2d095f4850115e7b7d3695153320ac32b44c5b92d0d09eb06437368d98a62b",
+    "assets.html": "794b5505a2cec104d810901d768b8705a057e04bf1dfe99d35c0be6df003c30c",
+    "state-previews.js": "ef137d30c08eab6e798aada3a4ba27994f70ef0184e8e0145fd2ed616679acdd",
+    "sprites/06-normal.png": "a3c6fe2437d4b75cc39ebe96d8f8f07f134eba695f15a1679784a2a04d6aad1c",
+    "sprites/01-idle.png": "b3783681219e905dfa922f753aff5d9496e11333cef9cde4b0f6e433166ae074",
+    "sprites/05-spectrum.png": "94f195e271965b3de7c724851597cb730a321a186e38d1bc74f80846fc74374e"
+  },
+  "checks": [
+    {
+      "name": "active sources and loaded resources exclude focused and wink poses",
+      "status": "PASS",
+      "evidence": {
+        "checkedFiles": [
+          "film.js",
+          "player.js",
+          "index.html",
+          "assets.html",
+          "state-previews.js"
+        ],
+        "loadedSprites": [
+          "http://127.0.0.1:8766/sprites/06-normal.png",
+          "http://127.0.0.1:8766/sprites/01-idle.png",
+          "http://127.0.0.1:8766/sprites/05-spectrum.png",
+          "http://127.0.0.1:8766/sprites/06-normal.png",
+          "http://127.0.0.1:8766/sprites/01-idle.png",
+          "http://127.0.0.1:8766/sprites/05-spectrum.png"
+        ]
+      }
+    },
+    {
+      "name": "frame 90: normal rendered state",
+      "status": "PASS",
+      "evidence": {
+        "descriptor": {
+          "state": "normal",
+          "eyeMode": "rectangular",
+          "aura": "none",
+          "sprite": "normal",
+          "frame": 90,
+          "chapter": 0,
+          "rainbowPhase": 0,
+          "auraPhase": 0,
+          "heroBounds": {
+            "x": 295,
+            "y": 811.9449404879898,
+            "width": 490,
+            "height": 300.47169811320754
+          },
+          "auraBounds": null,
+          "opacity": 1
+        },
+        "imageDrawCount": 1,
+        "eyeMetrics": [
+          {
+            "crop": {
+              "x": 373,
+              "y": 842,
+              "w": 157,
+              "h": 147
+            },
+            "largestDarkComponent": {
+              "area": 1372,
+              "width": 28,
+              "height": 49,
+              "rectangularFill": 1
+            }
+          },
+          {
+            "crop": {
+              "x": 550,
+              "y": 842,
+              "w": 157,
+              "h": 147
+            },
+            "largestDarkComponent": {
+              "area": 1323,
+              "width": 27,
+              "height": 49,
+              "rectangularFill": 1
+            }
+          }
+        ],
+        "screenshot": "normal-0090.png"
+      }
+    },
+    {
+      "name": "frame 315: working rendered state",
+      "status": "PASS",
+      "evidence": {
+        "descriptor": {
+          "state": "working",
+          "eyeMode": "friendly-spiral",
+          "aura": "green-code",
+          "sprite": "working",
+          "frame": 315,
+          "chapter": 1,
+          "rainbowPhase": 0,
+          "auraPhase": 2.4000000000000004,
+          "heroBounds": {
+            "x": 685,
+            "y": 1345.9234575988137,
+            "width": 250,
+            "height": 153.3553875236295
+          },
+          "auraBounds": {
+            "x": 585,
+            "y": 1269.2457638369988,
+            "width": 450,
+            "height": 306.710775047259
+          },
+          "opacity": 1
+        },
+        "imageDrawCount": 1,
+        "eyeMetrics": [
+          {
+            "crop": {
+              "x": 725,
+              "y": 1361,
+              "w": 80,
+              "h": 75
+            },
+            "largestDarkComponent": {
+              "area": 2422,
+              "width": 72,
+              "height": 62,
+              "rectangularFill": 0.5425627240143369
+            }
+          },
+          {
+            "crop": {
+              "x": 815,
+              "y": 1361,
+              "w": 80,
+              "h": 75
+            },
+            "largestDarkComponent": {
+              "area": 2418,
+              "width": 72,
+              "height": 63,
+              "rectangularFill": 0.533068783068783
+            }
+          }
+        ],
+        "screenshot": "working-build-0315.png"
+      }
+    },
+    {
+      "name": "frame 540: working rendered state",
+      "status": "PASS",
+      "evidence": {
+        "descriptor": {
+          "state": "working",
+          "eyeMode": "friendly-spiral",
+          "aura": "green-code",
+          "sprite": "working",
+          "frame": 540,
+          "chapter": 2,
+          "rainbowPhase": 0,
+          "auraPhase": 2.4000000000000004,
+          "heroBounds": {
+            "x": 420,
+            "y": 924.2431223166561,
+            "width": 240,
+            "height": 147.2211720226843
+          },
+          "auraBounds": {
+            "x": 324,
+            "y": 850.6325363053139,
+            "width": 432,
+            "height": 294.4423440453686
+          },
+          "opacity": 1
+        },
+        "imageDrawCount": 19,
+        "eyeMetrics": [
+          {
+            "crop": {
+              "x": 458,
+              "y": 939,
+              "w": 77,
+              "h": 72
+            },
+            "largestDarkComponent": {
+              "area": 2236,
+              "width": 68,
+              "height": 60,
+              "rectangularFill": 0.5480392156862746
+            }
+          },
+          {
+            "crop": {
+              "x": 545,
+              "y": 939,
+              "w": 77,
+              "h": 72
+            },
+            "largestDarkComponent": {
+              "area": 2242,
+              "width": 69,
+              "height": 60,
+              "rectangularFill": 0.5415458937198068
+            }
+          }
+        ],
+        "screenshot": "working-swarm-0540.png"
+      }
+    },
+    {
+      "name": "frame 765: working rendered state",
+      "status": "PASS",
+      "evidence": {
+        "descriptor": {
+          "state": "working",
+          "eyeMode": "friendly-spiral",
+          "aura": "green-code",
+          "sprite": "working",
+          "frame": 765,
+          "chapter": 3,
+          "rainbowPhase": 0,
+          "auraPhase": 2.4000000000000004,
+          "heroBounds": {
+            "x": 445,
+            "y": 936.7249527410208,
+            "width": 190,
+            "height": 116.55009451795841
+          },
+          "auraBounds": {
+            "x": 369,
+            "y": 878.4499054820416,
+            "width": 342,
+            "height": 233.10018903591683
+          },
+          "opacity": 0.95
+        },
+        "imageDrawCount": 43,
+        "eyeMetrics": [
+          {
+            "crop": {
+              "x": 475,
+              "y": 948,
+              "w": 61,
+              "h": 57
+            },
+            "largestDarkComponent": {
+              "area": 1371,
+              "width": 54,
+              "height": 47,
+              "rectangularFill": 0.5401891252955082
+            }
+          },
+          {
+            "crop": {
+              "x": 544,
+              "y": 948,
+              "w": 61,
+              "h": 57
+            },
+            "largestDarkComponent": {
+              "area": 1370,
+              "width": 54,
+              "height": 47,
+              "rectangularFill": 0.5397951142631994
+            }
+          }
+        ],
+        "screenshot": "working-sync-0765.png"
+      }
+    },
+    {
+      "name": "frame 990: ultracode rendered state",
+      "status": "PASS",
+      "evidence": {
+        "descriptor": {
+          "state": "ultracode",
+          "eyeMode": "friendly-spiral",
+          "aura": "flowing-rainbow",
+          "sprite": "spectrum",
+          "frame": 990,
+          "chapter": 4,
+          "rainbowPhase": 0.48,
+          "auraPhase": 0,
+          "heroBounds": {
+            "x": 214.5059182411701,
+            "y": 796.8072224431694,
+            "width": 650.9881635176598,
+            "height": 400.7972451496829
+          },
+          "auraBounds": null,
+          "opacity": 1
+        },
+        "imageDrawCount": 2,
+        "eyeMetrics": [
+          {
+            "crop": {
+              "x": 319,
+              "y": 837,
+              "w": 208,
+              "h": 196
+            },
+            "largestDarkComponent": {
+              "area": 17025,
+              "width": 187,
+              "height": 163,
+              "rectangularFill": 0.5585446671697123
+            }
+          },
+          {
+            "crop": {
+              "x": 553,
+              "y": 837,
+              "w": 208,
+              "h": 196
+            },
+            "largestDarkComponent": {
+              "area": 16988,
+              "width": 187,
+              "height": 163,
+              "rectangularFill": 0.5573307962337194
+            }
+          }
+        ],
+        "screenshot": "ultracode-0990.png"
+      }
+    },
+    {
+      "name": "frame 1020: ultracode rendered state",
+      "status": "PASS",
+      "evidence": {
+        "descriptor": {
+          "state": "ultracode",
+          "eyeMode": "friendly-spiral",
+          "aura": "flowing-rainbow",
+          "sprite": "spectrum",
+          "frame": 1020,
+          "chapter": 4,
+          "rainbowPhase": 0.64,
+          "auraPhase": 0,
+          "heroBounds": {
+            "x": 214.80570693298972,
+            "y": 809.6795323437686,
+            "width": 650.3885861340206,
+            "height": 400.42810024493053
+          },
+          "auraBounds": null,
+          "opacity": 1
+        },
+        "imageDrawCount": 2,
+        "eyeMetrics": [
+          {
+            "crop": {
+              "x": 319,
+              "y": 850,
+              "w": 208,
+              "h": 196
+            },
+            "largestDarkComponent": {
+              "area": 17016,
+              "width": 186,
+              "height": 163,
+              "rectangularFill": 0.5612507421333861
+            }
+          },
+          {
+            "crop": {
+              "x": 553,
+              "y": 850,
+              "w": 208,
+              "h": 196
+            },
+            "largestDarkComponent": {
+              "area": 17080,
+              "width": 187,
+              "height": 163,
+              "rectangularFill": 0.5603490699124044
+            }
+          }
+        ],
+        "screenshot": "ultracode-1020.png"
+      }
+    },
+    {
+      "name": "frame 1050: ultracode rendered state",
+      "status": "PASS",
+      "evidence": {
+        "descriptor": {
+          "state": "ultracode",
+          "eyeMode": "friendly-spiral",
+          "aura": "flowing-rainbow",
+          "sprite": "spectrum",
+          "frame": 1050,
+          "chapter": 4,
+          "rainbowPhase": 0.8,
+          "auraPhase": 0,
+          "heroBounds": {
+            "x": 214.92359605426907,
+            "y": 794.418320172866,
+            "width": 650.1528078914619,
+            "height": 400.2829374364808
+          },
+          "auraBounds": null,
+          "opacity": 1
+        },
+        "imageDrawCount": 2,
+        "eyeMetrics": [
+          {
+            "crop": {
+              "x": 319,
+              "y": 834,
+              "w": 208,
+              "h": 196
+            },
+            "largestDarkComponent": {
+              "area": 16949,
+              "width": 186,
+              "height": 163,
+              "rectangularFill": 0.5590408338280889
+            }
+          },
+          {
+            "crop": {
+              "x": 553,
+              "y": 834,
+              "w": 208,
+              "h": 196
+            },
+            "largestDarkComponent": {
+              "area": 16986,
+              "width": 187,
+              "height": 163,
+              "rectangularFill": 0.5572651815885306
+            }
+          }
+        ],
+        "screenshot": "ultracode-1050.png"
+      }
+    },
+    {
+      "name": "isolated normal preview at 3 seconds renders",
+      "status": "PASS",
+      "evidence": {
+        "descriptor": {
+          "state": "normal",
+          "eyeMode": "rectangular",
+          "aura": "none",
+          "sprite": "normal",
+          "frame": null,
+          "chapter": null,
+          "preview": true,
+          "rainbowPhase": 0,
+          "auraPhase": 0,
+          "heroBounds": {
+            "x": 124.81494505494507,
+            "y": 100.97142857142858,
+            "width": 290.37010989010986,
+            "height": 178.05714285714285
+          },
+          "auraBounds": null,
+          "opacity": 1
+        },
+        "screenshot": "preview-normal-3s.png"
+      }
+    },
+    {
+      "name": "isolated working preview at 3 seconds renders",
+      "status": "PASS",
+      "evidence": {
+        "descriptor": {
+          "state": "working",
+          "eyeMode": "friendly-spiral",
+          "aura": "green-code",
+          "sprite": "working",
+          "frame": null,
+          "chapter": null,
+          "preview": true,
+          "rainbowPhase": 0,
+          "auraPhase": 2.4000000000000004,
+          "heroBounds": {
+            "x": 124.86559542152762,
+            "y": 100.97142857142856,
+            "width": 290.26880915694477,
+            "height": 178.05714285714288
+          },
+          "auraBounds": {
+            "x": 8.75807175874968,
+            "y": 11.942857142857122,
+            "width": 522.4838564825006,
+            "height": 356.11428571428576
+          },
+          "opacity": 1
+        },
+        "screenshot": "preview-working-3s.png"
+      }
+    },
+    {
+      "name": "isolated working preview at 4 seconds renders",
+      "status": "PASS",
+      "evidence": {
+        "descriptor": {
+          "state": "working",
+          "eyeMode": "friendly-spiral",
+          "aura": "green-code",
+          "sprite": "working",
+          "frame": null,
+          "chapter": null,
+          "preview": true,
+          "rainbowPhase": 0,
+          "auraPhase": 3.2,
+          "heroBounds": {
+            "x": 124.86559542152762,
+            "y": 100.97142857142856,
+            "width": 290.26880915694477,
+            "height": 178.05714285714288
+          },
+          "auraBounds": {
+            "x": 8.75807175874968,
+            "y": 11.942857142857122,
+            "width": 522.4838564825006,
+            "height": 356.11428571428576
+          },
+          "opacity": 1
+        },
+        "screenshot": "preview-working-4s.png"
+      }
+    },
+    {
+      "name": "isolated working preview at 5 seconds renders",
+      "status": "PASS",
+      "evidence": {
+        "descriptor": {
+          "state": "working",
+          "eyeMode": "friendly-spiral",
+          "aura": "green-code",
+          "sprite": "working",
+          "frame": null,
+          "chapter": null,
+          "preview": true,
+          "rainbowPhase": 0,
+          "auraPhase": 4,
+          "heroBounds": {
+            "x": 124.86559542152762,
+            "y": 100.97142857142856,
+            "width": 290.26880915694477,
+            "height": 178.05714285714288
+          },
+          "auraBounds": {
+            "x": 8.75807175874968,
+            "y": 11.942857142857122,
+            "width": 522.4838564825006,
+            "height": 356.11428571428576
+          },
+          "opacity": 1
+        },
+        "screenshot": "preview-working-5s.png"
+      }
+    },
+    {
+      "name": "isolated ultracode preview at 3 seconds renders",
+      "status": "PASS",
+      "evidence": {
+        "descriptor": {
+          "state": "ultracode",
+          "eyeMode": "friendly-spiral",
+          "aura": "flowing-rainbow",
+          "sprite": "spectrum",
+          "frame": null,
+          "chapter": null,
+          "preview": true,
+          "rainbowPhase": 0.48,
+          "auraPhase": 0,
+          "heroBounds": {
+            "x": 125.3968448729185,
+            "y": 100.97142857142858,
+            "width": 289.206310254163,
+            "height": 178.05714285714285
+          },
+          "auraBounds": null,
+          "opacity": 1
+        },
+        "screenshot": "preview-ultracode-3s.png"
+      }
+    },
+    {
+      "name": "isolated ultracode preview at 4 seconds renders",
+      "status": "PASS",
+      "evidence": {
+        "descriptor": {
+          "state": "ultracode",
+          "eyeMode": "friendly-spiral",
+          "aura": "flowing-rainbow",
+          "sprite": "spectrum",
+          "frame": null,
+          "chapter": null,
+          "preview": true,
+          "rainbowPhase": 0.64,
+          "auraPhase": 0,
+          "heroBounds": {
+            "x": 125.3968448729185,
+            "y": 100.97142857142858,
+            "width": 289.206310254163,
+            "height": 178.05714285714285
+          },
+          "auraBounds": null,
+          "opacity": 1
+        },
+        "screenshot": "preview-ultracode-4s.png"
+      }
+    },
+    {
+      "name": "isolated ultracode preview at 5 seconds renders",
+      "status": "PASS",
+      "evidence": {
+        "descriptor": {
+          "state": "ultracode",
+          "eyeMode": "friendly-spiral",
+          "aura": "flowing-rainbow",
+          "sprite": "spectrum",
+          "frame": null,
+          "chapter": null,
+          "preview": true,
+          "rainbowPhase": 0.8,
+          "auraPhase": 0,
+          "heroBounds": {
+            "x": 125.3968448729185,
+            "y": 100.97142857142858,
+            "width": 289.206310254163,
+            "height": 178.05714285714285
+          },
+          "auraBounds": null,
+          "opacity": 1
+        },
+        "screenshot": "preview-ultracode-5s.png"
+      }
+    },
+    {
+      "name": "normal preview contains two solid rectangular eye components",
+      "status": "PASS",
+      "evidence": [
+        {
+          "area": 464,
+          "width": 16,
+          "height": 29,
+          "rectangularFill": 1
+        },
+        {
+          "area": 464,
+          "width": 16,
+          "height": 29,
+          "rectangularFill": 1
+        }
+      ]
+    },
+    {
+      "name": "working preview eye components preserve open spiral geometry",
+      "status": "PASS",
+      "evidence": [
+        {
+          "area": 3261,
+          "width": 83,
+          "height": 72,
+          "rectangularFill": 0.5456827309236948
+        },
+        {
+          "area": 3266,
+          "width": 83,
+          "height": 72,
+          "rectangularFill": 0.5465194109772423
+        }
+      ]
+    },
+    {
+      "name": "normal preview has no green aura outside the fixed body",
+      "status": "PASS",
+      "evidence": {
+        "state": "normal",
+        "times": [
+          3,
+          4
+        ],
+        "heroA": {
+          "x": 124.81494505494507,
+          "y": 100.97142857142858,
+          "width": 290.37010989010986,
+          "height": 178.05714285714285
+        },
+        "heroB": {
+          "x": 124.81494505494507,
+          "y": 100.97142857142858,
+          "width": 290.37010989010986,
+          "height": 178.05714285714285
+        },
+        "greenSamplesA": 0,
+        "greenSamplesB": 0,
+        "changedGreenSamples": 0,
+        "changedGreenFraction": 0
+      }
+    },
+    {
+      "name": "isolated working aura has green pixels and motion: 3 to 4 seconds",
+      "status": "PASS",
+      "evidence": {
+        "state": "working",
+        "times": [
+          3,
+          4
+        ],
+        "heroA": {
+          "x": 124.86559542152762,
+          "y": 100.97142857142856,
+          "width": 290.26880915694477,
+          "height": 178.05714285714288
+        },
+        "heroB": {
+          "x": 124.86559542152762,
+          "y": 100.97142857142856,
+          "width": 290.26880915694477,
+          "height": 178.05714285714288
+        },
+        "greenSamplesA": 363,
+        "greenSamplesB": 338,
+        "changedGreenSamples": 701,
+        "changedGreenFraction": 1
+      }
+    },
+    {
+      "name": "isolated working aura has green pixels and motion: 4 to 5 seconds",
+      "status": "PASS",
+      "evidence": {
+        "state": "working",
+        "times": [
+          4,
+          5
+        ],
+        "heroA": {
+          "x": 124.86559542152762,
+          "y": 100.97142857142856,
+          "width": 290.26880915694477,
+          "height": 178.05714285714288
+        },
+        "heroB": {
+          "x": 124.86559542152762,
+          "y": 100.97142857142856,
+          "width": 290.26880915694477,
+          "height": 178.05714285714288
+        },
+        "greenSamplesA": 338,
+        "greenSamplesB": 335,
+        "changedGreenSamples": 673,
+        "changedGreenFraction": 1
+      }
+    },
+    {
+      "name": "isolated rainbow wave changes inside fixed body region: 3 to 4 seconds",
+      "status": "PASS",
+      "evidence": {
+        "times": [
+          3,
+          4
+        ],
+        "fixedHeroBounds": {
+          "x": 125.3968448729185,
+          "y": 100.97142857142858,
+          "width": 289.206310254163,
+          "height": 178.05714285714285
+        },
+        "normalizedCrop": {
+          "x": [
+            0.21,
+            0.79
+          ],
+          "y": [
+            0.12,
+            0.7
+          ],
+          "grid": [
+            36,
+            28
+          ]
+        },
+        "chromaticSamples": 627,
+        "changedSamples": 397,
+        "changedFraction": 0.6331738437001595,
+        "meanRgbDifference": 42.82987772461463,
+        "hueBinsA": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "hueBinsB": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "phaseA": 0.48,
+        "phaseB": 0.64
+      }
+    },
+    {
+      "name": "isolated rainbow wave changes inside fixed body region: 4 to 5 seconds",
+      "status": "PASS",
+      "evidence": {
+        "times": [
+          4,
+          5
+        ],
+        "fixedHeroBounds": {
+          "x": 125.3968448729185,
+          "y": 100.97142857142858,
+          "width": 289.206310254163,
+          "height": 178.05714285714285
+        },
+        "normalizedCrop": {
+          "x": [
+            0.21,
+            0.79
+          ],
+          "y": [
+            0.12,
+            0.7
+          ],
+          "grid": [
+            36,
+            28
+          ]
+        },
+        "chromaticSamples": 627,
+        "changedSamples": 381,
+        "changedFraction": 0.6076555023923444,
+        "meanRgbDifference": 42.121743753322775,
+        "hueBinsA": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "hueBinsB": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "phaseA": 0.64,
+        "phaseB": 0.8
+      }
+    },
+    {
+      "name": "same frame renders identical pixels",
+      "status": "PASS",
+      "evidence": {
+        "frame": 990,
+        "comparisons": [
+          {
+            "from": 1,
+            "to": 2,
+            "changedPixels": 0,
+            "maxChannelDelta": 0,
+            "totalChannelDelta": 0,
+            "bounds": null,
+            "samples": []
+          },
+          {
+            "from": 2,
+            "to": 3,
+            "changedPixels": 0,
+            "maxChannelDelta": 0,
+            "totalChannelDelta": 0,
+            "bounds": null,
+            "samples": []
+          }
+        ],
+        "pngHashes": [
+          "92b2eca18a8b739a6c526163068a79b2b71df133d2674e3b82870a73ec9bddf7",
+          "92b2eca18a8b739a6c526163068a79b2b71df133d2674e3b82870a73ec9bddf7",
+          "92b2eca18a8b739a6c526163068a79b2b71df133d2674e3b82870a73ec9bddf7"
+        ]
+      }
+    },
+    {
+      "name": "live asset library displays all three labelled character states",
+      "status": "PASS",
+      "evidence": {
+        "cards": [
+          {
+            "state": "normal",
+            "label": "Normal Clawd with two regular black rectangular eyes and no aura",
+            "width": 540,
+            "height": 380
+          },
+          {
+            "state": "working",
+            "label": "Working Clawd with open spiral eyes and a moving green code aura",
+            "width": 540,
+            "height": 380
+          },
+          {
+            "state": "ultracode",
+            "label": "Ultracode Clawd with an animated flowing rainbow wave",
+            "width": 540,
+            "height": 380
+          }
+        ],
+        "screenshot": "state-library.png"
+      }
+    },
+    {
+      "name": "no browser exceptions or missing resources",
+      "status": "PASS",
+      "evidence": {
+        "pageErrors": [],
+        "badResponses": []
+      }
+    },
+    {
+      "name": "tested source and sprite hashes remain unchanged",
+      "status": "PASS",
+      "evidence": {
+        "film.js": "bd88d19d4c945d01fcb3bfe3ae1aa957aaf03f0ac3011b8d44fa7b8c85819ffc",
+        "player.js": "bcb7370e94beadac183c214b1ccad3666c636d881ed2bf69374f2f7ae1767a7c",
+        "index.html": "6f2d095f4850115e7b7d3695153320ac32b44c5b92d0d09eb06437368d98a62b",
+        "assets.html": "794b5505a2cec104d810901d768b8705a057e04bf1dfe99d35c0be6df003c30c",
+        "state-previews.js": "ef137d30c08eab6e798aada3a4ba27994f70ef0184e8e0145fd2ed616679acdd",
+        "sprites/06-normal.png": "a3c6fe2437d4b75cc39ebe96d8f8f07f134eba695f15a1679784a2a04d6aad1c",
+        "sprites/01-idle.png": "b3783681219e905dfa922f753aff5d9496e11333cef9cde4b0f6e433166ae074",
+        "sprites/05-spectrum.png": "94f195e271965b3de7c724851597cb730a321a186e38d1bc74f80846fc74374e"
+      }
+    }
+  ],
+  "captures": [
+    {
+      "frame": 90,
+      "file": "normal-0090.png",
+      "descriptor": {
+        "state": "normal",
+        "eyeMode": "rectangular",
+        "aura": "none",
+        "sprite": "normal",
+        "frame": 90,
+        "chapter": 0,
+        "rainbowPhase": 0,
+        "auraPhase": 0,
+        "heroBounds": {
+          "x": 295,
+          "y": 811.9449404879898,
+          "width": 490,
+          "height": 300.47169811320754
+        },
+        "auraBounds": null,
+        "opacity": 1
+      },
+      "draws": [
+        {
+          "source": "http://127.0.0.1:8766/sprites/06-normal.png",
+          "bounds": {
+            "x": 295,
+            "y": 811.2896639670965,
+            "width": 490,
+            "height": 301.7822443314318
+          }
+        }
+      ],
+      "eyeMetrics": [
+        {
+          "crop": {
+            "x": 373,
+            "y": 842,
+            "w": 157,
+            "h": 147
+          },
+          "largestDarkComponent": {
+            "area": 1372,
+            "width": 28,
+            "height": 49,
+            "rectangularFill": 1
+          }
+        },
+        {
+          "crop": {
+            "x": 550,
+            "y": 842,
+            "w": 157,
+            "h": 147
+          },
+          "largestDarkComponent": {
+            "area": 1323,
+            "width": 27,
+            "height": 49,
+            "rectangularFill": 1
+          }
+        }
+      ]
+    },
+    {
+      "frame": 315,
+      "file": "working-build-0315.png",
+      "descriptor": {
+        "state": "working",
+        "eyeMode": "friendly-spiral",
+        "aura": "green-code",
+        "sprite": "working",
+        "frame": 315,
+        "chapter": 1,
+        "rainbowPhase": 0,
+        "auraPhase": 2.4000000000000004,
+        "heroBounds": {
+          "x": 685,
+          "y": 1345.9234575988137,
+          "width": 250,
+          "height": 153.3553875236295
+        },
+        "auraBounds": {
+          "x": 585,
+          "y": 1269.2457638369988,
+          "width": 450,
+          "height": 306.710775047259
+        },
+        "opacity": 1
+      },
+      "draws": [
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 682.4502486781143,
+            "y": 1341.692516395707,
+            "width": 255.0995026437713,
+            "height": 161.81735978671122
+          }
+        }
+      ],
+      "eyeMetrics": [
+        {
+          "crop": {
+            "x": 725,
+            "y": 1361,
+            "w": 80,
+            "h": 75
+          },
+          "largestDarkComponent": {
+            "area": 2422,
+            "width": 72,
+            "height": 62,
+            "rectangularFill": 0.5425627240143369
+          }
+        },
+        {
+          "crop": {
+            "x": 815,
+            "y": 1361,
+            "w": 80,
+            "h": 75
+          },
+          "largestDarkComponent": {
+            "area": 2418,
+            "width": 72,
+            "height": 63,
+            "rectangularFill": 0.533068783068783
+          }
+        }
+      ]
+    },
+    {
+      "frame": 540,
+      "file": "working-swarm-0540.png",
+      "descriptor": {
+        "state": "working",
+        "eyeMode": "friendly-spiral",
+        "aura": "green-code",
+        "sprite": "working",
+        "frame": 540,
+        "chapter": 2,
+        "rainbowPhase": 0,
+        "auraPhase": 2.4000000000000004,
+        "heroBounds": {
+          "x": 420,
+          "y": 924.2431223166561,
+          "width": 240,
+          "height": 147.2211720226843
+        },
+        "auraBounds": {
+          "x": 324,
+          "y": 850.6325363053139,
+          "width": 432,
+          "height": 294.4423440453686
+        },
+        "opacity": 1
+      },
+      "draws": [
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 418.75920826973464,
+            "y": 922.2025451391285,
+            "width": 242.48158346053066,
+            "height": 151.30230718268058
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 672.6114899146277,
+            "y": 1027.3919634493664,
+            "width": 118.49467153793216,
+            "height": 74.23365122626728
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 513.5002396643345,
+            "y": 1141.735372872737,
+            "width": 119.77625406976858,
+            "height": 76.39131480140122
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 322.25330859179047,
+            "y": 1078.576622021474,
+            "width": 118.55240381251281,
+            "height": 74.32991025392721
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 289.0677155341315,
+            "y": 899.1925008416108,
+            "width": 118.14685652939329,
+            "height": 73.65552566052838
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 446.73930325256424,
+            "y": 782.0169478948478,
+            "width": 119.74472113159027,
+            "height": 76.33768624155437
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 639.0395699742415,
+            "y": 846.4318812572677,
+            "width": 118.86190009057941,
+            "height": 74.84741912608956
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 818.496462797939,
+            "y": 1165.3805972748178,
+            "width": 78.51549725568452,
+            "height": 48.69193045036445
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 666.6028955556047,
+            "y": 1280.2657820795764,
+            "width": 79.77333486535304,
+            "height": 50.79582841897218
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 470.90319178972345,
+            "y": 1312.2187407352571,
+            "width": 79.4218879049281,
+            "height": 50.201678685735715
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 283.48570005491007,
+            "y": 1252.2798248740069,
+            "width": 78.25388065189861,
+            "height": 48.261883455111274
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 153.0187765988008,
+            "y": 1116.1403455102893,
+            "width": 79.6822954352109,
+            "height": 50.641428120046385
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 116.33625016492641,
+            "y": 945.5831462628832,
+            "width": 79.57371549045968,
+            "height": 50.457730911733506
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 183.23817028268624,
+            "y": 786.4077050879813,
+            "width": 78.01523658306499,
+            "height": 47.8717236130999
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 333.73138788661083,
+            "y": 675.8226648347794,
+            "width": 79.55815928537208,
+            "height": 50.431452557003695
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 529.5387543944009,
+            "y": 644.5217842751686,
+            "width": 79.69421972682312,
+            "height": 50.66163164497539
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 718.2454398329012,
+            "y": 700.4819985066234,
+            "width": 78.28377853732263,
+            "height": 48.31090533050315
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 847.438597524988,
+            "y": 827.4146643223531,
+            "width": 79.40295631721142,
+            "height": 50.169816863106234
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 883.9861749225654,
+            "y": 996.2087955525334,
+            "width": 79.7814343345567,
+            "height": 50.80958174649584
+          }
+        }
+      ],
+      "eyeMetrics": [
+        {
+          "crop": {
+            "x": 458,
+            "y": 939,
+            "w": 77,
+            "h": 72
+          },
+          "largestDarkComponent": {
+            "area": 2236,
+            "width": 68,
+            "height": 60,
+            "rectangularFill": 0.5480392156862746
+          }
+        },
+        {
+          "crop": {
+            "x": 545,
+            "y": 939,
+            "w": 77,
+            "h": 72
+          },
+          "largestDarkComponent": {
+            "area": 2242,
+            "width": 69,
+            "height": 60,
+            "rectangularFill": 0.5415458937198068
+          }
+        }
+      ]
+    },
+    {
+      "frame": 765,
+      "file": "working-sync-0765.png",
+      "descriptor": {
+        "state": "working",
+        "eyeMode": "friendly-spiral",
+        "aura": "green-code",
+        "sprite": "working",
+        "frame": 765,
+        "chapter": 3,
+        "rainbowPhase": 0,
+        "auraPhase": 2.4000000000000004,
+        "heroBounds": {
+          "x": 445,
+          "y": 936.7249527410208,
+          "width": 190,
+          "height": 116.55009451795841
+        },
+        "auraBounds": {
+          "x": 369,
+          "y": 878.4499054820416,
+          "width": 342,
+          "height": 233.10018903591683
+        },
+        "opacity": 0.95
+      },
+      "draws": [
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 514.1014965334692,
+            "y": 1011.4265415617723,
+            "width": 37.52466806587404,
+            "height": 23.15863562645552
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 433.6002700340968,
+            "y": 921.8881120177527,
+            "width": 40.25057077165013,
+            "height": 26.564107995744507
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 629.5963243257447,
+            "y": 961.7647846886504,
+            "width": 40.353615996948065,
+            "height": 26.55685640394927
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 561.5583842450216,
+            "y": 863.2882946125881,
+            "width": 39.990287174019386,
+            "height": 25.48078382169888
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 444.0869475628881,
+            "y": 1101.481663492902,
+            "width": 41.3577210851613,
+            "height": 27.298391764195912
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 646.2416295498966,
+            "y": 1087.4856184984988,
+            "width": 40.85341082208174,
+            "height": 25.494339174877496
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 337.4409784560269,
+            "y": 1017.4970608517779,
+            "width": 41.4689342012274,
+            "height": 25.57472595269428
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 534.9251337333523,
+            "y": 1168.221818707564,
+            "width": 43.37898058017049,
+            "height": 28.672085241122204
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 477.53264207150846,
+            "y": 776.5626721783416,
+            "width": 44.082359899951825,
+            "height": 28.722433963629328
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 345.6011338392432,
+            "y": 850.6313302089876,
+            "width": 43.7361478488574,
+            "height": 27.598911847649788
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 690.6157969928697,
+            "y": 827.2457136464861,
+            "width": 45.37228785019806,
+            "height": 29.364407667965224
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 753.9564321717788,
+            "y": 948.0152443124113,
+            "width": 45.73862491425484,
+            "height": 29.40017543767749
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 316.00223022117143,
+            "y": 1141.059517148442,
+            "width": 47.84423340531339,
+            "height": 31.49327039061609
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 645.5462221862114,
+            "y": 1209.224686200896,
+            "width": 47.11690621351477,
+            "height": 29.71346939508294
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 756.2695814475563,
+            "y": 1086.000413315291,
+            "width": 48.22035858926233,
+            "height": 31.602200713167804
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 599.0135911594964,
+            "y": 721.2987305856084,
+            "width": 48.8164456106947,
+            "height": 31.842968516283236
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 424.0364292081818,
+            "y": 1235.2818622842585,
+            "width": 48.45698777504265,
+            "height": 31.131343790857954
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 237.61045362358834,
+            "y": 959.5113188530022,
+            "width": 49.90946384657332,
+            "height": 32.98700584868311
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 417.85165008210583,
+            "y": 684.577068382346,
+            "width": 52.97730286313208,
+            "height": 34.33267964155789
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 282.45652878751065,
+            "y": 769.9113452751345,
+            "width": 53.59615873357245,
+            "height": 35.114687379418456
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 785.481080728953,
+            "y": 798.2236056459534,
+            "width": 56.38048990928155,
+            "height": 36.9719781612182
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 209.6017840824107,
+            "y": 1113.7484101339403,
+            "width": 55.74250727463175,
+            "height": 34.762212935244406
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 846.752081310799,
+            "y": 956.0526651419092,
+            "width": 57.78197019090203,
+            "height": 37.102799598994125
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 482.2447800296004,
+            "y": 1312.3858554924643,
+            "width": 58.38568408142419,
+            "height": 37.80372846819637
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 695.4166323161539,
+            "y": 1259.3824133664848,
+            "width": 58.88682814112963,
+            "height": 38.383122485780405
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 645.8763822175689,
+            "y": 662.3301770878854,
+            "width": 58.703290252362194,
+            "height": 36.97306867579164
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 175.87970274449194,
+            "y": 895.4290877508151,
+            "width": 59.11998904226613,
+            "height": 36.918435826494715
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 818.9951293574954,
+            "y": 1127.6310237118587,
+            "width": 60.61264655844661,
+            "height": 39.26334320128262
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 311.86169069875234,
+            "y": 1262.3049072835906,
+            "width": 62.74701655171407,
+            "height": 41.134814339068726
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 364.370702979009,
+            "y": 651.0894316389847,
+            "width": 66.03911162010695,
+            "height": 42.47091699546809
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 771.7811377800057,
+            "y": 748.5473685210454,
+            "width": 69.23740705717614,
+            "height": 43.148549090721644
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 171.301656559774,
+            "y": 1069.580728807373,
+            "width": 72.61851915584265,
+            "height": 48.000407619629186
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 585.9965446961037,
+            "y": 1306.2849644957682,
+            "width": 72.72151021716763,
+            "height": 47.41859639908853
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 221.3243723153682,
+            "y": 776.7387670771705,
+            "width": 74.17083544738855,
+            "height": 48.8012744394091
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 562.9494423210283,
+            "y": 636.4723597605174,
+            "width": 75.1797286391934,
+            "height": 49.68650606490269
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 831.6981179629142,
+            "y": 955.696957040817,
+            "width": 77.10242130073402,
+            "height": 50.763068340241034
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 747.2504649217614,
+            "y": 1170.7128742791656,
+            "width": 77.94987582053977,
+            "height": 49.60989597291882
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 344.6737737851322,
+            "y": 1246.7276820446436,
+            "width": 77.50773807426685,
+            "height": 48.847858566962714
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 254.24097553239918,
+            "y": 956.3289265587615,
+            "width": 84.36344688442037,
+            "height": 52.10240078872698
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 435.17966975045874,
+            "y": 731.8396781369805,
+            "width": 87.92532846783251,
+            "height": 58.01998454635145
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 641.9456267010821,
+            "y": 889.0449881682481,
+            "width": 88.60130030877326,
+            "height": 54.60338303850381
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 492.6142869326235,
+            "y": 1121.4197557052694,
+            "width": 92.69781773631553,
+            "height": 61.19344757383624
+          }
+        },
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 445,
+            "y": 936.7249527410208,
+            "width": 190,
+            "height": 116.55009451795831
+          }
+        }
+      ],
+      "eyeMetrics": [
+        {
+          "crop": {
+            "x": 475,
+            "y": 948,
+            "w": 61,
+            "h": 57
+          },
+          "largestDarkComponent": {
+            "area": 1371,
+            "width": 54,
+            "height": 47,
+            "rectangularFill": 0.5401891252955082
+          }
+        },
+        {
+          "crop": {
+            "x": 544,
+            "y": 948,
+            "w": 61,
+            "h": 57
+          },
+          "largestDarkComponent": {
+            "area": 1370,
+            "width": 54,
+            "height": 47,
+            "rectangularFill": 0.5397951142631994
+          }
+        }
+      ]
+    },
+    {
+      "frame": 990,
+      "file": "ultracode-0990.png",
+      "descriptor": {
+        "state": "ultracode",
+        "eyeMode": "friendly-spiral",
+        "aura": "flowing-rainbow",
+        "sprite": "spectrum",
+        "frame": 990,
+        "chapter": 4,
+        "rainbowPhase": 0.48,
+        "auraPhase": 0,
+        "heroBounds": {
+          "x": 214.5059182411701,
+          "y": 796.8072224431694,
+          "width": 650.9881635176598,
+          "height": 400.7972451496829
+        },
+        "auraBounds": null,
+        "opacity": 1
+      },
+      "draws": [
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 214.5059182411701,
+            "y": 797.5407874029381,
+            "width": 650.9881635176598,
+            "height": 399.33016835818626
+          }
+        },
+        {
+          "source": "canvas:generated",
+          "bounds": {
+            "x": 214.5059182411701,
+            "y": 796.8072490071897,
+            "width": 650.9881635176598,
+            "height": 400.797245149683
+          }
+        }
+      ],
+      "eyeMetrics": [
+        {
+          "crop": {
+            "x": 319,
+            "y": 837,
+            "w": 208,
+            "h": 196
+          },
+          "largestDarkComponent": {
+            "area": 17025,
+            "width": 187,
+            "height": 163,
+            "rectangularFill": 0.5585446671697123
+          }
+        },
+        {
+          "crop": {
+            "x": 553,
+            "y": 837,
+            "w": 208,
+            "h": 196
+          },
+          "largestDarkComponent": {
+            "area": 16988,
+            "width": 187,
+            "height": 163,
+            "rectangularFill": 0.5573307962337194
+          }
+        }
+      ]
+    },
+    {
+      "frame": 1020,
+      "file": "ultracode-1020.png",
+      "descriptor": {
+        "state": "ultracode",
+        "eyeMode": "friendly-spiral",
+        "aura": "flowing-rainbow",
+        "sprite": "spectrum",
+        "frame": 1020,
+        "chapter": 4,
+        "rainbowPhase": 0.64,
+        "auraPhase": 0,
+        "heroBounds": {
+          "x": 214.80570693298972,
+          "y": 809.6795323437686,
+          "width": 650.3885861340206,
+          "height": 400.42810024493053
+        },
+        "auraBounds": null,
+        "opacity": 1
+      },
+      "draws": [
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 214.80570693298972,
+            "y": 810.4123673524437,
+            "width": 650.3885861340204,
+            "height": 398.9623746701127
+          }
+        },
+        {
+          "source": "canvas:generated",
+          "bounds": {
+            "x": 214.80570693298972,
+            "y": 809.6795045650347,
+            "width": 650.3885861340204,
+            "height": 400.42810024493065
+          }
+        }
+      ],
+      "eyeMetrics": [
+        {
+          "crop": {
+            "x": 319,
+            "y": 850,
+            "w": 208,
+            "h": 196
+          },
+          "largestDarkComponent": {
+            "area": 17016,
+            "width": 186,
+            "height": 163,
+            "rectangularFill": 0.5612507421333861
+          }
+        },
+        {
+          "crop": {
+            "x": 553,
+            "y": 850,
+            "w": 208,
+            "h": 196
+          },
+          "largestDarkComponent": {
+            "area": 17080,
+            "width": 187,
+            "height": 163,
+            "rectangularFill": 0.5603490699124044
+          }
+        }
+      ]
+    },
+    {
+      "frame": 1050,
+      "file": "ultracode-1050.png",
+      "descriptor": {
+        "state": "ultracode",
+        "eyeMode": "friendly-spiral",
+        "aura": "flowing-rainbow",
+        "sprite": "spectrum",
+        "frame": 1050,
+        "chapter": 4,
+        "rainbowPhase": 0.8,
+        "auraPhase": 0,
+        "heroBounds": {
+          "x": 214.92359605426907,
+          "y": 794.418320172866,
+          "width": 650.1528078914619,
+          "height": 400.2829374364808
+        },
+        "auraBounds": null,
+        "opacity": 1
+      },
+      "draws": [
+        {
+          "source": "http://127.0.0.1:8766/sprites/01-idle.png",
+          "bounds": {
+            "x": 214.92359605426907,
+            "y": 795.150942845583,
+            "width": 650.1528078914619,
+            "height": 398.81774321508385
+          }
+        },
+        {
+          "source": "canvas:generated",
+          "bounds": {
+            "x": 214.92359605426907,
+            "y": 794.4183457348846,
+            "width": 650.1528078914619,
+            "height": 400.2829374364809
+          }
+        }
+      ],
+      "eyeMetrics": [
+        {
+          "crop": {
+            "x": 319,
+            "y": 834,
+            "w": 208,
+            "h": 196
+          },
+          "largestDarkComponent": {
+            "area": 16949,
+            "width": 186,
+            "height": 163,
+            "rectangularFill": 0.5590408338280889
+          }
+        },
+        {
+          "crop": {
+            "x": 553,
+            "y": 834,
+            "w": 208,
+            "h": 196
+          },
+          "largestDarkComponent": {
+            "area": 16986,
+            "width": 187,
+            "height": 163,
+            "rectangularFill": 0.5572651815885306
+          }
+        }
+      ]
+    },
+    {
+      "preview": "normal",
+      "time": 3,
+      "file": "preview-normal-3s.png",
+      "descriptor": {
+        "state": "normal",
+        "eyeMode": "rectangular",
+        "aura": "none",
+        "sprite": "normal",
+        "frame": null,
+        "chapter": null,
+        "preview": true,
+        "rainbowPhase": 0,
+        "auraPhase": 0,
+        "heroBounds": {
+          "x": 124.81494505494507,
+          "y": 100.97142857142858,
+          "width": 290.37010989010986,
+          "height": 178.05714285714285
+        },
+        "auraBounds": null,
+        "opacity": 1
+      },
+      "eyeMetrics": [
+        {
+          "crop": {
+            "x": 171,
+            "y": 119,
+            "w": 93,
+            "h": 87
+          },
+          "largestDarkComponent": {
+            "area": 464,
+            "width": 16,
+            "height": 29,
+            "rectangularFill": 1
+          }
+        },
+        {
+          "crop": {
+            "x": 276,
+            "y": 119,
+            "w": 93,
+            "h": 87
+          },
+          "largestDarkComponent": {
+            "area": 464,
+            "width": 16,
+            "height": 29,
+            "rectangularFill": 1
+          }
+        }
+      ]
+    },
+    {
+      "preview": "working",
+      "time": 3,
+      "file": "preview-working-3s.png",
+      "descriptor": {
+        "state": "working",
+        "eyeMode": "friendly-spiral",
+        "aura": "green-code",
+        "sprite": "working",
+        "frame": null,
+        "chapter": null,
+        "preview": true,
+        "rainbowPhase": 0,
+        "auraPhase": 2.4000000000000004,
+        "heroBounds": {
+          "x": 124.86559542152762,
+          "y": 100.97142857142856,
+          "width": 290.26880915694477,
+          "height": 178.05714285714288
+        },
+        "auraBounds": {
+          "x": 8.75807175874968,
+          "y": 11.942857142857122,
+          "width": 522.4838564825006,
+          "height": 356.11428571428576
+        },
+        "opacity": 1
+      },
+      "eyeMetrics": [
+        {
+          "crop": {
+            "x": 171,
+            "y": 119,
+            "w": 93,
+            "h": 87
+          },
+          "largestDarkComponent": {
+            "area": 3261,
+            "width": 83,
+            "height": 72,
+            "rectangularFill": 0.5456827309236948
+          }
+        },
+        {
+          "crop": {
+            "x": 276,
+            "y": 119,
+            "w": 93,
+            "h": 87
+          },
+          "largestDarkComponent": {
+            "area": 3266,
+            "width": 83,
+            "height": 72,
+            "rectangularFill": 0.5465194109772423
+          }
+        }
+      ]
+    },
+    {
+      "preview": "working",
+      "time": 4,
+      "file": "preview-working-4s.png",
+      "descriptor": {
+        "state": "working",
+        "eyeMode": "friendly-spiral",
+        "aura": "green-code",
+        "sprite": "working",
+        "frame": null,
+        "chapter": null,
+        "preview": true,
+        "rainbowPhase": 0,
+        "auraPhase": 3.2,
+        "heroBounds": {
+          "x": 124.86559542152762,
+          "y": 100.97142857142856,
+          "width": 290.26880915694477,
+          "height": 178.05714285714288
+        },
+        "auraBounds": {
+          "x": 8.75807175874968,
+          "y": 11.942857142857122,
+          "width": 522.4838564825006,
+          "height": 356.11428571428576
+        },
+        "opacity": 1
+      },
+      "eyeMetrics": [
+        {
+          "crop": {
+            "x": 171,
+            "y": 119,
+            "w": 93,
+            "h": 87
+          },
+          "largestDarkComponent": {
+            "area": 3261,
+            "width": 83,
+            "height": 72,
+            "rectangularFill": 0.5456827309236948
+          }
+        },
+        {
+          "crop": {
+            "x": 276,
+            "y": 119,
+            "w": 93,
+            "h": 87
+          },
+          "largestDarkComponent": {
+            "area": 3266,
+            "width": 83,
+            "height": 72,
+            "rectangularFill": 0.5465194109772423
+          }
+        }
+      ]
+    },
+    {
+      "preview": "working",
+      "time": 5,
+      "file": "preview-working-5s.png",
+      "descriptor": {
+        "state": "working",
+        "eyeMode": "friendly-spiral",
+        "aura": "green-code",
+        "sprite": "working",
+        "frame": null,
+        "chapter": null,
+        "preview": true,
+        "rainbowPhase": 0,
+        "auraPhase": 4,
+        "heroBounds": {
+          "x": 124.86559542152762,
+          "y": 100.97142857142856,
+          "width": 290.26880915694477,
+          "height": 178.05714285714288
+        },
+        "auraBounds": {
+          "x": 8.75807175874968,
+          "y": 11.942857142857122,
+          "width": 522.4838564825006,
+          "height": 356.11428571428576
+        },
+        "opacity": 1
+      },
+      "eyeMetrics": [
+        {
+          "crop": {
+            "x": 171,
+            "y": 119,
+            "w": 93,
+            "h": 87
+          },
+          "largestDarkComponent": {
+            "area": 3261,
+            "width": 83,
+            "height": 72,
+            "rectangularFill": 0.5456827309236948
+          }
+        },
+        {
+          "crop": {
+            "x": 276,
+            "y": 119,
+            "w": 93,
+            "h": 87
+          },
+          "largestDarkComponent": {
+            "area": 3266,
+            "width": 83,
+            "height": 72,
+            "rectangularFill": 0.5465194109772423
+          }
+        }
+      ]
+    },
+    {
+      "preview": "ultracode",
+      "time": 3,
+      "file": "preview-ultracode-3s.png",
+      "descriptor": {
+        "state": "ultracode",
+        "eyeMode": "friendly-spiral",
+        "aura": "flowing-rainbow",
+        "sprite": "spectrum",
+        "frame": null,
+        "chapter": null,
+        "preview": true,
+        "rainbowPhase": 0.48,
+        "auraPhase": 0,
+        "heroBounds": {
+          "x": 125.3968448729185,
+          "y": 100.97142857142858,
+          "width": 289.206310254163,
+          "height": 178.05714285714285
+        },
+        "auraBounds": null,
+        "opacity": 1
+      },
+      "eyeMetrics": [
+        {
+          "crop": {
+            "x": 172,
+            "y": 119,
+            "w": 93,
+            "h": 87
+          },
+          "largestDarkComponent": {
+            "area": 3324,
+            "width": 83,
+            "height": 72,
+            "rectangularFill": 0.5562248995983936
+          }
+        },
+        {
+          "crop": {
+            "x": 276,
+            "y": 119,
+            "w": 93,
+            "h": 87
+          },
+          "largestDarkComponent": {
+            "area": 3340,
+            "width": 83,
+            "height": 72,
+            "rectangularFill": 0.5589022757697456
+          }
+        }
+      ]
+    },
+    {
+      "preview": "ultracode",
+      "time": 4,
+      "file": "preview-ultracode-4s.png",
+      "descriptor": {
+        "state": "ultracode",
+        "eyeMode": "friendly-spiral",
+        "aura": "flowing-rainbow",
+        "sprite": "spectrum",
+        "frame": null,
+        "chapter": null,
+        "preview": true,
+        "rainbowPhase": 0.64,
+        "auraPhase": 0,
+        "heroBounds": {
+          "x": 125.3968448729185,
+          "y": 100.97142857142858,
+          "width": 289.206310254163,
+          "height": 178.05714285714285
+        },
+        "auraBounds": null,
+        "opacity": 1
+      },
+      "eyeMetrics": [
+        {
+          "crop": {
+            "x": 172,
+            "y": 119,
+            "w": 93,
+            "h": 87
+          },
+          "largestDarkComponent": {
+            "area": 3324,
+            "width": 83,
+            "height": 72,
+            "rectangularFill": 0.5562248995983936
+          }
+        },
+        {
+          "crop": {
+            "x": 276,
+            "y": 119,
+            "w": 93,
+            "h": 87
+          },
+          "largestDarkComponent": {
+            "area": 3340,
+            "width": 83,
+            "height": 72,
+            "rectangularFill": 0.5589022757697456
+          }
+        }
+      ]
+    },
+    {
+      "preview": "ultracode",
+      "time": 5,
+      "file": "preview-ultracode-5s.png",
+      "descriptor": {
+        "state": "ultracode",
+        "eyeMode": "friendly-spiral",
+        "aura": "flowing-rainbow",
+        "sprite": "spectrum",
+        "frame": null,
+        "chapter": null,
+        "preview": true,
+        "rainbowPhase": 0.8,
+        "auraPhase": 0,
+        "heroBounds": {
+          "x": 125.3968448729185,
+          "y": 100.97142857142858,
+          "width": 289.206310254163,
+          "height": 178.05714285714285
+        },
+        "auraBounds": null,
+        "opacity": 1
+      },
+      "eyeMetrics": [
+        {
+          "crop": {
+            "x": 172,
+            "y": 119,
+            "w": 93,
+            "h": 87
+          },
+          "largestDarkComponent": {
+            "area": 3324,
+            "width": 83,
+            "height": 72,
+            "rectangularFill": 0.5562248995983936
+          }
+        },
+        {
+          "crop": {
+            "x": 276,
+            "y": 119,
+            "w": 93,
+            "h": 87
+          },
+          "largestDarkComponent": {
+            "area": 3340,
+            "width": 83,
+            "height": 72,
+            "rectangularFill": 0.5589022757697456
+          }
+        }
+      ]
+    },
+    {
+      "type": "browser-library",
+      "file": "state-library.png",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    }
+  ],
+  "requests": [
+    "http://127.0.0.1:8766/sprites/06-normal.png",
+    "http://127.0.0.1:8766/sprites/01-idle.png",
+    "http://127.0.0.1:8766/sprites/05-spectrum.png",
+    "http://127.0.0.1:8766/sprites/06-normal.png",
+    "http://127.0.0.1:8766/sprites/01-idle.png",
+    "http://127.0.0.1:8766/sprites/05-spectrum.png"
+  ],
+  "pageErrors": [],
+  "badResponses": [],
+  "browserVersion": "154.0.4258.37",
+  "finishedAt": "2026-09-29T01:31:01.994Z",
+  "summary": {
+    "passed": 26,
+    "failed": 0
+  },
+  "visualReview": "Screenshots saved for independent visual inspection; automatic checks alone do not establish expression quality.",
+  "unverified": [
+    "Exported MP4 and full-timeline continuity",
+    "Audio playback and audiovisual synchronization",
+    "Perceived expression and aura quality until screenshot inspection"
+  ]
+}

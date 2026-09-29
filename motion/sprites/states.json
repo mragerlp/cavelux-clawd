@@ -1,0 +1,37 @@
+{
+  "revision": 3,
+  "normal": {
+    "base": "06-normal.png",
+    "eyes": "two plain black rectangles",
+    "aura": "none",
+    "purpose": "resting, greeting, and closing signature"
+  },
+  "working": {
+    "base": "01-idle.png",
+    "eyes": "friendly open spirals with counter-rotating pixel-grid hypnosis",
+    "aura": "animated green code tokens and trails",
+    "purpose": "skills, MCPs, workflows, and coordinated swarms"
+  },
+  "ultracode": {
+    "base": "05-spectrum.png",
+    "eyes": "black spirals with counter-rotating pixel-grid hypnosis",
+    "aura": "none",
+    "body": "animated flowing rainbow wave",
+    "purpose": "ultracode transformation"
+  },
+  "animationSource": "../film.js",
+  "previewEntryPoint": "renderCharacterPreview(state, time, targetCanvas, options = {})",
+  "previewOptions": {
+    "background": {"values": ["dark", "light", "transparent"], "default": "dark"},
+    "scale": {"minimum": 0.4, "maximum": 1.4, "default": 1},
+    "eyeSpeed": {"minimum": 0, "maximum": 3, "default": 1},
+    "aura": {"default": true, "meaning": "toggle external green code aura; rainbow body animation remains active"}
+  },
+  "embedding": {
+    "characterOnlyFlag": "CAVELUX_CHARACTER_ONLY = true",
+    "assetOverrides": "CAVELUX_ASSET_URLS = { normal, working, spectrum }",
+    "readiness": "await window.filmReady",
+    "details": "Set globals before loading film.js. Character-only mode needs no #film canvas, skips brand assets, and does not render the full film. Source PNG files remain unchanged."
+  },
+  "retiredFromActiveUse": ["02-focused.png", "03-wink.png", "04-celebrate.png"]
+}

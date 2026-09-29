@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920" fill="none" role="img" aria-labelledby="title description">
+  <title id="title">Topology map</title>
+  <desc id="description">One root branches into two working lanes and four leaf nodes, with one highlighted route. Transparent portrait overlay.</desc>
+  <g id="network-links" stroke="#F0F0E8" stroke-width="1.75" opacity="0.48">
+    <path id="link-root-left" d="M540 470V562H310V680"/>
+    <path id="link-root-right" d="M540 470V562H770V680"/>
+    <path id="link-left-outer" d="M310 680V798H180V930"/>
+    <path id="link-left-inner" d="M310 680V798H430V930"/>
+    <path id="link-right-inner" d="M770 680V798H650V930"/>
+    <path id="link-right-outer" d="M770 680V798H900V930"/>
+  </g>
+  <g id="active-route" stroke="#92FA11" stroke-width="2">
+    <path id="route-root-to-lane" d="M540 470V562H310V680"/>
+    <path id="route-lane-to-leaf" d="M310 680V798H430V930"/>
+  </g>
+  <g id="network-nodes" fill="#101210" stroke="#F0F0E8" stroke-width="2">
+    <rect id="node-root" x="523" y="453" width="34" height="34" stroke="#92FA11"/>
+    <rect id="node-lane-left" x="297" y="667" width="26" height="26" stroke="#92FA11"/>
+    <rect id="node-lane-right" x="757" y="667" width="26" height="26"/>
+    <rect id="node-leaf-left-outer" x="171" y="921" width="18" height="18"/>
+    <rect id="node-leaf-left-inner" x="421" y="921" width="18" height="18" stroke="#92FA11"/>
+    <rect id="node-leaf-right-inner" x="641" y="921" width="18" height="18"/>
+    <rect id="node-leaf-right-outer" x="891" y="921" width="18" height="18"/>
+  </g>
+  <g id="node-status" fill="#92FA11">
+    <rect id="root-status" x="536" y="466" width="8" height="8"/>
+    <rect id="leaf-status" x="426" y="926" width="8" height="8"/>
+  </g>
+</svg>

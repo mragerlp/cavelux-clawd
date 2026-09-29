@@ -1,0 +1,25 @@
+{
+  "revision": 2,
+  "normal": {
+    "base": "06-normal.png",
+    "eyes": "two plain black rectangles",
+    "aura": "none",
+    "purpose": "resting, greeting, and closing signature"
+  },
+  "working": {
+    "base": "01-idle.png",
+    "eyes": "friendly open spirals",
+    "aura": "animated green code tokens and trails",
+    "purpose": "skills, MCPs, workflows, and coordinated swarms"
+  },
+  "ultracode": {
+    "base": "05-spectrum.png",
+    "eyes": "black spirals",
+    "aura": "none",
+    "body": "animated flowing rainbow wave",
+    "purpose": "ultracode transformation"
+  },
+  "animationSource": "../film.js",
+  "previewEntryPoint": "renderCharacterPreview(state, time, targetCanvas)",
+  "retiredFromActiveUse": ["02-focused.png", "03-wink.png", "04-celebrate.png"]
+}

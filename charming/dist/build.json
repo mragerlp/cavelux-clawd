@@ -1,0 +1,11 @@
+{
+  "moduleBytes": 5334,
+  "uiBytes": 45018,
+  "combinedBytes": 50352,
+  "limitBytes": 65536,
+  "assetKeys": [
+    "06-normal.png",
+    "01-idle.png",
+    "05-spectrum.png"
+  ]
+}

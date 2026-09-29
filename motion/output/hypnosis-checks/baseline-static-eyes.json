@@ -1,0 +1,121 @@
+{
+  "startedAt": "2026-09-29T01:39:31.692Z",
+  "root": "C:\\Users\\jared\\.codex\\visualizations\\2026\\09\\29\\01a0ea97-8016-7c91-8112-655302cb1db6\\cavelux-clawd\\motion",
+  "checks": [
+    {
+      "name": "normal isolated black-eye motion",
+      "status": "PASS",
+      "evidence": {
+        "state": "normal",
+        "times": [
+          0.2,
+          0.65
+        ],
+        "heroBefore": {
+          "x": 168.967032967033,
+          "y": 132.8571428571429,
+          "width": 382.065934065934,
+          "height": 234.28571428571425
+        },
+        "heroAfter": {
+          "x": 168.967032967033,
+          "y": 132.8571428571429,
+          "width": 382.065934065934,
+          "height": 234.28571428571425
+        },
+        "eyes": [
+          {
+            "blackBefore": 941,
+            "blackAfter": 941,
+            "changed": 0
+          },
+          {
+            "blackBefore": 910,
+            "blackAfter": 910,
+            "changed": 0
+          }
+        ],
+        "outsideEyeBlackChanges": 0
+      }
+    },
+    {
+      "name": "working isolated black-eye motion",
+      "status": "FAIL",
+      "error": "Expected actual black spiral motion in both eyes: [{\"blackBefore\":5764,\"blackAfter\":5764,\"changed\":0},{\"blackBefore\":5788,\"blackAfter\":5788,\"changed\":0}]",
+      "evidence": {
+        "state": "working",
+        "times": [
+          0.2,
+          0.65
+        ],
+        "heroBefore": {
+          "x": 169.03367818622053,
+          "y": 132.85714285714283,
+          "width": 381.93264362755895,
+          "height": 234.28571428571433
+        },
+        "heroAfter": {
+          "x": 169.03367818622053,
+          "y": 132.85714285714283,
+          "width": 381.93264362755895,
+          "height": 234.28571428571433
+        },
+        "eyes": [
+          {
+            "blackBefore": 5764,
+            "blackAfter": 5764,
+            "changed": 0
+          },
+          {
+            "blackBefore": 5788,
+            "blackAfter": 5788,
+            "changed": 0
+          }
+        ],
+        "outsideEyeBlackChanges": 0
+      }
+    },
+    {
+      "name": "ultracode isolated black-eye motion",
+      "status": "FAIL",
+      "error": "Expected actual black spiral motion in both eyes: [{\"blackBefore\":5932,\"blackAfter\":5932,\"changed\":0},{\"blackBefore\":5990,\"blackAfter\":5990,\"changed\":0}]",
+      "evidence": {
+        "state": "ultracode",
+        "times": [
+          0.2,
+          0.65
+        ],
+        "heroBefore": {
+          "x": 169.73269062226115,
+          "y": 132.85714285714283,
+          "width": 380.5346187554777,
+          "height": 234.28571428571433
+        },
+        "heroAfter": {
+          "x": 169.73269062226115,
+          "y": 132.85714285714283,
+          "width": 380.5346187554777,
+          "height": 234.28571428571433
+        },
+        "eyes": [
+          {
+            "blackBefore": 5932,
+            "blackAfter": 5932,
+            "changed": 0
+          },
+          {
+            "blackBefore": 5990,
+            "blackAfter": 5990,
+            "changed": 0
+          }
+        ],
+        "outsideEyeBlackChanges": 0
+      }
+    }
+  ],
+  "finishedAt": "2026-09-29T01:39:32.690Z",
+  "summary": {
+    "passed": 1,
+    "failed": 2
+  }
+}

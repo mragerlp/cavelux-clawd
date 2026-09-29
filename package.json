@@ -1,0 +1,22 @@
+{
+  "name": "cavelux-clawd",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Cavelux Clawd character studio, motion assets, and showreel sources",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "preview": "node motion/server.mjs",
+    "studio": "node charming/server.mjs",
+    "build:studio": "node charming/build.mjs",
+    "test:backend": "node --test charming/backend.test.mjs",
+    "test:studio": "node charming/verify-ui.mjs",
+    "test:exports": "node charming/verify-export.mjs",
+    "test": "node --test charming/backend.test.mjs && node scripts/check-motion.mjs && node charming/verify-ui.mjs && node charming/verify-export.mjs",
+    "render": "node motion/render.mjs",
+    "verify:video": "node motion/verify.mjs",
+    "test:motion": "node scripts/check-motion.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

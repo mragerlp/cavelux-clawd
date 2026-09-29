@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920" fill="none" role="img" aria-labelledby="title description">
+  <title id="title">Orbital diagram</title>
+  <desc id="description">Three precise orbital ellipses and calibration axes around a shared center. Transparent portrait overlay.</desc>
+  <g id="axis-system" stroke="#F0F0E8" stroke-width="1" opacity="0.22">
+    <path id="axis-horizontal" d="M140 750H940"/>
+    <path id="axis-vertical" d="M540 350V1150"/>
+    <path id="axis-ticks-horizontal" d="M220 744V756M300 746V754M380 746V754M460 746V754M620 746V754M700 746V754M780 746V754M860 744V756"/>
+    <path id="axis-ticks-vertical" d="M534 430H546M536 510H544M536 590H544M536 670H544M536 830H544M536 910H544M536 990H544M534 1070H546"/>
+  </g>
+  <g id="orbital-system" transform="translate(540 750)" stroke="#F0F0E8" stroke-width="1.75">
+    <ellipse id="orbit-horizontal" rx="326" ry="116" opacity="0.8"/>
+    <ellipse id="orbit-rising" rx="326" ry="116" transform="rotate(-60)" opacity="0.55"/>
+    <ellipse id="orbit-falling" rx="326" ry="116" transform="rotate(60)" opacity="0.55"/>
+  </g>
+  <g id="orbital-particles" fill="#92FA11">
+    <circle id="particle-horizontal" cx="866" cy="750" r="6"/>
+    <circle id="particle-rising" cx="703" cy="467.68" r="5"/>
+    <circle id="particle-falling" cx="377" cy="467.68" r="5"/>
+  </g>
+  <g id="orbital-origin" stroke="#92FA11" stroke-width="1.75">
+    <rect id="origin-square" x="532" y="742" width="16" height="16"/>
+    <path id="origin-cross" d="M516 750H524M556 750H564M540 726V734M540 766V774"/>
+  </g>
+</svg>

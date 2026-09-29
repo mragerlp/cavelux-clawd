@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920" fill="none" role="img" aria-labelledby="title description">
+  <title id="title">Terminal process module</title>
+  <desc id="description">Minimal retro terminal with three generic process states: observe, build, and verify. Transparent portrait overlay.</desc>
+  <g id="terminal-chrome" stroke="#F0F0E8" stroke-width="1.5" opacity="0.55">
+    <path id="terminal-outline" d="M140 540H940V1000H140Z"/>
+    <path id="terminal-divider" d="M140 606H940"/>
+  </g>
+  <g id="terminal-window-marks" fill="#F0F0E8" opacity="0.6">
+    <rect id="window-mark-one" x="170" y="568" width="10" height="10"/>
+    <rect id="window-mark-two" x="194" y="568" width="10" height="10"/>
+    <rect id="window-mark-three" x="218" y="568" width="10" height="10"/>
+  </g>
+  <g id="terminal-labels" fill="#F0F0E8" font-family="'Courier New', Courier, monospace" font-size="34" letter-spacing="1">
+    <text id="label-observe" x="224" y="702">observe</text>
+    <text id="label-build" x="224" y="790">build</text>
+    <text id="label-verify" x="224" y="878">verify</text>
+  </g>
+  <g id="terminal-line-markers" stroke="#92FA11" stroke-width="2">
+    <path id="marker-observe" d="M182 680L190 688L182 696"/>
+    <path id="marker-build" d="M182 768L190 776L182 784"/>
+    <path id="marker-verify" d="M182 856L190 864L182 872"/>
+  </g>
+  <rect id="terminal-cursor" x="362" y="852" width="18" height="30" fill="#92FA11"/>
+  <g id="terminal-footer" stroke="#F0F0E8" stroke-width="1" opacity="0.25">
+    <path id="terminal-footer-rule" d="M178 938H902"/>
+    <path id="terminal-footer-ticks" d="M178 950V958M194 950V958M210 950V958M886 950V958M902 950V958"/>
+  </g>
+</svg>

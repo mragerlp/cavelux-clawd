@@ -1,0 +1,50 @@
+{
+  "canvas": { "width": 1080, "height": 1920, "viewBox": "0 0 1080 1920" },
+  "palette": { "ink": "#101210", "paper": "#F0F0E8", "lime": "#92FA11" },
+  "background": "transparent",
+  "designNotes": "Sparse overlays intended for individual scene use. All geometry is native SVG. Spectrum colors appear only in spectrum-stripe.svg. The terminal uses live editable monospace text; font appearance depends on the renderer.",
+  "assets": [
+    {
+      "file": "calibration-frame.svg",
+      "name": "Calibration frame",
+      "motionUse": "Draw corner brackets first, reveal edge ticks, then resolve the center reticle. Use as a short acquisition or focus state around the mascot.",
+      "animateIds": ["corner-brackets", "edge-ticks", "center-reticle", "registration-squares"],
+      "anchor": [540, 750]
+    },
+    {
+      "file": "orbital-diagram.svg",
+      "name": "Orbital diagram",
+      "motionUse": "Reveal the three orbital ellipses in sequence. Move each particle along its matching ellipse or rotate the whole orbital system around the shared origin.",
+      "animateIds": ["axis-system", "orbit-horizontal", "orbit-rising", "orbit-falling", "orbital-particles", "orbital-origin"],
+      "anchor": [540, 750]
+    },
+    {
+      "file": "topology-map.svg",
+      "name": "Topology map",
+      "motionUse": "Trace links from the root into two lanes and four leaves. Pop the nodes on after each link, then sweep the lime route to introduce a swarm or delegation beat.",
+      "animateIds": ["network-links", "active-route", "network-nodes", "node-status"],
+      "anchor": [540, 470]
+    },
+    {
+      "file": "oscilloscope-trace.svg",
+      "name": "Oscilloscope trace",
+      "motionUse": "Use a left-to-right clip reveal or a path stroke draw on signal-trace, with the head tracking the reveal. The signal is decorative geometry, not measured telemetry.",
+      "animateIds": ["signal-grid", "signal-calibration", "signal-trace", "signal-head"],
+      "anchor": [540, 750]
+    },
+    {
+      "file": "terminal-module.svg",
+      "name": "Terminal process module",
+      "motionUse": "Reveal observe, build, and verify on successive beats. Blink terminal-cursor, fade previous lines slightly, and use the window marks as a restrained opening cue.",
+      "animateIds": ["terminal-chrome", "terminal-window-marks", "label-observe", "label-build", "label-verify", "terminal-line-markers", "terminal-cursor"],
+      "anchor": [540, 770]
+    },
+    {
+      "file": "spectrum-stripe.svg",
+      "name": "Spectrum stripe",
+      "motionUse": "Reveal the eight hard-edged segments as a brief spectrum scan or color-state transition. Scale the band height or wipe across it before the mascot rainbow transformation.",
+      "animateIds": ["spectrum-bands", "band-red", "band-orange", "band-yellow", "band-lime", "band-cyan", "band-blue", "band-violet", "band-pink", "spectrum-registration"],
+      "anchor": [540, 750]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "surface": "Local browser with injected documented Charming helper responses; not hosted upload or opening evidence",
+  "startedAt": "2026-09-29T02:00:46.529Z",
+  "sourceHash": "fa873ccf7592fd2f6746b41defbf50bdcc8379774bdeb388e4e7668bd5dc4f17",
+  "checks": [
+    {
+      "name": "native PNG uploads a File to the fixed key then signs and opens it",
+      "status": "FAIL",
+      "error": "page.waitForFunction: Timeout 2500ms exceeded."
+    },
+    {
+      "name": "native JSON uploads the selected settings and reuses its fixed key",
+      "status": "FAIL",
+      "error": "page.waitForFunction: Timeout 2500ms exceeded."
+    },
+    {
+      "name": "upload failure stops signing and opening and shows an inline error",
+      "status": "FAIL",
+      "error": "page.waitForFunction: Timeout 2500ms exceeded."
+    },
+    {
+      "name": "URL failure never claims an artifact is ready",
+      "status": "FAIL",
+      "error": "page.waitForFunction: Timeout 2500ms exceeded."
+    },
+    {
+      "name": "host opening failure keeps the generated link and retry does not upload again",
+      "status": "FAIL",
+      "error": "page.waitForFunction: Timeout 2500ms exceeded."
+    },
+    {
+      "name": "read-only viewers use a Blob download without a native asset write",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n"
+    },
+    {
+      "name": "native export has no uncaught browser errors",
+      "status": "PASS",
+      "evidence": []
+    }
+  ],
+  "errors": [],
+  "summary": {
+    "passed": 1,
+    "failed": 6
+  },
+  "finishedAt": "2026-09-29T02:01:00.905Z"
+}

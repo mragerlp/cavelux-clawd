@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920" fill="none" role="img" aria-labelledby="title description">
+  <title id="title">Spectrum stripe</title>
+  <desc id="description">Eight hard-edged spectrum segments with tiny registration marks. Transparent portrait overlay for a brief color transformation.</desc>
+  <g id="spectrum-bands">
+    <rect id="band-red" x="140" y="738" width="100" height="24" fill="#FA5E50"/>
+    <rect id="band-orange" x="240" y="738" width="100" height="24" fill="#FFAA55"/>
+    <rect id="band-yellow" x="340" y="738" width="100" height="24" fill="#EFDD67"/>
+    <rect id="band-lime" x="440" y="738" width="100" height="24" fill="#92FA11"/>
+    <rect id="band-cyan" x="540" y="738" width="100" height="24" fill="#70D8CB"/>
+    <rect id="band-blue" x="640" y="738" width="100" height="24" fill="#78ACEA"/>
+    <rect id="band-violet" x="740" y="738" width="100" height="24" fill="#AD8AEF"/>
+    <rect id="band-pink" x="840" y="738" width="100" height="24" fill="#D995CD"/>
+  </g>
+  <g id="spectrum-registration" stroke="#F0F0E8" stroke-width="1" opacity="0.55">
+    <path id="spectrum-left-marks" d="M140 716V726M140 774V784"/>
+    <path id="spectrum-right-marks" d="M940 716V726M940 774V784"/>
+    <path id="spectrum-center-marks" d="M540 720V726M540 774V780"/>
+  </g>
+</svg>

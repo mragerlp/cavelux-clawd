@@ -1,0 +1,41 @@
+{
+  "title": "CAVELUX - From signal to spectrum",
+  "video": "output/cavelux-from-signal-to-spectrum.mp4",
+  "durationSeconds": 45,
+  "width": 1080,
+  "height": 1920,
+  "framesPerSecond": 30,
+  "frames": 1350,
+  "videoCodec": "H264",
+  "pixelFormat": "yuv420p",
+  "colorRange": "limited",
+  "colorSpace": "BT.709",
+  "audio": "AAC stereo 48000 Hz",
+  "videoSha256": "97A0FD5DA9BD32290FF5EF87D41FCE1D650C2ED6E376877B36F77E512153419C",
+  "assets": {
+    "characterStates": 5,
+    "editableSvgGraphics": 6,
+    "storyboardCaptures": 6,
+    "verticalCover": "output/cover.png",
+    "originalAudioStems": [
+      "audio/score.wav",
+      "audio/sfx.wav"
+    ],
+    "originalMaster": "audio/master.wav"
+  },
+  "checks": {
+    "fullMediaDecode": "PASS exit 0",
+    "metadataVerification": "PASS exit 0",
+    "boundaryFrames": 20,
+    "uiChecksPassed": 19,
+    "uiChecksFailed": 0,
+    "uiSourceHashesMatch": true,
+    "pngAndSvgVisualReview": "sampled",
+    "documentation": "PASS exit 0"
+  },
+  "unverified": [
+    "Instagram upload and platform transcoding",
+    "Other device/browser playback",
+    "Perceptual listening and full subjective audio/visual assessment"
+  ]
+}

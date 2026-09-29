@@ -1,0 +1,35 @@
+{
+  "appId": "f4528594-b79b-4627-a4a5-e7a545d128b5",
+  "url": "https://charm.ing/bloodwave/cavelux-clawd-studio",
+  "revision": 4,
+  "visibility": "private",
+  "sourceBundle": "charming/dist/source.json",
+  "sourceBundleSHA256": "4EB811D6EA1F3772D249C1B8B35AFB96D979956C92CFC9D6A57F5DCD9C4FE3A3",
+  "sourceReadback": "PASS: persisted module, UI and styles exactly match the local build",
+  "hostedBrowserChecks": {
+    "originalAssetsLoaded": "PASS",
+    "savedPresetAfterReload": "PASS: Working / hypnosis restores Working, eyeSpeed 1.5, scale 1, transparent background and enabled aura",
+    "nativePNGExport": "PASS: asset uploaded, signed URL opened an image tab, 1080x760 PNG downloaded and visually inspected",
+    "nativeJSONExport": "PASS: asset uploaded, exported document opened in browser and contained the selected Working / hypnosis settings",
+    "downloadedPNG": "charming/e2e-evidence/hosted-working-export.png",
+    "downloadedPNGSHA256": "02EA39FB7DFB53B49D8C9F363B642C7AB7497BC026FA38AF9F310C86FB03296B"
+  },
+  "localChecks": {
+    "command": "npm test",
+    "exitCode": 0,
+    "backend": { "passed": 15, "failed": 0 },
+    "character": { "passed": 26, "failed": 0 },
+    "hypnosis": { "passed": 9, "failed": 0 },
+    "motionUI": { "passed": 19, "failed": 0 },
+    "studioUI": { "passed": 18, "failed": 0 },
+    "nativeExportAdapter": { "passed": 7, "failed": 0 },
+    "filmBoundarySamples": { "passed": 20, "failed": 0 },
+    "scope": "Windows with installed Microsoft Edge; native-export adapter tests use local helpers and are separate from the hosted browser checks"
+  },
+  "exportRetention": "Each native export replaces the latest asset of that type. Download copies to retain multiple outputs.",
+  "unverified": [
+    "Automatic local file download of hosted JSON in the Codex in-app browser; its JSON document was opened and inspected instead",
+    "Other operating systems and browser engines",
+    "Instagram upload, transcoding, and playback on physical mobile devices"
+  ]
+}
