@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "exitCode": 0,
+  "v4VideoPreserved": "0111552b96da60f815871c95127058816933edf5a8147549501cf5f0d070b807",
+  "characterRendererUnchanged": true,
+  "characterPreviewPNGsByteIdenticalToV4": [
+    "motion/output/character-checks/preview-normal-3s.png",
+    "motion/output/character-checks/preview-working-3s.png",
+    "motion/output/character-checks/preview-working-4s.png",
+    "motion/output/character-checks/preview-working-5s.png",
+    "motion/output/character-checks/preview-ultracode-3s.png",
+    "motion/output/character-checks/preview-ultracode-4s.png",
+    "motion/output/character-checks/preview-ultracode-5s.png"
+  ],
+  "v4AndV5EncodedAACByteIdentical": true,
+  "encodedAACSHA256": "495413cdfca211319ae77c5f986018affc3d29e31d4f68ff6bb7526d48de2e7e",
+  "colorMetadata": "limited BT.709",
+  "audioSampleRate": 48000,
+  "audioChannels": 2
+}

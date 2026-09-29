@@ -1,14 +1,14 @@
 {
   "surface": "Local browser + actual backend route handlers with disk KV adapter; not hosted evidence",
   "url": "http://127.0.0.1:8787/studio",
-  "startedAt": "2026-09-29T08:37:08.388Z",
+  "startedAt": "2026-09-29T08:49:56.687Z",
   "sourceHashes": {
     "backend.mjs": "3d0483efcb0eb0f6184727221dc47e34b9dd4b35f3311fde06d0f8dd3a41d988",
     "ui.js": "85c88db79b9d9a71d36284f40bffd26ffb231375a32521475513b8161bab6709",
     "styles.css": "749b3b0d994aa9a2b7e5ad97e65a8ed0c6bfea20764c4ee85fa5fc3cac879215",
     "build.mjs": "5412b814b1c509d91bdaa96e69b50f6615c069eff579e31843b69b8acf492455",
     "server.mjs": "c8b9784d8f40b41a5c1f7427e1ba8b18b6d8a6d441956f26fe17c7f91b219f8a",
-    "../motion/film.js": "7468f5fb3a5e8b3480399e8500aa6f3cdd0e209761f1bf166709890ce3d9292b"
+    "../motion/film.js": "65b01474358fe7aa08b9155dc0d3cc9f4ce562b5f42ee8e5598f0e01048eb286"
   },
   "checks": [
     {
@@ -54,7 +54,7 @@
           "scale": 1,
           "background": "dark",
           "aura": true,
-          "time": 3.2266999999955295,
+          "time": 3.21960000000149,
           "playing": true
         },
         "stopped": {
@@ -63,7 +63,7 @@
           "scale": 1,
           "background": "dark",
           "aura": true,
-          "time": 3.2475999999955296,
+          "time": 3.23350000000149,
           "playing": false
         },
         "later": {
@@ -72,7 +72,7 @@
           "scale": 1,
           "background": "dark",
           "aura": true,
-          "time": 3.2475999999955296,
+          "time": 3.23350000000149,
           "playing": false
         }
       }
@@ -186,7 +186,7 @@
       "name": "preset deletion persists after reload",
       "status": "PASS",
       "evidence": {
-        "deleted": "Browser evidence 1790671030118"
+        "deleted": "Browser evidence 1790671798404"
       }
     },
     {
@@ -351,7 +351,7 @@
         "styles.css": "749b3b0d994aa9a2b7e5ad97e65a8ed0c6bfea20764c4ee85fa5fc3cac879215",
         "build.mjs": "5412b814b1c509d91bdaa96e69b50f6615c069eff579e31843b69b8acf492455",
         "server.mjs": "c8b9784d8f40b41a5c1f7427e1ba8b18b6d8a6d441956f26fe17c7f91b219f8a",
-        "../motion/film.js": "7468f5fb3a5e8b3480399e8500aa6f3cdd0e209761f1bf166709890ce3d9292b"
+        "../motion/film.js": "65b01474358fe7aa08b9155dc0d3cc9f4ce562b5f42ee8e5598f0e01048eb286"
       }
     }
   ],
@@ -366,7 +366,7 @@
     "Other browsers",
     "RTL and localization: this interface is English-only"
   ],
-  "finishedAt": "2026-09-29T08:37:12.071Z",
+  "finishedAt": "2026-09-29T08:50:00.338Z",
   "summary": {
     "passed": 18,
     "failed": 0

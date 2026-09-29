@@ -14,8 +14,8 @@ const WIDTH = 1080;
 const HEIGHT = 1920;
 const BASE_URL = `http://${HOST}:${PORT}`;
 const OUTPUT_DIRECTORY = path.join(ROOT, 'output');
-const OUTPUT = path.join(OUTPUT_DIRECTORY, 'cavelux-engineered-to-deliver-v4.mp4');
-const TEMP_OUTPUT = path.join(OUTPUT_DIRECTORY, '.cavelux-engineered-to-deliver-v4.rendering.mp4');
+const OUTPUT = path.join(OUTPUT_DIRECTORY, 'cavelux-engineered-to-deliver-v5.mp4');
+const TEMP_OUTPUT = path.join(OUTPUT_DIRECTORY, '.cavelux-engineered-to-deliver-v5.rendering.mp4');
 const AUDIO = path.join(ROOT, 'audio', 'master.wav');
 const flags = new Set(process.argv.slice(2));
 for (const flag of flags) {
@@ -69,8 +69,8 @@ async function capture(page, frame, format = 'image/png') {
 }
 
 async function checkFlow(page) {
-  const frames = [0, 1, 149, 150, 299, 300, 449, 450, 599, 600, 749, 750,
-    899, 900, 1049, 1050, 1199, 1200, 1348, 1349];
+  const frames = [0, 1, ...[225, 450, 675, 900, 1125].flatMap(frame =>
+    [frame - 1, frame, frame + 1, frame + 8]), 1348, 1349];
   for (const frame of frames) await capture(page, frame);
   assertBrowserClean();
   console.log(`Flow PASS: ${frames.length} boundary samples; canvas ${WIDTH}x${HEIGHT}; no console/page errors or non-finite canvas arguments.`);

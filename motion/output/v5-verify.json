@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "file": "C:\\Users\\jared\\.codex\\visualizations\\2026\\09\\29\\01a0ea97-8016-7c91-8112-655302cb1db6\\cavelux-clawd\\motion\\output\\cavelux-engineered-to-deliver-v5.mp4",
+  "video": {
+    "width": 1080,
+    "height": 1920,
+    "codec": "h264",
+    "pixelFormat": "yuv420p",
+    "fps": 30,
+    "frames": 1350,
+    "duration": 45
+  },
+  "audio": {
+    "codec": "aac",
+    "duration": 45,
+    "sampleRate": 48000,
+    "channels": 2
+  },
+  "ffprobeExitCode": 0,
+  "fullDecodeExitCode": 0,
+  "unverified": [
+    "Instagram upload/transcode behavior",
+    "human aesthetic approval"
+  ]
+}

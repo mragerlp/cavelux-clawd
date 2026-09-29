@@ -1,0 +1,308 @@
+
+> cavelux-clawd@0.3.0 test
+> node --test charming/backend.test.mjs && node scripts/check-motion.mjs && node charming/verify-ui.mjs && node charming/verify-export.mjs && node scripts/check-reactions.mjs && python motion/validate-audio.py
+
+(node:45576) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+TAP version 13
+# (node:23300) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: canonical manifest and discoverable routes use the existing contract
+ok 1 - canonical manifest and discoverable routes use the existing contract
+  ---
+  duration_ms: 1.0433
+  type: 'test'
+  ...
+# Subtest: empty authoritative storage returns an empty preset list
+ok 2 - empty authoritative storage returns an empty preset list
+  ---
+  duration_ms: 0.2292
+  type: 'test'
+  ...
+# Subtest: save writes a named preset and later reads return the saved settings
+ok 3 - save writes a named preset and later reads return the saved settings
+  ---
+  duration_ms: 1.1488
+  type: 'test'
+  ...
+# Subtest: saving an existing id updates it without making a duplicate or losing createdAt
+ok 4 - saving an existing id updates it without making a duplicate or losing createdAt
+  ---
+  duration_ms: 0.2576
+  type: 'test'
+  ...
+# Subtest: saved values cannot be changed by mutating an earlier response
+ok 5 - saved values cannot be changed by mutating an earlier response
+  ---
+  duration_ms: 0.1573
+  type: 'test'
+  ...
+# Subtest: delete removes only the selected preset and missing deletion is explicit
+ok 6 - delete removes only the selected preset and missing deletion is explicit
+  ---
+  duration_ms: 0.3604
+  type: 'test'
+  ...
+# Subtest: empty, long, and control-character names are rejected
+ok 7 - empty, long, and control-character names are rejected
+  ---
+  duration_ms: 0.5072
+  type: 'test'
+  ...
+# Subtest: path-like and prototype-like ids are rejected
+ok 8 - path-like and prototype-like ids are rejected
+  ---
+  duration_ms: 0.2628
+  type: 'test'
+  ...
+# Subtest: settings reject unknown state, background, wrong boolean and extra keys
+ok 9 - settings reject unknown state, background, wrong boolean and extra keys
+  ---
+  duration_ms: 0.4225
+  type: 'test'
+  ...
+# Subtest: numeric controls reject nonfinite, string, and out-of-range values
+ok 10 - numeric controls reject nonfinite, string, and out-of-range values
+  ---
+  duration_ms: 0.9531
+  type: 'test'
+  ...
+# Subtest: boundary control values are valid
+ok 11 - boundary control values are valid
+  ---
+  duration_ms: 0.2321
+  type: 'test'
+  ...
+# Subtest: incomplete and extra top-level inputs are rejected
+ok 12 - incomplete and extra top-level inputs are rejected
+  ---
+  duration_ms: 0.174
+  type: 'test'
+  ...
+# Subtest: storage write failures reject instead of reporting a saved preset
+ok 13 - storage write failures reject instead of reporting a saved preset
+  ---
+  duration_ms: 0.1149
+  type: 'test'
+  ...
+# Subtest: unavailable key listing is not presented as an empty library
+ok 14 - unavailable key listing is not presented as an empty library
+  ---
+  duration_ms: 0.1
+  type: 'test'
+  ...
+# Subtest: corrupt stored preset is reported while unrelated KV keys are ignored
+ok 15 - corrupt stored preset is reported while unrelated KV keys are ignored
+  ---
+  duration_ms: 0.1741
+  type: 'test'
+  ...
+1..15
+# tests 15
+# suites 0
+# pass 15
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 72.712
+(node:49460) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:39900) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Browser: C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe
+Flow PASS: 24 boundary samples; canvas 1080x1920; no console/page errors or non-finite canvas arguments.
+(node:34356) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS active sources and loaded resources exclude focused and wink poses
+PASS frame 90: normal rendered state
+PASS frame 315: working rendered state
+PASS frame 540: working rendered state
+PASS frame 765: working rendered state
+PASS frame 990: ultracode rendered state
+PASS frame 1020: ultracode rendered state
+PASS frame 1050: ultracode rendered state
+PASS isolated normal preview at 3 seconds renders
+PASS isolated working preview at 3 seconds renders
+PASS isolated working preview at 4 seconds renders
+PASS isolated working preview at 5 seconds renders
+PASS isolated ultracode preview at 3 seconds renders
+PASS isolated ultracode preview at 4 seconds renders
+PASS isolated ultracode preview at 5 seconds renders
+PASS normal preview contains two solid rectangular eye components
+PASS working preview eye components preserve open spiral geometry
+PASS normal preview has no green aura outside the fixed body
+PASS isolated working aura has green pixels and motion: 3 to 4 seconds
+PASS isolated working aura has green pixels and motion: 4 to 5 seconds
+PASS isolated rainbow wave changes inside fixed body region: 3 to 4 seconds
+PASS isolated rainbow wave changes inside fixed body region: 4 to 5 seconds
+PASS same frame renders identical pixels
+PASS live asset library displays all three labelled character states
+PASS no browser exceptions or missing resources
+PASS tested source and sprite hashes remain unchanged
+{"passed":26,"failed":0}
+(node:13648) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS normal black-eye motion
+PASS working black-eye motion
+PASS ultracode black-eye motion
+PASS dark to transparent background preserves export alpha on the same canvas
+PASS scale control and range clamping change actual body bounds
+PASS working eyeSpeed zero freezes actual eye pixels
+PASS ultracode eyeSpeed zero freezes actual eye pixels
+PASS working aura can be disabled independently of eye motion
+PASS character-only embedding honors three asset URL overrides without brand or film canvas
+{"passed":9,"failed":0}
+(node:8504) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS desktop: initially paused without autoplay
+PASS desktop: no horizontal overflow
+PASS desktop: controls visible and labelled
+PASS desktop: keyboard reaches controls with visible focus
+PASS desktop: Play starts at frame zero and advances
+PASS desktop: Pause freezes frame
+PASS desktop: Throughput chapter jump updates chapter and seek
+PASS desktop: meaningful Throughput frame renders
+PASS desktop: Restart returns near zero and plays
+PASS desktop: mute toggles aria-pressed and label
+PASS desktop: seek reaches final frame
+PASS mobile: reduced motion also starts paused without autoplay
+PASS mobile: no horizontal overflow
+PASS mobile: controls visible and labelled
+PASS mobile: keyboard reaches controls with visible focus
+PASS mobile: chapter navigation and canvas rendering
+PASS desktop: Asset library link opens with all images loaded
+PASS mobile: Asset library images load without horizontal overflow
+PASS both surfaces: no browser exceptions or HTTP errors
+{"passed":19,"failed":0}
+(node:28048) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS DEFINE: approved copy is drawn on canvas
+PASS DEFINE: headline ink fits the composition
+PASS BUILD: approved copy is drawn on canvas
+PASS BUILD: headline ink fits the composition
+PASS ORCHESTRATE: approved copy is drawn on canvas
+PASS ORCHESTRATE: headline ink fits the composition
+PASS INTEGRATE: approved copy is drawn on canvas
+PASS INTEGRATE: headline ink fits the composition
+PASS THROUGHPUT: approved copy is drawn on canvas
+PASS THROUGHPUT: headline ink fits the composition
+PASS DELIVER: approved copy is drawn on canvas
+PASS DELIVER: headline ink fits the composition
+PASS film has no retired exploratory copy
+PASS player title and chapter navigation use engineering language
+PASS browser reports no rendering errors
+{"passed":15,"failed":0}
+{"check":"motion suite","result":"PASS","exitCode":0}
+(node:42960) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS initial state is normal and remains paused
+PASS state selection changes actual rendered pixels
+PASS play advances time and pause freezes it
+PASS timeline scrub sets exact paused time and wave phase changes pixels
+PASS eye speed changes working eye pixels at the same time
+PASS scale and aura controls alter real canvas output
+PASS background modes change pixels and transparent corner has zero alpha
+PASS PNG export downloads a real transparent1080x760 image
+PASS JSON export contains the selected preset settings
+PASS save preset then reload and restore through real disk-backed API
+PASS write failures show an error and preserve the unsaved look
+PASS preset deletion persists after reload
+PASS read failures remain visible and retry recovers
+PASS desktop controls are labelled, keyboard reachable and within viewport
+PASS mobile reduced-motion starts paused without horizontal overflow
+PASS asset-load failure shows an explicit retry screen
+PASS no uncaught browser errors
+PASS tested source bytes remain current
+{"passed":18,"failed":0}
+(node:41932) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS native PNG uploads a File to the fixed key then signs and opens it
+PASS native JSON uploads the selected settings and reuses its fixed key
+PASS upload failure stops signing and opening and shows an inline error
+PASS URL failure never claims an artifact is ready
+PASS host opening failure keeps the generated link and retry does not upload again
+PASS read-only viewers use a Blob download without a native asset write
+PASS native export has no uncaught browser errors
+{"passed":7,"failed":0}
+(node:30240) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+test_completed_archive_contains_exact_inputs_and_is_reproducible (__main__.PackagingTests.test_completed_archive_contains_exact_inputs_and_is_reproducible) ... ok
+test_missing_master_preserves_previous_archive (__main__.PackagingTests.test_missing_master_preserves_previous_archive) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.205s
+
+OK
+{"check": "archive failure handling", "passed": 2, "failed": 0, "exitCode": 0}
+(node:35752) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS share-break: visible motion, seamless loop, transparent safe area
+PASS typing: visible motion, seamless loop, transparent safe area
+PASS approved: visible motion, seamless loop, transparent safe area
+PASS panic: visible motion, seamless loop, transparent safe area
+PASS side-eye: visible motion, seamless loop, transparent safe area
+PASS shrug: visible motion, seamless loop, transparent safe area
+PASS celebrate: visible motion, seamless loop, transparent safe area
+PASS presenting: visible motion, seamless loop, transparent safe area
+PASS side-eye shifts two rectangular eyes and blinks without changing the body
+PASS typing contains moving black spiral ink inside both eye regions
+PASS unknown reaction IDs and invalid times are rejected
+PASS background selection preserves opaque and transparent exports
+PASS renderer loads without browser errors or missing resources
+{"passed":13,"failed":0}
+PASS share-break GIF motion, loop, transparency and size
+PASS share-break transparent poster
+PASS share-break MP4 format and full decode
+PASS typing GIF motion, loop, transparency and size
+PASS typing transparent poster
+PASS typing MP4 format and full decode
+PASS approved GIF motion, loop, transparency and size
+PASS approved transparent poster
+PASS approved MP4 format and full decode
+PASS panic GIF motion, loop, transparency and size
+PASS panic transparent poster
+PASS panic MP4 format and full decode
+PASS side-eye GIF motion, loop, transparency and size
+PASS side-eye transparent poster
+PASS side-eye MP4 format and full decode
+PASS shrug GIF motion, loop, transparency and size
+PASS shrug transparent poster
+PASS shrug MP4 format and full decode
+PASS celebrate GIF motion, loop, transparency and size
+PASS celebrate transparent poster
+PASS celebrate MP4 format and full decode
+PASS presenting GIF motion, loop, transparency and size
+PASS presenting transparent poster
+PASS presenting MP4 format and full decode
+PASS complete reusable master archive
+PASS exports match current animation sources and manifest
+{"check": "reaction deliverables", "passed": 26, "failed": 0, "exitCode": 0}
+(node:30568) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS gallery is available as an actual page
+PASS all eight reactions are selectable and the first preview is paused
+PASS selecting typing changes the visible character and download destinations
+PASS play advances actual frames and pause freezes them
+PASS scrubbing chooses an exact paused reaction moment
+PASS background controls render transparent, dark and light canvas pixels
+PASS switching reactions while playing pauses at the selected poster
+PASS desktop controls are labelled and keyboard focus is visible
+PASS 375px reduced-motion view starts paused and has no horizontal overflow
+PASS RTL layout retains visible reachable controls without horizontal overflow
+PASS typing GIF is actually downloaded after selection, playback, pause and scrub
+PASS gallery has no uncaught browser errors
+{"passed":12,"failed":0,"skipped":0}
+{"check":"reaction pack suite","result":"PASS","exitCode":0}
+PASS score.wav: exact 45s stereo 48kHz 24-bit, no clipped samples
+PASS sfx.wav: exact 45s stereo 48kHz 24-bit, no clipped samples
+PASS premaster.wav: exact 45s stereo 48kHz 24-bit, no clipped samples
+PASS master.wav: exact 45s stereo 48kHz 24-bit, no clipped samples
+PASS master reaches the requested -14 LUFS delivery level
+PASS master true peak remains at or below -1 dBTP
+PASS master retains stereo content and avoids destructive negative correlation
+PASS clean final silence avoids an export boundary click
+PASS new composition is not the old cue with a gain change
+PASS core groove adds substantial sixteenth-note percussion beyond the old eighth-note feel
+{"passed": 10, "failed": 0, "baseline_groove": {"off_eighth_sixteenth_attacks": 0, "all_sixteenth_grid_attacks": 117, "high_band_energy_fraction": 0.001665285105859933}, "current_groove": {"off_eighth_sixteenth_attacks": 128, "all_sixteenth_grid_attacks": 256, "high_band_energy_fraction": 0.011081829036191227}}
+{"command":"npm test","exitCode":0,"finishedAt":"2026-09-29T08:50:37.0046117Z"}

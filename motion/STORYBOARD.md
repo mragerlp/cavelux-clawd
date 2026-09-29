@@ -50,3 +50,9 @@ Render H.264 with yuv420p and AAC audio. Keep the editable source and separate s
 - The current contents of cavelux.ai could not be fetched with the web tool. The domain and requested brand are taken from the user's brief, not from a verified live site capture.
 
 No upload, publication, or website change is part of this local artifact.
+
+## V5 finishing pass
+
+Chapter transitions retain the outgoing image under a 0.234375-second wipe (one eighth note at 128 BPM), avoiding a blank transition frame. The transition cache uses one reusable canvas. Throughput bars occupy y=1540–1640, below the captions. The closing business line uses 32 px at 90% opacity. From 42.0 to 42.9 seconds the secondary labels, frame marks and progress rails fade away; the final 2.1 seconds hold the identity, domain, business line and regular-eyed mascot. The original spiral renderer and audio bytes are unchanged.
+
+V4 is preserved. This new v5 is a review candidate and is distinguished by its delivery hash from the earlier rejected simplified-eye v5 in Git history. FABLE reviews non-character claims and delivery evidence; Codex performs implementation and rendering.

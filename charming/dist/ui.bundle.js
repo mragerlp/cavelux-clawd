@@ -204,17 +204,17 @@
     lines.forEach((s,i)=>{const v=out((local-delay-i*.13)/.8);ctx.save();ctx.beginPath();ctx.rect(x-3,y+i*size*.98-size,920,size*1.08);ctx.clip();text(s,x,y+i*size*.98+(1-v)*size,size,color);ctx.restore();});
   }
   function micro(s,x,y,color=GRAY,alpha=1){text(s,x,y,20,color,{mono:true,spacing:1.4,alpha});}
-  function base(light=false){ctx.fillStyle=light?PAPER:INK;ctx.fillRect(0,0,W,H);const color=light?INK:PAPER;
+  function base(light=false,detail=1){ctx.fillStyle=light?PAPER:INK;ctx.fillRect(0,0,W,H);const color=light?INK:PAPER;
     for(let y=0;y<H;y+=4)rect(0,y,W,1,color,.011);
     for(let i=0;i<150;i++){const x=Math.floor(rng(i+13)*W),y=Math.floor(rng(i+733)*H);rect(x,y,1.5,1.5,color,.06);}
-    line(84,224,996,224,color,1,.14);line(84,1670,996,1670,color,1,.14);
-    [[84,224],[996,224],[84,1670],[996,1670]].forEach(p=>cross(...p,7,color,.45));
+    line(84,224,996,224,color,1,.14*detail);line(84,1670,996,1670,color,1,.14*detail);
+    [[84,224],[996,224],[84,1670],[996,1670]].forEach(p=>cross(...p,7,color,.45*detail));
   }
-  function furniture(index,t,light=false){const c=light?INK:PAPER;micro('CAVELUX',106,175,c,.8);micro('ENGINEERING / 01',670,175,c,.48);
+  function furniture(index,t,light=false){const c=light?INK:PAPER,fade=index===5?1-smooth((t-42)/.9):1;micro('CAVELUX',106,175,c,.8*fade);micro('APPLIED ENGINEERING',670,175,c,.48*fade);
     const names=['DEFINE','BUILD','ORCHESTRATE','INTEGRATE','THROUGHPUT','DELIVER'];
-    micro(`0${index+1} / ${names[index]}`,106,1730,c,.5);micro('INTENT → DELIVERY',646,1730,c,.45);
-    for(let i=0;i<6;i++)rect(106+i*148,1790,130,3,c,.12);
-    for(let i=0;i<=index;i++)rect(106+i*148,1790,130*(i===index?clamp((t-i*7.5)/7.5):1),3,light?INK:LIME,.8);
+    micro(`0${index+1} / ${names[index]}`,106,1730,c,.5*fade);micro('INTENT → DELIVERY',646,1730,c,.45*fade);
+    for(let i=0;i<6;i++)rect(106+i*148,1790,130,3,c,.12*fade);
+    for(let i=0;i<=index;i++)rect(106+i*148,1790,130*(i===index?clamp((t-i*7.5)/7.5):1),3,light?INK:LIME,.8*fade);
   }
   function wake(t){
     base();const e=out((t-.8)/1.4);const bob=Math.sin(t*2.2)*7;
@@ -227,7 +227,7 @@
     character('normal',540,960+bob,490*scale,t,{hero:true,alpha:e,sy:1+Math.sin(t*2.2)*.014});
     if(t<1.5){const p=out(t/1.5);rect(540-150*p,960-2,300*p,4,LIME,1-p);}
     bracket(243,758,594,400,LIME,e*.6);
-    micro('AGENT 01',110,1320,PAPER,e*.7);micro('DEFINED BEFORE BUILT.',110,1360,GRAY,e);
+    micro('READY TO BUILD',110,1320,PAPER,e*.7);micro('DEFINED BEFORE BUILT.',110,1360,GRAY,e);
     const words='> define. build. verify.';text(words.slice(0,Math.floor(Math.max(0,t-2.8)*15)),110,1490,28,LIME,{mono:true});
     if(t>2.8&&Math.floor(t*2)%2===0)rect(110+Math.min(words.length,Math.floor((t-2.8)*15))*17,1500,14,3,LIME);
   }
@@ -282,8 +282,8 @@
   function spectrum(t){
     base();const burst=out(t/1.4),power=1+.025*pulse(t);
     for(let i=0;i<8;i++){
-      const x=80+i*130;const h=(150+Math.sin(t*1.9+i*.7)*80)*burst;
-      rect(x,1540-h,24,h,SPECTRUM[i],.28);rect(x+33,1570-h*.6,8,h*.6,SPECTRUM[i],.15);
+      const x=80+i*130;const h=(70+Math.sin(t*1.9+i*.7)*30)*burst;
+      rect(x,1640-h,24,h,SPECTRUM[i],.28);rect(x+33,1640-h*.6,8,h*.6,SPECTRUM[i],.15);
     }
     title(['FULL','THROUGHPUT.'],104,435,130,t,PAPER,.1);
     const w=650*mix(.75,1,burst)*power,y=1000+Math.sin(t*2)*10;
@@ -294,8 +294,8 @@
     if(t<1.8){const yy=mix(740,1230,sweep);line(150,yy,930,yy,PAPER,2,(1-sweep)*.6);}
   }
   function reveal(t){
-    base();const settle=out(t/1.9),word=out((t-1.1)/1.1);
-    micro('BUILT WITH INTENT.',110,350,PAPER,.6*out(t/.9));
+    const quiet=1-smooth((t-4.5)/.9);base(false,quiet);const settle=out(t/1.9),word=out((t-1.1)/1.1);
+    micro('BUILT WITH INTENT.',110,350,PAPER,.6*out(t/.9)*quiet);
     const logoY=mix(880,765,settle);const logoW=mix(650,470,settle);
     image('swirl',540,logoY,logoW,logoW,settle,(1-settle)*1.5);
     image('eye',540,logoY,logoW,logoW,smooth((t-.5)/1.4));
@@ -303,12 +303,31 @@
     ctx.save();ctx.beginPath();ctx.rect(100,1010,880*word,210);ctx.clip();image('wordmark',540,1080,830,830*209/1005);ctx.restore();
     text('cavelux.ai',540,1230,42,LIME,{mono:true,align:'center',spacing:2.5,alpha:out((t-2.1)/.8)});
     line(340,1310,740,1310,PAPER,1,.18*out((t-2.5)/.8));
-    text('ENGINEERED TO DELIVER.',540,1360,20,PAPER,{mono:true,spacing:1.4,align:'center',alpha:.6*out((t-2.7)/.8)});
-    character('normal',882,1530+Math.sin(t*2.4)*4,86,t,{hero:t>=1.9,alpha:out((t-3.2)/.9)});
-    micro('DEFINE. BUILD. VERIFY.',110,1540,GRAY,.65*out((t-3.4)/.8));
+    text('ENGINEERED TO DELIVER.',540,1360,32,PAPER,{mono:true,spacing:1.4,align:'center',alpha:.9*out((t-2.7)/.8)});
+    character('normal',882,1530+Math.sin(t*2.4)*4*quiet,86,t,{hero:t>=1.9,alpha:out((t-3.2)/.9)});
+    micro('DEFINE. BUILD. VERIFY.',110,1540,GRAY,.65*out((t-3.4)/.8)*quiet);
   }
   const scenes=[wake,build,swarm,sync,spectrum,reveal];
-  function transition(local,index){if(index===0||local>.3)return;const p=clamp(local/.3);const height=H*(1-inout(p));rect(0,0,W,height,index===1?PAPER:INK);rect(0,height-5,W,5,index===4?SPECTRUM[4]:LIME,.8);}
+  // Keep the outgoing picture beneath an eighth-note wipe. A single reusable
+  // canvas bounds the transition cache to one 1080x1920 surface.
+  let outgoingCanvas,outgoingIndex=-1;
+  function transition(local,index){
+    const duration=60/128/2;
+    if(index===0||local>=duration)return;
+    if(outgoingIndex!==index){
+      if(!outgoingCanvas){outgoingCanvas=document.createElement('canvas');outgoingCanvas.width=W;outgoingCanvas.height=H;}
+      const priorContext=ctx,priorState=window.characterState;
+      try{
+        ctx=outgoingCanvas.getContext('2d',{alpha:false,willReadFrequently:true});
+        ctx.setTransform(1,0,0,1,0,0);ctx.globalAlpha=1;ctx.globalCompositeOperation='source-over';
+        scenes[index-1](7.5-1/FPS);furniture(index-1,index*7.5-1/FPS,index===2);
+        outgoingIndex=index;
+      }finally{ctx=priorContext;window.characterState=priorState;}
+    }
+    const height=H*(1-inout(clamp(local/duration)));
+    ctx.save();ctx.beginPath();ctx.rect(0,0,W,height);ctx.clip();ctx.drawImage(outgoingCanvas,0,0);ctx.restore();
+    if(local>0)rect(0,height-5,W,5,index===4?SPECTRUM[4]:LIME,.8);
+  }
   function renderFrame(frame){
     if(characterOnly)throw new Error('Full-film rendering is unavailable in character-only mode');
     if(!Number.isFinite(frame))throw new TypeError('frame must be finite');
@@ -316,7 +335,10 @@
     const state=index===0||index===5?'normal':index===4?'ultracode':'working';
     window.characterState={state,...characterStates[state],frame:f,chapter:index,rainbowPhase:0,auraPhase:0,heroBounds:null,auraBounds:null,opacity:0};
     ctx.setTransform(1,0,0,1,0,0);ctx.globalAlpha=1;ctx.globalCompositeOperation='source-over';
-    scenes[index](local);furniture(index,t,index===1);transition(local,index);
+    // The first cut frame is fully covered by the outgoing picture.
+    // Skip the invisible incoming scene to avoid rendering both compositions.
+    if(index>0&&local===0)transition(local,index);
+    else{scenes[index](local);furniture(index,t,index===1);transition(local,index);}
     window.currentFrame=f;window.currentChapter=index;return {frame:f,chapter:index,width:W,height:H};
   }
   function renderCharacterPreview(state,time,targetCanvas,options={}){

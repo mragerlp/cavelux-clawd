@@ -1,0 +1,1028 @@
+{
+  "frames": 1350,
+  "drawCalls": 19722,
+  "entries": [
+    {
+      "method": "fillText",
+      "text": "FROM BRIEF TO BUILD",
+      "firstFrame": 0,
+      "lastFrame": 224,
+      "calls": 225
+    },
+    {
+      "method": "fillText",
+      "text": "CLEAR",
+      "firstFrame": 0,
+      "lastFrame": 224,
+      "calls": 225
+    },
+    {
+      "method": "fillText",
+      "text": "INTENT.",
+      "firstFrame": 0,
+      "lastFrame": 224,
+      "calls": 225
+    },
+    {
+      "method": "fillText",
+      "text": "READY TO BUILD",
+      "firstFrame": 0,
+      "lastFrame": 224,
+      "calls": 225
+    },
+    {
+      "method": "fillText",
+      "text": "DEFINED BEFORE BUILT.",
+      "firstFrame": 0,
+      "lastFrame": 224,
+      "calls": 225
+    },
+    {
+      "method": "fillText",
+      "text": "",
+      "firstFrame": 0,
+      "lastFrame": 284,
+      "calls": 200
+    },
+    {
+      "method": "fillText",
+      "text": "CAVELUX",
+      "firstFrame": 0,
+      "lastFrame": 1349,
+      "calls": 1345
+    },
+    {
+      "method": "fillText",
+      "text": "APPLIED ENGINEERING",
+      "firstFrame": 0,
+      "lastFrame": 1349,
+      "calls": 1345
+    },
+    {
+      "method": "fillText",
+      "text": "01 / DEFINE",
+      "firstFrame": 0,
+      "lastFrame": 224,
+      "calls": 225
+    },
+    {
+      "method": "fillText",
+      "text": "INTENT → DELIVERY",
+      "firstFrame": 0,
+      "lastFrame": 1349,
+      "calls": 1345
+    },
+    {
+      "method": "fillText",
+      "text": ">",
+      "firstFrame": 86,
+      "lastFrame": 88,
+      "calls": 3
+    },
+    {
+      "method": "fillText",
+      "text": "> ",
+      "firstFrame": 89,
+      "lastFrame": 89,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "> d",
+      "firstFrame": 90,
+      "lastFrame": 91,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "> de",
+      "firstFrame": 92,
+      "lastFrame": 93,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "> def",
+      "firstFrame": 94,
+      "lastFrame": 95,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "> defi",
+      "firstFrame": 96,
+      "lastFrame": 97,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "> defin",
+      "firstFrame": 98,
+      "lastFrame": 99,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "> define",
+      "firstFrame": 100,
+      "lastFrame": 101,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "> define.",
+      "firstFrame": 102,
+      "lastFrame": 103,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "> define. ",
+      "firstFrame": 104,
+      "lastFrame": 105,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "> define. b",
+      "firstFrame": 106,
+      "lastFrame": 107,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "> define. bu",
+      "firstFrame": 108,
+      "lastFrame": 109,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "> define. bui",
+      "firstFrame": 110,
+      "lastFrame": 111,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "> define. buil",
+      "firstFrame": 112,
+      "lastFrame": 113,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "> define. build",
+      "firstFrame": 114,
+      "lastFrame": 115,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "> define. build.",
+      "firstFrame": 116,
+      "lastFrame": 117,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "> define. build. ",
+      "firstFrame": 118,
+      "lastFrame": 119,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "> define. build. v",
+      "firstFrame": 120,
+      "lastFrame": 121,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "> define. build. ve",
+      "firstFrame": 122,
+      "lastFrame": 123,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "> define. build. ver",
+      "firstFrame": 124,
+      "lastFrame": 125,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "> define. build. veri",
+      "firstFrame": 126,
+      "lastFrame": 127,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "> define. build. verif",
+      "firstFrame": 128,
+      "lastFrame": 129,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "> define. build. verify",
+      "firstFrame": 130,
+      "lastFrame": 131,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "> define. build. verify.",
+      "firstFrame": 132,
+      "lastFrame": 224,
+      "calls": 93
+    },
+    {
+      "method": "fillText",
+      "text": "SYSTEMS,",
+      "firstFrame": 226,
+      "lastFrame": 449,
+      "calls": 224
+    },
+    {
+      "method": "fillText",
+      "text": "BUILT RIGHT.",
+      "firstFrame": 226,
+      "lastFrame": 449,
+      "calls": 224
+    },
+    {
+      "method": "fillText",
+      "text": "02 / SKILLS + MCPs + WORKFLOWS",
+      "firstFrame": 226,
+      "lastFrame": 449,
+      "calls": 224
+    },
+    {
+      "method": "fillText",
+      "text": "SKILLS",
+      "firstFrame": 226,
+      "lastFrame": 449,
+      "calls": 224
+    },
+    {
+      "method": "fillText",
+      "text": "MCPs",
+      "firstFrame": 226,
+      "lastFrame": 449,
+      "calls": 224
+    },
+    {
+      "method": "fillText",
+      "text": "WORKFLOWS",
+      "firstFrame": 226,
+      "lastFrame": 449,
+      "calls": 224
+    },
+    {
+      "method": "fillText",
+      "text": "{}",
+      "firstFrame": 226,
+      "lastFrame": 899,
+      "calls": 2912
+    },
+    {
+      "method": "fillText",
+      "text": "</>",
+      "firstFrame": 226,
+      "lastFrame": 899,
+      "calls": 896
+    },
+    {
+      "method": "fillText",
+      "text": "[]",
+      "firstFrame": 226,
+      "lastFrame": 899,
+      "calls": 896
+    },
+    {
+      "method": "fillText",
+      "text": "::",
+      "firstFrame": 226,
+      "lastFrame": 899,
+      "calls": 1120
+    },
+    {
+      "method": "fillText",
+      "text": "<>",
+      "firstFrame": 226,
+      "lastFrame": 899,
+      "calls": 896
+    },
+    {
+      "method": "fillText",
+      "text": "BUILD.",
+      "firstFrame": 226,
+      "lastFrame": 449,
+      "calls": 224
+    },
+    {
+      "method": "fillText",
+      "text": "TEST.",
+      "firstFrame": 226,
+      "lastFrame": 449,
+      "calls": 224
+    },
+    {
+      "method": "fillText",
+      "text": "REFINE.",
+      "firstFrame": 226,
+      "lastFrame": 449,
+      "calls": 224
+    },
+    {
+      "method": "fillText",
+      "text": "02 / BUILD",
+      "firstFrame": 226,
+      "lastFrame": 449,
+      "calls": 224
+    },
+    {
+      "method": "fillText",
+      "text": "d",
+      "firstFrame": 243,
+      "lastFrame": 244,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "de",
+      "firstFrame": 245,
+      "lastFrame": 245,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "def",
+      "firstFrame": 246,
+      "lastFrame": 246,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "defi",
+      "firstFrame": 247,
+      "lastFrame": 247,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "defin",
+      "firstFrame": 248,
+      "lastFrame": 248,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "define",
+      "firstFrame": 249,
+      "lastFrame": 250,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "define.",
+      "firstFrame": 251,
+      "lastFrame": 251,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "define. ",
+      "firstFrame": 252,
+      "lastFrame": 252,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "define. b",
+      "firstFrame": 253,
+      "lastFrame": 253,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "define. bu",
+      "firstFrame": 254,
+      "lastFrame": 255,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "define. bui",
+      "firstFrame": 256,
+      "lastFrame": 256,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "define. buil",
+      "firstFrame": 257,
+      "lastFrame": 257,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "define. build",
+      "firstFrame": 258,
+      "lastFrame": 259,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "define. build.",
+      "firstFrame": 260,
+      "lastFrame": 260,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "define. build. ",
+      "firstFrame": 261,
+      "lastFrame": 261,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "define. build. v",
+      "firstFrame": 262,
+      "lastFrame": 262,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "define. build. ve",
+      "firstFrame": 263,
+      "lastFrame": 263,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "define. build. ver",
+      "firstFrame": 264,
+      "lastFrame": 265,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "t",
+      "firstFrame": 264,
+      "lastFrame": 286,
+      "calls": 3
+    },
+    {
+      "method": "fillText",
+      "text": "to",
+      "firstFrame": 265,
+      "lastFrame": 266,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "define. build. veri",
+      "firstFrame": 266,
+      "lastFrame": 266,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "define. build. verif",
+      "firstFrame": 267,
+      "lastFrame": 267,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "too",
+      "firstFrame": 267,
+      "lastFrame": 267,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "define. build. verify",
+      "firstFrame": 268,
+      "lastFrame": 268,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "tool",
+      "firstFrame": 268,
+      "lastFrame": 268,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "define. build. verify.",
+      "firstFrame": 269,
+      "lastFrame": 449,
+      "calls": 181
+    },
+    {
+      "method": "fillText",
+      "text": "tools",
+      "firstFrame": 269,
+      "lastFrame": 270,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "tools ",
+      "firstFrame": 271,
+      "lastFrame": 271,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "tools -",
+      "firstFrame": 272,
+      "lastFrame": 272,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "tools ->",
+      "firstFrame": 273,
+      "lastFrame": 273,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "tools -> ",
+      "firstFrame": 274,
+      "lastFrame": 275,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "tools -> c",
+      "firstFrame": 276,
+      "lastFrame": 276,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "tools -> co",
+      "firstFrame": 277,
+      "lastFrame": 277,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "tools -> con",
+      "firstFrame": 278,
+      "lastFrame": 278,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "tools -> cont",
+      "firstFrame": 279,
+      "lastFrame": 279,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "tools -> conte",
+      "firstFrame": 280,
+      "lastFrame": 281,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "tools -> contex",
+      "firstFrame": 282,
+      "lastFrame": 282,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "tools -> context",
+      "firstFrame": 283,
+      "lastFrame": 449,
+      "calls": 167
+    },
+    {
+      "method": "fillText",
+      "text": "te",
+      "firstFrame": 287,
+      "lastFrame": 287,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "tes",
+      "firstFrame": 288,
+      "lastFrame": 288,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "test",
+      "firstFrame": 289,
+      "lastFrame": 289,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "test.",
+      "firstFrame": 290,
+      "lastFrame": 291,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "test. ",
+      "firstFrame": 292,
+      "lastFrame": 292,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "test. i",
+      "firstFrame": 293,
+      "lastFrame": 293,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "test. in",
+      "firstFrame": 294,
+      "lastFrame": 294,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "test. int",
+      "firstFrame": 295,
+      "lastFrame": 295,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "test. inte",
+      "firstFrame": 296,
+      "lastFrame": 297,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "test. integ",
+      "firstFrame": 298,
+      "lastFrame": 298,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "test. integr",
+      "firstFrame": 299,
+      "lastFrame": 299,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "test. integra",
+      "firstFrame": 300,
+      "lastFrame": 301,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "test. integrat",
+      "firstFrame": 302,
+      "lastFrame": 302,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "test. integrate",
+      "firstFrame": 303,
+      "lastFrame": 303,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "test. integrate.",
+      "firstFrame": 304,
+      "lastFrame": 304,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "test. integrate. ",
+      "firstFrame": 305,
+      "lastFrame": 306,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "test. integrate. s",
+      "firstFrame": 307,
+      "lastFrame": 307,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "test. integrate. sh",
+      "firstFrame": 308,
+      "lastFrame": 308,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "test. integrate. shi",
+      "firstFrame": 309,
+      "lastFrame": 309,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "test. integrate. ship",
+      "firstFrame": 310,
+      "lastFrame": 310,
+      "calls": 1
+    },
+    {
+      "method": "fillText",
+      "text": "test. integrate. ship.",
+      "firstFrame": 311,
+      "lastFrame": 449,
+      "calls": 139
+    },
+    {
+      "method": "fillText",
+      "text": "ONE BRIEF.",
+      "firstFrame": 451,
+      "lastFrame": 674,
+      "calls": 224
+    },
+    {
+      "method": "fillText",
+      "text": "MANY AGENTS.",
+      "firstFrame": 451,
+      "lastFrame": 674,
+      "calls": 224
+    },
+    {
+      "method": "fillText",
+      "text": "COORDINATED EXECUTION.",
+      "firstFrame": 451,
+      "lastFrame": 674,
+      "calls": 224
+    },
+    {
+      "method": "fillText",
+      "text": "SHARED CONTEXT.",
+      "firstFrame": 451,
+      "lastFrame": 674,
+      "calls": 224
+    },
+    {
+      "method": "fillText",
+      "text": "01",
+      "firstFrame": 451,
+      "lastFrame": 473,
+      "calls": 23
+    },
+    {
+      "method": "fillText",
+      "text": "03 / ORCHESTRATE",
+      "firstFrame": 451,
+      "lastFrame": 674,
+      "calls": 224
+    },
+    {
+      "method": "fillText",
+      "text": "02",
+      "firstFrame": 474,
+      "lastFrame": 478,
+      "calls": 5
+    },
+    {
+      "method": "fillText",
+      "text": "03",
+      "firstFrame": 479,
+      "lastFrame": 482,
+      "calls": 4
+    },
+    {
+      "method": "fillText",
+      "text": "04",
+      "firstFrame": 483,
+      "lastFrame": 485,
+      "calls": 3
+    },
+    {
+      "method": "fillText",
+      "text": "05",
+      "firstFrame": 486,
+      "lastFrame": 489,
+      "calls": 4
+    },
+    {
+      "method": "fillText",
+      "text": "06",
+      "firstFrame": 490,
+      "lastFrame": 492,
+      "calls": 3
+    },
+    {
+      "method": "fillText",
+      "text": "07",
+      "firstFrame": 493,
+      "lastFrame": 495,
+      "calls": 3
+    },
+    {
+      "method": "fillText",
+      "text": "08",
+      "firstFrame": 496,
+      "lastFrame": 498,
+      "calls": 3
+    },
+    {
+      "method": "fillText",
+      "text": "09",
+      "firstFrame": 499,
+      "lastFrame": 501,
+      "calls": 3
+    },
+    {
+      "method": "fillText",
+      "text": "10",
+      "firstFrame": 502,
+      "lastFrame": 503,
+      "calls": 2
+    },
+    {
+      "method": "fillText",
+      "text": "11",
+      "firstFrame": 504,
+      "lastFrame": 506,
+      "calls": 3
+    },
+    {
+      "method": "fillText",
+      "text": "12",
+      "firstFrame": 507,
+      "lastFrame": 509,
+      "calls": 3
+    },
+    {
+      "method": "fillText",
+      "text": "13",
+      "firstFrame": 510,
+      "lastFrame": 512,
+      "calls": 3
+    },
+    {
+      "method": "fillText",
+      "text": "14",
+      "firstFrame": 513,
+      "lastFrame": 516,
+      "calls": 4
+    },
+    {
+      "method": "fillText",
+      "text": "15",
+      "firstFrame": 517,
+      "lastFrame": 519,
+      "calls": 3
+    },
+    {
+      "method": "fillText",
+      "text": "16",
+      "firstFrame": 520,
+      "lastFrame": 523,
+      "calls": 4
+    },
+    {
+      "method": "fillText",
+      "text": "17",
+      "firstFrame": 524,
+      "lastFrame": 528,
+      "calls": 5
+    },
+    {
+      "method": "fillText",
+      "text": "18",
+      "firstFrame": 529,
+      "lastFrame": 539,
+      "calls": 11
+    },
+    {
+      "method": "fillText",
+      "text": "19",
+      "firstFrame": 540,
+      "lastFrame": 674,
+      "calls": 135
+    },
+    {
+      "method": "fillText",
+      "text": "COMPLEXITY.",
+      "firstFrame": 676,
+      "lastFrame": 899,
+      "calls": 224
+    },
+    {
+      "method": "fillText",
+      "text": "UNDER CONTROL.",
+      "firstFrame": 676,
+      "lastFrame": 899,
+      "calls": 224
+    },
+    {
+      "method": "fillText",
+      "text": "INTEGRATION / SHARED CONTROL",
+      "firstFrame": 676,
+      "lastFrame": 899,
+      "calls": 224
+    },
+    {
+      "method": "fillText",
+      "text": "04 / INTEGRATE",
+      "firstFrame": 676,
+      "lastFrame": 899,
+      "calls": 224
+    },
+    {
+      "method": "fillText",
+      "text": "FULL",
+      "firstFrame": 901,
+      "lastFrame": 1124,
+      "calls": 224
+    },
+    {
+      "method": "fillText",
+      "text": "THROUGHPUT.",
+      "firstFrame": 901,
+      "lastFrame": 1124,
+      "calls": 224
+    },
+    {
+      "method": "fillText",
+      "text": "COORDINATED SYSTEMS.",
+      "firstFrame": 901,
+      "lastFrame": 1124,
+      "calls": 224
+    },
+    {
+      "method": "fillText",
+      "text": "DELIVERY IN MOTION.",
+      "firstFrame": 901,
+      "lastFrame": 1124,
+      "calls": 224
+    },
+    {
+      "method": "fillText",
+      "text": "05 / THROUGHPUT",
+      "firstFrame": 901,
+      "lastFrame": 1124,
+      "calls": 224
+    },
+    {
+      "method": "fillText",
+      "text": "BUILT WITH INTENT.",
+      "firstFrame": 1126,
+      "lastFrame": 1349,
+      "calls": 224
+    },
+    {
+      "method": "fillText",
+      "text": "cavelux.ai",
+      "firstFrame": 1126,
+      "lastFrame": 1349,
+      "calls": 224
+    },
+    {
+      "method": "fillText",
+      "text": "ENGINEERED TO DELIVER.",
+      "firstFrame": 1126,
+      "lastFrame": 1349,
+      "calls": 224
+    },
+    {
+      "method": "fillText",
+      "text": "DEFINE. BUILD. VERIFY.",
+      "firstFrame": 1126,
+      "lastFrame": 1349,
+      "calls": 224
+    },
+    {
+      "method": "fillText",
+      "text": "06 / DELIVER",
+      "firstFrame": 1126,
+      "lastFrame": 1349,
+      "calls": 224
+    }
+  ]
+}

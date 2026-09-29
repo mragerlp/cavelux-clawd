@@ -1,11 +1,11 @@
 {
-  "startedAt": "2026-09-29T08:36:59.241Z",
+  "startedAt": "2026-09-29T08:49:47.347Z",
   "url": "http://127.0.0.1:8766/?export",
   "browser": "Microsoft Edge / Playwright headless",
   "sourceHashes": {
-    "film.js": "7468f5fb3a5e8b3480399e8500aa6f3cdd0e209761f1bf166709890ce3d9292b",
+    "film.js": "65b01474358fe7aa08b9155dc0d3cc9f4ce562b5f42ee8e5598f0e01048eb286",
     "player.js": "bcb7370e94beadac183c214b1ccad3666c636d881ed2bf69374f2f7ae1767a7c",
-    "index.html": "c35aa47fbc787ce7034569c9c68343b6d6e1c4c27dc76caf5d771eda7a358445",
+    "index.html": "3a1c2738ded411d517ce5ad1f6ba24cfe93f0ad46abb7cecef5c99bec223baf2",
     "assets.html": "b3cc0e2d490149970ef9ad28c8498f1db2a243948d3cd29600a3b56447cfb9b8",
     "state-previews.js": "ef137d30c08eab6e798aada3a4ba27994f70ef0184e8e0145fd2ed616679acdd",
     "sprites/06-normal.png": "a3c6fe2437d4b75cc39ebe96d8f8f07f134eba695f15a1679784a2a04d6aad1c",
@@ -1118,9 +1118,9 @@
           }
         ],
         "pngHashes": [
-          "bdb0b4bacc7fe464d1e27862ce46764bc4313b14a99b4e0996b387a37778f94a",
-          "bdb0b4bacc7fe464d1e27862ce46764bc4313b14a99b4e0996b387a37778f94a",
-          "bdb0b4bacc7fe464d1e27862ce46764bc4313b14a99b4e0996b387a37778f94a"
+          "24f352db474e82b75323288ac8124145a346bfc57ef58c86416e8c29cd74a8f4",
+          "24f352db474e82b75323288ac8124145a346bfc57ef58c86416e8c29cd74a8f4",
+          "24f352db474e82b75323288ac8124145a346bfc57ef58c86416e8c29cd74a8f4"
         ]
       }
     },
@@ -1163,9 +1163,9 @@
       "name": "tested source and sprite hashes remain unchanged",
       "status": "PASS",
       "evidence": {
-        "film.js": "7468f5fb3a5e8b3480399e8500aa6f3cdd0e209761f1bf166709890ce3d9292b",
+        "film.js": "65b01474358fe7aa08b9155dc0d3cc9f4ce562b5f42ee8e5598f0e01048eb286",
         "player.js": "bcb7370e94beadac183c214b1ccad3666c636d881ed2bf69374f2f7ae1767a7c",
-        "index.html": "c35aa47fbc787ce7034569c9c68343b6d6e1c4c27dc76caf5d771eda7a358445",
+        "index.html": "3a1c2738ded411d517ce5ad1f6ba24cfe93f0ad46abb7cecef5c99bec223baf2",
         "assets.html": "b3cc0e2d490149970ef9ad28c8498f1db2a243948d3cd29600a3b56447cfb9b8",
         "state-previews.js": "ef137d30c08eab6e798aada3a4ba27994f70ef0184e8e0145fd2ed616679acdd",
         "sprites/06-normal.png": "a3c6fe2437d4b75cc39ebe96d8f8f07f134eba695f15a1679784a2a04d6aad1c",
@@ -4086,7 +4086,7 @@
   "pageErrors": [],
   "badResponses": [],
   "browserVersion": "154.0.4258.37",
-  "finishedAt": "2026-09-29T08:37:01.337Z",
+  "finishedAt": "2026-09-29T08:49:49.468Z",
   "summary": {
     "passed": 26,
     "failed": 0

@@ -3,9 +3,9 @@
   "url": "https://charm.ing/bloodwave/cavelux-clawd-studio",
   "revision": 8,
   "visibility": "private",
-  "sourceBundle": "charming/dist/source.json",
+  "sourceBundle": "archive/motion-v4/charming-dist/source.json",
   "sourceBundleSHA256": "2F33D6F6E17595DDF904067F066AB09902F875AE665D401BCE7B85FB3243B94F",
-  "sourceReadback": "PASS: persisted module, UI and styles exactly match the local build",
+  "sourceReadback": "Revision8 readback passed during the preceding restore; retained source archived. No hosted source update in the v5 film pass.",
   "localChecks": {
     "commands": [
       "node charming/verify-ui.mjs",
@@ -20,7 +20,7 @@
       "passed": 7,
       "failed": 0
     },
-    "scope": "Restored original spiral source at revision8, Windows Edge local harness; no new hosted export roundtrip claimed"
+    "scope": "Current local generated bundle; hosted app remains revision8 with unchanged character behavior"
   },
   "exportRetention": "Each native export replaces the latest asset of that type. Download copies to retain multiple outputs.",
   "unverified": [
@@ -43,5 +43,11 @@
     "nativeJSONExport": "PASS: asset uploaded, exported document opened in browser and contained the selected Working / hypnosis settings",
     "downloadedPNG": "charming/e2e-evidence/hosted-working-export.png",
     "downloadedPNGSHA256": "02EA39FB7DFB53B49D8C9F363B642C7AB7497BC026FA38AF9F310C86FB03296B"
+  },
+  "localCandidate": {
+    "sourceBundle": "charming/dist/source.json",
+    "sha256": "3880a8cbcabe22512db5e0f5bdd0e4ffd37c9aef3b5927955c22a9ecb46ea9ba",
+    "published": false,
+    "reason": "Film-only polish; hosted character app does not render the film"
   }
 }

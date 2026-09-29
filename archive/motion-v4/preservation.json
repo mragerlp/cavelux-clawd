@@ -1,0 +1,102 @@
+{
+  "gitBaseline": "cd3b5a95a58d8b640f5cd5addd907a63a14431eb",
+  "files": [
+    {
+      "path": "film.js",
+      "sha256": "7468f5fb3a5e8b3480399e8500aa6f3cdd0e209761f1bf166709890ce3d9292b",
+      "bytes": 26911
+    },
+    {
+      "path": "index.html",
+      "sha256": "c35aa47fbc787ce7034569c9c68343b6d6e1c4c27dc76caf5d771eda7a358445",
+      "bytes": 4621
+    },
+    {
+      "path": "render.mjs",
+      "sha256": "8b9d36757f9b6d151332d08f25d5785bf0434cd223f28223a96c2ddbd256a432",
+      "bytes": 9468
+    },
+    {
+      "path": "verify.mjs",
+      "sha256": "746393b3cf9e3167083569e4f6722fdae434e6896962072d69a68e7e4c11ce46",
+      "bytes": 3489
+    },
+    {
+      "path": "DELIVERY.json",
+      "sha256": "9227dba9087ef47816d1f462765d65bcf031bf225e79ee3a63ff5a8147bc63da",
+      "bytes": 4049
+    },
+    {
+      "path": "STORYBOARD.md",
+      "sha256": "499e08b229bd34b84335d5e9958fde5f0f41288314ce3af587054859556afae1",
+      "bytes": 5135
+    },
+    {
+      "path": "output/cover.png",
+      "sha256": "954dd428a07c74f584d0763765f56b616aee6cd943dd24ad6b5af43bdb3cf26d",
+      "bytes": 391577
+    },
+    {
+      "path": "output/stills/keyframe-0090.png",
+      "sha256": "811ad78d38d92a878cee6c95641e1cc9904590ca571cad75e933021f32019d04",
+      "bytes": 303267
+    },
+    {
+      "path": "output/stills/keyframe-0315.png",
+      "sha256": "8e9bc7d0141f0a65ae66526ee213670f9c1b7c90980a7f734530c5be822e3e47",
+      "bytes": 191145
+    },
+    {
+      "path": "output/stills/keyframe-0540.png",
+      "sha256": "197596d263a4130f503f5bfd105030ab4fe0f7c6b785589c9533592b172e7197",
+      "bytes": 365740
+    },
+    {
+      "path": "output/stills/keyframe-0765.png",
+      "sha256": "93186ed67438f43e4a07a7f83ad38bfb313ebd64e7e5175461d612b0295ffd63",
+      "bytes": 350346
+    },
+    {
+      "path": "output/stills/keyframe-0990.png",
+      "sha256": "bdb0b4bacc7fe464d1e27862ce46764bc4313b14a99b4e0996b387a37778f94a",
+      "bytes": 222673
+    },
+    {
+      "path": "output/stills/keyframe-1260.png",
+      "sha256": "fb831a33f46c68ba6afd4caeaad6bd838bb31dc3d76dedf3b85f231ba7528eee",
+      "bytes": 391613
+    },
+    {
+      "path": "charming-dist/build.json",
+      "sha256": "491f33c0946050cf18349b1e6bceee7f399d25dbe33a76c5f0d388bd6422085a",
+      "bytes": 179
+    },
+    {
+      "path": "charming-dist/DEPLOYMENT.json",
+      "sha256": "bbac481198558f1e4f9bdd944659921199e141fdba3dc10314bd43625bd8e7c6",
+      "bytes": 2488
+    },
+    {
+      "path": "charming-dist/source.json",
+      "sha256": "2f33d6f6e17595ddf904067f066ab09902f875ae665d401bce7b85fb3243b94f",
+      "bytes": 61651
+    },
+    {
+      "path": "charming-dist/styles.css",
+      "sha256": "749b3b0d994aa9a2b7e5ad97e65a8ed0c6bfea20764c4ee85fa5fc3cac879215",
+      "bytes": 10315
+    },
+    {
+      "path": "charming-dist/ui.bundle.js",
+      "sha256": "fe95868ae4a2ab365e22b3cc389794a9524c163097ef24abf98f10da517d3f67",
+      "bytes": 45042
+    }
+  ],
+  "retainedVideo": "../../motion/output/cavelux-engineered-to-deliver-v4.mp4",
+  "sharedUnchangedAssets": [
+    "../../motion/sprites/",
+    "../../motion/brand/",
+    "../../motion/audio/"
+  ],
+  "scope": "Partial source snapshot; complete project recoverable at gitBaseline. V4 video remains in motion/output."
+}

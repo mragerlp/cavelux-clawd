@@ -1,5 +1,5 @@
 {
-  "startedAt": "2026-09-29T08:37:07.207Z",
+  "startedAt": "2026-09-29T08:49:55.542Z",
   "checks": [
     {
       "name": "DEFINE: approved copy is drawn on canvas",
@@ -265,13 +265,13 @@
           "bottom": 613.04
         },
         {
-          "text": "AGENT 01",
+          "text": "READY TO BUILD",
           "font": "500 20px Consolas, monospace",
           "alpha": 0.7,
           "x": 110,
           "y": 1320,
-          "left": 109,
-          "right": 207.77261352539062,
+          "left": 111,
+          "right": 282.1491394042969,
           "top": 1307,
           "bottom": 1320
         },
@@ -309,15 +309,15 @@
           "bottom": 175
         },
         {
-          "text": "ENGINEERING / 01",
+          "text": "APPLIED ENGINEERING",
           "font": "500 20px Consolas, monospace",
           "alpha": 0.48,
           "x": 670,
           "y": 175,
-          "left": 671,
-          "right": 866.9413146972656,
-          "top": 161,
-          "bottom": 177
+          "left": 669,
+          "right": 904.1295776367188,
+          "top": 162,
+          "bottom": 175
         },
         {
           "text": "01 / DEFINE",
@@ -546,15 +546,15 @@
           "bottom": 175
         },
         {
-          "text": "ENGINEERING / 01",
+          "text": "APPLIED ENGINEERING",
           "font": "500 20px Consolas, monospace",
           "alpha": 0.48,
           "x": 670,
           "y": 175,
-          "left": 671,
-          "right": 866.9413146972656,
-          "top": 161,
-          "bottom": 177
+          "left": 669,
+          "right": 904.1295776367188,
+          "top": 162,
+          "bottom": 175
         },
         {
           "text": "02 / BUILD",
@@ -772,15 +772,15 @@
           "bottom": 175
         },
         {
-          "text": "ENGINEERING / 01",
+          "text": "APPLIED ENGINEERING",
           "font": "500 20px Consolas, monospace",
           "alpha": 0.48,
           "x": 670,
           "y": 175,
-          "left": 671,
-          "right": 866.9413146972656,
-          "top": 161,
-          "bottom": 177
+          "left": 669,
+          "right": 904.1295776367188,
+          "top": 162,
+          "bottom": 175
         },
         {
           "text": "03 / ORCHESTRATE",
@@ -1009,15 +1009,15 @@
           "bottom": 175
         },
         {
-          "text": "ENGINEERING / 01",
+          "text": "APPLIED ENGINEERING",
           "font": "500 20px Consolas, monospace",
           "alpha": 0.48,
           "x": 670,
           "y": 175,
-          "left": 671,
-          "right": 866.9413146972656,
-          "top": 161,
-          "bottom": 177
+          "left": 669,
+          "right": 904.1295776367188,
+          "top": 162,
+          "bottom": 175
         },
         {
           "text": "04 / INTEGRATE",
@@ -1103,15 +1103,15 @@
           "bottom": 175
         },
         {
-          "text": "ENGINEERING / 01",
+          "text": "APPLIED ENGINEERING",
           "font": "500 20px Consolas, monospace",
           "alpha": 0.48,
           "x": 670,
           "y": 175,
-          "left": 671,
-          "right": 866.9413146972656,
-          "top": 161,
-          "bottom": 177
+          "left": 669,
+          "right": 904.1295776367188,
+          "top": 162,
+          "bottom": 175
         },
         {
           "text": "05 / THROUGHPUT",
@@ -1144,7 +1144,7 @@
         {
           "text": "BUILT WITH INTENT.",
           "font": "500 20px Consolas, monospace",
-          "alpha": 0.6,
+          "alpha": 0,
           "x": 110,
           "y": 350,
           "left": 111,
@@ -1165,19 +1165,19 @@
         },
         {
           "text": "ENGINEERED TO DELIVER.",
-          "font": "500 20px Consolas, monospace",
-          "alpha": 0.6,
+          "font": "500 32px Consolas, monospace",
+          "alpha": 0.9,
           "x": 540,
           "y": 1360,
-          "left": 404.6430358886719,
-          "right": 671.9608764648438,
-          "top": 1347,
+          "left": 333.0688171386719,
+          "right": 741.9374389648438,
+          "top": 1340,
           "bottom": 1360
         },
         {
           "text": "DEFINE. BUILD. VERIFY.",
           "font": "500 20px Consolas, monospace",
-          "alpha": 0.65,
+          "alpha": 0,
           "x": 110,
           "y": 1540,
           "left": 110,
@@ -1188,7 +1188,7 @@
         {
           "text": "CAVELUX",
           "font": "500 20px Consolas, monospace",
-          "alpha": 0.8,
+          "alpha": 0,
           "x": 106,
           "y": 175,
           "left": 106,
@@ -1197,20 +1197,20 @@
           "bottom": 175
         },
         {
-          "text": "ENGINEERING / 01",
+          "text": "APPLIED ENGINEERING",
           "font": "500 20px Consolas, monospace",
-          "alpha": 0.48,
+          "alpha": 0,
           "x": 670,
           "y": 175,
-          "left": 671,
-          "right": 866.9413146972656,
-          "top": 161,
-          "bottom": 177
+          "left": 669,
+          "right": 904.1295776367188,
+          "top": 162,
+          "bottom": 175
         },
         {
           "text": "06 / DELIVER",
           "font": "500 20px Consolas, monospace",
-          "alpha": 0.5,
+          "alpha": 0,
           "x": 106,
           "y": 1730,
           "left": 106,
@@ -1221,7 +1221,7 @@
         {
           "text": "INTENT → DELIVERY",
           "font": "500 20px Consolas, monospace",
-          "alpha": 0.45,
+          "alpha": 0,
           "x": 646,
           "y": 1730,
           "left": 647,
@@ -1233,8 +1233,8 @@
     }
   ],
   "pageErrors": [],
-  "sourceHash": "7468f5fb3a5e8b3480399e8500aa6f3cdd0e209761f1bf166709890ce3d9292b",
-  "finishedAt": "2026-09-29T08:37:08.153Z",
+  "sourceHash": "65b01474358fe7aa08b9155dc0d3cc9f4ce562b5f42ee8e5598f0e01048eb286",
+  "finishedAt": "2026-09-29T08:49:56.460Z",
   "summary": {
     "passed": 15,
     "failed": 0

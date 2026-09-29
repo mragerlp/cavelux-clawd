@@ -4,7 +4,7 @@ A retro character studio and 45-second vertical motion film for CAVELUX.
 Clawd moves from a ready state to coordinated working swarms and ultracode at
 full throughput, with an original electronic score and editable science/code graphics.
 The current film is **Engineered to deliver**. Start with the
-[Claude handoff](docs/CLAUDE-HANDOFF.md) for the final editorial pass.
+[FABLE review packet](docs/FABLE-REVIEW.md) for the rendered candidate and review boundaries.
 
 [Charming studio workspace](https://charm.ing/bloodwave/cavelux-clawd-studio)
 · [Attribution](ATTRIBUTION.md)
@@ -73,7 +73,7 @@ npm run render
 npm run verify:video
 ```
 
-The output is `motion/output/cavelux-engineered-to-deliver-v4.mp4`: 45 seconds,
+The output is `motion/output/cavelux-engineered-to-deliver-v5.mp4`: 45 seconds,
 1080 × 1920, 30 fps, H.264 with stereo audio. For stills, use
 `node motion/render.mjs --stills-only`. `npm run test:motion` checks the local
 composition, character behavior, and preview interface.
@@ -105,4 +105,4 @@ the source revision that produced them.
 
 This is an internal CAVELUX creative project. Clawd's original Anthropic
 provenance and the adaptation context are recorded in [ATTRIBUTION.md](ATTRIBUTION.md).
-Local output does not imply publication to Instagram or a hosted app deployment.
+The v5 film is a review candidate. V4 remains preserved, and no Instagram publication or hosted studio update is part of this polish pass.

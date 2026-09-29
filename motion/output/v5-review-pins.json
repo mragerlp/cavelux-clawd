@@ -1,0 +1,64 @@
+{
+  "createdAt": "2026-09-29T08:52:01.025724+00:00",
+  "files": {
+    "motion/output/cavelux-engineered-to-deliver-v5.mp4": {
+      "sha256": "011e5dd04333fff6e4350ec899b2b752f8896021e58fa1683e98ce15905496f6",
+      "bytes": 11447110
+    },
+    "motion/output/cavelux-engineered-to-deliver-v4.mp4": {
+      "sha256": "0111552b96da60f815871c95127058816933edf5a8147549501cf5f0d070b807",
+      "bytes": 11249888
+    },
+    "motion/film.js": {
+      "sha256": "65b01474358fe7aa08b9155dc0d3cc9f4ce562b5f42ee8e5598f0e01048eb286",
+      "bytes": 28196
+    },
+    "motion/audio/master.wav": {
+      "sha256": "a54be14ec09fe572801451f23689c9b18e2361b272e40bfed55f34ff20c69f62",
+      "bytes": 12960102
+    },
+    "motion/audio/score.wav": {
+      "sha256": "efd73aa3ec134feb41b4c2751da416e0a759ea95ede05a62cbc340b92ebb9b2e",
+      "bytes": 12960044
+    },
+    "motion/audio/sfx.wav": {
+      "sha256": "0b36604696eecb8e371d5816f7582da5d7b1ed4f82ba8e3a5331874ed7a0b21e",
+      "bytes": 12960044
+    },
+    "motion/DELIVERY.json": {
+      "sha256": "8c2a05f0135ac121fa90b93194ba9a50e559c68e57e7895f08c072ef1b7fbbbf",
+      "bytes": 5035
+    },
+    "motion/output/v5-render.txt": {
+      "sha256": "2c3f7c4f4d358b7af6a4b8d5bdf8743e24de19d3acb2dbd58bf841d57cca57e5",
+      "bytes": 1141
+    },
+    "motion/output/v5-ffprobe.json": {
+      "sha256": "6bd22f00e37876000f710c25ea0b75117a7ffd1cb0ff8f611a258a6b6b26f17d",
+      "bytes": 4772
+    },
+    "motion/output/v5-verify.json": {
+      "sha256": "2621100c1f3c925cb489405baee6550022cf2880e35441ffe31836bcac163cb1",
+      "bytes": 634
+    },
+    "motion/output/v5-tests.txt": {
+      "sha256": "489081c7b3b4f7d967fc41a2d22cdc30a1bd86296b39a3a6d5f947a3fda57598",
+      "bytes": 15653
+    },
+    "motion/output/v5-preservation-check.json": {
+      "sha256": "f4327eb6058df36552557f416e5797cf85ae3a1cec7f78da9c908a9e2c0e1ae5",
+      "bytes": 888
+    },
+    "performance-evidence/candidate.json": {
+      "sha256": "727617d8d93a03244edaff194476a1b3c97d51ed88c89775a774a4f5d5e319b6",
+      "bytes": 34510
+    },
+    "performance-evidence/text-corpus.json": {
+      "sha256": "a848bfde16485f46cfcb66863d5c4f1b48d2955d94edede141bc89b5aac66210",
+      "bytes": 19904
+    }
+  },
+  "reviewOwner": "FABLE: non-character claims, never-list and delivery evidence",
+  "approvalOwner": "Bloodwave",
+  "status": "REVIEW_CANDIDATE"
+}

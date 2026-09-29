@@ -1,11 +1,11 @@
 {
-  "startedAt": "2026-09-29T08:37:02.960Z",
+  "startedAt": "2026-09-29T08:49:51.152Z",
   "baseUrl": "http://127.0.0.1:8766/",
   "browser": "Microsoft Edge / Playwright headless",
   "sourceHashes": {
-    "index.html": "c35aa47fbc787ce7034569c9c68343b6d6e1c4c27dc76caf5d771eda7a358445",
+    "index.html": "3a1c2738ded411d517ce5ad1f6ba24cfe93f0ad46abb7cecef5c99bec223baf2",
     "player.js": "bcb7370e94beadac183c214b1ccad3666c636d881ed2bf69374f2f7ae1767a7c",
-    "film.js": "7468f5fb3a5e8b3480399e8500aa6f3cdd0e209761f1bf166709890ce3d9292b",
+    "film.js": "65b01474358fe7aa08b9155dc0d3cc9f4ce562b5f42ee8e5598f0e01048eb286",
     "assets.html": "b3cc0e2d490149970ef9ad28c8498f1db2a243948d3cd29600a3b56447cfb9b8",
     "state-previews.js": "ef137d30c08eab6e798aada3a4ba27994f70ef0184e8e0145fd2ed616679acdd"
   },
@@ -180,17 +180,17 @@
       "status": "PASS",
       "evidence": {
         "before": {
-          "frame": 13,
+          "frame": 12,
           "chapter": "01 / DEFINE",
-          "seek": 13,
+          "seek": 12,
           "playName": "Play motion film",
           "mutePressed": "false",
           "time": "00:00 / 00:45"
         },
         "after": {
-          "frame": 13,
+          "frame": 12,
           "chapter": "01 / DEFINE",
-          "seek": 13,
+          "seek": 12,
           "playName": "Play motion film",
           "mutePressed": "false",
           "time": "00:00 / 00:45"
@@ -216,8 +216,8 @@
         "width": 1080,
         "height": 1920,
         "frame": 1050,
-        "distinctSampleColors": 170,
-        "nonBackgroundSamples": 3805,
+        "distinctSampleColors": 152,
+        "nonBackgroundSamples": 3719,
         "samples": 8360
       }
     },
@@ -225,9 +225,9 @@
       "name": "desktop: Restart returns near zero and plays",
       "status": "PASS",
       "evidence": {
-        "frame": 3,
+        "frame": 4,
         "chapter": "01 / DEFINE",
-        "seek": 3,
+        "seek": 4,
         "playName": "Pause motion film",
         "mutePressed": "false",
         "time": "00:00 / 00:45"
@@ -414,8 +414,8 @@
           "width": 1080,
           "height": 1920,
           "frame": 1050,
-          "distinctSampleColors": 170,
-          "nonBackgroundSamples": 3805,
+          "distinctSampleColors": 152,
+          "nonBackgroundSamples": 3719,
           "samples": 8360
         }
       }
@@ -673,7 +673,7 @@
   ],
   "badResponses": [],
   "browserVersion": "154.0.4258.37",
-  "finishedAt": "2026-09-29T08:37:06.978Z",
+  "finishedAt": "2026-09-29T08:49:55.313Z",
   "summary": {
     "passed": 19,
     "failed": 0

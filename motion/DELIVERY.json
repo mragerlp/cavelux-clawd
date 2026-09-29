@@ -1,7 +1,7 @@
 {
   "title": "CAVELUX - Engineered to deliver",
-  "revision": 4,
-  "video": "output/cavelux-engineered-to-deliver-v4.mp4",
+  "revision": 5,
+  "video": "output/cavelux-engineered-to-deliver-v5.mp4",
   "durationSeconds": 45,
   "width": 1080,
   "height": 1920,
@@ -12,7 +12,7 @@
   "colorRange": "limited",
   "colorSpace": "BT.709",
   "audio": "AAC stereo 48000 Hz",
-  "videoSha256": "0111552B96DA60F815871C95127058816933EDF5A8147549501CF5F0D070B807",
+  "videoSha256": "011E5DD04333FFF6E4350EC899B2B752F8896021E58FA1683E98CE15905496F6",
   "assets": {
     "characterStates": 3,
     "stateManifest": "sprites/states.json",
@@ -47,26 +47,38 @@
       "reactionUI": 12,
       "audio": 10
     },
-    "filmBoundarySamples": 20,
-    "render": "Existing v4 artifact retained byte-for-byte; no new film render for this revert",
+    "filmBoundarySamples": 24,
+    "render": "node motion/render.mjs: PASS exit0;1350frames; output/v5-render.txt",
     "encodedMedia": "node motion/verify.mjs: PASS exit0; ffprobe and full FFmpeg audio/video decode exit0",
-    "visualReview": "Original larger Working spirals restored at user request. Working and Normal PNGs match baseline84c362a. Hosted Working preview and playback verified at studio revision8.",
+    "visualReview": "Fresh storyboard captures and encoded Throughput/final-hold PNGs inspected. Independent read-only code and visual review found no concrete issue. Full subjective audiovisual approval remains the user decision.",
     "documentation": "git diff --check: PASS exit0",
-    "reactions": "node motion/reactions/render.mjs: PASS exit0; eight reactions and376transparent frame masters regenerated"
+    "reactions": "node motion/reactions/render.mjs: PASS exit0; eight reactions and376transparent frame masters regenerated",
+    "polish": {
+      "command": "node scripts/check-polish.mjs --candidate",
+      "exitCode": 0,
+      "passed": 11,
+      "failed": 0,
+      "textFrames": 1350,
+      "textDrawCalls": 19722,
+      "textViolations": 0,
+      "evidence": "../performance-evidence/candidate.json"
+    },
+    "preservation": "output/v5-preservation-check.json: PASS exit0; v4 video, character rendering and AAC retained",
+    "totalPassedIncludingPolish": 183
   },
   "unverified": [
     "Full-length subjective audiovisual approval by the user",
     "Instagram upload and platform transcoding",
     "Physical-phone and other operating-system/browser playback"
   ],
-  "videoBytes": 11249888,
+  "videoBytes": 11447110,
   "sources": {
-    "motion/film.js": "7468f5fb3a5e8b3480399e8500aa6f3cdd0e209761f1bf166709890ce3d9292b",
+    "motion/film.js": "65b01474358fe7aa08b9155dc0d3cc9f4ce562b5f42ee8e5598f0e01048eb286",
     "motion/audio/generate_audio.py": "76472bc539c624ac361f0ee5bf195b4422428e6c3650b5cb96d91476d3ecb721",
     "motion/audio/master.wav": "a54be14ec09fe572801451f23689c9b18e2361b272e40bfed55f34ff20c69f62",
-    "motion/index.html": "c35aa47fbc787ce7034569c9c68343b6d6e1c4c27dc76caf5d771eda7a358445",
-    "motion/render.mjs": "8b9d36757f9b6d151332d08f25d5785bf0434cd223f28223a96c2ddbd256a432",
-    "motion/verify.mjs": "746393b3cf9e3167083569e4f6722fdae434e6896962072d69a68e7e4c11ce46"
+    "motion/index.html": "3a1c2738ded411d517ce5ad1f6ba24cfe93f0ad46abb7cecef5c99bec223baf2",
+    "motion/render.mjs": "2204a9f5b5eb7d005fba3d206d0aa123edccd1a6b6ed71ca88b4d21455af26fb",
+    "motion/verify.mjs": "e116f11a861f97521738046645d5f7910f0c47037807f54ad2232fbad8a73654"
   },
   "soundtrack": {
     "style": "Original driving electro: punch kick/snare, sixteenth-note hats and arps, FM/saw bass, harmonic stabs",
@@ -77,19 +89,25 @@
     "masterTruePeakDBTP": -1.45,
     "encodedAACIntegratedLUFS": -14.02,
     "encodedAACTruePeakDBTP": -1.02,
-    "measurement": "Independent FFmpeg loudnorm analysis of WAV and finished MP4; both exit0"
+    "measurement": "Independent FFmpeg loudnorm analysis of WAV and finished MP4; both exit0",
+    "v4AndV5EncodedAudioByteIdentical": true,
+    "encodedAudioADTSSHA256": "495413cdfca211319ae77c5f986018affc3d29e31d4f68ff6bb7526d48de2e7e"
   },
   "studio": {
     "url": "https://charm.ing/bloodwave/cavelux-clawd-studio",
     "revision": 8,
-    "readback": "Exact module/UI/styles match; hosted copy and all four saved presets observed"
+    "readback": "Exact module/UI/styles match; hosted copy and all four saved presets observed",
+    "scope": "Hosted revision8 unchanged; local generated bundle includes film-only polish and is not published"
   },
-  "handoff": "../docs/CLAUDE-HANDOFF.md",
-  "previousRevision": "../archive/motion-v3/DELIVERY.json",
-  "restoration": {
-    "request": "revert it, old swirly looks better",
-    "sourceBaseline": "84c362a5160d1a7bced351a8d19386724b13dfa0",
-    "revertedCommit": "5d0ec852b969d793135108ba31e492810a895780",
-    "design": "Original larger counter-rotating spirals; regular Normal eyes; engineering copy and electronic score retained"
-  }
+  "handoff": "../docs/FABLE-REVIEW.md",
+  "previousRevision": "../archive/motion-v4/DELIVERY.json",
+  "status": "REVIEW_CANDIDATE",
+  "changes": [
+    "Outgoing image retained through an eighth-note chapter wipe; no blank cut frame",
+    "Throughput bars moved below captions",
+    "Closing business line increased to32px at90% opacity",
+    "Secondary labels and frame furniture fade42.0-42.9s for a2.1s clean closing hold",
+    "Generic agent identifier replaced with READY TO BUILD"
+  ],
+  "versionNote": "This v5 replaces the rejected simplified-eye iteration in the current checkout; that old candidate remains in Git history at5d0ec85. Identify this delivery bySHA256."
 }
