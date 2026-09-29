@@ -10,7 +10,7 @@ Run `node server.mjs`, then open http://127.0.0.1:8766/ in a browser. Press Play
 
 Run `node render.mjs --stills-only` for storyboard captures, or `node render.mjs` for the full video. Run `node verify.mjs` to check the resulting MP4.
 
-The renderer and current presentation use output/cavelux-engineered-to-deliver-v5.mp4. Earlier film exports remain available as history. Verify the new output after rendering before treating it as a finished delivery.
+The renderer and current presentation use output/cavelux-engineered-to-deliver-v4.mp4. Earlier film exports remain available as history. Verify the new output after rendering before treating it as a finished delivery.
 
 Run `node validate-editorial.mjs` with the preview server running to check the copy actually drawn on canvas, headline ink bounds, player title, and chapter labels. `node validate-ui.mjs` exercises playback, the Throughput chapter jump, desktop and mobile layout, and the asset-library flow. Editorial evidence is written to output/editorial-checks/.
 
@@ -19,14 +19,14 @@ Install the repository's pinned Playwright dependency with `npm ci` from the rep
 ## Files
 
 - index.html, film.js, player.js: interactive preview and frame-addressable composition.
-- sprites/: the active regular-eyed normal, working, and rainbow ultracode bases; earlier pose candidates remain on disk as history and are excluded from the current kit.
+- sprites/: the active regular-eyed normal, open-spiral working, and rainbow ultracode bases; earlier pose candidates remain on disk as history and are excluded from the current kit.
 - brand/: copies of existing Cavelux identity assets.
 - graphics/: six editable native SVG motion assets and a manifest.
 - audio/: original score, sound effects, mixed master, generator, and measured audio evidence.
 - STORYBOARD.md: six movements, timing, copy, and intended transitions.
 - output/: final film, cover, storyboard captures, and verification evidence after rendering.
 
-Image-generation prompts are recorded in IMAGEGEN-PROMPTS.md and sprites/NORMAL-PROMPT.md. The prior pose prompts in sprites/POSE-PROMPTS.md are historical. Open assets.html for live previews of the three active states: normal with regular eyes, working with medium-sized, thin, single-turn counter-rotating curls and green code aura, and ultracode with the same simple curls plus an animated rainbow wave. The procedural eye layer replaces the dense source eye ink without changing the source PNGs. The library honors reduced-motion preferences. The shared renderer also powers the Charming studio in ../charming/.
+Image-generation prompts are recorded in IMAGEGEN-PROMPTS.md and sprites/NORMAL-PROMPT.md. The prior pose prompts in sprites/POSE-PROMPTS.md are historical. Open assets.html for live previews of the three active states: normal with regular eyes, working with counter-rotating spiral eyes and green code aura, and ultracode with the same hypnotic eyes plus an animated rainbow wave. The library honors reduced-motion preferences. The shared renderer also powers the Charming studio in ../charming/.
 
 ## Limits
 

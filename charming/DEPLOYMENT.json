@@ -1,10 +1,10 @@
 {
   "appId": "f4528594-b79b-4627-a4a5-e7a545d128b5",
   "url": "https://charm.ing/bloodwave/cavelux-clawd-studio",
-  "revision": 7,
+  "revision": 8,
   "visibility": "private",
   "sourceBundle": "charming/dist/source.json",
-  "sourceBundleSHA256": "EB847DFBEBD8FB101B77207D1E9ED5AF65BEE887D06486887516E3DFD015B40D",
+  "sourceBundleSHA256": "2F33D6F6E17595DDF904067F066AB09902F875AE665D401BCE7B85FB3243B94F",
   "sourceReadback": "PASS: persisted module, UI and styles exactly match the local build",
   "localChecks": {
     "commands": [
@@ -20,18 +20,20 @@
       "passed": 7,
       "failed": 0
     },
-    "scope": "Fresh revision7 source, Windows Edge local harness; no new hosted export roundtrip claimed"
+    "scope": "Restored original spiral source at revision8, Windows Edge local harness; no new hosted export roundtrip claimed"
   },
   "exportRetention": "Each native export replaces the latest asset of that type. Download copies to retain multiple outputs.",
   "unverified": [
     "Automatic local file download of hosted JSON in the Codex in-app browser; its JSON document was opened and inspected instead",
     "Other operating systems and browser engines",
     "Instagram upload, transcoding, and playback on physical mobile devices",
-    "Hosted PNG/JSON export roundtrip on revision7; revision4 roundtrip evidence retained separately and current local adapter checks pass"
+    "Hosted PNG/JSON export roundtrip on revision8; revision4 roundtrip evidence retained separately and current local adapter checks pass"
   ],
   "hostedBrowserChecks": {
-    "revision": 7,
-    "readableCurlPreview": "PASS: Working selected and larger open curls observed in hosted UI",
+    "revision": 8,
+    "originalSpiralPreview": "PASS: Working selected and original larger spiral eyes observed in hosted UI",
+    "playback": "PASS: Play changes state to PLAYING and advances the timeline",
+    "professionalCopy": "PASS: Configure. Preview. Export. and ENGINEERED TO DELIVER. remain present",
     "existingPresets": "PASS: all four original saved looks remain listed; no preset data changed"
   },
   "priorRevision4ExportEvidence": {

@@ -32,16 +32,13 @@ node charming/server.mjs
 ```
 
 Open [the local studio](http://127.0.0.1:8787/studio). Choose Normal, Working,
-or Ultracode; adjust the simple curl rotation, character scale, background,
-and code aura. Play or scrub the ten-second timeline, save named looks, and export a PNG
+or Ultracode; adjust spiral-eye rotation, character scale, background, and code
+aura. Play or scrub the ten-second timeline, save named looks, and export a PNG
 frame or a preset JSON file. Choose the Transparent background for a cutout PNG.
 
-Working and Ultracode use medium-sized, thin, single-turn curls that rotate in
-opposite directions. Normal retains its regular rectangular eyes.
-
 The private [hosted studio](https://charm.ing/bloodwave/cavelux-clawd-studio)
-records its deployed revision in `charming/DEPLOYMENT.json`. Hosted exports
-are stored as the latest PNG and JSON in the app's asset storage, with an open link for each result. Save downloaded
+is deployed at revision 8. Hosted exports are stored as the latest PNG and JSON
+in the app's asset storage, with an open link for each result. Save downloaded
 exports separately if you want to retain multiple frames or presets.
 
 The local harness stores presets in `charming/.local/presets.json`, which is
@@ -76,7 +73,7 @@ npm run render
 npm run verify:video
 ```
 
-The output is `motion/output/cavelux-engineered-to-deliver-v5.mp4`: 45 seconds,
+The output is `motion/output/cavelux-engineered-to-deliver-v4.mp4`: 45 seconds,
 1080 × 1920, 30 fps, H.264 with stereo audio. For stills, use
 `node motion/render.mjs --stills-only`. `npm run test:motion` checks the local
 composition, character behavior, and preview interface.

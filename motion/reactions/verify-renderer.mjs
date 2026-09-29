@@ -62,7 +62,7 @@ try{
     const result=await page.evaluate(()=>{
       const c=document.getElementById('reaction'),g=c.getContext('2d');window.renderReaction('typing',0,c);const a=g.getImageData(0,0,512,512).data;const spec=window.renderReaction('typing',1.2,c),b=g.getImageData(0,0,512,512).data,hero=spec.bodyBounds;
       return[[.16,.47],[.53,.84]].map(([left,right])=>{let blackPixels=0,inkChanged=0;for(let y=Math.ceil(hero.y+hero.height*.1);y<hero.y+hero.height*.64;y++)for(let x=Math.ceil(hero.x+hero.width*left);x<hero.x+hero.width*right;x++){const i=(y*512+x)*4,dark=data=>data[i+3]>200&&Math.max(data[i],data[i+1],data[i+2])<70;if(dark(a))blackPixels++;if(dark(a)!==dark(b))inkChanged++;}return{blackPixels,inkChanged};});
-    });for(const eye of result){assert.ok(eye.blackPixels>60,'Small working curl must contain readable black ink');assert.ok(eye.inkChanged/eye.blackPixels>.2,'Working curl ink must visibly animate relative to its size');}return result;
+    });for(const eye of result){assert.ok(eye.blackPixels>400,'Working eye must contain actual black spiral ink');assert.ok(eye.inkChanged>100,'Working eye ink must animate');}return result;
   });
   await check('unknown reaction IDs and invalid times are rejected',async()=>{
     const result=await page.evaluate(()=>{

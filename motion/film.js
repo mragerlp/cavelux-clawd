@@ -65,30 +65,26 @@
     if(selected.length!==2)throw new Error('Expected two isolated friendly spiral eye components in the source sprite');
     const eyes=selected.map((eye,index)=>{
       const ew=eye.x1-eye.x0+1,eh=eye.y1-eye.y0+1;
-      // An open single-turn curl stays readable without filling the face. Use the source eyes
-      // only to locate their centers; their dense original ink is removed below.
-      const size=25,inner=19,diameter=Math.max(ew,eh)*.90,source=document.createElement('canvas');source.width=size;source.height=size;
-      const sg=source.getContext('2d',{willReadFrequently:true}),center=(size-1)/2;
-      sg.strokeStyle='#0e0f0d';sg.lineWidth=2;sg.lineCap='round';sg.lineJoin='round';sg.beginPath();
-      for(let i=0;i<=80;i++){
-        const u=i/80,r=1.4+7.1*u,angle=-Math.PI/2+u*Math.PI*2;
-        const x=center+Math.cos(angle)*r,y=center+Math.sin(angle)*r;
-        if(i===0)sg.moveTo(x,y);else sg.lineTo(x,y);
-      }
-      sg.stroke();
+      const mask=document.createElement('canvas');mask.width=ew;mask.height=eh;
+      const mg=mask.getContext('2d',{willReadFrequently:true}),maskData=mg.createImageData(ew,eh);
+      for(const p of eye.points){const x=p%b.w-eye.x0,y=Math.floor(p/b.w)-eye.y0,i=(y*ew+x)*4;maskData.data[i+3]=255;}
+      mg.putImageData(maskData,0,0);
+      const size=25,inner=19,diameter=Math.max(ew,eh),source=document.createElement('canvas');source.width=size;source.height=size;
+      const sg=source.getContext('2d',{willReadFrequently:true});sg.imageSmoothingEnabled=false;
+      sg.drawImage(mask,(size-inner*ew/diameter)/2,(size-inner*eh/diameter)/2,inner*ew/diameter,inner*eh/diameter);
       const sourcePixels=sg.getImageData(0,0,size,size).data,grid=new Uint8Array(size*size);
       for(let p=0;p<grid.length;p++)grid[p]=sourcePixels[p*4+3]>127?1:0;
       // Replace the original eye ink with nearby body color. The source PNG is
       // untouched; this cached body is used only by the procedural compositor.
-      const left=Math.max(0,eye.x0-5),right=Math.min(b.w-1,eye.x1+5);
-      for(let y=Math.max(0,eye.y0-5);y<=Math.min(b.h-1,eye.y1+5);y++){
-        const li=(y*b.w+left)*4,ri=(y*b.w+right)*4;
-        const a=[pixels[li],pixels[li+1],pixels[li+2]],z=[pixels[ri],pixels[ri+1],pixels[ri+2]];
-        // Restore the full old-eye area, including its bright antialiased edge,
-        // by interpolating the adjacent body colors along the same scanline.
-        for(let x=left;x<=right;x++){
-          const i=(y*b.w+x)*4,u=(x-left)/(right-left);
-          if(pixels[i+3]>0)for(let channel=0;channel<3;channel++)pixels[i+channel]=Math.round(mix(a[channel],z[channel],u));
+      for(let y=Math.max(0,eye.y0-2);y<=Math.min(b.h-1,eye.y1+2);y++){
+        const sum=[0,0,0];let count=0;
+        for(let x=Math.max(0,eye.x0-8);x<=Math.min(b.w-1,eye.x1+8);x++){
+          const i=(y*b.w+x)*4,hi=Math.max(pixels[i],pixels[i+1],pixels[i+2]),lo=Math.min(pixels[i],pixels[i+1],pixels[i+2]);
+          if(pixels[i+3]>200&&hi>120&&hi-lo>45){for(let channel=0;channel<3;channel++)sum[channel]+=pixels[i+channel];count++;}
+        }
+        const color=count?sum.map(value=>Math.round(value/count)):[190,250,17];
+        for(let x=Math.max(0,eye.x0-2);x<=Math.min(b.w-1,eye.x1+2);x++){
+          const i=(y*b.w+x)*4;if(Math.max(pixels[i],pixels[i+1],pixels[i+2])<145&&pixels[i+3]>0){for(let channel=0;channel<3;channel++)pixels[i+channel]=color[channel];}
         }
       }
       const frame=document.createElement('canvas');frame.width=size;frame.height=size;

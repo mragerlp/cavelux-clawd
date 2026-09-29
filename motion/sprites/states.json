@@ -1,5 +1,5 @@
 {
-  "revision": 4,
+  "revision": 3,
   "normal": {
     "base": "06-normal.png",
     "eyes": "two plain black rectangles",
@@ -8,13 +8,13 @@
   },
   "working": {
     "base": "01-idle.png",
-    "eyes": "medium-sized, thin single-turn curls with counter-rotating pixel-grid animation",
+    "eyes": "friendly open spirals with counter-rotating pixel-grid hypnosis",
     "aura": "animated green code tokens and trails",
     "purpose": "skills, MCPs, workflows, and coordinated swarms"
   },
   "ultracode": {
     "base": "05-spectrum.png",
-    "eyes": "medium-sized, thin black single-turn curls with counter-rotating pixel-grid animation",
+    "eyes": "black spirals with counter-rotating pixel-grid hypnosis",
     "aura": "none",
     "body": "animated flowing rainbow wave",
     "purpose": "ultracode transformation"

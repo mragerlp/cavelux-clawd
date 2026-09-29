@@ -37,11 +37,10 @@ node motion/validate-editorial.mjs
 python motion/validate-audio.py
 ```
 
-The full renderer writes `motion/output/cavelux-engineered-to-deliver-v5.mp4`:
+The full renderer writes `motion/output/cavelux-engineered-to-deliver-v4.mp4`:
 1080 by 1920 pixels, 30 frames per second, 1,350 frames, and 45 seconds. It uses
 the local `motion/audio/master.wav`. Rendering replaces the current output;
-the prior v4 MP4 remains in `motion/output/`, and earlier revisions are represented
-in the archive inventory.
+earlier revisions are represented in the archive inventory.
 
 The composition uses Bahnschrift and Consolas, with Arial/sans-serif and
 monospace fallbacks. Fonts are not bundled. A different host, font fallback,

@@ -1,7 +1,7 @@
 {
   "title": "CAVELUX - Engineered to deliver",
-  "revision": 5,
-  "video": "output/cavelux-engineered-to-deliver-v5.mp4",
+  "revision": 4,
+  "video": "output/cavelux-engineered-to-deliver-v4.mp4",
   "durationSeconds": 45,
   "width": 1080,
   "height": 1920,
@@ -12,13 +12,13 @@
   "colorRange": "limited",
   "colorSpace": "BT.709",
   "audio": "AAC stereo 48000 Hz",
-  "videoSha256": "F00B82DEE90A3FB921BD286E906C4F3190C4FB4D377E3498422C8627FCBE621B",
+  "videoSha256": "0111552B96DA60F815871C95127058816933EDF5A8147549501CF5F0D070B807",
   "assets": {
     "characterStates": 3,
     "stateManifest": "sprites/states.json",
     "normal": "Regular rectangular eyes; no aura",
-    "working": "Readable medium-sized single-turn rotating curls; animated green code aura",
-    "ultracode": "Readable medium-sized single-turn rotating curls; animated rainbow body wave",
+    "working": "Friendly counter-rotating spiral eyes; animated green code aura for skills, MCPs, workflows, and swarms",
+    "ultracode": "Animated rainbow wave through the body with counter-rotating black spiral eyes",
     "editableSvgGraphics": 6,
     "storyboardCaptures": 6,
     "verticalCover": "output/cover.png",
@@ -31,11 +31,11 @@
   "checks": {
     "command": "npm test",
     "exitCode": 0,
-    "passed": 174,
+    "passed": 172,
     "failed": 0,
     "suites": {
       "backend": 15,
-      "character": 28,
+      "character": 26,
       "hypnosis": 9,
       "motionUI": 19,
       "editorial": 15,
@@ -48,25 +48,25 @@
       "audio": 10
     },
     "filmBoundarySamples": 20,
-    "render": "node motion/render.mjs: PASS exit0;1350frames",
+    "render": "Existing v4 artifact retained byte-for-byte; no new film render for this revert",
     "encodedMedia": "node motion/verify.mjs: PASS exit0; ffprobe and full FFmpeg audio/video decode exit0",
-    "visualReview": "Working and Ultracode previews inspected; simple open curls enlarged after user found the first attempt too small. Hosted Working preview verified at revision7. Current local playback, speed/freeze, aura, export and mobile checks pass.",
+    "visualReview": "Original larger Working spirals restored at user request. Working and Normal PNGs match baseline84c362a. Hosted Working preview and playback verified at studio revision8.",
     "documentation": "git diff --check: PASS exit0",
-    "earlierAttempts": "Initial studio UI check could not connect to stopped local server; after starting it, complete npm test passed. Initial typing test used a dense-eye area threshold; replaced it with readable ink and proportional motion assertions, then 13 renderer checks passed."
+    "reactions": "node motion/reactions/render.mjs: PASS exit0; eight reactions and376transparent frame masters regenerated"
   },
   "unverified": [
     "Full-length subjective audiovisual approval by the user",
     "Instagram upload and platform transcoding",
     "Physical-phone and other operating-system/browser playback"
   ],
-  "videoBytes": 9274902,
+  "videoBytes": 11249888,
   "sources": {
-    "motion/film.js": "31c72c6cf86f9e297998ffd278c3bff31d7f208b65bea98126d32e54fc1186fe",
+    "motion/film.js": "7468f5fb3a5e8b3480399e8500aa6f3cdd0e209761f1bf166709890ce3d9292b",
     "motion/audio/generate_audio.py": "76472bc539c624ac361f0ee5bf195b4422428e6c3650b5cb96d91476d3ecb721",
     "motion/audio/master.wav": "a54be14ec09fe572801451f23689c9b18e2361b272e40bfed55f34ff20c69f62",
-    "motion/index.html": "3a1c2738ded411d517ce5ad1f6ba24cfe93f0ad46abb7cecef5c99bec223baf2",
-    "motion/render.mjs": "50c26d301ff00b1b700d2679955dfc777572bad1c40c1e7f87c2f908b4cbd39a",
-    "motion/verify.mjs": "e116f11a861f97521738046645d5f7910f0c47037807f54ad2232fbad8a73654"
+    "motion/index.html": "c35aa47fbc787ce7034569c9c68343b6d6e1c4c27dc76caf5d771eda7a358445",
+    "motion/render.mjs": "8b9d36757f9b6d151332d08f25d5785bf0434cd223f28223a96c2ddbd256a432",
+    "motion/verify.mjs": "746393b3cf9e3167083569e4f6722fdae434e6896962072d69a68e7e4c11ce46"
   },
   "soundtrack": {
     "style": "Original driving electro: punch kick/snare, sixteenth-note hats and arps, FM/saw bass, harmonic stabs",
@@ -77,15 +77,19 @@
     "masterTruePeakDBTP": -1.45,
     "encodedAACIntegratedLUFS": -14.02,
     "encodedAACTruePeakDBTP": -1.02,
-    "measurement": "Independent FFmpeg loudnorm analysis of WAV and finished MP4; both exit0",
-    "v4AndV5EncodedAudioByteIdentical": true,
-    "encodedAudioADTSSHA256": "495413cdfca211319ae77c5f986018affc3d29e31d4f68ff6bb7526d48de2e7e"
+    "measurement": "Independent FFmpeg loudnorm analysis of WAV and finished MP4; both exit0"
   },
   "studio": {
     "url": "https://charm.ing/bloodwave/cavelux-clawd-studio",
-    "revision": 7,
+    "revision": 8,
     "readback": "Exact module/UI/styles match; hosted copy and all four saved presets observed"
   },
   "handoff": "../docs/CLAUDE-HANDOFF.md",
-  "previousRevision": "output/v4-delivery.json"
+  "previousRevision": "../archive/motion-v3/DELIVERY.json",
+  "restoration": {
+    "request": "revert it, old swirly looks better",
+    "sourceBaseline": "84c362a5160d1a7bced351a8d19386724b13dfa0",
+    "revertedCommit": "5d0ec852b969d793135108ba31e492810a895780",
+    "design": "Original larger counter-rotating spirals; regular Normal eyes; engineering copy and electronic score retained"
+  }
 }
