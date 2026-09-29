@@ -7,7 +7,7 @@
   "sources": {
     "renderer.js": "83f5f096c34a6cea6d5da56ef6c6c978f18012dc8ca7c3a59cac0661fd422429",
     "catalog.json": "724eb2b587eee2338d48f39a2262f7011c1d22fb3e0661b7d39da3bc146aee0c",
-    "../film.js": "7468f5fb3a5e8b3480399e8500aa6f3cdd0e209761f1bf166709890ce3d9292b",
+    "../film.js": "31c72c6cf86f9e297998ffd278c3bff31d7f208b65bea98126d32e54fc1186fe",
     "../sprites/06-normal.png": "a3c6fe2437d4b75cc39ebe96d8f8f07f134eba695f15a1679784a2a04d6aad1c",
     "../sprites/01-idle.png": "b3783681219e905dfa922f753aff5d9496e11333cef9cde4b0f6e433166ae074",
     "../sprites/05-spectrum.png": "94f195e271965b3de7c724851597cb730a321a186e38d1bc74f80846fc74374e"
@@ -52,16 +52,16 @@
       "frames": 48,
       "files": {
         "gif": {
-          "bytes": 1068220,
-          "sha256": "526a926689c6a580f30aa996a45152e2b5ebc35462634312a58a53b5e0ae4b3d"
+          "bytes": 1024237,
+          "sha256": "81af08d1bbfa07873c7a1cb63460f5153b7683e2d228fdf5b9fac6c4d692d255"
         },
         "mp4": {
-          "bytes": 85764,
-          "sha256": "61bbe5a72028937d844d6c5b6a64f8dc778e627be51127f15267ad7855cbc269"
+          "bytes": 67899,
+          "sha256": "28a6f8e42be91e1839303f513b60c60c60205402279929f412646dacbfdf49be"
         },
         "png": {
-          "bytes": 65475,
-          "sha256": "c95ad88ea0154d12999eeee5977f8f252a89996b477d0d959bc6556ffb907b12"
+          "bytes": 61962,
+          "sha256": "760340b3708e4fe89565a062b87f880bd7017192695c9fe6569ea3b8c1fa1778"
         }
       }
     },
@@ -182,16 +182,16 @@
       "frames": 48,
       "files": {
         "gif": {
-          "bytes": 600652,
-          "sha256": "58723c7b3d2504cfa795734f371ad48b92ab3cc1ac5a00c50db83510368c95e5"
+          "bytes": 581597,
+          "sha256": "684e3de2bfb5224384753caf1ca62a41ec372a36189c700b71229ab7499266bd"
         },
         "mp4": {
-          "bytes": 98079,
-          "sha256": "33ca311e6a621fda14f4ca1337c88f1f805e52455e13a903ec408b3d6afdf5c9"
+          "bytes": 79738,
+          "sha256": "d98e43dd021527c4ef22a1fe306c7f0be9d4d59bf6f5ee2b83ad92d4f0c41ccc"
         },
         "png": {
-          "bytes": 37964,
-          "sha256": "99d5657c728279f7c37b0b6c7e2044626ccde632594194d6093ab8366936eea9"
+          "bytes": 38839,
+          "sha256": "713a0517fd6bada07a8d0be1d7d7faad9e855f4da1fc6028bbe895eee70cfb1f"
         }
       }
     },

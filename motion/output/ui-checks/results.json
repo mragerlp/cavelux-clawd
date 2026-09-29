@@ -1,11 +1,11 @@
 {
-  "startedAt": "2026-09-29T08:15:59.125Z",
+  "startedAt": "2026-09-29T08:31:30.919Z",
   "baseUrl": "http://127.0.0.1:8766/",
   "browser": "Microsoft Edge / Playwright headless",
   "sourceHashes": {
-    "index.html": "c35aa47fbc787ce7034569c9c68343b6d6e1c4c27dc76caf5d771eda7a358445",
+    "index.html": "3a1c2738ded411d517ce5ad1f6ba24cfe93f0ad46abb7cecef5c99bec223baf2",
     "player.js": "bcb7370e94beadac183c214b1ccad3666c636d881ed2bf69374f2f7ae1767a7c",
-    "film.js": "7468f5fb3a5e8b3480399e8500aa6f3cdd0e209761f1bf166709890ce3d9292b",
+    "film.js": "31c72c6cf86f9e297998ffd278c3bff31d7f208b65bea98126d32e54fc1186fe",
     "assets.html": "b3cc0e2d490149970ef9ad28c8498f1db2a243948d3cd29600a3b56447cfb9b8",
     "state-previews.js": "ef137d30c08eab6e798aada3a4ba27994f70ef0184e8e0145fd2ed616679acdd"
   },
@@ -216,7 +216,7 @@
         "width": 1080,
         "height": 1920,
         "frame": 1050,
-        "distinctSampleColors": 170,
+        "distinctSampleColors": 171,
         "nonBackgroundSamples": 3805,
         "samples": 8360
       }
@@ -414,7 +414,7 @@
           "width": 1080,
           "height": 1920,
           "frame": 1050,
-          "distinctSampleColors": 170,
+          "distinctSampleColors": 171,
           "nonBackgroundSamples": 3805,
           "samples": 8360
         }
@@ -673,7 +673,7 @@
   ],
   "badResponses": [],
   "browserVersion": "154.0.4258.37",
-  "finishedAt": "2026-09-29T08:16:03.416Z",
+  "finishedAt": "2026-09-29T08:31:35.336Z",
   "summary": {
     "passed": 19,
     "failed": 0

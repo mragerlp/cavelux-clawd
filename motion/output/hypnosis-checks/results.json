@@ -1,5 +1,5 @@
 {
-  "startedAt": "2026-09-29T08:15:57.710Z",
+  "startedAt": "2026-09-29T08:31:26.364Z",
   "root": "C:\\Users\\jared\\.codex\\visualizations\\2026\\09\\29\\01a0ea97-8016-7c91-8112-655302cb1db6\\cavelux-clawd\\motion",
   "checks": [
     {
@@ -61,14 +61,14 @@
         },
         "eyes": [
           {
-            "blackBefore": 6939,
-            "blackAfter": 6800,
-            "changed": 3869
+            "blackBefore": 1935,
+            "blackAfter": 1942,
+            "changed": 1957
           },
           {
-            "blackBefore": 6979,
-            "blackAfter": 6840,
-            "changed": 3869
+            "blackBefore": 1976,
+            "blackAfter": 2056,
+            "changed": 2062
           }
         ],
         "outsideEyeBlackChanges": 0
@@ -97,14 +97,14 @@
         },
         "eyes": [
           {
-            "blackBefore": 7280,
-            "blackAfter": 7216,
-            "changed": 3656
+            "blackBefore": 2068,
+            "blackAfter": 1992,
+            "changed": 1966
           },
           {
-            "blackBefore": 7293,
-            "blackAfter": 7113,
-            "changed": 3680
+            "blackBefore": 1994,
+            "blackAfter": 2078,
+            "changed": 2036
           }
         ],
         "outsideEyeBlackChanges": 0
@@ -161,7 +161,7 @@
       "status": "PASS",
       "evidence": {
         "changed": 0,
-        "blackPixels": 13816,
+        "blackPixels": 3878,
         "doubleSpeedMismatches": 0,
         "phaseA": 0,
         "phaseB": 0
@@ -172,7 +172,7 @@
       "status": "PASS",
       "evidence": {
         "changed": 0,
-        "blackPixels": 14427,
+        "blackPixels": 4042,
         "doubleSpeedMismatches": 0,
         "phaseA": 0,
         "phaseB": 0
@@ -217,16 +217,16 @@
           "eyePhase": 2.21,
           "eyeBounds": [
             {
-              "x": 219.74396700534078,
-              "y": 141.51152148475967,
-              "width": 142.97299489092532,
-              "height": 142.97299489092532
+              "x": 226.89261674988703,
+              "y": 148.6601712293059,
+              "width": 128.6756954018328,
+              "height": 128.6756954018328
             },
             {
-              "x": 357.28303810373393,
-              "y": 141.51152148475967,
-              "width": 142.97299489092532,
-              "height": 142.97299489092532
+              "x": 364.43168784828015,
+              "y": 148.6601712293059,
+              "width": 128.6756954018328,
+              "height": 128.6756954018328
             }
           ],
           "heroBounds": {
@@ -251,7 +251,7 @@
       }
     }
   ],
-  "finishedAt": "2026-09-29T08:15:58.879Z",
+  "finishedAt": "2026-09-29T08:31:30.689Z",
   "summary": {
     "passed": 9,
     "failed": 0

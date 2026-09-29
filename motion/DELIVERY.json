@@ -1,7 +1,7 @@
 {
   "title": "CAVELUX - Engineered to deliver",
-  "revision": 4,
-  "video": "output/cavelux-engineered-to-deliver-v4.mp4",
+  "revision": 5,
+  "video": "output/cavelux-engineered-to-deliver-v5.mp4",
   "durationSeconds": 45,
   "width": 1080,
   "height": 1920,
@@ -12,13 +12,13 @@
   "colorRange": "limited",
   "colorSpace": "BT.709",
   "audio": "AAC stereo 48000 Hz",
-  "videoSha256": "0111552B96DA60F815871C95127058816933EDF5A8147549501CF5F0D070B807",
+  "videoSha256": "F00B82DEE90A3FB921BD286E906C4F3190C4FB4D377E3498422C8627FCBE621B",
   "assets": {
     "characterStates": 3,
     "stateManifest": "sprites/states.json",
     "normal": "Regular rectangular eyes; no aura",
-    "working": "Friendly counter-rotating spiral eyes; animated green code aura for skills, MCPs, workflows, and swarms",
-    "ultracode": "Animated rainbow wave through the body with counter-rotating black spiral eyes",
+    "working": "Readable medium-sized single-turn rotating curls; animated green code aura",
+    "ultracode": "Readable medium-sized single-turn rotating curls; animated rainbow body wave",
     "editableSvgGraphics": 6,
     "storyboardCaptures": 6,
     "verticalCover": "output/cover.png",
@@ -31,11 +31,11 @@
   "checks": {
     "command": "npm test",
     "exitCode": 0,
-    "passed": 172,
+    "passed": 174,
     "failed": 0,
     "suites": {
       "backend": 15,
-      "character": 26,
+      "character": 28,
       "hypnosis": 9,
       "motionUI": 19,
       "editorial": 15,
@@ -50,22 +50,23 @@
     "filmBoundarySamples": 20,
     "render": "node motion/render.mjs: PASS exit0;1350frames",
     "encodedMedia": "node motion/verify.mjs: PASS exit0; ffprobe and full FFmpeg audio/video decode exit0",
-    "visualReview": "Six current storyboard captures and one decoded MP4 Throughput frame inspected; headline bounds checked against actual canvas ink",
-    "documentation": "git diff --check: PASS exit0"
+    "visualReview": "Working and Ultracode previews inspected; simple open curls enlarged after user found the first attempt too small. Hosted Working preview verified at revision7. Current local playback, speed/freeze, aura, export and mobile checks pass.",
+    "documentation": "git diff --check: PASS exit0",
+    "earlierAttempts": "Initial studio UI check could not connect to stopped local server; after starting it, complete npm test passed. Initial typing test used a dense-eye area threshold; replaced it with readable ink and proportional motion assertions, then 13 renderer checks passed."
   },
   "unverified": [
     "Full-length subjective audiovisual approval by the user",
     "Instagram upload and platform transcoding",
     "Physical-phone and other operating-system/browser playback"
   ],
-  "videoBytes": 11249888,
+  "videoBytes": 9274902,
   "sources": {
-    "motion/film.js": "7468f5fb3a5e8b3480399e8500aa6f3cdd0e209761f1bf166709890ce3d9292b",
+    "motion/film.js": "31c72c6cf86f9e297998ffd278c3bff31d7f208b65bea98126d32e54fc1186fe",
     "motion/audio/generate_audio.py": "76472bc539c624ac361f0ee5bf195b4422428e6c3650b5cb96d91476d3ecb721",
     "motion/audio/master.wav": "a54be14ec09fe572801451f23689c9b18e2361b272e40bfed55f34ff20c69f62",
-    "motion/index.html": "c35aa47fbc787ce7034569c9c68343b6d6e1c4c27dc76caf5d771eda7a358445",
-    "motion/render.mjs": "8b9d36757f9b6d151332d08f25d5785bf0434cd223f28223a96c2ddbd256a432",
-    "motion/verify.mjs": "746393b3cf9e3167083569e4f6722fdae434e6896962072d69a68e7e4c11ce46"
+    "motion/index.html": "3a1c2738ded411d517ce5ad1f6ba24cfe93f0ad46abb7cecef5c99bec223baf2",
+    "motion/render.mjs": "50c26d301ff00b1b700d2679955dfc777572bad1c40c1e7f87c2f908b4cbd39a",
+    "motion/verify.mjs": "e116f11a861f97521738046645d5f7910f0c47037807f54ad2232fbad8a73654"
   },
   "soundtrack": {
     "style": "Original driving electro: punch kick/snare, sixteenth-note hats and arps, FM/saw bass, harmonic stabs",
@@ -76,13 +77,15 @@
     "masterTruePeakDBTP": -1.45,
     "encodedAACIntegratedLUFS": -14.02,
     "encodedAACTruePeakDBTP": -1.02,
-    "measurement": "Independent FFmpeg loudnorm analysis of WAV and finished MP4; both exit0"
+    "measurement": "Independent FFmpeg loudnorm analysis of WAV and finished MP4; both exit0",
+    "v4AndV5EncodedAudioByteIdentical": true,
+    "encodedAudioADTSSHA256": "495413cdfca211319ae77c5f986018affc3d29e31d4f68ff6bb7526d48de2e7e"
   },
   "studio": {
     "url": "https://charm.ing/bloodwave/cavelux-clawd-studio",
-    "revision": 5,
+    "revision": 7,
     "readback": "Exact module/UI/styles match; hosted copy and all four saved presets observed"
   },
   "handoff": "../docs/CLAUDE-HANDOFF.md",
-  "previousRevision": "../archive/motion-v3/DELIVERY.json"
+  "previousRevision": "output/v4-delivery.json"
 }

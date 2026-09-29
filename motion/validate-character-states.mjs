@@ -139,6 +139,24 @@ try{
     assert.ok(metrics.every(item=>item.rectangularFill<.85),JSON.stringify(metrics));
     return metrics;
   });
+  // Regression: oversized dense curls obscure the face. Measure actual ink
+  // across three rotations, independently of the renderer's reported eye boxes.
+  for(const state of ['working','ultracode'])await check(`${state} curls stay compact and open through rotation`,async()=>{
+    const evidence=[];
+    for(const time of [3,4,5]){
+      const shot=snapshots.get(`${state}-${time}`),hero=shot.descriptor.heroBounds;
+      for(const eye of shot.eyeMetrics){
+        const ink=eye.largestDarkComponent;
+        assert.ok(ink&&ink.area>30,'Both eyes must remain readable');
+        const width=ink.width/hero.width,occupancy=ink.area/(hero.width*hero.height);
+        assert.ok(width<.21,`Eye overwhelms face: width fraction ${width}`);
+        assert.ok(occupancy<.035,`Eye ink is too dense: body fraction ${occupancy}`);
+        assert.ok(ink.rectangularFill<.55,'Curl must have a visibly open center');
+        evidence.push({time,width,occupancy,fill:ink.rectangularFill});
+      }
+    }
+    return evidence;
+  });
 
   await check('normal preview has no green aura outside the fixed body',async()=>{
     const evidence=await page.evaluate(()=>window.comparePreviewAura('normal',[3,4]));

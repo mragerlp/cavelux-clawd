@@ -43,10 +43,10 @@
         "frames": 48,
         "distinctFrames": 48,
         "durationMs": 2400,
-        "bytes": 1068220,
+        "bytes": 1024237,
         "loop": 0,
-        "seamDelta": 8.137489318847656,
-        "maxStepDelta": 9.43930435180664
+        "seamDelta": 6.581153869628906,
+        "maxStepDelta": 7.462543487548828
       }
     },
     {
@@ -208,10 +208,10 @@
         "frames": 48,
         "distinctFrames": 48,
         "durationMs": 2400,
-        "bytes": 600652,
+        "bytes": 581597,
         "loop": 0,
-        "seamDelta": 1.9710350036621094,
-        "maxStepDelta": 20.492801666259766
+        "seamDelta": 1.2500114440917969,
+        "maxStepDelta": 16.937389373779297
       }
     },
     {

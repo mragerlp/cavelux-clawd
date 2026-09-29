@@ -1,5 +1,5 @@
 {
-  "startedAt": "2026-09-29T08:16:11.826Z",
+  "startedAt": "2026-09-29T08:31:43.314Z",
   "checks": [
     {
       "name": "share-break: visible motion, seamless loop, transparent safe area",
@@ -393,7 +393,7 @@
         "id": "typing",
         "duration": 2.4,
         "state": "working",
-        "changedPixels": 33623,
+        "changedPixels": 36509,
         "seamChanges": 0,
         "unsafePixels": 0,
         "badCorners": 0,
@@ -2255,7 +2255,7 @@
         "id": "celebrate",
         "duration": 2.4,
         "state": "ultracode",
-        "changedPixels": 39382,
+        "changedPixels": 40712,
         "seamChanges": 0,
         "unsafePixels": 0,
         "badCorners": 0,
@@ -3080,12 +3080,12 @@
       "status": "PASS",
       "evidence": [
         {
-          "blackPixels": 2815,
-          "inkChanged": 1893
+          "blackPixels": 837,
+          "inkChanged": 1664
         },
         {
-          "blackPixels": 2817,
-          "inkChanged": 1893
+          "blackPixels": 829,
+          "inkChanged": 1646
         }
       ]
     },
@@ -3143,7 +3143,7 @@
   ],
   "pageErrors": [],
   "badResponses": [],
-  "finishedAt": "2026-09-29T08:16:14.418Z",
+  "finishedAt": "2026-09-29T08:31:45.730Z",
   "summary": {
     "passed": 13,
     "failed": 0

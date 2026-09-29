@@ -6,9 +6,10 @@ This is an existing, editable Cavelux motion project. Make a final polish pass
 on the current film; preserve the approved character and its three states.
 
 - Repository: https://github.com/mragerlp/cavelux-clawd (private).
-- Current film: `motion/output/cavelux-engineered-to-deliver-v4.mp4`.
+- Current film: `motion/output/cavelux-engineered-to-deliver-v5.mp4`.
 - Current delivery metadata and video SHA-256: `motion/DELIVERY.json`.
-- Previous approved picture and calmer score: `archive/motion-v3/`.
+- Previous film with larger eyes: `motion/output/cavelux-engineered-to-deliver-v4.mp4`.
+- Earlier picture and calmer score: `archive/motion-v3/`.
 - Hosted character studio: https://charm.ing/bloodwave/cavelux-clawd-studio.
 - Same-machine checkout:
   `C:\Users\jared\.codex\visualizations\2026\09\29\01a0ea97-8016-7c91-8112-655302cb1db6\cavelux-clawd`.
@@ -20,7 +21,14 @@ retain unrelated work and coordinate if another agent is still editing it.
 
 ## User direction
 
-The user's latest request:
+The user requested simpler, less scary swirly eyes, then corrected the first
+attempt: "oh no this is too small." Preserve the simpler, open single-turn
+shape while giving the eyes a more substantial, clearly readable size. Working
+and Ultracode use medium-sized, thin rotating curls; the normal eyes, green
+aura, rainbow wave, timing, copy, and score are retained. Review the revised
+size before making further character changes.
+
+The earlier editorial and audio direction remains:
 
 > Frame the context and wording more as a professional business, not just
 > curiosity. Replace "spectrum" in "Full spectrum" with something more
@@ -39,8 +47,10 @@ with stronger visual and musical energy in the throughput sequence.
 ## Locked character direction
 
 - Normal: regular rectangular black eyes, friendly expression, no aura.
-- Working: visibly rotating hypnotic spiral eyes and a green code aura.
-- Ultracode: rotating spiral eyes and an animated rainbow wave through the body.
+- Working: medium-sized, thin, single-turn rotating curls and a green code aura.
+- Ultracode: the same simple rotating curls and an animated rainbow body wave.
+- Keep the curls clearly readable and open; do not shrink them to tiny marks
+  or restore the dense hypnotic eye pattern.
 - Keep crisp pixel geometry. No chains, angry brows, or half-lidded angry eyes.
 - Preserve the source sprites and existing approved animation.
 - Keep existing user presets and app privacy. Stored preset names and internal
@@ -119,9 +129,9 @@ npm test
 git diff --check
 ```
 
-Keep the v4 video before rendering later revisions. Change the output name
+Keep both v5 and v4 before rendering later revisions. Change the output name
 consistently in `motion/render.mjs`, `motion/verify.mjs`,
-`motion/index.html`, and delivery documentation for a v5 final.
+`motion/index.html`, and delivery documentation for a v6 final.
 The renderer atomically replaces its configured output only after encoding.
 
 This Windows host has an unusually long inherited PATH. If npm's command shell
@@ -146,7 +156,8 @@ Do not modify the user's system environment to work around that limitation.
 
 ## Final pass and acceptance
 
-1. Watch and listen to v4 first, including at phone scale.
+1. Watch and listen to v5 first, including at phone scale. Check that the
+   medium-sized curls feel friendly and stay clearly readable during motion.
 2. Refine typography spacing, transition continuity and musical accents while
    preserving the six timed movements and approved Clawd states.
 3. Keep the professional business framing; make any proposed copy changes
@@ -169,9 +180,10 @@ posting or website change has been requested.
 
 ## Paste into Claude Code
 
-> Read docs/CLAUDE-HANDOFF.md and review the v4 film before editing. Make the
+> Read docs/CLAUDE-HANDOFF.md and review the v5 film before editing. Make the
 > final polish pass for Cavelux: professional engineering language, tasteful
 > retro science/code motion, and a driving electronic score. Preserve the
-> approved Clawd states, 45-second format and six timed movements. Work from
-> the editable source, retain v4, deliver a numbered v5 MP4, and report the
-> changes, fresh checks and any remaining review limitations.
+> approved Clawd state behavior, the clearly readable single-turn curls, 45-second
+> format and six timed movements. Work from the editable source, retain v5 and
+> v4, deliver a numbered v6 MP4, and report the changes, fresh checks and
+> any remaining review limitations.

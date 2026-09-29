@@ -1,0 +1,19 @@
+{
+  "revision": 7,
+  "filmSourceSHA256": "31c72c6cf86f9e297998ffd278c3bff31d7f208b65bea98126d32e54fc1186fe",
+  "preview": "motion/output/character-checks/preview-working-3s.png",
+  "previewSHA256": "a1317377d82d7039a4a059e3f42382f611399fc7e8c6a6b61c33f95c7f93938c",
+  "observed": "Readable medium-sized single-turn curls; 55% larger than the first reduced-eye attempt, with thin ink and clean restored body. Normal eyes, aura and rainbow behavior retained.",
+  "checks": {
+    "character": 28,
+    "hypnosis": 9,
+    "studioUI": 18,
+    "nativeExportAdapter": 7,
+    "fullProject": 174
+  },
+  "hosted": "Exact revision7 source readback and Working preview verified; playback and pause tested with current source in local harness",
+  "unverified": [
+    "User aesthetic approval",
+    "Physical phone and Instagram playback"
+  ]
+}

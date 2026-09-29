@@ -1,14 +1,14 @@
 {
   "surface": "Local browser + actual backend route handlers with disk KV adapter; not hosted evidence",
   "url": "http://127.0.0.1:8787/studio",
-  "startedAt": "2026-09-29T08:16:04.898Z",
+  "startedAt": "2026-09-29T08:31:36.710Z",
   "sourceHashes": {
     "backend.mjs": "3d0483efcb0eb0f6184727221dc47e34b9dd4b35f3311fde06d0f8dd3a41d988",
     "ui.js": "85c88db79b9d9a71d36284f40bffd26ffb231375a32521475513b8161bab6709",
     "styles.css": "749b3b0d994aa9a2b7e5ad97e65a8ed0c6bfea20764c4ee85fa5fc3cac879215",
     "build.mjs": "5412b814b1c509d91bdaa96e69b50f6615c069eff579e31843b69b8acf492455",
     "server.mjs": "c8b9784d8f40b41a5c1f7427e1ba8b18b6d8a6d441956f26fe17c7f91b219f8a",
-    "../motion/film.js": "7468f5fb3a5e8b3480399e8500aa6f3cdd0e209761f1bf166709890ce3d9292b"
+    "../motion/film.js": "31c72c6cf86f9e297998ffd278c3bff31d7f208b65bea98126d32e54fc1186fe"
   },
   "checks": [
     {
@@ -40,8 +40,8 @@
       "status": "PASS",
       "evidence": {
         "normal": "87d770d59cd8cb4413e32f4882cd0fe6efc70b01696cc0ba3da3e6f59d323972",
-        "working": "57fd1f69015bb79508838dd64db90b0ab3f97d2990a2683018443d6401af6838",
-        "ultracode": "abb594c6a584798ed35477164ac683d9f19d9110d74c3c8da98674a9fba5ac4f"
+        "working": "5954dbeb6bea03c9483aea7896ac0b1f6e1eeab719c5d6bc9b7c8d664ac91485",
+        "ultracode": "6477fd50020235e8e6810dd6ac6d379c25c68942c957c0f6dc2559f1f87ea094"
       }
     },
     {
@@ -54,7 +54,7 @@
           "scale": 1,
           "background": "dark",
           "aura": true,
-          "time": 3.22579999999851,
+          "time": 3.2259,
           "playing": true
         },
         "stopped": {
@@ -63,7 +63,7 @@
           "scale": 1,
           "background": "dark",
           "aura": true,
-          "time": 3.24659999999851,
+          "time": 3.2467,
           "playing": false
         },
         "later": {
@@ -72,7 +72,7 @@
           "scale": 1,
           "background": "dark",
           "aura": true,
-          "time": 3.24659999999851,
+          "time": 3.2467,
           "playing": false
         }
       }
@@ -81,8 +81,8 @@
       "name": "timeline scrub sets exact paused time and wave phase changes pixels",
       "status": "PASS",
       "evidence": {
-        "first": "348d7bb9e572b3e242fa020da57d33d3bf162a6d195189e7c376428838f37743",
-        "second": "c156cf9bad4764c699ecb2dde4b21a33d53b39c72a7635e4cfe6e47946caa6f0",
+        "first": "828f6c4f84dab522edf4c792248bd96e3f5ee44a926e4cc802a178eecc11a666",
+        "second": "6afcea28bdf6d8e3b514542fb61383f88822b072357d7aa3cb647ef1aaa13630",
         "time": 5
       }
     },
@@ -90,25 +90,25 @@
       "name": "eye speed changes working eye pixels at the same time",
       "status": "PASS",
       "evidence": {
-        "still": "c774e1b5a3d6962644ca76ab092a9df72ca3678562f4d2737e1586e93bcb3f8b",
-        "moving": "e6490a0c42107e89503c4e1edf8b90be4283fa991960c7d6f11c3dc0de1eabd9"
+        "still": "9a021cb7a8b01fa0dff27359d2b9ff1832ca587338b5604a3dc2cb72492dbd79",
+        "moving": "6338f1f09fc6c5a9cb2c29261f4073de05354f450e9fda22a635d54ff9abc0a3"
       }
     },
     {
       "name": "scale and aura controls alter real canvas output",
       "status": "PASS",
       "evidence": {
-        "small": "85089a2a0fc6936b3785cd5ff71a5a6c8ab90c5340f70460d38f76d7aba5cfe5",
-        "large": "dae953e14fee069c08cd2b75f14ad43bbce06b8a300adde0698a196bc44e41ef",
-        "clean": "87a9a949dc4a052c25fc80055c03d28825f74f0da7bbad394b918f77e66beecc"
+        "small": "68c48f5686b458662cf0aba9d9665fe4ccb41d04006c0280947601e7247ba060",
+        "large": "df75de94066df6bcb4bc630ca3aa77cea8da3a7e6922f3dbbb93c092b9f4d4ca",
+        "clean": "8f2d3509557dae61612e5c4ad3c22d9bc7907ce6f58b4fd2bd83e4faf2d60b40"
       }
     },
     {
       "name": "background modes change pixels and transparent corner has zero alpha",
       "status": "PASS",
       "evidence": {
-        "dark": "dae953e14fee069c08cd2b75f14ad43bbce06b8a300adde0698a196bc44e41ef",
-        "light": "ac1b1073b955f74be952f3502c7654943f158819d1c43dee38652f8e73c11ef4",
+        "dark": "df75de94066df6bcb4bc630ca3aa77cea8da3a7e6922f3dbbb93c092b9f4d4ca",
+        "light": "b24cab236fcf9b567ee4652cf2a73eca323771ae58fdccf7b19f3d9e5f95deae",
         "transparentCorner": [
           0,
           0,
@@ -122,7 +122,7 @@
       "status": "PASS",
       "evidence": {
         "filename": "cavelux-clawd-working.png",
-        "bytes": 356958,
+        "bytes": 321707,
         "width": 1080,
         "height": 760,
         "corner": [
@@ -186,7 +186,7 @@
       "name": "preset deletion persists after reload",
       "status": "PASS",
       "evidence": {
-        "deleted": "Browser evidence 1790669766723"
+        "deleted": "Browser evidence 1790670698460"
       }
     },
     {
@@ -351,7 +351,7 @@
         "styles.css": "749b3b0d994aa9a2b7e5ad97e65a8ed0c6bfea20764c4ee85fa5fc3cac879215",
         "build.mjs": "5412b814b1c509d91bdaa96e69b50f6615c069eff579e31843b69b8acf492455",
         "server.mjs": "c8b9784d8f40b41a5c1f7427e1ba8b18b6d8a6d441956f26fe17c7f91b219f8a",
-        "../motion/film.js": "7468f5fb3a5e8b3480399e8500aa6f3cdd0e209761f1bf166709890ce3d9292b"
+        "../motion/film.js": "31c72c6cf86f9e297998ffd278c3bff31d7f208b65bea98126d32e54fc1186fe"
       }
     }
   ],
@@ -366,7 +366,7 @@
     "Other browsers",
     "RTL and localization: this interface is English-only"
   ],
-  "finishedAt": "2026-09-29T08:16:08.826Z",
+  "finishedAt": "2026-09-29T08:31:40.394Z",
   "summary": {
     "passed": 18,
     "failed": 0
