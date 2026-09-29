@@ -2,7 +2,7 @@
   'use strict';
   const host=document.getElementById('app');
   const charming=window.charming,api=charming.api('cavelux-clawd-studio');
-  const descriptions={normal:'A quiet spark. Ready for what comes next.',working:'Curiosity in motion. A little code in the orbit.',ultracode:'Same character. A whole new frequency.'};
+  const descriptions={normal:'Ready for the next assignment.',working:'Coordinated execution across skills, tools and workflows.',ultracode:'Parallel execution at full throughput.'};
   const stateNames={normal:'Normal',working:'Working',ultracode:'Ultracode'};
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   let configuration={state:'normal',eyeSpeed:1,scale:1,background:'dark',aura:true,time:3};
@@ -10,7 +10,7 @@
   host.innerHTML=`
     <main class="studio">
       <header class="studio-header"><a class="brand-link" href="https://cavelux.ai" target="_blank" rel="noopener">CAVELUX<span class="brand-square" aria-hidden="true"></span></a><span class="studio-label">CHARACTER STUDIO / 01</span><a class="source-link" href="https://github.com/mragerlp/cavelux-clawd" target="_blank" rel="noopener">Source on GitHub <span aria-hidden="true">↗</span></a></header>
-      <section class="intro"><div><p class="kicker">THE CHARACTER, IN YOUR HANDS.</p><h1>Clawd. <span>In character.</span></h1></div><p class="intro-copy">A small companion for big ideas.<br>Find a state. Set the motion. Make it yours.</p></section>
+      <section class="intro"><div><p class="kicker">CONFIGURED FOR CAVELUX WORKFLOWS.</p><h1>Clawd. <span>In character.</span></h1></div><p class="intro-copy">A reusable identity for Cavelux workflows.<br>Configure. Preview. Export.</p></section>
       <div class="workspace">
         <section class="preview-section" aria-label="Character preview and playback">
           <div class="stage-meta"><span><i aria-hidden="true"></i><span id="state-label">NORMAL / REGULAR EYES</span></span><span id="playback-status">PAUSED</span></div>
@@ -21,12 +21,12 @@
           <div class="export-feedback"><p id="export-status" class="status" role="status" aria-live="polite"></p><a id="export-link" hidden rel="noopener" target="_blank"></a></div>
         </section>
         <aside class="inspector" aria-label="Character controls">
-          <section class="control-section"><div class="section-heading"><h2>Character state</h2><span>01—03</span></div><div class="state-options" role="group" aria-label="Character state"><button id="state-normal" type="button" data-state="normal" aria-pressed="true"><span>01</span><strong>Normal</strong><small>Regular eyes</small></button><button id="state-working" type="button" data-state="working" aria-pressed="false"><span>02</span><strong>Working</strong><small>Code in orbit</small></button><button id="state-ultracode" type="button" data-state="ultracode" aria-pressed="false"><span>03</span><strong>Ultracode</strong><small>Full spectrum</small></button></div></section>
-          <section class="control-section motion-controls"><div class="section-heading"><h2>Fine-tune</h2><span>THE FEEL</span></div><div class="control"><div class="range-label"><label for="eye-speed">Eye rotation</label><output id="eye-speed-output" for="eye-speed">1.0×</output></div><input id="eye-speed" type="range" min="0" max="3" step="0.1" value="1"><p class="hint">Spiral eyes in Working and Ultracode.</p></div><div class="control"><div class="range-label"><label for="scale">Character scale</label><output id="scale-output" for="scale">100%</output></div><input id="scale" type="range" min="0.4" max="1.4" step="0.05" value="1"></div><div class="control horizontal"><label for="background">Background</label><select id="background"><option value="dark">Carbon</option><option value="light">Paper</option><option value="transparent">Transparent</option></select></div><div class="control horizontal"><div><label for="aura">Code aura</label><p class="hint">Orbiting glyphs in Working.</p></div><label class="switch"><input id="aura" type="checkbox" checked aria-label="Show code aura"><span aria-hidden="true"></span></label></div></section>
+          <section class="control-section"><div class="section-heading"><h2>Character state</h2><span>01—03</span></div><div class="state-options" role="group" aria-label="Character state"><button id="state-normal" type="button" data-state="normal" aria-pressed="true"><span>01</span><strong>Normal</strong><small>Regular eyes</small></button><button id="state-working" type="button" data-state="working" aria-pressed="false"><span>02</span><strong>Working</strong><small>Execution</small></button><button id="state-ultracode" type="button" data-state="ultracode" aria-pressed="false"><span>03</span><strong>Ultracode</strong><small>Full throughput</small></button></div></section>
+          <section class="control-section motion-controls"><div class="section-heading"><h2>Fine-tune</h2><span>PARAMETERS</span></div><div class="control"><div class="range-label"><label for="eye-speed">Eye rotation</label><output id="eye-speed-output" for="eye-speed">1.0×</output></div><input id="eye-speed" type="range" min="0" max="3" step="0.1" value="1"><p class="hint">Spiral eyes in Working and Ultracode.</p></div><div class="control"><div class="range-label"><label for="scale">Character scale</label><output id="scale-output" for="scale">100%</output></div><input id="scale" type="range" min="0.4" max="1.4" step="0.05" value="1"></div><div class="control horizontal"><label for="background">Background</label><select id="background"><option value="dark">Carbon</option><option value="light">Paper</option><option value="transparent">Transparent</option></select></div><div class="control horizontal"><div><label for="aura">Code aura</label><p class="hint">Orbiting glyphs in Working.</p></div><label class="switch"><input id="aura" type="checkbox" checked aria-label="Show code aura"><span aria-hidden="true"></span></label></div></section>
           <section class="control-section preset-section"><div class="section-heading"><h2>Saved looks</h2><button id="new-preset" class="text-button" type="button">New preset +</button></div><form id="preset-form"><label class="sr-only" for="preset-name">Preset name</label><div class="save-row"><input id="preset-name" type="text" maxlength="48" autocomplete="off" placeholder="Name this look" aria-describedby="status"><button id="save-preset" type="submit">Save</button></div></form><p id="status" class="status" role="status" aria-live="polite">Loading saved presets…</p><button id="retry-presets" class="text-button" type="button" hidden>Retry loading presets</button><ul id="presets-list" class="presets-list" aria-label="Saved presets"></ul></section>
         </aside>
       </div>
-      <footer class="studio-footer"><span>CURIOSITY, BY DESIGN.</span><p>Regular eyes. Working spirals. Full-spectrum possibility.</p><span id="motion-preference"></span></footer>
+      <footer class="studio-footer"><span>ENGINEERED TO DELIVER.</span><p>Ready. Executing. Full throughput.</p><span id="motion-preference"></span></footer>
     </main>`;
   const byId=id=>document.getElementById(id),canvas=byId('preview');
   const notify=(message,error=false)=>{byId('status').textContent=message;byId('status').dataset.error=String(error);};
@@ -37,7 +37,7 @@
   }
   function updateControls(){
     document.querySelectorAll('[data-state]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.state===configuration.state)));
-    byId('state-label').textContent=configuration.state==='normal'?'NORMAL / REGULAR EYES':configuration.state==='working'?'WORKING / CODE AURA':'ULTRACODE / RAINBOW WAVE';
+    byId('state-label').textContent=configuration.state==='normal'?'NORMAL / REGULAR EYES':configuration.state==='working'?'WORKING / CODE AURA':'ULTRACODE / FULL THROUGHPUT';
     byId('state-description').textContent=descriptions[configuration.state];canvas.setAttribute('aria-label',`${stateNames[configuration.state]} Cavelux Clawd character preview`);
     byId('eye-speed').value=configuration.eyeSpeed;byId('eye-speed-output').textContent=configuration.eyeSpeed.toFixed(1)+'×';
     byId('scale').value=configuration.scale;byId('scale-output').textContent=Math.round(configuration.scale*100)+'%';
@@ -52,7 +52,7 @@
   document.querySelectorAll('[data-state]').forEach(button=>{button.onclick=()=>{configuration.state=button.dataset.state;updateControls();};});
   for(const [element,key] of [['eye-speed','eyeSpeed'],['scale','scale']])byId(element).oninput=event=>{configuration[key]=Number(event.target.value);updateControls();};
   byId('background').onchange=event=>{configuration.background=event.target.value;updateControls();};byId('aura').onchange=event=>{configuration.aura=event.target.checked;render();};
-  const preference=()=>{byId('motion-preference').textContent=reduced.matches?'REDUCED MOTION / MANUAL PLAY':'MOTION STARTS WITH YOU.';if(reduced.matches)pause();};reduced.addEventListener('change',preference);preference();
+  const preference=()=>{byId('motion-preference').textContent=reduced.matches?'REDUCED MOTION / MANUAL PLAY':'READY TO PREVIEW.';if(reduced.matches)pause();};reduced.addEventListener('change',preference);preference();
   document.addEventListener('visibilitychange',()=>{if(document.hidden)pause();});
   let exportBusy=false,exportObjectUrl=null;
   const exportNotice=(message,error=false)=>{byId('export-status').textContent=message;byId('export-status').dataset.error=String(error);};

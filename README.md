@@ -1,8 +1,10 @@
 # Cavelux Clawd
 
 A retro character studio and 45-second vertical motion film for CAVELUX.
-Clawd moves from a quiet normal state to working swarms and a full-spectrum
-ultracode state, with original electronic music and editable science/code graphics.
+Clawd moves from a ready state to coordinated working swarms and ultracode at
+full throughput, with an original electronic score and editable science/code graphics.
+The current film is **Engineered to deliver**. Start with the
+[Claude handoff](docs/CLAUDE-HANDOFF.md) for the final editorial pass.
 
 [Charming studio workspace](https://charm.ing/bloodwave/cavelux-clawd-studio)
 · [Attribution](ATTRIBUTION.md)
@@ -35,7 +37,7 @@ aura. Play or scrub the ten-second timeline, save named looks, and export a PNG
 frame or a preset JSON file. Choose the Transparent background for a cutout PNG.
 
 The private [hosted studio](https://charm.ing/bloodwave/cavelux-clawd-studio)
-is deployed at revision 4. Hosted exports are stored as the latest PNG and JSON
+is deployed at revision 5. Hosted exports are stored as the latest PNG and JSON
 in the app's asset storage, with an open link for each result. Save downloaded
 exports separately if you want to retain multiple frames or presets.
 
@@ -71,7 +73,7 @@ npm run render
 npm run verify:video
 ```
 
-The output is `motion/output/cavelux-from-signal-to-spectrum.mp4`: 45 seconds,
+The output is `motion/output/cavelux-engineered-to-deliver-v4.mp4`: 45 seconds,
 1080 × 1920, 30 fps, H.264 with stereo audio. For stills, use
 `node motion/render.mjs --stills-only`. `npm run test:motion` checks the local
 composition, character behavior, and preview interface.
@@ -92,7 +94,7 @@ studio, and export suites. The film renderer can use another Chromium executable
 | `motion/brand/` | Existing CAVELUX identity assets copied for this project. |
 | `motion/output/` | Rendered film, covers, stills, and version-specific check results. |
 | `charming/` | Character-studio application, preset storage backend, and local harness. |
-| `archive/` | Earlier concepts, clean poses, and partial v1/v2 snapshots with shared unchanged assets. |
+| `archive/` | Earlier concepts, clean poses, and partial v1/v2/v3 snapshots with shared unchanged assets. |
 | `references/` | The original user-supplied Clawd image and visual direction references. |
 | `docs/` | Reproduction notes and the SHA-256 inventory of preserved history. |
 

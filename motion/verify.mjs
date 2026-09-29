@@ -3,7 +3,7 @@ import path from 'node:path';
 import { spawn } from 'node:child_process';
 import { ROOT } from './server.mjs';
 
-const videoPath = path.resolve(process.argv[2] ?? path.join(ROOT, 'output', 'cavelux-from-signal-to-spectrum.mp4'));
+const videoPath = path.resolve(process.argv[2] ?? path.join(ROOT, 'output', 'cavelux-engineered-to-deliver-v4.mp4'));
 
 function run(command, args) {
   return new Promise((resolve, reject) => {

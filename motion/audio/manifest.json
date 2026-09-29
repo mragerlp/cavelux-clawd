@@ -1,20 +1,38 @@
 {
-  "title": "CAVELUX / Signal to Spectrum",
-  "composition": "Original procedural composition and sound design; no vocals, recordings, or external samples.",
+  "title": "CAVELUX / Engineered Momentum",
+  "revision": 4,
+  "composition": "Original synthesized industrial/electro business launch cue; no external samples, recordings, or vocals.",
   "duration_seconds": 45.0,
   "bpm": 128,
   "meter": "4/4",
   "bars": 24,
-  "key": "D minor with Dm9, Bbmaj9, Fmaj9, Cadd9 color",
+  "key": "D minor; Dm, Bb, F, C with open power voicings",
+  "chapter_seconds": [
+    0,
+    7.5,
+    15,
+    22.5,
+    30,
+    37.5
+  ],
+  "chapters": [
+    "INITIALIZE",
+    "BUILD",
+    "PARALLEL",
+    "SYNCHRONIZE",
+    "THROUGHPUT",
+    "DELIVER"
+  ],
   "master": "master.wav",
   "stems": [
     "score.wav",
     "sfx.wav"
   ],
-  "stems_note": "Pre-master stems share a common gain; master.wav adds two-pass loudness normalization.",
-  "integrated_loudness_lufs": -16.0,
-  "true_peak_dbtp": -1.81,
-  "loudness_range_lu": 6.3,
+  "stems_note": "Pre-master stems share one gain; their sum is premaster.wav. master.wav adds two-pass loudness normalization.",
+  "arrangement": "Punch kick and layered snare, articulated sixteenth hats and arpeggios, syncopated FM/saw bass, short harmonic stabs, restrained transition effects; no sustained pad bed.",
+  "integrated_loudness_lufs": -13.99,
+  "true_peak_dbtp": -1.45,
+  "loudness_range_lu": 4.2,
   "file_checks": {
     "score.wav": {
       "channels": 2,
@@ -22,11 +40,7 @@
       "sample_width_bytes": 3,
       "frames": 2160000,
       "duration_seconds": 45.0,
-      "peak_dbfs": -3.500006404129403,
-      "rms_dbfs": -19.098071463351754,
-      "clipping_samples": 0,
-      "last_50ms_peak": 0.0,
-      "stereo_correlation": 0.66224616424167
+      "sha256": "efd73aa3ec134feb41b4c2751da416e0a759ea95ede05a62cbc340b92ebb9b2e"
     },
     "sfx.wav": {
       "channels": 2,
@@ -34,11 +48,15 @@
       "sample_width_bytes": 3,
       "frames": 2160000,
       "duration_seconds": 45.0,
-      "peak_dbfs": -16.613500626173135,
-      "rms_dbfs": -44.10342554116386,
-      "clipping_samples": 0,
-      "last_50ms_peak": 0.0,
-      "stereo_correlation": 0.9602022304370901
+      "sha256": "0b36604696eecb8e371d5816f7582da5d7b1ed4f82ba8e3a5331874ed7a0b21e"
+    },
+    "premaster.wav": {
+      "channels": 2,
+      "sample_rate": 48000,
+      "sample_width_bytes": 3,
+      "frames": 2160000,
+      "duration_seconds": 45.0,
+      "sha256": "55603e1403e224fe8ef59951df4e904a3bf545f9b7b6f57dd42fa61b07960752"
     },
     "master.wav": {
       "channels": 2,
@@ -46,138 +64,135 @@
       "sample_width_bytes": 3,
       "frames": 2160000,
       "duration_seconds": 45.0,
-      "peak_dbfs": -1.8200018099997763,
-      "rms_dbfs": -17.40390416904782,
-      "clipping_samples": 0,
-      "last_50ms_peak": 0.0,
-      "stereo_correlation": 0.6629541839184989
+      "sha256": "a54be14ec09fe572801451f23689c9b18e2361b272e40bfed55f34ff20c69f62"
     }
   },
   "cues": [
     {
       "time_seconds": 0.0,
-      "cue": "wake / bar 1"
+      "cue": "INITIALIZE / bar 1"
     },
     {
-      "time_seconds": 0.0,
-      "cue": "Soft power-on, two clean harmonic signal notes"
+      "time_seconds": 0,
+      "cue": "Immediate electronic downbeat; initialize the engineering story"
     },
     {
       "time_seconds": 1.875,
-      "cue": "wake / bar 2"
+      "cue": "INITIALIZE / bar 2"
     },
     {
       "time_seconds": 3.75,
-      "cue": "wake / bar 3"
+      "cue": "INITIALIZE / bar 3"
     },
     {
       "time_seconds": 5.625,
-      "cue": "wake / bar 4"
+      "cue": "INITIALIZE / bar 4"
     },
     {
       "time_seconds": 7.5,
-      "cue": "build / bar 5"
+      "cue": "BUILD / bar 5"
     },
     {
       "time_seconds": 7.5,
-      "cue": "Stereo micro-click sequence / work-state transition"
+      "cue": "BUILD: complete drum groove and gated chord stabs"
     },
     {
       "time_seconds": 9.375,
-      "cue": "build / bar 6"
+      "cue": "BUILD / bar 6"
     },
     {
       "time_seconds": 11.25,
-      "cue": "build / bar 7"
+      "cue": "BUILD / bar 7"
     },
     {
       "time_seconds": 13.125,
-      "cue": "build / bar 8"
+      "cue": "BUILD / bar 8"
     },
     {
       "time_seconds": 15.0,
-      "cue": "swarm / bar 9"
+      "cue": "PARALLEL / bar 9"
     },
     {
-      "time_seconds": 15.0,
-      "cue": "Stereo micro-click sequence / work-state transition"
+      "time_seconds": 15,
+      "cue": "PARALLEL: denser bass and interlocking sixteenth-note sequence"
     },
     {
       "time_seconds": 16.875,
-      "cue": "swarm / bar 10"
+      "cue": "PARALLEL / bar 10"
     },
     {
       "time_seconds": 18.75,
-      "cue": "swarm / bar 11"
+      "cue": "PARALLEL / bar 11"
     },
     {
       "time_seconds": 20.625,
-      "cue": "swarm / bar 12"
+      "cue": "PARALLEL / bar 12"
     },
     {
       "time_seconds": 22.5,
-      "cue": "synchronize / bar 13"
+      "cue": "SYNCHRONIZE / bar 13"
     },
     {
       "time_seconds": 22.5,
-      "cue": "Stereo micro-click sequence / work-state transition"
+      "cue": "SYNCHRONIZE: controlled tension, spatial details, rising tom sequence"
     },
     {
       "time_seconds": 24.375,
-      "cue": "synchronize / bar 14"
+      "cue": "SYNCHRONIZE / bar 14"
     },
     {
       "time_seconds": 26.25,
-      "cue": "synchronize / bar 15"
+      "cue": "SYNCHRONIZE / bar 15"
     },
     {
       "time_seconds": 28.125,
-      "cue": "synchronize / bar 16"
-    },
-    {
-      "time_seconds": 28.125,
-      "cue": "Restrained ascending spectrum reveal riser"
+      "cue": "SYNCHRONIZE / bar 16"
     },
     {
       "time_seconds": 30.0,
-      "cue": "spectrum / bar 17"
+      "cue": "THROUGHPUT / bar 17"
     },
     {
-      "time_seconds": 30.0,
-      "cue": "Full-spectrum harmonic bloom"
+      "time_seconds": 30,
+      "cue": "THROUGHPUT: maximum groove, stronger bass, open harmonic voicing"
     },
     {
       "time_seconds": 31.875,
-      "cue": "spectrum / bar 18"
+      "cue": "THROUGHPUT / bar 18"
     },
     {
       "time_seconds": 33.75,
-      "cue": "spectrum / bar 19"
+      "cue": "THROUGHPUT / bar 19"
     },
     {
       "time_seconds": 35.625,
-      "cue": "spectrum / bar 20"
+      "cue": "THROUGHPUT / bar 20"
     },
     {
       "time_seconds": 37.5,
-      "cue": "reveal / bar 21"
+      "cue": "DELIVER / bar 21"
+    },
+    {
+      "time_seconds": 37.5,
+      "cue": "DELIVER: carry momentum into the brand reveal"
     },
     {
       "time_seconds": 39.375,
-      "cue": "reveal / bar 22"
+      "cue": "DELIVER / bar 22"
     },
     {
       "time_seconds": 41.25,
-      "cue": "reveal / bar 23"
+      "cue": "DELIVER / bar 23"
     },
     {
-      "time_seconds": 41.96,
-      "cue": "CAVELUX sonic mark: D5, A5, D6, warm and clean"
+      "time_seconds": 41.94,
+      "cue": "Electronic D-A-D sonic identity, low anchor, controlled tail"
     },
     {
       "time_seconds": 43.125,
-      "cue": "reveal / bar 24"
+      "cue": "DELIVER / bar 24"
     }
   ],
-  "verification_boundary": "File metadata, samples, clipping, channel correlation, and FFmpeg loudness measured. Human listening and final video synchronization remain unverified."
+  "verification": "../validate-audio.py compares actual PCM and normalized rhythmic attacks with the archived cue.",
+  "verification_boundary": "Signal measurements do not establish subjective listening quality or final video synchronization."
 }

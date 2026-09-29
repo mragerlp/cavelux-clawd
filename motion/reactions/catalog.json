@@ -5,6 +5,6 @@
   {"id":"panic","title":"Everything is fine","duration":2.4,"fps":20,"state":"normal","description":"A very small, very contained emergency.","posterTime":1.1},
   {"id":"side-eye","title":"Interesting…","duration":2.4,"fps":20,"state":"normal","description":"A glance that says just enough.","posterTime":1.0},
   {"id":"shrug","title":"It happens","duration":2.4,"fps":20,"state":"normal","description":"Two little arms. No further questions.","posterTime":1.2},
-  {"id":"celebrate","title":"We did it","duration":2.4,"fps":20,"state":"ultracode","description":"One tiny win. Full spectrum joy.","posterTime":1.0},
+  {"id":"celebrate","title":"We did it","duration":2.4,"fps":20,"state":"ultracode","description":"A milestone delivered. Full throughput.","posterTime":1.0},
   {"id":"presenting","title":"Look at this","duration":2.4,"fps":20,"state":"normal","description":"A little reveal, made for you.","posterTime":1.2}
 ]

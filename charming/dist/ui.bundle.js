@@ -1,4 +1,4 @@
-(function(){'use strict';async function boot(){const host=document.getElementById('app');host.innerHTML='<div class="boot" role="status"><p>CAVELUX / CHARACTER STUDIO</p><h1>One small spark.</h1><p>Loading the character assets…</p></div>';window.CAVELUX_STUDIO_READY=false;try{const hidden=document.createElement('canvas');hidden.id='film';hidden.width=1080;hidden.height=1920;hidden.hidden=true;hidden.setAttribute('aria-hidden','true');host.appendChild(hidden);window.CAVELUX_CHARACTER_ONLY=true;const urls=await Promise.all(['06-normal.png','01-idle.png','05-spectrum.png'].map(key=>window.charming.assets.load(key)));window.CAVELUX_ASSET_URLS={normal:urls[0],working:urls[1],spectrum:urls[2]};
+(function(){'use strict';async function boot(){const host=document.getElementById('app');host.innerHTML='<div class="boot" role="status"><p>CAVELUX / CHARACTER STUDIO</p><h1>Preparing the studio.</h1><p>Loading the character assets…</p></div>';window.CAVELUX_STUDIO_READY=false;try{const hidden=document.createElement('canvas');hidden.id='film';hidden.width=1080;hidden.height=1920;hidden.hidden=true;hidden.setAttribute('aria-hidden','true');host.appendChild(hidden);window.CAVELUX_CHARACTER_ONLY=true;const urls=await Promise.all(['06-normal.png','01-idle.png','05-spectrum.png'].map(key=>window.charming.assets.load(key)));window.CAVELUX_ASSET_URLS={normal:urls[0],working:urls[1],spectrum:urls[2]};
 /* CAVELUX — frame-addressable composition. 1350 frames / 30 fps / 1080 × 1920. */
 (() => {
   'use strict';
@@ -210,16 +210,16 @@
     line(84,224,996,224,color,1,.14);line(84,1670,996,1670,color,1,.14);
     [[84,224],[996,224],[84,1670],[996,1670]].forEach(p=>cross(...p,7,color,.45));
   }
-  function furniture(index,t,light=false){const c=light?INK:PAPER;micro('CAVELUX',106,175,c,.8);micro('MOTION STUDY / 01',670,175,c,.48);
-    const names=['WAKE','BUILD','SWARM','SYNCHRONIZE','SPECTRUM','REVEAL'];
-    micro(`0${index+1} / ${names[index]}`,106,1730,c,.5);micro('SIGNAL → SPECTRUM',646,1730,c,.45);
+  function furniture(index,t,light=false){const c=light?INK:PAPER;micro('CAVELUX',106,175,c,.8);micro('ENGINEERING / 01',670,175,c,.48);
+    const names=['DEFINE','BUILD','ORCHESTRATE','INTEGRATE','THROUGHPUT','DELIVER'];
+    micro(`0${index+1} / ${names[index]}`,106,1730,c,.5);micro('INTENT → DELIVERY',646,1730,c,.45);
     for(let i=0;i<6;i++)rect(106+i*148,1790,130,3,c,.12);
     for(let i=0;i<=index;i++)rect(106+i*148,1790,130*(i===index?clamp((t-i*7.5)/7.5):1),3,light?INK:LIME,.8);
   }
   function wake(t){
     base();const e=out((t-.8)/1.4);const bob=Math.sin(t*2.2)*7;
-    micro('A STUDY IN POSSIBILITY',110,324,LIME,smooth(t/.6));
-    title(['A SMALL','SIGNAL.'],104,468,148,t,PAPER,.25);
+    micro('FROM BRIEF TO BUILD',110,324,LIME,smooth(t/.6));
+    title(['CLEAR','INTENT.'],104,468,148,t,PAPER,.25);
     const radius=235+Math.sin(t*.9)*12;circle(540,960,radius,PAPER,.14*e);circle(540,960,radius+64,PAPER,.07*e);
     for(let i=0;i<48;i++){const a=i*Math.PI/24;const r=radius+64;line(540+Math.cos(a)*r,960+Math.sin(a)*r,540+Math.cos(a)*(r+(i%4===0?14:6)),960+Math.sin(a)*(r+(i%4===0?14:6)),PAPER,1,.2*e);}
     cross(540,960,340,PAPER,.045*e);
@@ -227,29 +227,29 @@
     character('normal',540,960+bob,490*scale,t,{hero:true,alpha:e,sy:1+Math.sin(t*2.2)*.014});
     if(t<1.5){const p=out(t/1.5);rect(540-150*p,960-2,300*p,4,LIME,1-p);}
     bracket(243,758,594,400,LIME,e*.6);
-    micro('SPECIMEN 01',110,1320,PAPER,e*.7);micro('CURIOUS BY DESIGN.',110,1360,GRAY,e);
-    const words='> hello, possibility';text(words.slice(0,Math.floor(Math.max(0,t-2.8)*15)),110,1490,28,LIME,{mono:true});
+    micro('AGENT 01',110,1320,PAPER,e*.7);micro('DEFINED BEFORE BUILT.',110,1360,GRAY,e);
+    const words='> define. build. verify.';text(words.slice(0,Math.floor(Math.max(0,t-2.8)*15)),110,1490,28,LIME,{mono:true});
     if(t>2.8&&Math.floor(t*2)%2===0)rect(110+Math.min(words.length,Math.floor((t-2.8)*15))*17,1500,14,3,LIME);
   }
   function terminal(x,y,w,h,phase,t,label){
     const v=out((t-phase)/.5);ctx.save();ctx.translate(0,(1-v)*35);ctx.globalAlpha=v;
     rect(x,y,w,h,'#e1e5d9');line(x,y,x+w,y,INK,2,.65);line(x,y+h,x+w,y+h,INK,1,.2);
     micro(label,x+28,y+42,INK,.6);rect(x+w-40,y+28,9,9,'#60853d');
-    const lines={SKILLS:'explore. make. refine.',MCPs:'context -> possibility',WORKFLOWS:'compose. test. repeat.'};
+    const lines={SKILLS:'define. build. verify.',MCPs:'tools -> context',WORKFLOWS:'test. integrate. ship.'};
     const s=lines[label];text(s.slice(0,Math.floor(Math.max(0,t-phase-.2)*24)),x+28,y+101,31,INK,{mono:true,spacing:-.4});
     ctx.restore();
   }
   function build(t){
-    base(true);title(['IDEAS,','IN MOTION.'],104,440,138,t,INK);
+    base(true);title(['SYSTEMS,','BUILT RIGHT.'],104,440,132,t,INK);
     micro('02 / SKILLS + MCPs + WORKFLOWS',110,718,INK,.55);
     terminal(110,770,760,143,.35,t,'SKILLS');terminal(160,948,760,143,1.05,t,'MCPs');terminal(210,1126,710,143,1.75,t,'WORKFLOWS');
     const p=(t*.65)%3;const py=844+178*Math.floor(p);line(84,800,84,1220,INK,1,.18);rect(78,py,12,12,'#497d1c');
     for(let i=0;i<3;i++){line(86,842+i*178,102+i*50,842+i*178,INK,1,.35);}
     const tx=mix(810,655,smooth((t-3)/3));character('working',tx,1420+Math.sin(t*5)*4,250,t,{hero:true,auraInk:'#3f8f18',rotation:Math.sin(t*1.5)*.035,alpha:out((t-2)/.7)});
-    text('MAKE.',110,1410,68,INK,{alpha:out((t-2.8)/.6)});text('LEARN.',110,1480,68,INK,{alpha:out((t-3.4)/.6)});text('MAKE AGAIN.',110,1550,68,INK,{alpha:out((t-4)/.6)});
+    text('BUILD.',110,1410,68,INK,{alpha:out((t-2.8)/.6)});text('TEST.',110,1480,68,INK,{alpha:out((t-3.4)/.6)});text('REFINE.',110,1550,68,INK,{alpha:out((t-4)/.6)});
   }
   function swarm(t){
-    base();title(['ONE SPARK.','MANY MINDS.'],104,433,125,t);
+    base();title(['ONE BRIEF.','MANY AGENTS.'],104,433,125,t);
     const expand=smooth((t-.4)/2.6);const spin=t*.12;const nodes=[];
     for(let i=0;i<19;i++){
       const ring=i===0?0:i<7?1:2;const count=ring===1?6:12;const j=ring===1?i-1:i-7;
@@ -260,13 +260,13 @@
       const r=(t*.55+i*.173)%1;rect(mix(p.x,n.x,r)-3,mix(p.y,n.y,r)-3,6,6,LIME,.7*expand);}
     circle(540,1000,205*expand,LIME,.14);circle(540,1000,385*expand,PAPER,.09);
     nodes.forEach((n,i)=>{character('working',n.x,n.y+Math.sin(t*4+i)*4,n.w,t,{hero:i===0,seed:i,auraCount:i===0?5:i%3===0?1:0,alpha:n.a*(i===0?1:expand),rotation:Math.sin(t*.9+i)*.04});});
-    micro('INDEPENDENT MOTION.',110,1480,PAPER,.75);micro('SHARED DIRECTION.',110,1520,LIME,.9);
+    micro('COORDINATED EXECUTION.',110,1480,PAPER,.75);micro('SHARED CONTEXT.',110,1520,LIME,.9);
     text(String(Math.floor(mix(1,19,expand))).padStart(2,'0'),822,1518,90,PAPER,{align:'right',alpha:.22});
   }
   function rotate3(p,a,b){let x=p.x*Math.cos(a)-p.z*Math.sin(a),z=p.x*Math.sin(a)+p.z*Math.cos(a);const y=p.y*Math.cos(b)-z*Math.sin(b);z=p.y*Math.sin(b)+z*Math.cos(b);return {x,y,z};}
   function project(p){const s=760/(760+p.z);return{x:540+p.x*s,y:995+p.y*s,scale:s,z:p.z};}
   function sync(t){
-    base();title(['COMPLEXITY.','IN CONCERT.'],104,430,122,t);
+    base();title(['COMPLEXITY.','UNDER CONTROL.'],104,430,112,t);
     const grow=out(t/1.1);const a=t*.42,b=.34+Math.sin(t*.35)*.2;
     for(let axis=0;axis<3;axis++){
       ctx.beginPath();for(let j=0;j<=160;j++){const ang=j/160*Math.PI*2,r=322*grow;let p=axis===0?{x:Math.cos(ang)*r,y:Math.sin(ang)*r,z:0}:axis===1?{x:Math.cos(ang)*r,y:0,z:Math.sin(ang)*r}:{x:0,y:Math.cos(ang)*r,z:Math.sin(ang)*r};const q=project(rotate3(p,a,b));if(j===0)ctx.moveTo(q.x,q.y);else ctx.lineTo(q.x,q.y);}
@@ -276,7 +276,7 @@
     arr.sort((p,q)=>q.z-p.z).forEach(p=>{character('working',p.x,p.y,53*p.scale,t,{seed:p.i,auraCount:p.i%5===0?1:0,alpha:mix(.23,.97,clamp((320-p.z)/640)),rotation:Math.sin(t*.5+p.i)*.08});});
     character('working',540,995,190,t,{hero:true,alpha:.95});
     bracket(123,617,834,760,PAPER,.17);
-    micro('ORBITAL STUDY / COHERENCE',110,1488,LIME,.8);
+    micro('INTEGRATION / SHARED CONTROL',110,1488,LIME,.8);
     for(let i=0;i<100;i++){const x=110+i*8.5;const y=1570+Math.sin(i*.12+t*3)*Math.sin(i/100*Math.PI)*19;rect(x,y,4,2,PAPER,.28);}
   }
   function spectrum(t){
@@ -285,17 +285,17 @@
       const x=80+i*130;const h=(150+Math.sin(t*1.9+i*.7)*80)*burst;
       rect(x,1540-h,24,h,SPECTRUM[i],.28);rect(x+33,1570-h*.6,8,h*.6,SPECTRUM[i],.15);
     }
-    title(['FULL','SPECTRUM.'],104,435,153,t,PAPER,.1);
+    title(['FULL','THROUGHPUT.'],104,435,130,t,PAPER,.1);
     const w=650*mix(.75,1,burst)*power,y=1000+Math.sin(t*2)*10;
     character('working',540,y,w,t,{aura:false});
     const sweep=clamp((t-.35)/1.5);ctx.save();ctx.beginPath();ctx.rect(90,680,900,640*sweep);ctx.clip();character('ultracode',540,y,w,t,{hero:true});ctx.restore();
     const r=414;for(let i=0;i<64;i++){const a=i/64*Math.PI*2+t*.08;const length=(i%8===0?32:10)*burst;line(540+Math.cos(a)*r,1000+Math.sin(a)*r*.81,540+Math.cos(a)*(r+length),1000+Math.sin(a)*(r+length)*.81,SPECTRUM[Math.floor(i/8)],i%8===0?4:1,.42);}
-    micro('SAME CURIOSITY.',110,1418,PAPER,.65);micro('A WHOLE NEW FREQUENCY.',110,1458,SPECTRUM[6],.85);
+    micro('COORDINATED SYSTEMS.',110,1418,PAPER,.65);micro('DELIVERY IN MOTION.',110,1458,SPECTRUM[6],.85);
     if(t<1.8){const yy=mix(740,1230,sweep);line(150,yy,930,yy,PAPER,2,(1-sweep)*.6);}
   }
   function reveal(t){
     base();const settle=out(t/1.9),word=out((t-1.1)/1.1);
-    micro('THE NEXT THING STARTS HERE.',110,350,PAPER,.6*out(t/.9));
+    micro('BUILT WITH INTENT.',110,350,PAPER,.6*out(t/.9));
     const logoY=mix(880,765,settle);const logoW=mix(650,470,settle);
     image('swirl',540,logoY,logoW,logoW,settle,(1-settle)*1.5);
     image('eye',540,logoY,logoW,logoW,smooth((t-.5)/1.4));
@@ -303,9 +303,9 @@
     ctx.save();ctx.beginPath();ctx.rect(100,1010,880*word,210);ctx.clip();image('wordmark',540,1080,830,830*209/1005);ctx.restore();
     text('cavelux.ai',540,1230,42,LIME,{mono:true,align:'center',spacing:2.5,alpha:out((t-2.1)/.8)});
     line(340,1310,740,1310,PAPER,1,.18*out((t-2.5)/.8));
-    micro('CURIOUS BY DESIGN.',540-112,1360,PAPER,.6*out((t-2.7)/.8));
+    text('ENGINEERED TO DELIVER.',540,1360,20,PAPER,{mono:true,spacing:1.4,align:'center',alpha:.6*out((t-2.7)/.8)});
     character('normal',882,1530+Math.sin(t*2.4)*4,86,t,{hero:t>=1.9,alpha:out((t-3.2)/.9)});
-    micro('END OF STUDY. START OF SOMETHING.',110,1540,GRAY,.65*out((t-3.4)/.8));
+    micro('DEFINE. BUILD. VERIFY.',110,1540,GRAY,.65*out((t-3.4)/.8));
   }
   const scenes=[wake,build,swarm,sync,spectrum,reveal];
   function transition(local,index){if(index===0||local>.3)return;const p=clamp(local/.3);const height=H*(1-inout(p));rect(0,0,W,height,index===1?PAPER:INK);rect(0,height-5,W,5,index===4?SPECTRUM[4]:LIME,.8);}
@@ -355,7 +355,7 @@
   window.renderFrame=renderFrame;
   window.renderCharacterPreview=renderCharacterPreview;
   window.characterStates=Object.fromEntries(Object.entries(characterStates).map(([name,spec])=>[name,{...spec}]));
-  window.filmSpec={width:W,height:H,fps:FPS,durationInFrames:DURATION,chapters:['WAKE','BUILD','SWARM','SYNCHRONIZE','SPECTRUM','REVEAL']};
+  window.filmSpec={width:W,height:H,fps:FPS,durationInFrames:DURATION,chapters:['DEFINE','BUILD','ORCHESTRATE','INTEGRATE','THROUGHPUT','DELIVER']};
   window.filmReady=Promise.all(Object.entries(files).map(([name,url])=>new Promise((resolve,reject)=>{const img=new Image();img.crossOrigin='anonymous';img.onload=()=>{try{assets[name]={img,bounds:name==='glyph'?null:bounds(img)};if(name==='working'||name==='spectrum')assets[name].hypnosis=makeHypnosisLayers(img,assets[name].bounds);if(name==='spectrum'){const a=assets[name];a.wave=makeSpectrumLayers(a.hypnosis.body,{x:0,y:0,w:a.bounds.w,h:a.bounds.h});}resolve();}catch(error){reject(error);}};img.onerror=()=>reject(new Error('Failed asset '+url));img.src=url;}))).then(()=>{if(!characterOnly)renderFrame(90);return window.filmSpec;});
 })();
 
@@ -364,7 +364,7 @@ await window.filmReady;
   'use strict';
   const host=document.getElementById('app');
   const charming=window.charming,api=charming.api('cavelux-clawd-studio');
-  const descriptions={normal:'A quiet spark. Ready for what comes next.',working:'Curiosity in motion. A little code in the orbit.',ultracode:'Same character. A whole new frequency.'};
+  const descriptions={normal:'Ready for the next assignment.',working:'Coordinated execution across skills, tools and workflows.',ultracode:'Parallel execution at full throughput.'};
   const stateNames={normal:'Normal',working:'Working',ultracode:'Ultracode'};
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   let configuration={state:'normal',eyeSpeed:1,scale:1,background:'dark',aura:true,time:3};
@@ -372,7 +372,7 @@ await window.filmReady;
   host.innerHTML=`
     <main class="studio">
       <header class="studio-header"><a class="brand-link" href="https://cavelux.ai" target="_blank" rel="noopener">CAVELUX<span class="brand-square" aria-hidden="true"></span></a><span class="studio-label">CHARACTER STUDIO / 01</span><a class="source-link" href="https://github.com/mragerlp/cavelux-clawd" target="_blank" rel="noopener">Source on GitHub <span aria-hidden="true">↗</span></a></header>
-      <section class="intro"><div><p class="kicker">THE CHARACTER, IN YOUR HANDS.</p><h1>Clawd. <span>In character.</span></h1></div><p class="intro-copy">A small companion for big ideas.<br>Find a state. Set the motion. Make it yours.</p></section>
+      <section class="intro"><div><p class="kicker">CONFIGURED FOR CAVELUX WORKFLOWS.</p><h1>Clawd. <span>In character.</span></h1></div><p class="intro-copy">A reusable identity for Cavelux workflows.<br>Configure. Preview. Export.</p></section>
       <div class="workspace">
         <section class="preview-section" aria-label="Character preview and playback">
           <div class="stage-meta"><span><i aria-hidden="true"></i><span id="state-label">NORMAL / REGULAR EYES</span></span><span id="playback-status">PAUSED</span></div>
@@ -383,12 +383,12 @@ await window.filmReady;
           <div class="export-feedback"><p id="export-status" class="status" role="status" aria-live="polite"></p><a id="export-link" hidden rel="noopener" target="_blank"></a></div>
         </section>
         <aside class="inspector" aria-label="Character controls">
-          <section class="control-section"><div class="section-heading"><h2>Character state</h2><span>01—03</span></div><div class="state-options" role="group" aria-label="Character state"><button id="state-normal" type="button" data-state="normal" aria-pressed="true"><span>01</span><strong>Normal</strong><small>Regular eyes</small></button><button id="state-working" type="button" data-state="working" aria-pressed="false"><span>02</span><strong>Working</strong><small>Code in orbit</small></button><button id="state-ultracode" type="button" data-state="ultracode" aria-pressed="false"><span>03</span><strong>Ultracode</strong><small>Full spectrum</small></button></div></section>
-          <section class="control-section motion-controls"><div class="section-heading"><h2>Fine-tune</h2><span>THE FEEL</span></div><div class="control"><div class="range-label"><label for="eye-speed">Eye rotation</label><output id="eye-speed-output" for="eye-speed">1.0×</output></div><input id="eye-speed" type="range" min="0" max="3" step="0.1" value="1"><p class="hint">Spiral eyes in Working and Ultracode.</p></div><div class="control"><div class="range-label"><label for="scale">Character scale</label><output id="scale-output" for="scale">100%</output></div><input id="scale" type="range" min="0.4" max="1.4" step="0.05" value="1"></div><div class="control horizontal"><label for="background">Background</label><select id="background"><option value="dark">Carbon</option><option value="light">Paper</option><option value="transparent">Transparent</option></select></div><div class="control horizontal"><div><label for="aura">Code aura</label><p class="hint">Orbiting glyphs in Working.</p></div><label class="switch"><input id="aura" type="checkbox" checked aria-label="Show code aura"><span aria-hidden="true"></span></label></div></section>
+          <section class="control-section"><div class="section-heading"><h2>Character state</h2><span>01—03</span></div><div class="state-options" role="group" aria-label="Character state"><button id="state-normal" type="button" data-state="normal" aria-pressed="true"><span>01</span><strong>Normal</strong><small>Regular eyes</small></button><button id="state-working" type="button" data-state="working" aria-pressed="false"><span>02</span><strong>Working</strong><small>Execution</small></button><button id="state-ultracode" type="button" data-state="ultracode" aria-pressed="false"><span>03</span><strong>Ultracode</strong><small>Full throughput</small></button></div></section>
+          <section class="control-section motion-controls"><div class="section-heading"><h2>Fine-tune</h2><span>PARAMETERS</span></div><div class="control"><div class="range-label"><label for="eye-speed">Eye rotation</label><output id="eye-speed-output" for="eye-speed">1.0×</output></div><input id="eye-speed" type="range" min="0" max="3" step="0.1" value="1"><p class="hint">Spiral eyes in Working and Ultracode.</p></div><div class="control"><div class="range-label"><label for="scale">Character scale</label><output id="scale-output" for="scale">100%</output></div><input id="scale" type="range" min="0.4" max="1.4" step="0.05" value="1"></div><div class="control horizontal"><label for="background">Background</label><select id="background"><option value="dark">Carbon</option><option value="light">Paper</option><option value="transparent">Transparent</option></select></div><div class="control horizontal"><div><label for="aura">Code aura</label><p class="hint">Orbiting glyphs in Working.</p></div><label class="switch"><input id="aura" type="checkbox" checked aria-label="Show code aura"><span aria-hidden="true"></span></label></div></section>
           <section class="control-section preset-section"><div class="section-heading"><h2>Saved looks</h2><button id="new-preset" class="text-button" type="button">New preset +</button></div><form id="preset-form"><label class="sr-only" for="preset-name">Preset name</label><div class="save-row"><input id="preset-name" type="text" maxlength="48" autocomplete="off" placeholder="Name this look" aria-describedby="status"><button id="save-preset" type="submit">Save</button></div></form><p id="status" class="status" role="status" aria-live="polite">Loading saved presets…</p><button id="retry-presets" class="text-button" type="button" hidden>Retry loading presets</button><ul id="presets-list" class="presets-list" aria-label="Saved presets"></ul></section>
         </aside>
       </div>
-      <footer class="studio-footer"><span>CURIOSITY, BY DESIGN.</span><p>Regular eyes. Working spirals. Full-spectrum possibility.</p><span id="motion-preference"></span></footer>
+      <footer class="studio-footer"><span>ENGINEERED TO DELIVER.</span><p>Ready. Executing. Full throughput.</p><span id="motion-preference"></span></footer>
     </main>`;
   const byId=id=>document.getElementById(id),canvas=byId('preview');
   const notify=(message,error=false)=>{byId('status').textContent=message;byId('status').dataset.error=String(error);};
@@ -399,7 +399,7 @@ await window.filmReady;
   }
   function updateControls(){
     document.querySelectorAll('[data-state]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.state===configuration.state)));
-    byId('state-label').textContent=configuration.state==='normal'?'NORMAL / REGULAR EYES':configuration.state==='working'?'WORKING / CODE AURA':'ULTRACODE / RAINBOW WAVE';
+    byId('state-label').textContent=configuration.state==='normal'?'NORMAL / REGULAR EYES':configuration.state==='working'?'WORKING / CODE AURA':'ULTRACODE / FULL THROUGHPUT';
     byId('state-description').textContent=descriptions[configuration.state];canvas.setAttribute('aria-label',`${stateNames[configuration.state]} Cavelux Clawd character preview`);
     byId('eye-speed').value=configuration.eyeSpeed;byId('eye-speed-output').textContent=configuration.eyeSpeed.toFixed(1)+'×';
     byId('scale').value=configuration.scale;byId('scale-output').textContent=Math.round(configuration.scale*100)+'%';
@@ -414,7 +414,7 @@ await window.filmReady;
   document.querySelectorAll('[data-state]').forEach(button=>{button.onclick=()=>{configuration.state=button.dataset.state;updateControls();};});
   for(const [element,key] of [['eye-speed','eyeSpeed'],['scale','scale']])byId(element).oninput=event=>{configuration[key]=Number(event.target.value);updateControls();};
   byId('background').onchange=event=>{configuration.background=event.target.value;updateControls();};byId('aura').onchange=event=>{configuration.aura=event.target.checked;render();};
-  const preference=()=>{byId('motion-preference').textContent=reduced.matches?'REDUCED MOTION / MANUAL PLAY':'MOTION STARTS WITH YOU.';if(reduced.matches)pause();};reduced.addEventListener('change',preference);preference();
+  const preference=()=>{byId('motion-preference').textContent=reduced.matches?'REDUCED MOTION / MANUAL PLAY':'READY TO PREVIEW.';if(reduced.matches)pause();};reduced.addEventListener('change',preference);preference();
   document.addEventListener('visibilitychange',()=>{if(document.hidden)pause();});
   let exportBusy=false,exportObjectUrl=null;
   const exportNotice=(message,error=false)=>{byId('export-status').textContent=message;byId('export-status').dataset.error=String(error);};

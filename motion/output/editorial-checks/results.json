@@ -1,0 +1,1242 @@
+{
+  "startedAt": "2026-09-29T08:16:03.679Z",
+  "checks": [
+    {
+      "name": "DEFINE: approved copy is drawn on canvas",
+      "status": "PASS",
+      "evidence": [
+        "CLEAR",
+        "INTENT."
+      ]
+    },
+    {
+      "name": "DEFINE: headline ink fits the composition",
+      "status": "PASS",
+      "evidence": [
+        {
+          "text": "CLEAR",
+          "font": "500 148px Bahnschrift, Arial, sans-serif",
+          "alpha": 1,
+          "x": 104,
+          "y": 468,
+          "left": 113,
+          "right": 533.512451171875,
+          "top": 361,
+          "bottom": 469
+        },
+        {
+          "text": "INTENT.",
+          "font": "500 148px Bahnschrift, Arial, sans-serif",
+          "alpha": 1,
+          "x": 104,
+          "y": 613.04,
+          "left": 115,
+          "right": 586.5684814453125,
+          "top": 508.03999999999996,
+          "bottom": 613.04
+        }
+      ]
+    },
+    {
+      "name": "BUILD: approved copy is drawn on canvas",
+      "status": "PASS",
+      "evidence": [
+        "SYSTEMS,",
+        "BUILT RIGHT.",
+        "define. build. verify.",
+        "tools -> context",
+        "test. integrate. ship."
+      ]
+    },
+    {
+      "name": "BUILD: headline ink fits the composition",
+      "status": "PASS",
+      "evidence": [
+        {
+          "text": "SYSTEMS,",
+          "font": "500 132px Bahnschrift, Arial, sans-serif",
+          "alpha": 1,
+          "x": 104,
+          "y": 440,
+          "left": 108,
+          "right": 648.6033935546875,
+          "top": 345,
+          "bottom": 462
+        },
+        {
+          "text": "BUILT RIGHT.",
+          "font": "500 132px Bahnschrift, Arial, sans-serif",
+          "alpha": 1,
+          "x": 104,
+          "y": 569.36,
+          "left": 114,
+          "right": 812.3968505859375,
+          "top": 474.36,
+          "bottom": 570.36
+        }
+      ]
+    },
+    {
+      "name": "ORCHESTRATE: approved copy is drawn on canvas",
+      "status": "PASS",
+      "evidence": [
+        "ONE BRIEF.",
+        "MANY AGENTS."
+      ]
+    },
+    {
+      "name": "ORCHESTRATE: headline ink fits the composition",
+      "status": "PASS",
+      "evidence": [
+        {
+          "text": "ONE BRIEF.",
+          "font": "500 125px Bahnschrift, Arial, sans-serif",
+          "alpha": 1,
+          "x": 104,
+          "y": 433,
+          "left": 112,
+          "right": 697.5869140625,
+          "top": 343,
+          "bottom": 434
+        },
+        {
+          "text": "MANY AGENTS.",
+          "font": "500 125px Bahnschrift, Arial, sans-serif",
+          "alpha": 1,
+          "x": 104,
+          "y": 555.5,
+          "left": 114,
+          "right": 897.63818359375,
+          "top": 465.5,
+          "bottom": 556.5
+        }
+      ]
+    },
+    {
+      "name": "INTEGRATE: approved copy is drawn on canvas",
+      "status": "PASS",
+      "evidence": [
+        "COMPLEXITY.",
+        "UNDER CONTROL."
+      ]
+    },
+    {
+      "name": "INTEGRATE: headline ink fits the composition",
+      "status": "PASS",
+      "evidence": [
+        {
+          "text": "COMPLEXITY.",
+          "font": "500 112px Bahnschrift, Arial, sans-serif",
+          "alpha": 1,
+          "x": 104,
+          "y": 430,
+          "left": 111,
+          "right": 719.175048828125,
+          "top": 349,
+          "bottom": 431
+        },
+        {
+          "text": "UNDER CONTROL.",
+          "font": "500 112px Bahnschrift, Arial, sans-serif",
+          "alpha": 1,
+          "x": 104,
+          "y": 539.76,
+          "left": 111,
+          "right": 949.6259765625,
+          "top": 458.76,
+          "bottom": 540.76
+        }
+      ]
+    },
+    {
+      "name": "THROUGHPUT: approved copy is drawn on canvas",
+      "status": "PASS",
+      "evidence": [
+        "FULL",
+        "THROUGHPUT."
+      ]
+    },
+    {
+      "name": "THROUGHPUT: headline ink fits the composition",
+      "status": "PASS",
+      "evidence": [
+        {
+          "text": "FULL",
+          "font": "500 130px Bahnschrift, Arial, sans-serif",
+          "alpha": 1,
+          "x": 104,
+          "y": 435,
+          "left": 114,
+          "right": 393.46820068359375,
+          "top": 342,
+          "bottom": 436
+        },
+        {
+          "text": "THROUGHPUT.",
+          "font": "500 130px Bahnschrift, Arial, sans-serif",
+          "alpha": 1,
+          "x": 104,
+          "y": 562.4,
+          "left": 101,
+          "right": 874.4493408203125,
+          "top": 468.4,
+          "bottom": 563.4
+        }
+      ]
+    },
+    {
+      "name": "DELIVER: approved copy is drawn on canvas",
+      "status": "PASS",
+      "evidence": [
+        "cavelux.ai",
+        "ENGINEERED TO DELIVER."
+      ]
+    },
+    {
+      "name": "DELIVER: headline ink fits the composition",
+      "status": "PASS",
+      "evidence": []
+    },
+    {
+      "name": "film has no retired exploratory copy",
+      "status": "PASS",
+      "evidence": {
+        "matches": []
+      }
+    },
+    {
+      "name": "player title and chapter navigation use engineering language",
+      "status": "PASS",
+      "evidence": {
+        "title": "CAVELUX — Engineered to deliver.",
+        "heading": "Engineered to deliver.",
+        "chapters": [
+          "01 DEFINE",
+          "02 BUILD",
+          "03 ORCHESTRATE",
+          "04 INTEGRATE",
+          "05 THROUGHPUT",
+          "06 DELIVER"
+        ]
+      }
+    },
+    {
+      "name": "browser reports no rendering errors",
+      "status": "PASS",
+      "evidence": []
+    }
+  ],
+  "frames": [
+    {
+      "frame": 150,
+      "chapter": "DEFINE",
+      "draws": [
+        {
+          "text": "FROM BRIEF TO BUILD",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 1,
+          "x": 110,
+          "y": 324,
+          "left": 111,
+          "right": 344.12957763671875,
+          "top": 311,
+          "bottom": 324
+        },
+        {
+          "text": "CLEAR",
+          "font": "500 148px Bahnschrift, Arial, sans-serif",
+          "alpha": 1,
+          "x": 104,
+          "y": 468,
+          "left": 113,
+          "right": 533.512451171875,
+          "top": 361,
+          "bottom": 469
+        },
+        {
+          "text": "INTENT.",
+          "font": "500 148px Bahnschrift, Arial, sans-serif",
+          "alpha": 1,
+          "x": 104,
+          "y": 613.04,
+          "left": 115,
+          "right": 586.5684814453125,
+          "top": 508.03999999999996,
+          "bottom": 613.04
+        },
+        {
+          "text": "AGENT 01",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.7,
+          "x": 110,
+          "y": 1320,
+          "left": 109,
+          "right": 207.77261352539062,
+          "top": 1307,
+          "bottom": 1320
+        },
+        {
+          "text": "DEFINED BEFORE BUILT.",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 1,
+          "x": 110,
+          "y": 1360,
+          "left": 110,
+          "right": 365.9217529296875,
+          "top": 1347,
+          "bottom": 1360
+        },
+        {
+          "text": "> define. build. verify.",
+          "font": "500 28px Consolas, monospace",
+          "alpha": 1,
+          "x": 110,
+          "y": 1490,
+          "left": 112,
+          "right": 498.07421875,
+          "top": 1470,
+          "bottom": 1495
+        },
+        {
+          "text": "CAVELUX",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.8,
+          "x": 106,
+          "y": 175,
+          "left": 106,
+          "right": 192.37652587890625,
+          "top": 162,
+          "bottom": 175
+        },
+        {
+          "text": "ENGINEERING / 01",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.48,
+          "x": 670,
+          "y": 175,
+          "left": 671,
+          "right": 866.9413146972656,
+          "top": 161,
+          "bottom": 177
+        },
+        {
+          "text": "01 / DEFINE",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.5,
+          "x": 106,
+          "y": 1730,
+          "left": 106,
+          "right": 239.96087646484375,
+          "top": 1716,
+          "bottom": 1732
+        },
+        {
+          "text": "INTENT → DELIVERY",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.45,
+          "x": 646,
+          "y": 1730,
+          "left": 647,
+          "right": 856.33740234375,
+          "top": 1717,
+          "bottom": 1730
+        }
+      ]
+    },
+    {
+      "frame": 375,
+      "chapter": "BUILD",
+      "draws": [
+        {
+          "text": "SYSTEMS,",
+          "font": "500 132px Bahnschrift, Arial, sans-serif",
+          "alpha": 1,
+          "x": 104,
+          "y": 440,
+          "left": 108,
+          "right": 648.6033935546875,
+          "top": 345,
+          "bottom": 462
+        },
+        {
+          "text": "BUILT RIGHT.",
+          "font": "500 132px Bahnschrift, Arial, sans-serif",
+          "alpha": 1,
+          "x": 104,
+          "y": 569.36,
+          "left": 114,
+          "right": 812.3968505859375,
+          "top": 474.36,
+          "bottom": 570.36
+        },
+        {
+          "text": "02 / SKILLS + MCPs + WORKFLOWS",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.55,
+          "x": 110,
+          "y": 718,
+          "left": 110,
+          "right": 480.4865417480469,
+          "top": 704,
+          "bottom": 720
+        },
+        {
+          "text": "SKILLS",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.6,
+          "x": 138,
+          "y": 812,
+          "left": 138,
+          "right": 210.98043823242188,
+          "top": 799,
+          "bottom": 812
+        },
+        {
+          "text": "define. build. verify.",
+          "font": "500 31px Consolas, monospace",
+          "alpha": 1,
+          "x": 138,
+          "y": 871,
+          "left": 139,
+          "right": 499.5229797363281,
+          "top": 850,
+          "bottom": 877
+        },
+        {
+          "text": "MCPs",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.6,
+          "x": 188,
+          "y": 990,
+          "left": 188,
+          "right": 235.18826293945312,
+          "top": 977,
+          "bottom": 990
+        },
+        {
+          "text": "tools -> context",
+          "font": "500 31px Consolas, monospace",
+          "alpha": 1,
+          "x": 188,
+          "y": 1049,
+          "left": 188,
+          "right": 452.6592712402344,
+          "top": 1028,
+          "bottom": 1049
+        },
+        {
+          "text": "WORKFLOWS",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.6,
+          "x": 238,
+          "y": 1168,
+          "left": 238,
+          "right": 348.168701171875,
+          "top": 1155,
+          "bottom": 1168
+        },
+        {
+          "text": "test. integrate. ship.",
+          "font": "500 31px Consolas, monospace",
+          "alpha": 1,
+          "x": 238,
+          "y": 1227,
+          "left": 238,
+          "right": 599.5229797363281,
+          "top": 1206,
+          "bottom": 1233
+        },
+        {
+          "text": "{}",
+          "font": "500 15.25px Consolas, monospace",
+          "alpha": 0.4838370444754882,
+          "x": -127.46050606840433,
+          "y": -92.91518155530959,
+          "left": 559.4133540224464,
+          "right": 575.7890466087509,
+          "top": 1315.611394820742,
+          "bottom": 1329.6038508364331
+        },
+        {
+          "text": "</>",
+          "font": "500 15.25px Consolas, monospace",
+          "alpha": 0.4200013710829015,
+          "x": 100.96611673188427,
+          "y": -105.63142012669117,
+          "left": 783.5268860442006,
+          "right": 808.2825820649863,
+          "top": 1303.9014696150705,
+          "bottom": 1315.8950033428057
+        },
+        {
+          "text": "[]",
+          "font": "500 15.25px Consolas, monospace",
+          "alpha": 0.48487979147993904,
+          "x": 189.86099792079824,
+          "y": 33.95386813856395,
+          "left": 878.5627896962524,
+          "right": 891.9400988506233,
+          "top": 1442.4120803631756,
+          "bottom": 1456.4045363788666
+        },
+        {
+          "text": "::",
+          "font": "500 15.25px Consolas, monospace",
+          "alpha": 0.6188233851557297,
+          "x": 16.374433121142197,
+          "y": 132.93855918732504,
+          "left": 705.1697091767844,
+          "right": 717.5475571871773,
+          "top": 1545.3412774909855,
+          "bottom": 1552.337505498831
+        },
+        {
+          "text": "<>",
+          "font": "500 15.25px Consolas, monospace",
+          "alpha": 0.6986850297972819,
+          "x": -179.74104170542034,
+          "y": 54.529174356111774,
+          "left": 507.1609900668946,
+          "right": 523.5366826531993,
+          "top": 1465.9746828849961,
+          "bottom": 1473.9703720368198
+        },
+        {
+          "text": "BUILD.",
+          "font": "500 68px Bahnschrift, Arial, sans-serif",
+          "alpha": 1,
+          "x": 110,
+          "y": 1410,
+          "left": 115,
+          "right": 298.2328643798828,
+          "top": 1361,
+          "bottom": 1411
+        },
+        {
+          "text": "TEST.",
+          "font": "500 68px Bahnschrift, Arial, sans-serif",
+          "alpha": 1,
+          "x": 110,
+          "y": 1480,
+          "left": 108,
+          "right": 260.13824462890625,
+          "top": 1431,
+          "bottom": 1481
+        },
+        {
+          "text": "REFINE.",
+          "font": "500 68px Bahnschrift, Arial, sans-serif",
+          "alpha": 1,
+          "x": 110,
+          "y": 1550,
+          "left": 115,
+          "right": 339.3489685058594,
+          "top": 1501,
+          "bottom": 1550
+        },
+        {
+          "text": "CAVELUX",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.8,
+          "x": 106,
+          "y": 175,
+          "left": 106,
+          "right": 192.37652587890625,
+          "top": 162,
+          "bottom": 175
+        },
+        {
+          "text": "ENGINEERING / 01",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.48,
+          "x": 670,
+          "y": 175,
+          "left": 671,
+          "right": 866.9413146972656,
+          "top": 161,
+          "bottom": 177
+        },
+        {
+          "text": "02 / BUILD",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.5,
+          "x": 106,
+          "y": 1730,
+          "left": 106,
+          "right": 228.56478881835938,
+          "top": 1716,
+          "bottom": 1732
+        },
+        {
+          "text": "INTENT → DELIVERY",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.45,
+          "x": 646,
+          "y": 1730,
+          "left": 647,
+          "right": 856.33740234375,
+          "top": 1717,
+          "bottom": 1730
+        }
+      ]
+    },
+    {
+      "frame": 600,
+      "chapter": "ORCHESTRATE",
+      "draws": [
+        {
+          "text": "ONE BRIEF.",
+          "font": "500 125px Bahnschrift, Arial, sans-serif",
+          "alpha": 1,
+          "x": 104,
+          "y": 433,
+          "left": 112,
+          "right": 697.5869140625,
+          "top": 343,
+          "bottom": 434
+        },
+        {
+          "text": "MANY AGENTS.",
+          "font": "500 125px Bahnschrift, Arial, sans-serif",
+          "alpha": 1,
+          "x": 104,
+          "y": 555.5,
+          "left": 114,
+          "right": 897.63818359375,
+          "top": 465.5,
+          "bottom": 556.5
+        },
+        {
+          "text": "{}",
+          "font": "500 14.64px Consolas, monospace",
+          "alpha": 0.4838370444754882,
+          "x": -122.36208582566816,
+          "y": -89.1985742930972,
+          "left": 409.68846130337204,
+          "right": 425.7253273734932,
+          "top": 903.5298073928813,
+          "bottom": 917.5191064269148
+        },
+        {
+          "text": "</>",
+          "font": "500 14.64px Consolas, monospace",
+          "alpha": 0.4200013710829015,
+          "x": 96.92747206260891,
+          "y": -101.40616332162351,
+          "left": 624.7889137309028,
+          "right": 648.8687607088402,
+          "top": 892.3307849378377,
+          "bottom": 904.3216126812952
+        },
+        {
+          "text": "[]",
+          "font": "500 14.64px Consolas, monospace",
+          "alpha": 0.48487979147993904,
+          "x": 182.26655800396634,
+          "y": 32.595713413021386,
+          "left": 716.0827320842977,
+          "right": 729.1218912185545,
+          "top": 1025.2310010613114,
+          "bottom": 1039.2203000953452
+        },
+        {
+          "text": "::",
+          "font": "500 14.64px Consolas, monospace",
+          "alpha": 0.6188233851557297,
+          "x": 15.719455796296511,
+          "y": 127.62101681983202,
+          "left": 549.6629309389504,
+          "right": 561.7028544279191,
+          "top": 1124.1806140108677,
+          "bottom": 1131.1752635278845
+        },
+        {
+          "text": "<>",
+          "font": "500 14.64px Consolas, monospace",
+          "alpha": 0.6986850297972819,
+          "x": -172.55140003720356,
+          "y": 52.3480073818673,
+          "left": 359.53750953064025,
+          "right": 375.5743756007614,
+          "top": 1047.9659042070562,
+          "bottom": 1055.9597893693613
+        },
+        {
+          "text": "::",
+          "font": "500 9px Consolas, monospace",
+          "alpha": 0.24883048001596542,
+          "x": 90.86405846541575,
+          "y": -2.909742198456042,
+          "left": 442.01382525747505,
+          "right": 449.95647353097513,
+          "top": 1065.8366693460991,
+          "bottom": 1070.833150383121
+        },
+        {
+          "text": "</>",
+          "font": "500 9px Consolas, monospace",
+          "alpha": 0.24883048001596542,
+          "x": -45.82109489257737,
+          "y": 54.837046323227646,
+          "left": 671.6303213209218,
+          "right": 686.5175843575597,
+          "top": 973.7319333720803,
+          "bottom": 981.7269811494593
+        },
+        {
+          "text": "<>",
+          "font": "500 9px Consolas, monospace",
+          "alpha": 0.16588698667731025,
+          "x": -25.117423602222775,
+          "y": -33.90638089398475,
+          "left": 390.1577277017418,
+          "right": 400.1008285282312,
+          "top": 1276.7826716641998,
+          "bottom": 1281.780087609191
+        },
+        {
+          "text": "[]",
+          "font": "500 9px Consolas, monospace",
+          "alpha": 0.16588698667731025,
+          "x": 59.70304198512167,
+          "y": 10.433694274898368,
+          "left": 229.84308892736155,
+          "right": 237.7881098248783,
+          "top": 901.4188138863509,
+          "bottom": 910.4151663364694
+        },
+        {
+          "text": "{}",
+          "font": "500 9px Consolas, monospace",
+          "alpha": 0.16588698667731025,
+          "x": -44.184298914915736,
+          "y": 30.32931177236524,
+          "left": 610.6740461644316,
+          "right": 620.6193702491157,
+          "top": 703.2862137378589,
+          "bottom": 712.2835737814879
+        },
+        {
+          "text": "::",
+          "font": "500 9px Consolas, monospace",
+          "alpha": 0.16588698667731025,
+          "x": -8.41506868924036,
+          "y": -37.10507345629976,
+          "left": 893.5281356067967,
+          "right": 901.4748686997356,
+          "top": 1063.3075839176636,
+          "bottom": 1068.3066345916834
+        },
+        {
+          "text": "COORDINATED EXECUTION.",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.75,
+          "x": 110,
+          "y": 1480,
+          "left": 110,
+          "right": 378.3178405761719,
+          "top": 1467,
+          "bottom": 1480
+        },
+        {
+          "text": "SHARED CONTEXT.",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.9,
+          "x": 110,
+          "y": 1520,
+          "left": 110,
+          "right": 291.54522705078125,
+          "top": 1507,
+          "bottom": 1520
+        },
+        {
+          "text": "19",
+          "font": "500 90px Bahnschrift, Arial, sans-serif",
+          "alpha": 0.22,
+          "x": 822,
+          "y": 1518,
+          "left": 755.1867065429688,
+          "right": 820.9634704589844,
+          "top": 1453,
+          "bottom": 1518
+        },
+        {
+          "text": "CAVELUX",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.8,
+          "x": 106,
+          "y": 175,
+          "left": 106,
+          "right": 192.37652587890625,
+          "top": 162,
+          "bottom": 175
+        },
+        {
+          "text": "ENGINEERING / 01",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.48,
+          "x": 670,
+          "y": 175,
+          "left": 671,
+          "right": 866.9413146972656,
+          "top": 161,
+          "bottom": 177
+        },
+        {
+          "text": "03 / ORCHESTRATE",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.5,
+          "x": 106,
+          "y": 1730,
+          "left": 106,
+          "right": 301.9413146972656,
+          "top": 1716,
+          "bottom": 1732
+        },
+        {
+          "text": "INTENT → DELIVERY",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.45,
+          "x": 646,
+          "y": 1730,
+          "left": 647,
+          "right": 856.33740234375,
+          "top": 1717,
+          "bottom": 1730
+        }
+      ]
+    },
+    {
+      "frame": 825,
+      "chapter": "INTEGRATE",
+      "draws": [
+        {
+          "text": "COMPLEXITY.",
+          "font": "500 112px Bahnschrift, Arial, sans-serif",
+          "alpha": 1,
+          "x": 104,
+          "y": 430,
+          "left": 111,
+          "right": 719.175048828125,
+          "top": 349,
+          "bottom": 431
+        },
+        {
+          "text": "UNDER CONTROL.",
+          "font": "500 112px Bahnschrift, Arial, sans-serif",
+          "alpha": 1,
+          "x": 104,
+          "y": 539.76,
+          "left": 111,
+          "right": 949.6259765625,
+          "top": 458.76,
+          "bottom": 540.76
+        },
+        {
+          "text": "{}",
+          "font": "500 9px Consolas, monospace",
+          "alpha": 0.06800428111963687,
+          "x": 5.969308120203746,
+          "y": 21.763121760829588,
+          "left": 546.7653238173045,
+          "right": 556.6855698632462,
+          "top": 1075.7553891593143,
+          "bottom": 1084.7300615417034
+        },
+        {
+          "text": "{}",
+          "font": "500 9px Consolas, monospace",
+          "alpha": 0.0770648244064654,
+          "x": 9.07407618548207,
+          "y": -16.378789957179247,
+          "left": 659.3659492647814,
+          "right": 669.3140514261169,
+          "top": 986.8849668446056,
+          "bottom": 995.8848401653936
+        },
+        {
+          "text": "{}",
+          "font": "500 9px Consolas, monospace",
+          "alpha": 0.0983589137607003,
+          "x": -21.14460299654906,
+          "y": -13.472783622420444,
+          "left": 486.51585155705783,
+          "right": 496.452693839149,
+          "top": 1160.6336843946415,
+          "bottom": 1169.6233711004188
+        },
+        {
+          "text": "{}",
+          "font": "500 9px Consolas, monospace",
+          "alpha": 0.11912144138768972,
+          "x": -25.176530069734177,
+          "y": 18.44337979159809,
+          "left": 748.469623989007,
+          "right": 758.3875801301698,
+          "top": 1015.1901582167147,
+          "bottom": 1024.162758962465
+        },
+        {
+          "text": "{}",
+          "font": "500 9px Consolas, monospace",
+          "alpha": 0.17918256267525995,
+          "x": 42.378514879206826,
+          "y": -4.43520348248518,
+          "left": 911.1668632145273,
+          "right": 921.107550819459,
+          "top": 1019.1354920004179,
+          "bottom": 1028.1286575022389
+        },
+        {
+          "text": "{}",
+          "font": "500 9px Consolas, monospace",
+          "alpha": 0.23453658248415488,
+          "x": -55.701904775994194,
+          "y": -7.043583633331151,
+          "left": 803.2863961483855,
+          "right": 813.219077402514,
+          "top": 1047.8796283062452,
+          "bottom": 1056.8655506030989
+        },
+        {
+          "text": "{}",
+          "font": "500 9px Consolas, monospace",
+          "alpha": 0.2357103716095605,
+          "x": -12.27909990339207,
+          "y": 40.155035064506336,
+          "left": 396.33986855250254,
+          "right": 406.2565417554724,
+          "top": 725.2201725543068,
+          "bottom": 734.1916126484043
+        },
+        {
+          "text": "{}",
+          "font": "500 9px Consolas, monospace",
+          "alpha": 0.2628488355850323,
+          "x": -20.01032182464253,
+          "y": -40.78226116866481,
+          "left": 403.01517225643084,
+          "right": 412.9621689702082,
+          "top": 819.7167019055659,
+          "bottom": 828.7155751473615
+        },
+        {
+          "text": "{}",
+          "font": "500 9px Consolas, monospace",
+          "alpha": 0.26508093507560476,
+          "x": 50.28938460020329,
+          "y": 34.73766829122886,
+          "left": 714.5510823117681,
+          "right": 724.4744649887713,
+          "top": 1050.0389605242283,
+          "bottom": 1059.0164705616544
+        },
+        {
+          "text": "{}",
+          "font": "500 11.59px Consolas, monospace",
+          "alpha": 0.45964519225171374,
+          "x": -96.8699846119873,
+          "y": -70.61553798203528,
+          "left": 436.75779248762205,
+          "right": 449.1300153880127,
+          "top": 916.3844620179648,
+          "bottom": 926.3844620179648
+        },
+        {
+          "text": "</>",
+          "font": "500 11.59px Consolas, monospace",
+          "alpha": 0.3990013025287564,
+          "x": 76.73424871623206,
+          "y": -80.27987929628529,
+          "left": 607.1759143656461,
+          "right": 626.9203601664274,
+          "top": 906.7201207037147,
+          "bottom": 915.7201207037147
+        },
+        {
+          "text": "[]",
+          "font": "500 11.59px Consolas, monospace",
+          "alpha": 0.4606358019059421,
+          "x": 144.29435841980668,
+          "y": 25.804939785308598,
+          "left": 678.9221355194161,
+          "right": 689.2943584198067,
+          "top": 1012.8049397853086,
+          "bottom": 1022.8049397853086
+        },
+        {
+          "text": "::",
+          "font": "500 11.59px Consolas, monospace",
+          "alpha": 0.5878822158979432,
+          "x": 12.444569172068071,
+          "y": 101.03330498236703,
+          "left": 548.0723462716775,
+          "right": 557.4445691720681,
+          "top": 1090.033304982367,
+          "bottom": 1096.033304982367
+        },
+        {
+          "text": "<>",
+          "font": "500 11.59px Consolas, monospace",
+          "alpha": 0.6637507783074177,
+          "x": -136.6031916961195,
+          "y": 41.442172510644944,
+          "left": 397.0245854034899,
+          "right": 410.3968083038805,
+          "top": 1029.442172510645,
+          "bottom": 1036.442172510645
+        },
+        {
+          "text": "INTEGRATION / SHARED CONTROL",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.8,
+          "x": 110,
+          "y": 1488,
+          "left": 111,
+          "right": 454.6943664550781,
+          "top": 1474,
+          "bottom": 1490
+        },
+        {
+          "text": "CAVELUX",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.8,
+          "x": 106,
+          "y": 175,
+          "left": 106,
+          "right": 192.37652587890625,
+          "top": 162,
+          "bottom": 175
+        },
+        {
+          "text": "ENGINEERING / 01",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.48,
+          "x": 670,
+          "y": 175,
+          "left": 671,
+          "right": 866.9413146972656,
+          "top": 161,
+          "bottom": 177
+        },
+        {
+          "text": "04 / INTEGRATE",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.5,
+          "x": 106,
+          "y": 1730,
+          "left": 106,
+          "right": 277.1491394042969,
+          "top": 1716,
+          "bottom": 1732
+        },
+        {
+          "text": "INTENT → DELIVERY",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.45,
+          "x": 646,
+          "y": 1730,
+          "left": 647,
+          "right": 856.33740234375,
+          "top": 1717,
+          "bottom": 1730
+        }
+      ]
+    },
+    {
+      "frame": 1050,
+      "chapter": "THROUGHPUT",
+      "draws": [
+        {
+          "text": "FULL",
+          "font": "500 130px Bahnschrift, Arial, sans-serif",
+          "alpha": 1,
+          "x": 104,
+          "y": 435,
+          "left": 114,
+          "right": 393.46820068359375,
+          "top": 342,
+          "bottom": 436
+        },
+        {
+          "text": "THROUGHPUT.",
+          "font": "500 130px Bahnschrift, Arial, sans-serif",
+          "alpha": 1,
+          "x": 104,
+          "y": 562.4,
+          "left": 101,
+          "right": 874.4493408203125,
+          "top": 468.4,
+          "bottom": 563.4
+        },
+        {
+          "text": "COORDINATED SYSTEMS.",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.65,
+          "x": 110,
+          "y": 1418,
+          "left": 110,
+          "right": 353.5256652832031,
+          "top": 1405,
+          "bottom": 1418
+        },
+        {
+          "text": "DELIVERY IN MOTION.",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.85,
+          "x": 110,
+          "y": 1458,
+          "left": 110,
+          "right": 341.12957763671875,
+          "top": 1445,
+          "bottom": 1458
+        },
+        {
+          "text": "CAVELUX",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.8,
+          "x": 106,
+          "y": 175,
+          "left": 106,
+          "right": 192.37652587890625,
+          "top": 162,
+          "bottom": 175
+        },
+        {
+          "text": "ENGINEERING / 01",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.48,
+          "x": 670,
+          "y": 175,
+          "left": 671,
+          "right": 866.9413146972656,
+          "top": 161,
+          "bottom": 177
+        },
+        {
+          "text": "05 / THROUGHPUT",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.5,
+          "x": 106,
+          "y": 1730,
+          "left": 106,
+          "right": 290.54522705078125,
+          "top": 1716,
+          "bottom": 1732
+        },
+        {
+          "text": "INTENT → DELIVERY",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.45,
+          "x": 646,
+          "y": 1730,
+          "left": 647,
+          "right": 856.33740234375,
+          "top": 1717,
+          "bottom": 1730
+        }
+      ]
+    },
+    {
+      "frame": 1290,
+      "chapter": "DELIVER",
+      "draws": [
+        {
+          "text": "BUILT WITH INTENT.",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.6,
+          "x": 110,
+          "y": 350,
+          "left": 111,
+          "right": 328.7334899902344,
+          "top": 337,
+          "bottom": 350
+        },
+        {
+          "text": "cavelux.ai",
+          "font": "500 42px Consolas, monospace",
+          "alpha": 1,
+          "x": 540,
+          "y": 1230,
+          "left": 414.041015625,
+          "right": 663.3671875,
+          "top": 1200,
+          "bottom": 1230
+        },
+        {
+          "text": "ENGINEERED TO DELIVER.",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.6,
+          "x": 540,
+          "y": 1360,
+          "left": 404.6430358886719,
+          "right": 671.9608764648438,
+          "top": 1347,
+          "bottom": 1360
+        },
+        {
+          "text": "DEFINE. BUILD. VERIFY.",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.65,
+          "x": 110,
+          "y": 1540,
+          "left": 110,
+          "right": 378.3178405761719,
+          "top": 1527,
+          "bottom": 1540
+        },
+        {
+          "text": "CAVELUX",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.8,
+          "x": 106,
+          "y": 175,
+          "left": 106,
+          "right": 192.37652587890625,
+          "top": 162,
+          "bottom": 175
+        },
+        {
+          "text": "ENGINEERING / 01",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.48,
+          "x": 670,
+          "y": 175,
+          "left": 671,
+          "right": 866.9413146972656,
+          "top": 161,
+          "bottom": 177
+        },
+        {
+          "text": "06 / DELIVER",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.5,
+          "x": 106,
+          "y": 1730,
+          "left": 106,
+          "right": 253.35696411132812,
+          "top": 1716,
+          "bottom": 1732
+        },
+        {
+          "text": "INTENT → DELIVERY",
+          "font": "500 20px Consolas, monospace",
+          "alpha": 0.45,
+          "x": 646,
+          "y": 1730,
+          "left": 647,
+          "right": 856.33740234375,
+          "top": 1717,
+          "bottom": 1730
+        }
+      ]
+    }
+  ],
+  "pageErrors": [],
+  "sourceHash": "7468f5fb3a5e8b3480399e8500aa6f3cdd0e209761f1bf166709890ce3d9292b",
+  "finishedAt": "2026-09-29T08:16:04.637Z",
+  "summary": {
+    "passed": 15,
+    "failed": 0
+  }
+}

@@ -20,6 +20,7 @@ try {
     ['motion/validate-character-states.mjs'],
     ['motion/validate-hypnosis.mjs'],
     ['motion/validate-ui.mjs'],
+    ['motion/validate-editorial.mjs'],
   ]) {
     await new Promise((resolve,reject) => {
       const child=spawn(process.execPath,args,{cwd:repository,stdio:'inherit',windowsHide:true});

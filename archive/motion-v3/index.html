@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAVELUX — From signal to spectrum</title>
+  <link rel="icon" href="brand/CVL_eyeglyph.svg" type="image/svg+xml">
+  <style>
+    :root { color-scheme: dark; --paper:#efefe6; --lime:#92fa11; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:#0c0e0c; color:var(--paper); font-family:Bahnschrift,Arial,sans-serif; }
+    main { display:grid; grid-template-columns:minmax(280px,540px) minmax(300px,460px); gap:64px; align-items:center; justify-content:center; min-height:100vh; padding:40px; }
+    .screen { position:relative; aspect-ratio:9/16; width:100%; max-height:87vh; justify-self:center; }
+    canvas { display:block; width:100%; height:100%; object-fit:contain; background:#101210; border:1px solid #272c24; }
+    .eyebrow, .counter, .note, label, .beats { font:12px/1.6 Consolas,monospace; letter-spacing:.08em; }
+    .eyebrow { color:var(--lime); margin-bottom:30px; }
+    h1 { font-size:clamp(40px,5vw,72px); line-height:1.02; font-weight:600; letter-spacing:-.045em; margin:0 0 22px; }
+    p { color:#a8afa3; line-height:1.6; max-width:400px; }
+    .controls { border-top:1px solid #31382c; margin-top:36px; padding-top:24px; }
+    button, a.button { border:1px solid #526047; color:var(--paper); background:transparent; font:14px Consolas,monospace; padding:12px 18px; cursor:pointer; text-decoration:none; display:inline-block; }
+    button:hover,a.button:hover { border-color:var(--lime); color:var(--lime); }
+    button:focus-visible, input:focus-visible,a:focus-visible { outline:2px solid var(--lime); outline-offset:4px; }
+    #play { background:var(--lime); color:#101210; border-color:var(--lime); min-width:90px; }
+    .row { display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
+    input[type=range] { width:100%; accent-color:var(--lime); margin:24px 0 10px; }
+    .counter { display:flex; justify-content:space-between; color:#b5bbaa; }
+    .beats { margin:30px 0; color:#a1a99c; }
+    .beats button { border:0; padding:5px 8px 5px 0; color:inherit; font-size:11px; }
+    .note { color:#7b8572; letter-spacing:0; }
+    .download { margin-top:24px; }
+    .export main { display:block; padding:0; min-height:0; }
+    .export .screen { width:1080px; height:1920px; max-height:none; }
+    .export canvas { width:1080px; height:1920px; border:0; }
+    .export aside { display:none; }
+    @media(max-width:780px) { main { display:flex; flex-direction:column; padding:24px; gap:32px; } .screen { width:min(100%,390px); max-height:none; } aside { width:min(100%,440px); } h1 { font-size:46px; } }
+    @media(prefers-reduced-motion:reduce) { * { scroll-behavior:auto; } }
+  </style>
+</head>
+<body>
+<main>
+  <div class="screen"><canvas id="film" width="1080" height="1920" role="img" aria-label="Cavelux motion film: Clawd wakes, builds, forms a swarm, synchronizes, transforms into rainbow, and reveals the Cavelux identity."></canvas></div>
+  <aside>
+    <div class="eyebrow">CAVELUX / MOTION STUDY 01</div>
+    <h1>From signal<br>to spectrum.</h1>
+    <p>A small spark becomes a coordinated world.<br>Retro pixels. Scientific precision. Full color.</p>
+    <div class="controls">
+      <div class="row"><button id="play" type="button" aria-label="Play motion film">Play</button><button id="restart" type="button">Restart</button><button id="mute" type="button" aria-pressed="false">Sound on</button></div>
+      <label for="seek" class="note">Timeline</label><input id="seek" type="range" min="0" max="1349" step="1" value="90" aria-label="Seek through the 45 second film">
+      <div class="counter"><span id="time">00:03 / 00:45</span><span id="chapter">01 / WAKE</span></div>
+    </div>
+    <div class="beats" aria-label="Jump to chapter"><button data-frame="0">01 WAKE</button><button data-frame="225">02 BUILD</button><button data-frame="450">03 SWARM</button><button data-frame="675">04 SYNC</button><button data-frame="900">05 SPECTRUM</button><button data-frame="1125">06 REVEAL</button></div>
+    <p class="note">45 seconds · 9:16 · 1080 × 1920 · 30 fps<br>Original music + synthesized sound design. No voiceover.<br>Playback starts only when you press Play.</p>
+    <div class="download row"><a class="button" href="output/cavelux-from-signal-to-spectrum.mp4" download>Download film</a><a class="button" href="assets.html">Asset library</a></div>
+  </aside>
+</main>
+<script src="film.js"></script>
+<script src="player.js"></script>
+</body>
+</html>

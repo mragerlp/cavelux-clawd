@@ -1,7 +1,7 @@
 {
   "surface": "Local Edge browser, real reaction renderer and local downloadable files",
   "url": "http://127.0.0.1:8766/reactions/index.html",
-  "startedAt": "2026-09-29T02:30:39.773Z",
+  "startedAt": "2026-09-29T08:16:17.676Z",
   "checks": [
     {
       "name": "gallery is available as an actual page",
@@ -32,7 +32,7 @@
       "name": "play advances actual frames and pause freezes them",
       "status": "PASS",
       "evidence": {
-        "pausedTime": "1.25"
+        "pausedTime": "1.8"
       }
     },
     {
@@ -121,7 +121,7 @@
     "Physical iMessage device import or playback",
     "Translated interface: English only; RTL layout is tested separately"
   ],
-  "finishedAt": "2026-09-29T02:31:06.955Z",
+  "finishedAt": "2026-09-29T08:16:47.951Z",
   "summary": {
     "passed": 12,
     "failed": 0,

@@ -164,15 +164,15 @@ try {
     assert.equal(after.playName,'Play motion film');
     return {before,after};
   });
-  await check('desktop: Spectrum chapter jump updates chapter and seek', async () => {
-    await desktop.getByRole('button',{name:'05 SPECTRUM',exact:true}).click();
+  await check('desktop: Throughput chapter jump updates chapter and seek', async () => {
+    await desktop.getByRole('button',{name:'05 THROUGHPUT',exact:true}).click();
     const after=await state(desktop);
     assert.equal(after.frame,900);
     assert.equal(after.seek,900);
-    assert.equal(after.chapter,'05 / SPECTRUM');
+    assert.equal(after.chapter,'05 / THROUGHPUT');
     return after;
   });
-  await check('desktop: meaningful Spectrum frame renders', async () => {
+  await check('desktop: meaningful Throughput frame renders', async () => {
     await setSeek(desktop,1050);
     const evidence=await canvasEvidence(desktop);
     assert.equal(evidence.frame,1050);
@@ -181,7 +181,7 @@ try {
     assert.ok(evidence.distinctSampleColors>30, 'Canvas lacks visible scene color detail');
     assert.ok(evidence.nonBackgroundSamples>300, 'Canvas appears empty');
     await desktop.evaluate(()=>window.scrollTo(0,0));
-    const screenshot=path.join(out,'desktop-spectrum.png');
+    const screenshot=path.join(out,'desktop-throughput.png');
     await desktop.screenshot({path:screenshot,fullPage:true});
     result.screenshots.push(screenshot);
     return evidence;
@@ -191,7 +191,7 @@ try {
     await desktop.waitForTimeout(120);
     const after=await state(desktop);
     assert.ok(after.frame>=0 && after.frame<=12, `Restart landed at ${after.frame}`);
-    assert.equal(after.chapter,'01 / WAKE');
+    assert.equal(after.chapter,'01 / DEFINE');
     assert.equal(after.playName,'Pause motion film');
     await desktop.getByRole('button',{name:'Pause motion film',exact:true}).click();
     return after;
@@ -212,7 +212,7 @@ try {
     const after=await state(desktop);
     assert.equal(after.frame,1349);
     assert.equal(after.seek,1349);
-    assert.equal(after.chapter,'06 / REVEAL');
+    assert.equal(after.chapter,'06 / DELIVER');
     assert.equal(after.playName,'Play motion film');
     return after;
   });
@@ -235,16 +235,16 @@ try {
   });
   await inspectLayout(mobile,'mobile');
   await check('mobile: chapter navigation and canvas rendering', async () => {
-    await mobile.getByRole('button',{name:'05 SPECTRUM',exact:true}).click();
+    await mobile.getByRole('button',{name:'05 THROUGHPUT',exact:true}).click();
     const after=await state(mobile);
     assert.equal(after.frame,900);
-    assert.equal(after.chapter,'05 / SPECTRUM');
+    assert.equal(after.chapter,'05 / THROUGHPUT');
     await setSeek(mobile,1050);
     const evidence=await canvasEvidence(mobile);
     assert.ok(evidence.distinctSampleColors>30);
     assert.ok(evidence.nonBackgroundSamples>300);
     await mobile.evaluate(()=>window.scrollTo(0,0));
-    const screenshot=path.join(out,'mobile-spectrum.png');
+    const screenshot=path.join(out,'mobile-throughput.png');
     await mobile.screenshot({path:screenshot,fullPage:true});
     result.screenshots.push(screenshot);
     return {after,canvas:evidence};

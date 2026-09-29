@@ -26,7 +26,7 @@ def digest(data):
 def files_under(root):
     for directory, subdirectories, names in os.walk(root):
         subdirectories[:] = sorted(name for name in subdirectories
-                                    if name not in {'.git', 'node_modules', '__pycache__'})
+                                    if name not in {'.git', 'node_modules', '__pycache__', '.frames', '.local'})
         for name in sorted(names):
             yield Path(directory) / name
 

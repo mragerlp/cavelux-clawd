@@ -33,9 +33,11 @@ node motion/verify.mjs
 node motion/validate-ui.mjs
 node motion/validate-character-states.mjs
 node motion/validate-hypnosis.mjs
+node motion/validate-editorial.mjs
+python motion/validate-audio.py
 ```
 
-The full renderer writes `motion/output/cavelux-from-signal-to-spectrum.mp4`:
+The full renderer writes `motion/output/cavelux-engineered-to-deliver-v4.mp4`:
 1080 by 1920 pixels, 30 frames per second, 1,350 frames, and 45 seconds. It uses
 the local `motion/audio/master.wav`. Rendering replaces the current output;
 earlier revisions are represented in the archive inventory.
@@ -84,9 +86,10 @@ measured sample count and audio checks are recorded by the generator.
 ## Preserved files and evidence
 
 `docs/archive-inventory.json` maps original sibling files and historical ZIP
-entries to matching repository files by SHA-256. Repeated assets share one
+entries to matching repository files by SHA-256. Ignored frame scratch directories
+and local preset storage are excluded. Repeated assets share one
 stored copy. The historical ZIP files themselves are not duplicated in this
-repository. `archive/motion-v1/` and `archive/motion-v2/` are partial snapshots;
+repository. `archive/motion-v1/`, `archive/motion-v2/`, and `archive/motion-v3/` are partial snapshots;
 unchanged assets live in shared locations recorded in the inventory. They are
 historical material, not independently runnable copies of the application.
 To rebuild the core migration snapshot while those source folders and

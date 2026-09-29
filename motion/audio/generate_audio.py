@@ -1,29 +1,23 @@
-"""Original CAVELUX 45-second electronic cue. Numpy + system FFmpeg only.
+"""CAVELUX / Engineered Momentum: original synthesized electro launch cue.
 
-All instruments and effects are synthesized here; no samples or recordings.
-Regenerate with: python generate_audio.py
+45.000 seconds, 128 BPM, 24 bars, six 7.5-second movements. NumPy and FFmpeg.
+Every instrument is synthesized; no samples, recordings, or vocals.
 """
 from pathlib import Path
+import hashlib
 import json
 import math
 import subprocess
 import wave
-
 import numpy as np
 
 OUT = Path(__file__).resolve().parent
-SR = 48000
-SECONDS = 45.0
-N = int(SR * SECONDS)
-BPM = 128
-BEAT = 60 / BPM
+SR, N, BPM = 48000, 2160000, 128
+SECONDS, BEAT = 45.0, 60 / BPM
 BAR = 4 * BEAT
-RNG = np.random.default_rng(260929)
-music = np.zeros((N, 2), np.float64)
-fx = np.zeros_like(music)
-padbus = np.zeros_like(music)
-pluckbus = np.zeros_like(music)
-drumbus = np.zeros_like(music)
+RNG = np.random.default_rng(26092904)
+drums = np.zeros((N, 2), np.float64)
+low, synths, arp_bus, fx = [np.zeros_like(drums) for _ in range(4)]
 cues = []
 
 
@@ -31,299 +25,278 @@ def hz(midi):
     return 440 * 2 ** ((midi - 69) / 12)
 
 
-def pan_gains(pan):
-    a = (pan + 1) * math.pi / 4
-    return np.array([math.cos(a), math.sin(a)])
+def axis(duration):
+    return np.arange(round(duration * SR)) / SR
+
+
+def envelope(t, attack, release, duration):
+    return np.minimum(t / attack, 1) * np.minimum(np.maximum(duration - t, 0) / release, 1) ** 1.5
 
 
 def add(bus, signal, start, gain=1, pan=0):
-    i = int(round(start * SR))
-    if i >= N or i + len(signal) <= 0:
+    index = round(start * SR)
+    if index >= N:
         return
-    if i < 0:
-        signal = signal[-i:]
-        i = 0
-    signal = signal[:N - i]
+    if index < 0:
+        signal, index = signal[-index:], 0
+    signal = signal[:N - index]
     if signal.ndim == 1:
-        signal = signal[:, None] * pan_gains(pan)[None, :]
-    bus[i:i + len(signal)] += gain * signal
+        angle = (pan + 1) * math.pi / 4
+        signal = signal[:, None] * np.array([math.cos(angle), math.sin(angle)])[None, :]
+    bus[index:index + len(signal)] += gain * signal
 
 
-def env(t, attack, release, duration):
-    return np.minimum(t / attack, 1) ** 1.5 * np.minimum(np.maximum(duration - t, 0) / release, 1) ** 1.5
-
-
-def synth_pad(notes, duration, color=1):
-    t = np.arange(int(duration * SR)) / SR
-    channels = []
-    for side in (-1, 1):
-        y = np.zeros_like(t)
-        for k, note in enumerate(notes):
-            f = hz(note) * (1 + side * (0.0007 + 0.00012 * k))
-            phase = 2 * np.pi * f * t + 0.026 * np.sin(2 * np.pi * (0.21 + k * .06) * t)
-            y += np.sin(phase + k * .31)
-            y += .20 * color * np.sin(2 * phase + .4)
-            y += .073 * color * np.sin(3 * phase + .6)
-            y += .025 * color * np.sin(5 * phase)
-        y /= len(notes)
-        channels.append(y * env(t, .20, .80, duration))
-    return np.stack(channels, axis=1)
-
-
-def pluck(note, duration=.65, bright=1):
-    t = np.arange(int(duration * SR)) / SR
-    p = 2 * np.pi * hz(note) * t
-    y = np.sin(p) * np.exp(-t * 4.6)
-    y += .32 * bright * np.sin(2 * p) * np.exp(-t * 10)
-    y += .10 * bright * np.sin(3 * p) * np.exp(-t * 14)
-    y += .045 * bright * np.sin(5 * p) * np.exp(-t * 20)
-    return y * env(t, .003, .16, duration)
-
-
-def bass(note, duration=.43):
-    t = np.arange(int(duration * SR)) / SR
-    p = 2 * np.pi * hz(note) * t
-    y = np.sin(p) + .23 * np.sin(2 * p) + .07 * np.sin(3 * p)
-    return y * env(t, .008, .10, duration) * np.exp(-t * 1.6)
+def band_noise(duration, lo, hi):
+    size = round(duration * SR)
+    spectrum = np.fft.rfft(RNG.normal(size=size))
+    frequencies = np.fft.rfftfreq(size, 1 / SR)
+    weight = np.clip((frequencies - lo) / max(150, lo * .25), 0, 1)
+    weight *= np.clip((hi - frequencies) / max(250, hi * .15), 0, 1)
+    signal = np.fft.irfft(spectrum * weight, n=size)
+    return signal / (np.std(signal) + 1e-12)
 
 
 def kick():
-    t = np.arange(int(.48 * SR)) / SR
-    phase = 2 * np.pi * (46 * t + 69 * .026 * (1 - np.exp(-t / .026)))
-    body = np.sin(phase) * np.exp(-t * 10)
-    click = .13 * np.sin(2 * np.pi * 1350 * t) * np.exp(-t * 220)
-    return (body + click) * env(t, .001, .07, .48)
-
-
-def noise_band(duration, lo, hi):
-    length = int(duration * SR)
-    n = RNG.normal(size=length)
-    spectrum = np.fft.rfft(n)
-    f = np.fft.rfftfreq(length, 1 / SR)
-    weight = np.clip((f - lo) / (max(100, lo * .35)), 0, 1)
-    weight *= np.clip((hi - f) / (max(500, hi * .20)), 0, 1)
-    y = np.fft.irfft(spectrum * weight, n=length)
-    return y / (np.std(y) + 1e-9)
+    t = axis(.38)
+    phase = 2 * np.pi * (49 * t + 102 * .022 * (1 - np.exp(-t / .022)))
+    punch = .88 * np.sin(phase) * np.exp(-t * 12.7)
+    punch += .16 * np.sin(2 * np.pi * 49 * t) * np.exp(-t * 8.2)
+    attack = .09 * band_noise(.38, 1300, 4900) * np.exp(-t * 220)
+    return (punch + attack) * envelope(t, .0007, .045, .38)
 
 
 def snare():
-    t = np.arange(int(.22 * SR)) / SR
-    noise = noise_band(.22, 900, 9500)
-    body = .50 * np.sin(2 * np.pi * 179 * t) * np.exp(-t * 32)
-    body += .20 * np.sin(2 * np.pi * 310 * t) * np.exp(-t * 45)
-    return (body + .34 * noise * np.exp(-t * 28)) * env(t, .001, .06, .22)
+    t = axis(.25)
+    noise = np.tanh(band_noise(.25, 1700, 11200) * .75)
+    clap = np.exp(-t * 32)
+    for delay, level in [(.012, .45), (.026, .28)]:
+        clap += np.where(t >= delay, level * np.exp(-np.maximum(t - delay, 0) * 45), 0)
+    body = .54 * np.sin(2 * np.pi * 189 * t) * np.exp(-t * 35)
+    body += .16 * np.sin(2 * np.pi * 317 * t) * np.exp(-t * 47)
+    return (body + .69 * noise * clap) * envelope(t, .0008, .04, .25)
 
 
 def hat(opened=False):
-    duration = .19 if opened else .065
-    t = np.arange(int(duration * SR)) / SR
-    noise = noise_band(duration, 5800, 15000)
-    return noise * np.exp(-t * (24 if opened else 75)) * env(t, .0008, .022, duration)
+    duration = .16 if opened else .052
+    t = axis(duration)
+    noisy = .8 * np.tanh(band_noise(duration, 4700, 13200) * .90)
+    metal = .095 * np.sin(2 * np.pi * 7811 * t) + .06 * np.sin(2 * np.pi * 10307 * t)
+    return (noisy + metal) * np.exp(-t * (28 if opened else 82)) * envelope(t, .0005, .013, duration)
 
 
-def pulse(note, duration=.16):
-    t = np.arange(int(duration * SR)) / SR
-    p = 2 * np.pi * hz(note) * t
-    y = np.sin(p) + .12 * np.sin(3 * p) + .04 * np.sin(5 * p)
-    return y * np.sin(np.pi * t / duration) ** 2
+def rim():
+    t = axis(.09)
+    signal = np.sin(2 * np.pi * 1190 * t) + .34 * np.sin(2 * np.pi * 1733 * t)
+    return signal * np.exp(-t * 72) * envelope(t, .0008, .015, .09)
 
 
-def cue(t, label):
-    cues.append({"time_seconds": t, "cue": label})
+def fm_bass(note, duration=.20, bite=1):
+    t = axis(duration)
+    phase = 2 * np.pi * hz(note) * t
+    index = bite * (.95 * np.exp(-t * 19) + .22)
+    fm = np.sin(phase + index * np.sin(2 * phase + .25))
+    saw = np.zeros_like(t)
+    for harmonic in range(1, 9):
+        saw += np.sin(harmonic * phase) / harmonic * np.exp(-(harmonic - 1) * (.22 + t * 4))
+    source = .72 * fm + .34 * saw + .12 * np.sin(phase / 2)
+    source = np.tanh(source * 1.12) / 1.12
+    return source * envelope(t, .003, .045, duration) * np.exp(-t * 3.6)
 
 
-# Four harmonic cells, deliberately voiced to share tones instead of jumping.
-# D minor 9 -> B-flat major 9 -> F major 9 -> C add 9.
+def chord_stab(notes, duration=.24):
+    t = axis(duration)
+    channels = []
+    for side in (-1, 1):
+        signal = np.zeros_like(t)
+        for i, note in enumerate(notes):
+            phase = 2 * np.pi * hz(note) * (1 + side * .00085) * t + i * .13
+            for harmonic, weight in [(1, 1), (2, .34), (3, .19), (4, .065), (5, .045)]:
+                signal += weight * np.sin(harmonic * phase) * np.exp(-(harmonic - 1) * t * 10)
+        channels.append(signal / len(notes) * envelope(t, .004, .10, duration) * np.exp(-t * 5.8))
+    return np.stack(channels, axis=1)
+
+
+def arp(note, duration=.15, brightness=.8):
+    t = axis(duration)
+    phase = 2 * np.pi * hz(note) * t
+    signal = np.sin(phase + .34 * np.exp(-t * 24) * np.sin(phase * 2))
+    signal += .19 * brightness * np.sin(3 * phase) * np.exp(-t * 25)
+    signal += .06 * brightness * np.sin(5 * phase) * np.exp(-t * 30)
+    return signal * envelope(t, .002, .05, duration) * np.exp(-t * 9)
+
+
+def tone_sweep(start, duration, gain, down=False):
+    t = axis(duration)
+    p = t / duration
+    frequencies = 210 + 1600 * (1 - p if down else p) ** 2
+    phase = 2 * np.pi * np.cumsum(frequencies) / SR
+    signal = np.sin(phase + .8 * np.sin(phase * 2)) * np.sin(np.pi * p) ** 2
+    signal += .11 * band_noise(duration, 2800, 8800) * np.sin(np.pi * p) ** 3
+    pans = .45 * np.sin(p * np.pi - np.pi / 2)
+    stereo = signal[:, None] * np.stack([np.cos((pans + 1) * np.pi / 4), np.sin((pans + 1) * np.pi / 4)], axis=1)
+    add(fx, stereo, start, gain)
+
+
+def electronic_mark(note, duration=1.6):
+    t = axis(duration)
+    phase = 2 * np.pi * hz(note) * t
+    signal = np.sin(phase + .95 * np.exp(-t * 10) * np.sin(phase * 2))
+    signal += .16 * np.sin(3 * phase) * np.exp(-t * 9)
+    return signal * envelope(t, .002, .35, duration) * np.exp(-t * 3.6)
+
+
 cells = [
-    {"pad": [50, 57, 60, 64, 65], "root": 38, "arp": [74, 77, 81, 84, 88]},
-    {"pad": [46, 53, 57, 60, 62], "root": 34, "arp": [74, 77, 81, 84, 86]},
-    {"pad": [48, 53, 57, 60, 64], "root": 41, "arp": [72, 77, 81, 84, 88]},
-    {"pad": [48, 55, 60, 62, 64], "root": 36, "arp": [72, 76, 79, 84, 86]},
+    {'root': 38, 'chord': [50, 57, 62, 65], 'arp': [62, 69, 74, 77, 81]},
+    {'root': 34, 'chord': [46, 53, 58, 62], 'arp': [62, 65, 70, 74, 77]},
+    {'root': 41, 'chord': [53, 60, 65, 69], 'arp': [65, 69, 72, 77, 81]},
+    {'root': 36, 'chord': [48, 55, 60, 64], 'arp': [60, 67, 72, 76, 79]},
 ]
-stage_names = ["wake", "build", "swarm", "synchronize", "spectrum", "reveal"]
-pad_levels = [.19, .19, .20, .24, .30, .24]
-arp_levels = [.12, .15, .12, .095, .165, .115]
-kick_wave = kick()
-snare_wave = snare()
-hat_wave = hat()
+chapters = ['INITIALIZE', 'BUILD', 'PARALLEL', 'SYNCHRONIZE', 'THROUGHPUT', 'DELIVER']
+kick_sound, snare_sound, rim_sound = kick(), snare(), rim()
+hats = [hat() for _ in range(8)]
 open_hat = hat(True)
 
 for bar in range(24):
-    stage = bar // 4
-    local = bar % 4
+    stage, local = divmod(bar, 4)
     start = bar * BAR
-    cell = cells[local]
-    # End on a stable Dm(add9), rather than leave an unresolved looping chord.
-    if bar >= 22:
-        cell = cells[0]
-    cue(start, f"{stage_names[stage]} / bar {bar + 1}")
-    add(padbus, synth_pad(cell["pad"], BAR + .9, 1.12 if stage == 4 else .85), start, pad_levels[stage])
-
-    if stage == 0:
-        positions = [0, 2] if local < 2 else [0, 1.5, 2.5, 3.5]
-        indexes = [0, 2, 1, 3]
-    elif stage == 1:
-        positions = [0, .75, 1.5, 2, 2.75, 3.5]
-        indexes = [0, 2, 1, 3, 2, 4]
-    elif stage == 2:
-        positions = list(np.arange(0, 4, .5))
-        indexes = [0, 2, 1, 3, 2, 4, 3, 1]
-    elif stage == 3:
-        positions = [0, .5, 1.5, 2, 2.5, 3.25, 3.5]
-        indexes = [0, 2, 3, 1, 2, 4, 3]
-    elif stage == 4:
-        positions = list(np.arange(0, 4, .5))
-        indexes = [0, 2, 1, 3, 2, 4, 3, 2]
-    else:
-        positions = [0, 1.5, 2.5] if local < 2 else ([0, 2] if local == 2 else [0])
-        indexes = [2, 1, 0]
-
-    for j, position in enumerate(positions):
-        note = cell["arp"][indexes[j % len(indexes)]]
-        if stage == 0:
-            note -= 12
-        if bar >= 22 and position > 1:
-            continue
-        gain = arp_levels[stage] * (.76 if j % 2 else 1)
-        add(pluckbus, pluck(note, .70, .60 if stage == 0 else .8), start + position * BEAT, gain, .35 * math.sin(j * 1.5 + bar))
-        if stage in (2, 4) and j in (3, 7):
-            add(pluckbus, pulse(note + 12, .09), start + (position + .25) * BEAT, .020, -.60 if j == 3 else .60)
-
-    if stage != 0 and bar < 22:
-        bass_positions = [0, 1.5, 2.5, 3.5] if stage in (2, 4) else [0, 2, 3.5]
-        for j, position in enumerate(bass_positions):
-            note = cell["root"] + (12 if j == 3 else 0)
-            add(music, bass(note, .50 if j == 0 else .32), start + position * BEAT, .30 if stage == 4 else .23)
-    elif stage == 0 and local in (0, 2):
-        add(music, bass(cell["root"], 1.3), start, .12)
-    elif bar >= 22:
-        add(music, bass(38, 1.5), start, .18)
-
-    if stage == 0:
-        if local >= 2:
-            add(drumbus, kick_wave, start, .23)
-        continue
-    if bar >= 22:
-        if bar == 22:
-            add(drumbus, kick_wave, start, .31)
-        continue
-    kick_positions = [0, 2.5] if stage == 3 else [0, 1.5, 2, 3.5]
-    if stage == 4:
-        kick_positions = [0, 1, 2, 3]
-    if stage == 5:
-        kick_positions = [0, 2]
+    cell = cells[local] if bar < 22 else cells[0]
+    cues.append({'time_seconds': start, 'cue': f'{chapters[stage]} / bar {bar + 1}'})
+    kick_positions = [0, 2] if stage == 0 and local < 2 else [0, 1, 2, 3]
+    if stage == 3 and local == 0:
+        kick_positions = [0, 2, 3]
+    if bar == 22:
+        kick_positions = [0]
+    if bar == 23:
+        kick_positions = []
+    if bar in (7, 15, 19):
+        kick_positions += [3.5]
     for position in kick_positions:
-        add(drumbus, kick_wave, start + position * BEAT, .43 if stage == 4 else .35)
-    for position in [1, 3]:
-        if stage != 3 or position == 3:
-            add(drumbus, snare_wave, start + position * BEAT, .18 if stage == 4 else .14)
-    for j in range(8):
-        gain = (.037 if j % 2 else .028) * (1.1 if stage == 4 else 1)
-        if stage == 3:
-            gain *= .65
-        add(drumbus, hat_wave, start + j * BEAT / 2, gain, -.16 if j % 2 else .16)
-    if stage in (2, 4):
-        add(drumbus, open_hat, start + 3.5 * BEAT, .034, .25)
-    if local == 3 and stage in (1, 2, 4):
-        for j in range(3):
-            add(drumbus, snare_wave, start + (3.5 + j * .125) * BEAT, .04 + .012 * j, (j - 1) * .3)
+        add(drums, kick_sound, start + position * BEAT, .76 if stage == 4 else .68)
+    if bar < 22:
+        for position in [1, 3]:
+            if stage != 0 or local >= 1:
+                add(drums, snare_sound, start + position * BEAT, .31 if stage == 4 else .265, .03)
+        # Articulated sixteenth hats: alternate velocities create forward motion.
+        for step in range(16):
+            if stage == 0 and local == 0 and step % 4:
+                continue
+            if stage == 0 and local == 1 and step % 2:
+                continue
+            gain = [.150, .145, .180, .150][step % 4]
+            if stage == 0:
+                gain *= .78
+            if stage == 5:
+                gain *= .84
+            add(drums, hats[(step + bar) % len(hats)], start + step * BEAT / 4, gain, -.50 if step % 2 else .50)
+        if stage in (1, 2, 4):
+            for position in [.5, 2.5]:
+                add(drums, open_hat, start + position * BEAT, .044, .28)
+        if stage in (2, 4):
+            for position in [1.75, 2.75, 3.75]:
+                add(drums, rim_sound, start + position * BEAT, .046, -.32 if position < 2 else .32)
+        if local == 3:
+            for step in range(3):
+                add(drums, snare_sound, start + (3.5 + step * .125) * BEAT, .052 + step * .021, (step - 1) * .18)
+    # A sequenced FM/saw bass line replaces the previous sustained harmonic bed.
+    bass_pattern = [(0.5, 0), (1.25, 0), (1.75, 12), (2.5, 0), (3.25, 7), (3.75, 0)]
+    if stage == 0 and local < 2:
+        bass_pattern = [(0.5, 0), (2.5, 0), (3.5, 12)]
+    if stage == 2:
+        bass_pattern = [(0.5, 0), (1, 0), (1.5, 12), (1.75, 0), (2.5, 0), (3, 7), (3.5, 0), (3.75, 12)]
+    if stage == 4:
+        bass_pattern = [(0.5, 0), (.75, 12), (1.5, 0), (1.75, 0), (2.5, 0), (2.75, 7), (3.25, 12), (3.75, 0)]
+    if bar >= 22:
+        bass_pattern = [(0, 0)] if bar == 22 else []
+    for position, octave in bass_pattern:
+        duration = .55 if bar == 22 else .15 if position % 1 == .75 else .22
+        add(low, fm_bass(cell['root'] + octave, duration, 1.15 if stage == 4 else 1),
+            start + position * BEAT, .42 if stage == 4 else .35)
+    stab_positions = [.5, 2.5] if stage in (0, 3) else [.5, 1.75, 2.5, 3.5]
+    if bar >= 22:
+        stab_positions = [0] if bar == 22 else []
+    for position in stab_positions:
+        add(synths, chord_stab(cell['chord'], .32 if stage == 4 else .23),
+            start + position * BEAT, .205 if stage == 4 else .13)
+    if bar < 22:
+        steps = [2, 6, 10, 14] if stage == 0 else list(range(16))
+        if stage == 3 and local == 0:
+            steps = [0, 3, 6, 8, 11, 14]
+        melody = [0, 2, 1, 3, 2, 4, 1, 2, 0, 3, 2, 4, 3, 1, 2, 0]
+        for step in steps:
+            note = cell['arp'][melody[step]]
+            if stage in (2, 4) and step in (6, 14):
+                note += 12
+            level = (.105 if stage == 4 else .085) * (.77 if step % 2 else 1)
+            add(arp_bus, arp(note, .16, .78), start + step * BEAT / 4, level,
+                .65 * math.sin(step * 1.7 + bar * .31))
 
-# Small melody returns as an identity; high register gives the full-color release lift.
-motif = [(0, 74), (.75, 77), (1.5, 81), (2.5, 76), (3.25, 77)]
-for start, level, transpose in [(0.9375, .095, -12), (15.0, .070, 0), (30.0, .13, 0), (33.75, .10, 0)]:
-    for offset, note in motif:
-        add(pluckbus, pluck(note + transpose, 1.0, .55), start + offset * BEAT, level, .12 * math.sin(note))
+# A measured low tom run supplies sync-stage tension without a noise wall.
+for i in range(8):
+    t = axis(.16)
+    tom = np.sin(2 * np.pi * hz(45 + i) * t + 2.4 * (1 - np.exp(-t * 55)))
+    tom *= np.exp(-t * 23) * envelope(t, .001, .035, .16)
+    add(drums, tom, 28.125 + i * BEAT / 2, .075 + i * .007, -.4 + i * .8 / 7)
+original_arp = arp_bus.copy()
+for delay, gain in [(BEAT * .75, .19), (BEAT * 1.5, .07)]:
+    offset = round(delay * SR)
+    arp_bus[offset:] += gain * original_arp[:-offset, ::-1]
+original_stabs = synths.copy()
+for delay, gain in [(.067, .14), (.119, .065)]:
+    offset = round(delay * SR)
+    synths[offset:] += gain * original_stabs[:-offset, ::-1]
+times = np.arange(N) / SR
+duck = 1 - .24 * np.exp(-((times / BEAT) % 1) * 15)
+music = drums + (low + synths + arp_bus) * duck[:, None]
+music = .78 * music + .22 * np.tanh(1.6 * music) / 1.6
 
-# Delays are rhythmic and decay rapidly enough to keep micro-typography cuts precise.
-for repeats, gain in [(1, .23), (2, .10), (3, .045)]:
-    offset = int(BEAT * .75 * repeats * SR)
-    pluckbus[offset:] += gain * pluckbus[:-offset, ::-1].copy()
-for delay, gain in [(.061, .18), (.109, .11), (.173, .075), (.293, .045)]:
-    offset = int(delay * SR)
-    padbus[offset:] += gain * padbus[:-offset, ::-1].copy()
-
-# A restrained breathing envelope makes the big section move without aggressive pumping.
-t_all = np.arange(N) / SR
-phase = (t_all / BEAT) % 1
-pump = 1 - .15 * np.exp(-phase * 12)
-pump[(t_all < 7.5) | (t_all >= 41.25)] = 1
-music += padbus * pump[:, None] + pluckbus + drumbus
-
-# SFX stem: tactile clicks, harmonic boot signal, spatial data passes and transitions.
-cue(0.0, "Soft power-on, two clean harmonic signal notes")
-add(fx, pulse(86, .19), .08, .08, -.2)
-add(fx, pulse(93, .25), .33, .065, .2)
-for start, count in [(7.5, 7), (15.0, 12), (22.5, 8)]:
-    for j in range(count):
-        duration = .027 + .005 * (j % 3)
-        ti = np.arange(int(duration * SR)) / SR
-        click = np.sin(2 * np.pi * (1500 + 150 * (j % 4)) * ti) * np.exp(-ti * 180)
-        click *= env(ti, .0006, .009, duration)
-        add(fx, click, start + .07 + j * .095, .029, -.7 + 1.4 * j / max(count - 1, 1))
-    cue(start, "Stereo micro-click sequence / work-state transition")
-
-def airy_rise(start, duration, gain, descending=False):
-    ti = np.arange(int(duration * SR)) / SR
-    progress = ti / duration
-    noise = noise_band(duration, 1800, 10000)
-    shaped = noise * np.sin(np.pi * progress) ** 2 * .14
-    freq = 260 + 1100 * (1 - progress if descending else progress) ** 2
-    phase = 2 * np.pi * np.cumsum(freq) / SR
-    shaped += .35 * np.sin(phase) * np.sin(np.pi * progress) ** 3
-    pan = np.sin(progress * np.pi - np.pi / 2) * .65
-    stereo = shaped[:, None] * np.stack([np.cos((pan + 1) * np.pi / 4), np.sin((pan + 1) * np.pi / 4)], axis=1)
-    add(fx, stereo, start, gain)
-
-airy_rise(14.50, .49, .065)
-airy_rise(21.80, .68, .065, True)
-airy_rise(28.125, 1.83, .085)
-cue(28.125, "Restrained ascending spectrum reveal riser")
-airy_rise(37.48, .65, .050, True)
-
-# Bright harmonic bloom, more like a glass resonator than a crash cymbal.
-for note, position, level in [(62, 30, .11), (69, 30.02, .075), (77, 30.04, .055), (86, 30.07, .035)]:
-    add(fx, pluck(note, 2.3, .40), position, level, (note - 74) / 35)
-cue(30.0, "Full-spectrum harmonic bloom")
-
-# Three-note mark timed independently of bars for the final wordmark.
-for note, position, gain in [(74, 41.96, .12), (81, 42.12, .105), (86, 42.31, .09)]:
-    add(fx, pluck(note, 1.9, .45), position, gain, 0)
-cue(41.96, "CAVELUX sonic mark: D5, A5, D6, warm and clean")
-
-# A short ambience tail behind effects keeps silence from feeling abruptly gated.
-for delay, gain in [(.093, .20), (.211, .12), (.397, .06)]:
-    offset = int(delay * SR)
-    fx[offset:] += gain * fx[:-offset, ::-1].copy()
-
-# All fades happen before mastering. The final 100ms is exactly digital silence.
+for chapter_time in [0, 7.5, 15, 22.5, 30, 37.5]:
+    t = axis(.25)
+    pulse = np.sin(2 * np.pi * 97 * t + .75 * np.sin(2 * np.pi * 194 * t))
+    pulse *= np.exp(-t * 27) * envelope(t, .0008, .035, .25)
+    add(fx, pulse, chapter_time, .09)
+for start, duration, level in [(6.80, .66, .050), (14.42, .54, .056), (21.94, .51, .055), (28.125, 1.82, .074)]:
+    tone_sweep(start, duration, level)
+tone_sweep(37.48, .48, .045, True)
+for start in [7.5, 15, 22.5, 30]:
+    for step in range(4):
+        add(fx, arp(86 + [0, 3, 7, 12][step], .075, .4), start + .035 + step * .059, .022, -.45 + step * .30)
+for note, time, level in [(74, 41.94, .115), (81, 42.10, .103), (86, 42.28, .095)]:
+    add(fx, electronic_mark(note), time, level, -.12 if note == 74 else .12 if note == 86 else 0)
+add(fx, fm_bass(38, .65, .65), 41.94, .17)
+tone_sweep(42.02, .40, .018, True)
+cues += [
+    {'time_seconds': 0, 'cue': 'Immediate electronic downbeat; initialize the engineering story'},
+    {'time_seconds': 7.5, 'cue': 'BUILD: complete drum groove and gated chord stabs'},
+    {'time_seconds': 15, 'cue': 'PARALLEL: denser bass and interlocking sixteenth-note sequence'},
+    {'time_seconds': 22.5, 'cue': 'SYNCHRONIZE: controlled tension, spatial details, rising tom sequence'},
+    {'time_seconds': 30, 'cue': 'THROUGHPUT: maximum groove, stronger bass, open harmonic voicing'},
+    {'time_seconds': 37.5, 'cue': 'DELIVER: carry momentum into the brand reveal'},
+    {'time_seconds': 41.94, 'cue': 'Electronic D-A-D sonic identity, low anchor, controlled tail'},
+]
+original_fx = fx.copy()
+for delay, gain in [(.083, .13), (.167, .065)]:
+    offset = round(delay * SR)
+    fx[offset:] += gain * original_fx[:-offset, ::-1]
 fade = np.ones(N)
-fade[:int(.02 * SR)] = np.linspace(0, 1, int(.02 * SR))
-fade_start = int(43.50 * SR)
-fade_end = int(44.90 * SR)
+fade[:round(.004 * SR)] = np.linspace(0, 1, round(.004 * SR))
+fade_start, fade_end = round(43.7 * SR), round(44.9 * SR)
 fade[fade_start:fade_end] = np.cos(np.linspace(0, np.pi / 2, fade_end - fade_start)) ** 2
 fade[fade_end:] = 0
-music *= fade[:, None]
-fx *= fade[:, None]
-music -= music.mean(axis=0, keepdims=True)
-fx -= fx.mean(axis=0, keepdims=True)
-music[fade_end:] = 0
-fx[fade_end:] = 0
-
-# Keep source stems coherent, with the SFX safely below the music bed.
-raw_master = music + fx
-common_gain = 10 ** (-3.5 / 20) / np.max(np.abs(raw_master))
-music *= common_gain
-fx *= common_gain
-raw_master = music + fx
+for bus in [music, fx]:
+    bus -= bus.mean(axis=0, keepdims=True)
+    bus *= fade[:, None]
+gain = 10 ** (-3 / 20) / np.max(np.abs(music + fx))
+music *= gain
+fx *= gain
+premaster = music + fx
 
 
-def write_pcm24(path, data):
-    integer = np.rint(np.clip(data, -.999999, .999999) * 8388607).astype(np.int32)
-    packed = np.empty((integer.size, 3), np.uint8)
-    flat = integer.ravel()
-    packed[:, 0] = flat & 255
-    packed[:, 1] = (flat >> 8) & 255
-    packed[:, 2] = (flat >> 16) & 255
+def write_pcm24(path, signal):
+    assert signal.shape == (N, 2) and np.all(np.isfinite(signal))
+    assert np.max(np.abs(signal)) < .999999
+    integers = np.rint(signal * 8388607).astype(np.int32).ravel()
+    packed = np.empty((integers.size, 3), np.uint8)
+    packed[:, 0], packed[:, 1], packed[:, 2] = integers & 255, (integers >> 8) & 255, (integers >> 16) & 255
     with wave.open(str(path), 'wb') as stream:
         stream.setnchannels(2)
         stream.setsampwidth(3)
@@ -331,103 +304,59 @@ def write_pcm24(path, data):
         stream.writeframes(packed.tobytes())
 
 
-def run_ffmpeg(args):
+def ffmpeg(args):
     result = subprocess.run(['ffmpeg', '-hide_banner', '-nostdin', *args], capture_output=True, text=True)
     if result.returncode:
         raise RuntimeError(result.stderr)
     return result.stderr
 
 
-def extract_measurement(log):
+def read_measurement(log):
     start = log.rfind('{')
     return json.loads(log[start:log.index('}', start) + 1])
 
 
 write_pcm24(OUT / 'score.wav', music)
 write_pcm24(OUT / 'sfx.wav', fx)
-write_pcm24(OUT / 'premaster.wav', raw_master)
-first_log = run_ffmpeg(['-i', str(OUT / 'premaster.wav'), '-af', 'loudnorm=I=-16:TP=-1.5:LRA=9:print_format=json', '-f', 'null', '-'])
-first = extract_measurement(first_log)
-filter_text = (
-    'loudnorm=I=-16:TP=-1.5:LRA=9:'
-    f'measured_I={first["input_i"]}:measured_TP={first["input_tp"]}:'
-    f'measured_LRA={first["input_lra"]}:measured_thresh={first["input_thresh"]}:'
-    f'offset={first["target_offset"]}:linear=true:print_format=json'
-)
-master_log = run_ffmpeg(['-y', '-i', str(OUT / 'premaster.wav'), '-af', filter_text,
-                         '-ar', str(SR), '-ac', '2', '-t', '45', '-c:a', 'pcm_s24le', str(OUT / 'master.wav')])
-measured_log = run_ffmpeg(['-i', str(OUT / 'master.wav'), '-af', 'loudnorm=I=-16:TP=-1.5:LRA=9:print_format=json', '-f', 'null', '-'])
-measured = extract_measurement(measured_log)
-(OUT / 'mastering-log.txt').write_text(first_log + '\nSECOND PASS\n' + master_log + '\nINDEPENDENT MEASUREMENT\n' + measured_log, encoding='utf-8')
-
-
-def read_pcm24(path):
+write_pcm24(OUT / 'premaster.wav', premaster)
+first_log = ffmpeg(['-i', str(OUT / 'premaster.wav'), '-af', 'loudnorm=I=-14:TP=-1.5:LRA=7:print_format=json', '-f', 'null', '-'])
+first = read_measurement(first_log)
+filter_text = ('loudnorm=I=-14:TP=-1.5:LRA=7:'
+               f'measured_I={first["input_i"]}:measured_TP={first["input_tp"]}:'
+               f'measured_LRA={first["input_lra"]}:measured_thresh={first["input_thresh"]}:'
+               f'offset={first["target_offset"]}:linear=true:print_format=json')
+second_log = ffmpeg(['-y', '-i', str(OUT / 'premaster.wav'), '-af', filter_text, '-ar', str(SR),
+                     '-ac', '2', '-t', '45', '-c:a', 'pcm_s24le', str(OUT / 'master.wav')])
+measure_log = ffmpeg(['-i', str(OUT / 'master.wav'), '-af', 'loudnorm=I=-14:TP=-1.5:LRA=7:print_format=json', '-f', 'null', '-'])
+measured = read_measurement(measure_log)
+assert abs(float(measured['input_i']) + 14) <= .5
+assert float(measured['input_tp']) <= -1
+(OUT / 'mastering-log.txt').write_text(first_log + '\nSECOND PASS\n' + second_log + '\nINDEPENDENT MEASUREMENT\n' + measure_log, encoding='utf-8')
+checks = {}
+for name in ['score.wav', 'sfx.wav', 'premaster.wav', 'master.wav']:
+    path = OUT / name
     with wave.open(str(path), 'rb') as stream:
-        metadata = dict(channels=stream.getnchannels(), sample_rate=stream.getframerate(), sample_width_bytes=stream.getsampwidth(), frames=stream.getnframes())
-        payload = np.frombuffer(stream.readframes(stream.getnframes()), dtype=np.uint8).reshape(-1, 3)
-    values = (payload[:, 0].astype(np.int32) | payload[:, 1].astype(np.int32) << 8 | payload[:, 2].astype(np.int32) << 16)
-    values = np.where(values & 8388608, values - 16777216, values).reshape(-1, 2) / 8388608
-    metadata.update(duration_seconds=metadata['frames'] / metadata['sample_rate'],
-                    peak_dbfs=float(20 * np.log10(np.max(np.abs(values)) + 1e-16)),
-                    rms_dbfs=float(20 * np.log10(np.sqrt(np.mean(values ** 2)) + 1e-16)),
-                    clipping_samples=int(np.count_nonzero(np.abs(values) >= .999999)),
-                    last_50ms_peak=float(np.max(np.abs(values[-2400:]))),
-                    stereo_correlation=float(np.corrcoef(values[:, 0], values[:, 1])[0, 1]))
-    assert metadata['frames'] == N and metadata['sample_rate'] == SR and metadata['channels'] == 2
-    assert metadata['clipping_samples'] == 0 and metadata['peak_dbfs'] < -1
-    return metadata
-
-
-checks = {name: read_pcm24(OUT / name) for name in ['score.wav', 'sfx.wav', 'master.wav']}
-assert float(measured['input_tp']) <= -1.0
-assert abs(float(measured['input_i']) + 16) <= .5
+        checks[name] = {'channels': stream.getnchannels(), 'sample_rate': stream.getframerate(),
+                        'sample_width_bytes': stream.getsampwidth(), 'frames': stream.getnframes(),
+                        'duration_seconds': stream.getnframes() / stream.getframerate(),
+                        'sha256': hashlib.sha256(path.read_bytes()).hexdigest()}
+        assert stream.getnframes() == N and stream.getnchannels() == 2 and stream.getsampwidth() == 3
 manifest = {
-    'title': 'CAVELUX / Signal to Spectrum',
-    'composition': 'Original procedural composition and sound design; no vocals, recordings, or external samples.',
-    'duration_seconds': SECONDS,
-    'bpm': BPM,
-    'meter': '4/4',
-    'bars': 24,
-    'key': 'D minor with Dm9, Bbmaj9, Fmaj9, Cadd9 color',
-    'master': 'master.wav',
-    'stems': ['score.wav', 'sfx.wav'],
-    'stems_note': 'Pre-master stems share a common gain; master.wav adds two-pass loudness normalization.',
-    'integrated_loudness_lufs': float(measured['input_i']),
-    'true_peak_dbtp': float(measured['input_tp']),
-    'loudness_range_lu': float(measured['input_lra']),
-    'file_checks': checks,
+    'title': 'CAVELUX / Engineered Momentum', 'revision': 4,
+    'composition': 'Original synthesized industrial/electro business launch cue; no external samples, recordings, or vocals.',
+    'duration_seconds': SECONDS, 'bpm': BPM, 'meter': '4/4', 'bars': 24,
+    'key': 'D minor; Dm, Bb, F, C with open power voicings',
+    'chapter_seconds': [0, 7.5, 15, 22.5, 30, 37.5], 'chapters': chapters,
+    'master': 'master.wav', 'stems': ['score.wav', 'sfx.wav'],
+    'stems_note': 'Pre-master stems share one gain; their sum is premaster.wav. master.wav adds two-pass loudness normalization.',
+    'arrangement': 'Punch kick and layered snare, articulated sixteenth hats and arpeggios, syncopated FM/saw bass, short harmonic stabs, restrained transition effects; no sustained pad bed.',
+    'integrated_loudness_lufs': float(measured['input_i']), 'true_peak_dbtp': float(measured['input_tp']),
+    'loudness_range_lu': float(measured['input_lra']), 'file_checks': checks,
     'cues': sorted(cues, key=lambda item: item['time_seconds']),
-    'verification_boundary': 'File metadata, samples, clipping, channel correlation, and FFmpeg loudness measured. Human listening and final video synchronization remain unverified.',
+    'verification': '../validate-audio.py compares actual PCM and normalized rhythmic attacks with the archived cue.',
+    'verification_boundary': 'Signal measurements do not establish subjective listening quality or final video synchronization.',
 }
 (OUT / 'manifest.json').write_text(json.dumps(manifest, indent=2) + '\n', encoding='utf-8')
-readme = '''# CAVELUX / Signal to Spectrum
-
-Original 45.000-second instrumental cue: 128 BPM, 24 bars, 4/4, D minor.
-All sounds are synthesized in `generate_audio.py`; no external samples or vocals.
-
-Use `master.wav` for the finished film. `score.wav` and `sfx.wav` are pre-master
-stems with a shared gain for alternate editorial mixes. `premaster.wav` is their sum.
-All WAV files are stereo, 48 kHz, 24-bit PCM.
-
-| Time | Movement | Sound and intended picture |
-| --- | --- | --- |
-| 0.000-7.500 | Wake | Soft boot signal, warm pad, sparse identity motif; mascot wakes. |
-| 7.500-15.000 | Build | Tight drums, warm bass, precision micro-clicks; code and work states. |
-| 15.000-22.500 | Swarm | Interlocking arpeggios, wide data ticks; agents multiply. |
-| 22.500-30.000 | Synchronize | Reduced backbeat, spatial detail, restrained rising tone. |
-| 30.000-37.500 | Spectrum | Harmonic bloom, fuller drums and melody; rainbow transformation. |
-| 37.500-45.000 | Reveal | Elements fall away; D-A-D sonic mark at 41.96-42.31, clean fade. |
-
-The final 100 ms is silence in the source mix. Mastering uses a two-pass FFmpeg
-loudness target of -16 LUFS with a -1.5 dBTP ceiling. Actual results and all cue
-times are in `manifest.json`; detailed FFmpeg output is in `mastering-log.txt`.
-
-Regenerate with the bundled Python runtime and `python generate_audio.py`.
-Dependency: NumPy; `ffmpeg` on PATH. The random source uses a fixed seed.
-
-Verified: exact sample count and duration, stereo sample format, clipping,
-sample peaks, channel correlation, and independent FFmpeg loudness measurement.
-Unverified: human listening assessment and synchronization to the final rendered film.
-'''
-(OUT / 'README.md').write_text(readme, encoding='utf-8')
-print(json.dumps({'master_loudness': {k: manifest[k] for k in ['integrated_loudness_lufs', 'true_peak_dbtp', 'loudness_range_lu']}, 'file_checks': checks}, indent=2))
+print(json.dumps({'title': manifest['title'], 'lufs': manifest['integrated_loudness_lufs'],
+                  'true_peak_dbtp': manifest['true_peak_dbtp'], 'range_lu': manifest['loudness_range_lu'],
+                  'master': checks['master.wav']}, indent=2))

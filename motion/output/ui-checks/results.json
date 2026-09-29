@@ -1,12 +1,12 @@
 {
-  "startedAt": "2026-09-29T02:30:22.975Z",
+  "startedAt": "2026-09-29T08:15:59.125Z",
   "baseUrl": "http://127.0.0.1:8766/",
   "browser": "Microsoft Edge / Playwright headless",
   "sourceHashes": {
-    "index.html": "6f2d095f4850115e7b7d3695153320ac32b44c5b92d0d09eb06437368d98a62b",
+    "index.html": "c35aa47fbc787ce7034569c9c68343b6d6e1c4c27dc76caf5d771eda7a358445",
     "player.js": "bcb7370e94beadac183c214b1ccad3666c636d881ed2bf69374f2f7ae1767a7c",
-    "film.js": "56904950df434bf7ae17097ef5b34eec9bcc5f022c8698d7584cc3ac64c3de9d",
-    "assets.html": "8ab792861c1050e4515385e833a6646646b0ec95edeb0ecb21eacced8d1352f7",
+    "film.js": "7468f5fb3a5e8b3480399e8500aa6f3cdd0e209761f1bf166709890ce3d9292b",
+    "assets.html": "b3cc0e2d490149970ef9ad28c8498f1db2a243948d3cd29600a3b56447cfb9b8",
     "state-previews.js": "ef137d30c08eab6e798aada3a4ba27994f70ef0184e8e0145fd2ed616679acdd"
   },
   "checks": [
@@ -16,7 +16,7 @@
       "evidence": {
         "before": {
           "frame": 90,
-          "chapter": "01 / WAKE",
+          "chapter": "01 / DEFINE",
           "seek": 90,
           "playName": "Play motion film",
           "mutePressed": "false",
@@ -24,7 +24,7 @@
         },
         "after": {
           "frame": 90,
-          "chapter": "01 / WAKE",
+          "chapter": "01 / DEFINE",
           "seek": 90,
           "playName": "Play motion film",
           "mutePressed": "false",
@@ -77,7 +77,7 @@
         },
         {
           "id": "0",
-          "label": "01 WAKE",
+          "label": "01 DEFINE",
           "disabled": false
         },
         {
@@ -87,22 +87,22 @@
         },
         {
           "id": "450",
-          "label": "03 SWARM",
+          "label": "03 ORCHESTRATE",
           "disabled": false
         },
         {
           "id": "675",
-          "label": "04 SYNC",
+          "label": "04 INTEGRATE",
           "disabled": false
         },
         {
           "id": "900",
-          "label": "05 SPECTRUM",
+          "label": "05 THROUGHPUT",
           "disabled": false
         },
         {
           "id": "1125",
-          "label": "06 REVEAL",
+          "label": "06 DELIVER",
           "disabled": false
         },
         {
@@ -167,7 +167,7 @@
         ],
         "after": {
           "frame": 12,
-          "chapter": "01 / WAKE",
+          "chapter": "01 / DEFINE",
           "seek": 12,
           "playName": "Pause motion film",
           "mutePressed": "false",
@@ -181,7 +181,7 @@
       "evidence": {
         "before": {
           "frame": 13,
-          "chapter": "01 / WAKE",
+          "chapter": "01 / DEFINE",
           "seek": 13,
           "playName": "Play motion film",
           "mutePressed": "false",
@@ -189,7 +189,7 @@
         },
         "after": {
           "frame": 13,
-          "chapter": "01 / WAKE",
+          "chapter": "01 / DEFINE",
           "seek": 13,
           "playName": "Play motion film",
           "mutePressed": "false",
@@ -198,11 +198,11 @@
       }
     },
     {
-      "name": "desktop: Spectrum chapter jump updates chapter and seek",
+      "name": "desktop: Throughput chapter jump updates chapter and seek",
       "status": "PASS",
       "evidence": {
         "frame": 900,
-        "chapter": "05 / SPECTRUM",
+        "chapter": "05 / THROUGHPUT",
         "seek": 900,
         "playName": "Play motion film",
         "mutePressed": "false",
@@ -210,14 +210,14 @@
       }
     },
     {
-      "name": "desktop: meaningful Spectrum frame renders",
+      "name": "desktop: meaningful Throughput frame renders",
       "status": "PASS",
       "evidence": {
         "width": 1080,
         "height": 1920,
         "frame": 1050,
-        "distinctSampleColors": 182,
-        "nonBackgroundSamples": 3884,
+        "distinctSampleColors": 170,
+        "nonBackgroundSamples": 3805,
         "samples": 8360
       }
     },
@@ -225,9 +225,9 @@
       "name": "desktop: Restart returns near zero and plays",
       "status": "PASS",
       "evidence": {
-        "frame": 4,
-        "chapter": "01 / WAKE",
-        "seek": 4,
+        "frame": 3,
+        "chapter": "01 / DEFINE",
+        "seek": 3,
         "playName": "Pause motion film",
         "mutePressed": "false",
         "time": "00:00 / 00:45"
@@ -253,7 +253,7 @@
       "status": "PASS",
       "evidence": {
         "frame": 1349,
-        "chapter": "06 / REVEAL",
+        "chapter": "06 / DELIVER",
         "seek": 1349,
         "playName": "Play motion film",
         "mutePressed": "false",
@@ -266,7 +266,7 @@
       "evidence": {
         "before": {
           "frame": 90,
-          "chapter": "01 / WAKE",
+          "chapter": "01 / DEFINE",
           "seek": 90,
           "playName": "Play motion film",
           "mutePressed": "false",
@@ -274,7 +274,7 @@
         },
         "after": {
           "frame": 90,
-          "chapter": "01 / WAKE",
+          "chapter": "01 / DEFINE",
           "seek": 90,
           "playName": "Play motion film",
           "mutePressed": "false",
@@ -328,7 +328,7 @@
         },
         {
           "id": "0",
-          "label": "01 WAKE",
+          "label": "01 DEFINE",
           "disabled": false
         },
         {
@@ -338,22 +338,22 @@
         },
         {
           "id": "450",
-          "label": "03 SWARM",
+          "label": "03 ORCHESTRATE",
           "disabled": false
         },
         {
           "id": "675",
-          "label": "04 SYNC",
+          "label": "04 INTEGRATE",
           "disabled": false
         },
         {
           "id": "900",
-          "label": "05 SPECTRUM",
+          "label": "05 THROUGHPUT",
           "disabled": false
         },
         {
           "id": "1125",
-          "label": "06 REVEAL",
+          "label": "06 DELIVER",
           "disabled": false
         },
         {
@@ -404,7 +404,7 @@
       "evidence": {
         "after": {
           "frame": 900,
-          "chapter": "05 / SPECTRUM",
+          "chapter": "05 / THROUGHPUT",
           "seek": 900,
           "playName": "Play motion film",
           "mutePressed": "false",
@@ -414,8 +414,8 @@
           "width": 1080,
           "height": 1920,
           "frame": 1050,
-          "distinctSampleColors": 182,
-          "nonBackgroundSamples": 3884,
+          "distinctSampleColors": 170,
+          "nonBackgroundSamples": 3805,
           "samples": 8360
         }
       }
@@ -462,7 +462,7 @@
           },
           {
             "src": "graphics/spectrum-stripe.svg",
-            "alt": "Discrete rainbow spectrum",
+            "alt": "Discrete rainbow palette",
             "complete": true,
             "width": 1080,
             "height": 1920
@@ -497,7 +497,7 @@
           },
           {
             "src": "output/stills/keyframe-0990.png",
-            "alt": "Spectrum storyboard frame",
+            "alt": "Full throughput storyboard frame",
             "complete": true,
             "width": 1080,
             "height": 1920
@@ -651,8 +651,8 @@
     }
   ],
   "screenshots": [
-    "C:\\Users\\jared\\.codex\\visualizations\\2026\\09\\29\\01a0ea97-8016-7c91-8112-655302cb1db6\\cavelux-clawd\\motion\\output\\ui-checks\\desktop-spectrum.png",
-    "C:\\Users\\jared\\.codex\\visualizations\\2026\\09\\29\\01a0ea97-8016-7c91-8112-655302cb1db6\\cavelux-clawd\\motion\\output\\ui-checks\\mobile-spectrum.png"
+    "C:\\Users\\jared\\.codex\\visualizations\\2026\\09\\29\\01a0ea97-8016-7c91-8112-655302cb1db6\\cavelux-clawd\\motion\\output\\ui-checks\\desktop-throughput.png",
+    "C:\\Users\\jared\\.codex\\visualizations\\2026\\09\\29\\01a0ea97-8016-7c91-8112-655302cb1db6\\cavelux-clawd\\motion\\output\\ui-checks\\mobile-throughput.png"
   ],
   "pageErrors": [],
   "failedRequests": [
@@ -673,7 +673,7 @@
   ],
   "badResponses": [],
   "browserVersion": "154.0.4258.37",
-  "finishedAt": "2026-09-29T02:30:27.060Z",
+  "finishedAt": "2026-09-29T08:16:03.416Z",
   "summary": {
     "passed": 19,
     "failed": 0

@@ -1,12 +1,12 @@
 {
-  "startedAt": "2026-09-29T02:30:19.277Z",
+  "startedAt": "2026-09-29T08:15:55.363Z",
   "url": "http://127.0.0.1:8766/?export",
   "browser": "Microsoft Edge / Playwright headless",
   "sourceHashes": {
-    "film.js": "56904950df434bf7ae17097ef5b34eec9bcc5f022c8698d7584cc3ac64c3de9d",
+    "film.js": "7468f5fb3a5e8b3480399e8500aa6f3cdd0e209761f1bf166709890ce3d9292b",
     "player.js": "bcb7370e94beadac183c214b1ccad3666c636d881ed2bf69374f2f7ae1767a7c",
-    "index.html": "6f2d095f4850115e7b7d3695153320ac32b44c5b92d0d09eb06437368d98a62b",
-    "assets.html": "8ab792861c1050e4515385e833a6646646b0ec95edeb0ecb21eacced8d1352f7",
+    "index.html": "c35aa47fbc787ce7034569c9c68343b6d6e1c4c27dc76caf5d771eda7a358445",
+    "assets.html": "b3cc0e2d490149970ef9ad28c8498f1db2a243948d3cd29600a3b56447cfb9b8",
     "state-previews.js": "ef137d30c08eab6e798aada3a4ba27994f70ef0184e8e0145fd2ed616679acdd",
     "sprites/06-normal.png": "a3c6fe2437d4b75cc39ebe96d8f8f07f134eba695f15a1679784a2a04d6aad1c",
     "sprites/01-idle.png": "b3783681219e905dfa922f753aff5d9496e11333cef9cde4b0f6e433166ae074",
@@ -1118,9 +1118,9 @@
           }
         ],
         "pngHashes": [
-          "a35e36ef2f1656f597079596602b3f5de8c4a45ab31ac8111fb0c75b7de7de2e",
-          "a35e36ef2f1656f597079596602b3f5de8c4a45ab31ac8111fb0c75b7de7de2e",
-          "a35e36ef2f1656f597079596602b3f5de8c4a45ab31ac8111fb0c75b7de7de2e"
+          "bdb0b4bacc7fe464d1e27862ce46764bc4313b14a99b4e0996b387a37778f94a",
+          "bdb0b4bacc7fe464d1e27862ce46764bc4313b14a99b4e0996b387a37778f94a",
+          "bdb0b4bacc7fe464d1e27862ce46764bc4313b14a99b4e0996b387a37778f94a"
         ]
       }
     },
@@ -1163,10 +1163,10 @@
       "name": "tested source and sprite hashes remain unchanged",
       "status": "PASS",
       "evidence": {
-        "film.js": "56904950df434bf7ae17097ef5b34eec9bcc5f022c8698d7584cc3ac64c3de9d",
+        "film.js": "7468f5fb3a5e8b3480399e8500aa6f3cdd0e209761f1bf166709890ce3d9292b",
         "player.js": "bcb7370e94beadac183c214b1ccad3666c636d881ed2bf69374f2f7ae1767a7c",
-        "index.html": "6f2d095f4850115e7b7d3695153320ac32b44c5b92d0d09eb06437368d98a62b",
-        "assets.html": "8ab792861c1050e4515385e833a6646646b0ec95edeb0ecb21eacced8d1352f7",
+        "index.html": "c35aa47fbc787ce7034569c9c68343b6d6e1c4c27dc76caf5d771eda7a358445",
+        "assets.html": "b3cc0e2d490149970ef9ad28c8498f1db2a243948d3cd29600a3b56447cfb9b8",
         "state-previews.js": "ef137d30c08eab6e798aada3a4ba27994f70ef0184e8e0145fd2ed616679acdd",
         "sprites/06-normal.png": "a3c6fe2437d4b75cc39ebe96d8f8f07f134eba695f15a1679784a2a04d6aad1c",
         "sprites/01-idle.png": "b3783681219e905dfa922f753aff5d9496e11333cef9cde4b0f6e433166ae074",
@@ -4086,7 +4086,7 @@
   "pageErrors": [],
   "badResponses": [],
   "browserVersion": "154.0.4258.37",
-  "finishedAt": "2026-09-29T02:30:21.318Z",
+  "finishedAt": "2026-09-29T08:15:57.450Z",
   "summary": {
     "passed": 26,
     "failed": 0

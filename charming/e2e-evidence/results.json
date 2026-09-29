@@ -1,14 +1,14 @@
 {
   "surface": "Local browser + actual backend route handlers with disk KV adapter; not hosted evidence",
   "url": "http://127.0.0.1:8787/studio",
-  "startedAt": "2026-09-29T02:30:27.316Z",
+  "startedAt": "2026-09-29T08:16:04.898Z",
   "sourceHashes": {
     "backend.mjs": "3d0483efcb0eb0f6184727221dc47e34b9dd4b35f3311fde06d0f8dd3a41d988",
-    "ui.js": "2bfcc639a21812320c94e76329cf8b48aabb62771c6401f709d9c10f71913030",
+    "ui.js": "85c88db79b9d9a71d36284f40bffd26ffb231375a32521475513b8161bab6709",
     "styles.css": "749b3b0d994aa9a2b7e5ad97e65a8ed0c6bfea20764c4ee85fa5fc3cac879215",
-    "build.mjs": "32fc6aca323f0b8ca7d4f73663de280187463c68bf4feb04371b029a8c9b0047",
+    "build.mjs": "5412b814b1c509d91bdaa96e69b50f6615c069eff579e31843b69b8acf492455",
     "server.mjs": "c8b9784d8f40b41a5c1f7427e1ba8b18b6d8a6d441956f26fe17c7f91b219f8a",
-    "../motion/film.js": "56904950df434bf7ae17097ef5b34eec9bcc5f022c8698d7584cc3ac64c3de9d"
+    "../motion/film.js": "7468f5fb3a5e8b3480399e8500aa6f3cdd0e209761f1bf166709890ce3d9292b"
   },
   "checks": [
     {
@@ -54,7 +54,7 @@
           "scale": 1,
           "background": "dark",
           "aura": true,
-          "time": 3.23279999999702,
+          "time": 3.22579999999851,
           "playing": true
         },
         "stopped": {
@@ -63,7 +63,7 @@
           "scale": 1,
           "background": "dark",
           "aura": true,
-          "time": 3.2535999999970198,
+          "time": 3.24659999999851,
           "playing": false
         },
         "later": {
@@ -72,7 +72,7 @@
           "scale": 1,
           "background": "dark",
           "aura": true,
-          "time": 3.2535999999970198,
+          "time": 3.24659999999851,
           "playing": false
         }
       }
@@ -186,7 +186,7 @@
       "name": "preset deletion persists after reload",
       "status": "PASS",
       "evidence": {
-        "deleted": "Browser evidence 1790649029108"
+        "deleted": "Browser evidence 1790669766723"
       }
     },
     {
@@ -233,12 +233,12 @@
           },
           {
             "id": "state-working",
-            "label": "02\nWorking\nCode in orbit",
+            "label": "02\nWorking\nExecution",
             "disabled": false
           },
           {
             "id": "state-ultracode",
-            "label": "03\nUltracode\nFull spectrum",
+            "label": "03\nUltracode\nFull throughput",
             "disabled": false
           },
           {
@@ -347,11 +347,11 @@
       "status": "PASS",
       "evidence": {
         "backend.mjs": "3d0483efcb0eb0f6184727221dc47e34b9dd4b35f3311fde06d0f8dd3a41d988",
-        "ui.js": "2bfcc639a21812320c94e76329cf8b48aabb62771c6401f709d9c10f71913030",
+        "ui.js": "85c88db79b9d9a71d36284f40bffd26ffb231375a32521475513b8161bab6709",
         "styles.css": "749b3b0d994aa9a2b7e5ad97e65a8ed0c6bfea20764c4ee85fa5fc3cac879215",
-        "build.mjs": "32fc6aca323f0b8ca7d4f73663de280187463c68bf4feb04371b029a8c9b0047",
+        "build.mjs": "5412b814b1c509d91bdaa96e69b50f6615c069eff579e31843b69b8acf492455",
         "server.mjs": "c8b9784d8f40b41a5c1f7427e1ba8b18b6d8a6d441956f26fe17c7f91b219f8a",
-        "../motion/film.js": "56904950df434bf7ae17097ef5b34eec9bcc5f022c8698d7584cc3ac64c3de9d"
+        "../motion/film.js": "7468f5fb3a5e8b3480399e8500aa6f3cdd0e209761f1bf166709890ce3d9292b"
       }
     }
   ],
@@ -366,7 +366,7 @@
     "Other browsers",
     "RTL and localization: this interface is English-only"
   ],
-  "finishedAt": "2026-09-29T02:30:31.154Z",
+  "finishedAt": "2026-09-29T08:16:08.826Z",
   "summary": {
     "passed": 18,
     "failed": 0

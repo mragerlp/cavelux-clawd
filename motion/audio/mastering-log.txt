@@ -1,5 +1,5 @@
-[aist#0:0/pcm_s24le @ 0000012021612d80] Guessed Channel Layout: stereo
-Input #0, wav, from 'C:\Users\jared\.codex\visualizations\2026\09\29\01a0ea97-8016-7c91-8112-655302cb1db6\cavelux-motion-film\audio\premaster.wav':
+[aist#0:0/pcm_s24le @ 00000147034f6340] Guessed Channel Layout: stereo
+Input #0, wav, from 'C:\Users\jared\.codex\visualizations\2026\09\29\01a0ea97-8016-7c91-8112-655302cb1db6\cavelux-clawd\motion\audio\premaster.wav':
   Duration: 00:00:45.00, bitrate: 2304 kb/s
   Stream #0:0: Audio: pcm_s24le ([1][0][0][0] / 0x0001), 48000 Hz, stereo, s32 (24 bit), 2304 kb/s
 Stream mapping:
@@ -10,54 +10,55 @@ Output #0, null, to 'pipe:':
   Stream #0:0: Audio: pcm_s16le, 192000 Hz, stereo, s16, 6144 kb/s
     Metadata:
       encoder         : Lavc63.1.101 pcm_s16le
-size=N/A time=00:00:28.00 bitrate=N/A speed=53.4x elapsed=0:00:00.52    
-[Parsed_loudnorm_0 @ 0000012021610f80] 
+size=N/A time=00:00:28.00 bitrate=N/A speed=54.6x elapsed=0:00:00.51    
+[Parsed_loudnorm_0 @ 0000014705396f00] 
 {
-	"input_i" : "-17.68",
-	"input_tp" : "-3.49",
-	"input_lra" : "6.40",
-	"input_thresh" : "-27.78",
-	"output_i" : "-14.80",
+	"input_i" : "-17.78",
+	"input_tp" : "-2.95",
+	"input_lra" : "4.90",
+	"input_thresh" : "-28.03",
+	"output_i" : "-13.63",
 	"output_tp" : "-1.50",
-	"output_lra" : "3.80",
-	"output_thresh" : "-24.86",
+	"output_lra" : "1.90",
+	"output_thresh" : "-23.79",
 	"normalization_type" : "dynamic",
-	"target_offset" : "-1.20"
+	"target_offset" : "-0.37"
 }
-[out#0/null @ 000001202159b100] video:0KiB audio:33750KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
-size=N/A time=00:00:45.00 bitrate=N/A speed=56.6x elapsed=0:00:00.79    
+[out#0/null @ 0000014703488ac0] video:0KiB audio:33750KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+size=N/A time=00:00:45.00 bitrate=N/A speed=56.5x elapsed=0:00:00.79    
 
 SECOND PASS
-[aist#0:0/pcm_s24le @ 000001c5858371c0] Guessed Channel Layout: stereo
-Input #0, wav, from 'C:\Users\jared\.codex\visualizations\2026\09\29\01a0ea97-8016-7c91-8112-655302cb1db6\cavelux-motion-film\audio\premaster.wav':
+[aist#0:0/pcm_s24le @ 0000027d43c736c0] Guessed Channel Layout: stereo
+Input #0, wav, from 'C:\Users\jared\.codex\visualizations\2026\09\29\01a0ea97-8016-7c91-8112-655302cb1db6\cavelux-clawd\motion\audio\premaster.wav':
   Duration: 00:00:45.00, bitrate: 2304 kb/s
   Stream #0:0: Audio: pcm_s24le ([1][0][0][0] / 0x0001), 48000 Hz, stereo, s32 (24 bit), 2304 kb/s
 Stream mapping:
   Stream #0:0 -> #0:0 (pcm_s24le (native) -> pcm_s24le (native))
-Output #0, wav, to 'C:\Users\jared\.codex\visualizations\2026\09\29\01a0ea97-8016-7c91-8112-655302cb1db6\cavelux-motion-film\audio\master.wav':
+Output #0, wav, to 'C:\Users\jared\.codex\visualizations\2026\09\29\01a0ea97-8016-7c91-8112-655302cb1db6\cavelux-clawd\motion\audio\master.wav':
   Metadata:
     ISFT            : Lavf63.1.101
   Stream #0:0: Audio: pcm_s24le ([1][0][0][0] / 0x0001), 48000 Hz, stereo, s32 (24 bit), 2304 kb/s
     Metadata:
       encoder         : Lavc63.1.101 pcm_s24le
-[Parsed_loudnorm_0 @ 000001c587587f00] 
+size=    7424KiB time=00:00:26.69 bitrate=2277.8kbits/s speed=51.5x elapsed=0:00:00.51    
+[Parsed_loudnorm_0 @ 0000027d43c71800] 
 {
-	"input_i" : "-17.55",
-	"input_tp" : "-3.50",
-	"input_lra" : "6.30",
-	"input_thresh" : "-27.61",
-	"output_i" : "-15.87",
-	"output_tp" : "-1.82",
-	"output_lra" : "6.40",
-	"output_thresh" : "-25.93",
-	"normalization_type" : "linear",
-	"target_offset" : "-0.13"
+	"input_i" : "-17.78",
+	"input_tp" : "-2.95",
+	"input_lra" : "4.90",
+	"input_thresh" : "-28.03",
+	"output_i" : "-13.94",
+	"output_tp" : "-1.50",
+	"output_lra" : "1.90",
+	"output_thresh" : "-24.09",
+	"normalization_type" : "dynamic",
+	"target_offset" : "-0.06"
 }
-[out#0/wav @ 000001c5857c9000] video:0KiB audio:12656KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.000787%
-size=   12656KiB time=00:00:45.00 bitrate=2304.0kbits/s speed= 597x elapsed=0:00:00.07    
+[out#0/wav @ 0000027d43bfaec0] video:0KiB audio:12656KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.000787%
+size=   12656KiB time=00:00:45.00 bitrate=2304.0kbits/s speed=53.8x elapsed=0:00:00.83    
 
 INDEPENDENT MEASUREMENT
-Input #0, wav, from 'C:\Users\jared\.codex\visualizations\2026\09\29\01a0ea97-8016-7c91-8112-655302cb1db6\cavelux-motion-film\audio\master.wav':
+Input #0, wav, from 'C:\Users\jared\.codex\visualizations\2026\09\29\01a0ea97-8016-7c91-8112-655302cb1db6\cavelux-clawd\motion\audio\master.wav':
   Metadata:
     encoder         : Lavf63.1.101
   Duration: 00:00:45.00, bitrate: 2304 kb/s
@@ -70,19 +71,19 @@ Output #0, null, to 'pipe:':
   Stream #0:0: Audio: pcm_s16le, 192000 Hz, stereo, s16, 6144 kb/s
     Metadata:
       encoder         : Lavc63.1.101 pcm_s16le
-size=N/A time=00:00:27.00 bitrate=N/A speed=52.8x elapsed=0:00:00.51    
-[Parsed_loudnorm_0 @ 00000184697d0840] 
+size=N/A time=00:00:27.30 bitrate=N/A speed=54.3x elapsed=0:00:00.50    
+[Parsed_loudnorm_0 @ 0000020f83009ec0] 
 {
-	"input_i" : "-16.00",
-	"input_tp" : "-1.81",
-	"input_lra" : "6.30",
-	"input_thresh" : "-26.10",
-	"output_i" : "-14.81",
+	"input_i" : "-13.99",
+	"input_tp" : "-1.45",
+	"input_lra" : "4.20",
+	"input_thresh" : "-24.26",
+	"output_i" : "-13.96",
 	"output_tp" : "-1.50",
-	"output_lra" : "3.80",
-	"output_thresh" : "-24.86",
+	"output_lra" : "2.10",
+	"output_thresh" : "-24.12",
 	"normalization_type" : "dynamic",
-	"target_offset" : "-1.19"
+	"target_offset" : "-0.04"
 }
-[out#0/null @ 000001846975d700] video:0KiB audio:33750KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
-size=N/A time=00:00:45.00 bitrate=N/A speed=56.4x elapsed=0:00:00.79    
+[out#0/null @ 0000020f8113a5c0] video:0KiB audio:33750KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+size=N/A time=00:00:45.00 bitrate=N/A speed=56.5x elapsed=0:00:00.79    

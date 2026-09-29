@@ -1,0 +1,52 @@
+{
+  "title": "CAVELUX - From signal to spectrum",
+  "revision": 3,
+  "video": "output/cavelux-from-signal-to-spectrum.mp4",
+  "durationSeconds": 45,
+  "width": 1080,
+  "height": 1920,
+  "framesPerSecond": 30,
+  "frames": 1350,
+  "videoCodec": "H264",
+  "pixelFormat": "yuv420p",
+  "colorRange": "limited",
+  "colorSpace": "BT.709",
+  "audio": "AAC stereo 48000 Hz",
+  "videoSha256": "F39807E33422C5B472A57D0966A235A8AA51E557502B951BD3C5E5148C0AD1D3",
+  "assets": {
+    "characterStates": 3,
+    "stateManifest": "sprites/states.json",
+    "normal": "Regular rectangular eyes; no aura",
+    "working": "Friendly counter-rotating spiral eyes; animated green code aura for skills, MCPs, workflows, and swarms",
+    "ultracode": "Animated rainbow wave through the body with counter-rotating black spiral eyes",
+    "editableSvgGraphics": 6,
+    "storyboardCaptures": 6,
+    "verticalCover": "output/cover.png",
+    "originalAudioStems": [
+      "audio/score.wav",
+      "audio/sfx.wav"
+    ],
+    "originalMaster": "audio/master.wav"
+  },
+  "checks": {
+    "fullMediaDecode": "PASS exit 0",
+    "metadataVerification": "PASS exit 0",
+    "boundaryFrames": 20,
+    "uiChecksPassed": 19,
+    "uiChecksFailed": 0,
+    "uiSourceHashesMatch": true,
+    "characterChecksPassed": 26,
+    "characterChecksFailed": 0,
+    "hypnosisChecksPassed": 9,
+    "hypnosisChecksFailed": 0,
+    "characterSourceHashesMatch": true,
+    "repeatedFrame990": "Three captures; decoded pixels identical on this host",
+    "pngAndSvgVisualReview": "sampled; three revised states visually reviewed",
+    "documentation": "PASS exit 0"
+  },
+  "unverified": [
+    "Instagram upload and platform transcoding",
+    "Other device/browser playback",
+    "Perceptual listening and full subjective audio/visual assessment"
+  ]
+}

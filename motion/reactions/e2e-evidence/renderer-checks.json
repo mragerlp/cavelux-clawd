@@ -1,5 +1,5 @@
 {
-  "startedAt": "2026-09-29T02:30:34.067Z",
+  "startedAt": "2026-09-29T08:16:11.826Z",
   "checks": [
     {
       "name": "share-break: visible motion, seamless loop, transparent safe area",
@@ -3143,7 +3143,7 @@
   ],
   "pageErrors": [],
   "badResponses": [],
-  "finishedAt": "2026-09-29T02:30:36.569Z",
+  "finishedAt": "2026-09-29T08:16:14.418Z",
   "summary": {
     "passed": 13,
     "failed": 0

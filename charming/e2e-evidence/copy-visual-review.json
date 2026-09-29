@@ -1,0 +1,15 @@
+{
+  "surface": "Local Edge browser screenshots from the rebuilt studio",
+  "screenshots": ["desktop-studio.png", "mobile-studio.png"],
+  "visualReview": {
+    "status": "PASS",
+    "observations": [
+      "The workflow introduction and Configure. Preview. Export. copy are visible at desktop and mobile widths.",
+      "Full throughput fits within the Ultracode state card and mobile stage label without clipping.",
+      "The longer working-state description is readable beneath the desktop canvas.",
+      "Engineered to deliver is visible in both footers."
+    ]
+  },
+  "existingSuiteResults": {"studio": "18/18 PASS", "exports": "7/7 PASS"},
+  "scope": "No source edits made during verification. No hosted deployment or hosted browser behavior verified."
+}

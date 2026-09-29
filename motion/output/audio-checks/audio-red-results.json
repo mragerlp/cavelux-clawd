@@ -1,0 +1,150 @@
+{
+  "check": "authored electro soundtrack",
+  "baseline": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "sample_width_bytes": 3,
+    "frames": 2160000,
+    "duration_seconds": 45.0,
+    "sha256": "d6594c6518354d71f4fd01ec9040abfb473afac4fff432c9ea9f1d7285972b35",
+    "sample_peak_dbfs": -1.820001809999778,
+    "rms_dbfs": -17.403904169047827,
+    "clipped_samples": 0,
+    "last_50ms_peak": 0.0,
+    "stereo_correlation": 0.6629541839184989,
+    "side_to_mid_db": -6.930974669509467,
+    "chapter_rms_dbfs": [
+      -21.390562856605037,
+      -17.84001828562041,
+      -17.231109048336627,
+      -17.73911743672756,
+      -14.403400884001895,
+      -18.74452751379122
+    ],
+    "integrated_lufs": -16.0,
+    "true_peak_dbtp": -1.81,
+    "loudness_range_lu": 6.3,
+    "off_eighth_sixteenth_attacks": 0,
+    "all_sixteenth_grid_attacks": 117,
+    "high_band_energy_fraction": 0.001665285105859933,
+    "attack_to_tail_median": 66.89770256744916
+  },
+  "current": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "sample_width_bytes": 3,
+    "frames": 2160000,
+    "duration_seconds": 45.0,
+    "sha256": "d6594c6518354d71f4fd01ec9040abfb473afac4fff432c9ea9f1d7285972b35",
+    "sample_peak_dbfs": -1.820001809999778,
+    "rms_dbfs": -17.403904169047827,
+    "clipped_samples": 0,
+    "last_50ms_peak": 0.0,
+    "stereo_correlation": 0.6629541839184989,
+    "side_to_mid_db": -6.930974669509467,
+    "chapter_rms_dbfs": [
+      -21.390562856605037,
+      -17.84001828562041,
+      -17.231109048336627,
+      -17.73911743672756,
+      -14.403400884001895,
+      -18.74452751379122
+    ],
+    "integrated_lufs": -16.0,
+    "true_peak_dbtp": -1.81,
+    "loudness_range_lu": 6.3,
+    "off_eighth_sixteenth_attacks": 0,
+    "all_sixteenth_grid_attacks": 117,
+    "high_band_energy_fraction": 0.001665285105859933,
+    "attack_to_tail_median": 66.89770256744916
+  },
+  "gain_invariant_waveform_correlation": 1.0,
+  "checks": [
+    {
+      "name": "score.wav: exact 45s stereo 48kHz 24-bit, no clipped samples",
+      "status": "PASS",
+      "evidence": {
+        "sample_rate": 48000,
+        "channels": 2,
+        "sample_width_bytes": 3,
+        "frames": 2160000,
+        "peak_dbfs": -3.5000064041294037
+      }
+    },
+    {
+      "name": "sfx.wav: exact 45s stereo 48kHz 24-bit, no clipped samples",
+      "status": "PASS",
+      "evidence": {
+        "sample_rate": 48000,
+        "channels": 2,
+        "sample_width_bytes": 3,
+        "frames": 2160000,
+        "peak_dbfs": -16.613500626173142
+      }
+    },
+    {
+      "name": "premaster.wav: exact 45s stereo 48kHz 24-bit, no clipped samples",
+      "status": "PASS",
+      "evidence": {
+        "sample_rate": 48000,
+        "channels": 2,
+        "sample_width_bytes": 3,
+        "frames": 2160000,
+        "peak_dbfs": -3.500001756346165
+      }
+    },
+    {
+      "name": "master.wav: exact 45s stereo 48kHz 24-bit, no clipped samples",
+      "status": "PASS",
+      "evidence": {
+        "sample_rate": 48000,
+        "channels": 2,
+        "sample_width_bytes": 3,
+        "frames": 2160000,
+        "peak_dbfs": -1.820001809999778
+      }
+    },
+    {
+      "name": "master reaches the requested -14 LUFS delivery level",
+      "status": "FAIL",
+      "evidence": -16.0
+    },
+    {
+      "name": "master true peak remains at or below -1 dBTP",
+      "status": "PASS",
+      "evidence": -1.81
+    },
+    {
+      "name": "master retains stereo content and avoids destructive negative correlation",
+      "status": "PASS",
+      "evidence": {
+        "correlation": 0.6629541839184989,
+        "side_to_mid_db": -6.930974669509467
+      }
+    },
+    {
+      "name": "clean final silence avoids an export boundary click",
+      "status": "PASS",
+      "evidence": 0.0
+    },
+    {
+      "name": "new composition is not the old cue with a gain change",
+      "status": "FAIL",
+      "evidence": {
+        "gain_invariant_waveform_correlation": 1.0
+      }
+    },
+    {
+      "name": "core groove adds substantial sixteenth-note percussion beyond the old eighth-note feel",
+      "status": "FAIL",
+      "evidence": {
+        "archived_attacks": 0,
+        "new_attacks": 0,
+        "available_off_eighth_positions": 128
+      }
+    }
+  ],
+  "passed": 7,
+  "failed": 3,
+  "measurement_boundary": "Actual WAV samples and FFmpeg loudness. Gain-invariant rhythm counts quantify articulation; they do not prove taste, listening quality, or final video synchronization."
+}

@@ -49,8 +49,7 @@
           "bytes": 6006,
           "sha256": "794b5505a2cec104d810901d768b8705a057e04bf1dfe99d35c0be6df003c30c",
           "repository_paths": [
-            "archive/motion-v2/assets.html",
-            "motion/assets.html"
+            "archive/motion-v2/assets.html"
           ]
         },
         {
@@ -68,7 +67,7 @@
           "repository_paths": [
             "archive/motion-v1/index.html",
             "archive/motion-v2/index.html",
-            "motion/index.html"
+            "archive/motion-v3/index.html"
           ]
         },
         {
@@ -78,6 +77,7 @@
           "repository_paths": [
             "archive/motion-v1/player.js",
             "archive/motion-v2/player.js",
+            "archive/motion-v3/player.js",
             "motion/player.js"
           ]
         },
@@ -131,8 +131,7 @@
           "sha256": "7ad82337898484595dea88bddfa8075ea39a9b89e1f9be364ddd68f750430980",
           "repository_paths": [
             "archive/motion-v1/verify.mjs",
-            "archive/motion-v2/verify.mjs",
-            "motion/verify.mjs"
+            "archive/motion-v2/verify.mjs"
           ]
         },
         {
@@ -142,7 +141,7 @@
           "repository_paths": [
             "archive/motion-v1/audio/README.md",
             "archive/motion-v2/audio/README.md",
-            "motion/audio/README.md"
+            "archive/motion-v3/audio/README.md"
           ]
         },
         {
@@ -150,7 +149,7 @@
           "bytes": 18337,
           "sha256": "4b9dd37d66181413bc086c5b840b1522f46605bcdda968ed9b88d9548a9e47b8",
           "repository_paths": [
-            "motion/audio/generate_audio.py"
+            "archive/motion-v3/audio/generate_audio.py"
           ]
         },
         {
@@ -160,7 +159,7 @@
           "repository_paths": [
             "archive/motion-v1/audio/manifest.json",
             "archive/motion-v2/audio/manifest.json",
-            "motion/audio/manifest.json"
+            "archive/motion-v3/audio/manifest.json"
           ]
         },
         {
@@ -168,7 +167,7 @@
           "bytes": 12960102,
           "sha256": "d6594c6518354d71f4fd01ec9040abfb473afac4fff432c9ea9f1d7285972b35",
           "repository_paths": [
-            "motion/audio/master.wav"
+            "archive/motion-v3/audio/master.wav"
           ]
         },
         {
@@ -176,7 +175,7 @@
           "bytes": 3890,
           "sha256": "c547f824b100916072105cf041c329722175a7779686c3e88177995b45c7bcbe",
           "repository_paths": [
-            "motion/audio/mastering-log.txt"
+            "archive/motion-v3/audio/mastering-log.txt"
           ]
         },
         {
@@ -184,7 +183,7 @@
           "bytes": 12960044,
           "sha256": "c08b1138a9a9d442d44a92410e6ce7096199b9e582d4ad5bc6fa9c995ef0c220",
           "repository_paths": [
-            "motion/audio/premaster.wav"
+            "archive/motion-v3/audio/premaster.wav"
           ]
         },
         {
@@ -192,7 +191,7 @@
           "bytes": 12960044,
           "sha256": "3332fe8b39920cab6faf9053dfe2c55be75b5faf5c2c4d68dfe4e388d0f2fc65",
           "repository_paths": [
-            "motion/audio/score.wav"
+            "archive/motion-v3/audio/score.wav"
           ]
         },
         {
@@ -200,7 +199,7 @@
           "bytes": 12960044,
           "sha256": "a88c40afee416f3e14d6e497f030e7ba46beb050e68649565d795c846283db06",
           "repository_paths": [
-            "motion/audio/sfx.wav"
+            "archive/motion-v3/audio/sfx.wav"
           ]
         },
         {
@@ -327,7 +326,7 @@
           "sha256": "736d825bcaa909f959fbc70dc889d207d6ee9bb3993f792b03a2763c4369d3f2",
           "repository_paths": [
             "archive/motion-v2/output/cover.png",
-            "motion/output/cover.png"
+            "archive/motion-v3/output/cover.png"
           ]
         },
         {
@@ -343,8 +342,7 @@
           "bytes": 184865,
           "sha256": "46a0d992e520920e37c87b900d67cb273bdda81c965c618d17f631bc2230129a",
           "repository_paths": [
-            "archive/motion-v2/output/character-checks/normal-0090.png",
-            "motion/output/character-checks/normal-0090.png"
+            "archive/motion-v2/output/character-checks/normal-0090.png"
           ]
         },
         {
@@ -491,7 +489,7 @@
           "sha256": "943481c0d2c8b768f9b4e0aa9d905c54f16746825650f18ffae54dd93e9cbad5",
           "repository_paths": [
             "archive/motion-v2/output/stills/keyframe-0090.png",
-            "motion/output/stills/keyframe-0090.png"
+            "archive/motion-v3/output/stills/keyframe-0090.png"
           ]
         },
         {
@@ -532,7 +530,7 @@
           "sha256": "89b4a7555da25e1ae99f558921bbf3fd6097ab840cd76ff445e0bc73428c4bff",
           "repository_paths": [
             "archive/motion-v2/output/stills/keyframe-1260.png",
-            "motion/output/stills/keyframe-1260.png"
+            "archive/motion-v3/output/stills/keyframe-1260.png"
           ]
         },
         {
@@ -834,7 +832,7 @@
           "repository_paths": [
             "archive/motion-v1/index.html",
             "archive/motion-v2/index.html",
-            "motion/index.html"
+            "archive/motion-v3/index.html"
           ]
         },
         {
@@ -844,6 +842,7 @@
           "repository_paths": [
             "archive/motion-v1/player.js",
             "archive/motion-v2/player.js",
+            "archive/motion-v3/player.js",
             "motion/player.js"
           ]
         },
@@ -896,8 +895,7 @@
           "sha256": "7ad82337898484595dea88bddfa8075ea39a9b89e1f9be364ddd68f750430980",
           "repository_paths": [
             "archive/motion-v1/verify.mjs",
-            "archive/motion-v2/verify.mjs",
-            "motion/verify.mjs"
+            "archive/motion-v2/verify.mjs"
           ]
         },
         {
@@ -905,7 +903,7 @@
           "bytes": 18337,
           "sha256": "4b9dd37d66181413bc086c5b840b1522f46605bcdda968ed9b88d9548a9e47b8",
           "repository_paths": [
-            "motion/audio/generate_audio.py"
+            "archive/motion-v3/audio/generate_audio.py"
           ]
         },
         {
@@ -915,7 +913,7 @@
           "repository_paths": [
             "archive/motion-v1/audio/manifest.json",
             "archive/motion-v2/audio/manifest.json",
-            "motion/audio/manifest.json"
+            "archive/motion-v3/audio/manifest.json"
           ]
         },
         {
@@ -923,7 +921,7 @@
           "bytes": 12960102,
           "sha256": "d6594c6518354d71f4fd01ec9040abfb473afac4fff432c9ea9f1d7285972b35",
           "repository_paths": [
-            "motion/audio/master.wav"
+            "archive/motion-v3/audio/master.wav"
           ]
         },
         {
@@ -933,7 +931,7 @@
           "repository_paths": [
             "archive/motion-v1/audio/README.md",
             "archive/motion-v2/audio/README.md",
-            "motion/audio/README.md"
+            "archive/motion-v3/audio/README.md"
           ]
         },
         {
@@ -941,7 +939,7 @@
           "bytes": 12960044,
           "sha256": "3332fe8b39920cab6faf9053dfe2c55be75b5faf5c2c4d68dfe4e388d0f2fc65",
           "repository_paths": [
-            "motion/audio/score.wav"
+            "archive/motion-v3/audio/score.wav"
           ]
         },
         {
@@ -949,7 +947,7 @@
           "bytes": 12960044,
           "sha256": "a88c40afee416f3e14d6e497f030e7ba46beb050e68649565d795c846283db06",
           "repository_paths": [
-            "motion/audio/sfx.wav"
+            "archive/motion-v3/audio/sfx.wav"
           ]
         },
         {
@@ -1212,8 +1210,7 @@
           "bytes": 6006,
           "sha256": "794b5505a2cec104d810901d768b8705a057e04bf1dfe99d35c0be6df003c30c",
           "repository_paths": [
-            "archive/motion-v2/assets.html",
-            "motion/assets.html"
+            "archive/motion-v2/assets.html"
           ]
         },
         {
@@ -1249,7 +1246,7 @@
           "repository_paths": [
             "archive/motion-v1/index.html",
             "archive/motion-v2/index.html",
-            "motion/index.html"
+            "archive/motion-v3/index.html"
           ]
         },
         {
@@ -1259,6 +1256,7 @@
           "repository_paths": [
             "archive/motion-v1/player.js",
             "archive/motion-v2/player.js",
+            "archive/motion-v3/player.js",
             "motion/player.js"
           ]
         },
@@ -1328,8 +1326,7 @@
           "sha256": "7ad82337898484595dea88bddfa8075ea39a9b89e1f9be364ddd68f750430980",
           "repository_paths": [
             "archive/motion-v1/verify.mjs",
-            "archive/motion-v2/verify.mjs",
-            "motion/verify.mjs"
+            "archive/motion-v2/verify.mjs"
           ]
         },
         {
@@ -1337,7 +1334,7 @@
           "bytes": 18337,
           "sha256": "4b9dd37d66181413bc086c5b840b1522f46605bcdda968ed9b88d9548a9e47b8",
           "repository_paths": [
-            "motion/audio/generate_audio.py"
+            "archive/motion-v3/audio/generate_audio.py"
           ]
         },
         {
@@ -1347,7 +1344,7 @@
           "repository_paths": [
             "archive/motion-v1/audio/manifest.json",
             "archive/motion-v2/audio/manifest.json",
-            "motion/audio/manifest.json"
+            "archive/motion-v3/audio/manifest.json"
           ]
         },
         {
@@ -1355,7 +1352,7 @@
           "bytes": 12960102,
           "sha256": "d6594c6518354d71f4fd01ec9040abfb473afac4fff432c9ea9f1d7285972b35",
           "repository_paths": [
-            "motion/audio/master.wav"
+            "archive/motion-v3/audio/master.wav"
           ]
         },
         {
@@ -1365,7 +1362,7 @@
           "repository_paths": [
             "archive/motion-v1/audio/README.md",
             "archive/motion-v2/audio/README.md",
-            "motion/audio/README.md"
+            "archive/motion-v3/audio/README.md"
           ]
         },
         {
@@ -1373,7 +1370,7 @@
           "bytes": 12960044,
           "sha256": "3332fe8b39920cab6faf9053dfe2c55be75b5faf5c2c4d68dfe4e388d0f2fc65",
           "repository_paths": [
-            "motion/audio/score.wav"
+            "archive/motion-v3/audio/score.wav"
           ]
         },
         {
@@ -1381,7 +1378,7 @@
           "bytes": 12960044,
           "sha256": "a88c40afee416f3e14d6e497f030e7ba46beb050e68649565d795c846283db06",
           "repository_paths": [
-            "motion/audio/sfx.wav"
+            "archive/motion-v3/audio/sfx.wav"
           ]
         },
         {
@@ -1498,7 +1495,7 @@
           "sha256": "736d825bcaa909f959fbc70dc889d207d6ee9bb3993f792b03a2763c4369d3f2",
           "repository_paths": [
             "archive/motion-v2/output/cover.png",
-            "motion/output/cover.png"
+            "archive/motion-v3/output/cover.png"
           ]
         },
         {
@@ -1514,8 +1511,7 @@
           "bytes": 184865,
           "sha256": "46a0d992e520920e37c87b900d67cb273bdda81c965c618d17f631bc2230129a",
           "repository_paths": [
-            "archive/motion-v2/output/character-checks/normal-0090.png",
-            "motion/output/character-checks/normal-0090.png"
+            "archive/motion-v2/output/character-checks/normal-0090.png"
           ]
         },
         {
@@ -1662,7 +1658,7 @@
           "sha256": "943481c0d2c8b768f9b4e0aa9d905c54f16746825650f18ffae54dd93e9cbad5",
           "repository_paths": [
             "archive/motion-v2/output/stills/keyframe-0090.png",
-            "motion/output/stills/keyframe-0090.png"
+            "archive/motion-v3/output/stills/keyframe-0090.png"
           ]
         },
         {
@@ -1703,7 +1699,7 @@
           "sha256": "89b4a7555da25e1ae99f558921bbf3fd6097ab840cd76ff445e0bc73428c4bff",
           "repository_paths": [
             "archive/motion-v2/output/stills/keyframe-1260.png",
-            "motion/output/stills/keyframe-1260.png"
+            "archive/motion-v3/output/stills/keyframe-1260.png"
           ]
         },
         {
