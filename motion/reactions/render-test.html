@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>Cavelux Clawd reaction renderer</title>
+  <style>html,body{margin:0;background:#101210}canvas{display:block;width:512px;height:512px;image-rendering:pixelated}</style>
+</head>
+<body>
+  <canvas id="reaction" width="512" height="512"></canvas>
+  <script>
+    window.CAVELUX_CHARACTER_ONLY=true;
+    window.CAVELUX_ASSET_URLS={normal:'../sprites/06-normal.png',working:'../sprites/01-idle.png',spectrum:'../sprites/05-spectrum.png'};
+  </script>
+  <script src="../film.js"></script>
+  <script src="renderer.js"></script>
+</body>
+</html>

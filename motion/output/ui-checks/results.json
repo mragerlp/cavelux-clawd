@@ -1,12 +1,12 @@
 {
-  "startedAt": "2026-09-29T02:08:41.906Z",
+  "startedAt": "2026-09-29T02:30:22.975Z",
   "baseUrl": "http://127.0.0.1:8766/",
   "browser": "Microsoft Edge / Playwright headless",
   "sourceHashes": {
     "index.html": "6f2d095f4850115e7b7d3695153320ac32b44c5b92d0d09eb06437368d98a62b",
     "player.js": "bcb7370e94beadac183c214b1ccad3666c636d881ed2bf69374f2f7ae1767a7c",
     "film.js": "56904950df434bf7ae17097ef5b34eec9bcc5f022c8698d7584cc3ac64c3de9d",
-    "assets.html": "794b5505a2cec104d810901d768b8705a057e04bf1dfe99d35c0be6df003c30c",
+    "assets.html": "8ab792861c1050e4515385e833a6646646b0ec95edeb0ecb21eacced8d1352f7",
     "state-previews.js": "ef137d30c08eab6e798aada3a4ba27994f70ef0184e8e0145fd2ed616679acdd"
   },
   "checks": [
@@ -225,9 +225,9 @@
       "name": "desktop: Restart returns near zero and plays",
       "status": "PASS",
       "evidence": {
-        "frame": 3,
+        "frame": 4,
         "chapter": "01 / WAKE",
-        "seek": 3,
+        "seek": 4,
         "playName": "Pause motion film",
         "mutePressed": "false",
         "time": "00:00 / 00:45"
@@ -673,7 +673,7 @@
   ],
   "badResponses": [],
   "browserVersion": "154.0.4258.37",
-  "finishedAt": "2026-09-29T02:08:45.940Z",
+  "finishedAt": "2026-09-29T02:30:27.060Z",
   "summary": {
     "passed": 19,
     "failed": 0

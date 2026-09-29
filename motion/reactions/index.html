@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101210">
+  <title>Cavelux Clawd — Reaction Pack 01</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>window.CAVELUX_CHARACTER_ONLY=true;window.CAVELUX_ASSET_URLS={normal:'../sprites/06-normal.png',working:'../sprites/01-idle.png',spectrum:'../sprites/05-spectrum.png'};</script>
+  <script defer src="../film.js"></script>
+  <script defer src="renderer.js"></script>
+  <script defer src="player.js"></script>
+</head>
+<body>
+  <main class="gallery">
+    <header class="masthead">
+      <a class="wordmark" href="https://cavelux.ai">CAVELUX<span aria-hidden="true"></span></a>
+      <span class="edition">REACTION PACK / 01</span>
+      <nav aria-label="Cavelux links"><a href="../assets.html">Asset library</a><a href="https://charm.ing/bloodwave/cavelux-clawd-studio" target="_blank" rel="noopener">Open studio <span aria-hidden="true">↗</span></a></nav>
+    </header>
+    <section class="intro" aria-labelledby="gallery-heading">
+      <div><p class="eyebrow">SMALL GESTURES. BIG PERSONALITY.</p><h1 id="gallery-heading">A little more<br><em>character.</em></h1></div>
+      <p class="intro-copy">Eight reactions. One curious Clawd.<br>Find the feeling. Send a little Cavelux.</p>
+    </section>
+    <p id="gallery-status" class="load-status" role="status">Loading the reaction pack…</p>
+    <div class="workbench">
+      <section class="preview-section" aria-label="Selected reaction preview">
+        <div class="preview-meta"><span id="reaction-state">CAVELUX CLAWD</span><span id="playback-state">PAUSED</span></div>
+        <div class="preview-surface" id="preview-surface" data-background="transparent">
+          <span class="registration top-left" aria-hidden="true"></span><span class="registration top-right" aria-hidden="true"></span>
+          <canvas id="reaction-preview" width="512" height="512" role="img" aria-label="Cavelux Clawd reaction preview"></canvas>
+          <span class="registration bottom-left" aria-hidden="true"></span><span class="registration bottom-right" aria-hidden="true"></span>
+        </div>
+        <div class="selected-caption"><div><h2 id="reaction-title">Clawd reactions</h2><p id="reaction-description">A feeling in a few pixels.</p></div><span>512 × 512</span></div>
+        <div class="transport">
+          <button id="reaction-play" type="button" class="play-button" aria-label="Play reaction" disabled><span id="play-symbol" aria-hidden="true">▶</span><span id="play-label">Play</span></button>
+          <div class="scrub"><div class="scrub-label"><label for="reaction-time">Timeline</label><output id="time-label" for="reaction-time">0.00 / 0.00s</output></div><input id="reaction-time" type="range" min="0" max="2" step="0.01" value="0" disabled></div>
+          <div class="background-control"><label for="reaction-background">Preview</label><select id="reaction-background" disabled><option value="transparent">Checkerboard</option><option value="dark">Carbon</option><option value="light">Paper</option></select></div>
+        </div>
+        <div class="downloads" aria-label="Download selected reaction"><a id="download-gif" href="output/share-break.gif" download="share-break.gif">GIF <span aria-hidden="true">↓</span></a><a id="download-mp4" href="output/share-break.mp4" download="share-break.mp4">MP4 <span aria-hidden="true">↓</span></a><a id="download-png" href="output/share-break.png" download="share-break.png">PNG poster <span aria-hidden="true">↓</span></a></div>
+      </section>
+      <aside class="selection-section" aria-label="Choose a reaction">
+        <div class="selection-heading"><h2>The collection</h2><span>01—08</span></div>
+        <div id="reaction-list" class="reaction-list" role="group" aria-label="Reaction selection"></div>
+        <div class="pack-download"><div><p class="eyebrow">KEEP THE WHOLE CAST.</p><h3>Reaction Pack 01</h3></div><a href="output/cavelux-clawd-pack-01.zip" download="cavelux-clawd-pack-01.zip">Download ZIP <span aria-hidden="true">↘</span></a></div>
+      </aside>
+    </div>
+    <section class="format-notes" aria-label="Export formats">
+      <div><span>01 / GIF</span><p>Transparent background.<br>A crisp edge, ready to share.</p></div>
+      <div><span>02 / MP4</span><p>Carbon background.<br>A compact video companion.</p></div>
+      <div><span>03 / MASTERS</span><p>Transparent PNG sequences<br>and all exports in the ZIP.</p></div>
+    </section>
+    <footer><span>CURIOSITY, BY DESIGN.</span><span id="motion-note">PRESS PLAY TO PREVIEW.</span><a href="../assets.html">Back to the asset library <span aria-hidden="true">↗</span></a></footer>
+  </main>
+</body>
+</html>

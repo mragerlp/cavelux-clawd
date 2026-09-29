@@ -1,6 +1,6 @@
 {
   "surface": "Local browser with injected documented Charming helper responses; not hosted upload or opening evidence",
-  "startedAt": "2026-09-29T02:08:50.257Z",
+  "startedAt": "2026-09-29T02:30:31.393Z",
   "sourceHash": "2bfcc639a21812320c94e76329cf8b48aabb62771c6401f709d9c10f71913030",
   "checks": [
     {
@@ -154,5 +154,5 @@
     "passed": 7,
     "failed": 0
   },
-  "finishedAt": "2026-09-29T02:08:52.301Z"
+  "finishedAt": "2026-09-29T02:30:33.409Z"
 }

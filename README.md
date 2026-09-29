@@ -44,6 +44,24 @@ excluded from Git. Local presets and hosted Charming presets use separate stores
 `node charming/build.mjs` assembles `charming/dist/source.json` for a hosted app
 update; generating that file alone does not publish it.
 
+## Reaction Pack 01
+
+Eight short reactions reuse the canonical character: KitKat handoff, typing,
+approval, panic, side-eye, shrug, celebration, and presenting. Open the
+[reaction gallery](http://127.0.0.1:8766/reactions/index.html) with the preview
+server running. Each reaction includes a transparent 512-square GIF and PNG
+poster, plus a carbon-background MP4. The ZIP also contains transparent frame
+masters. See [pack notes](motion/reactions/README.md) and the
+[production board](motion/reactions/PRODUCTION-BOARD.md).
+
+```sh
+npm run render:reactions
+npm run test:reactions
+```
+
+Rendering and checking the pack also need Python with Pillow. Device-specific
+Messages delivery remains a separate verification step.
+
 ## Render the film
 
 With FFmpeg and FFprobe available on PATH:

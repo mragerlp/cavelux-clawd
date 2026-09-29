@@ -1,0 +1,72 @@
+{
+  "startedAt": "2026-09-29T02:22:02.262Z",
+  "checks": [
+    {
+      "name": "share-break: visible motion, seamless loop, transparent safe area",
+      "status": "FAIL",
+      "error": "page.evaluate: Error: renderReaction is not implemented\n    at eval (eval at evaluate (:311:30), <anonymous>:2:58)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "name": "typing: visible motion, seamless loop, transparent safe area",
+      "status": "FAIL",
+      "error": "page.evaluate: Error: renderReaction is not implemented\n    at eval (eval at evaluate (:311:30), <anonymous>:2:58)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "name": "approved: visible motion, seamless loop, transparent safe area",
+      "status": "FAIL",
+      "error": "page.evaluate: Error: renderReaction is not implemented\n    at eval (eval at evaluate (:311:30), <anonymous>:2:58)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "name": "panic: visible motion, seamless loop, transparent safe area",
+      "status": "FAIL",
+      "error": "page.evaluate: Error: renderReaction is not implemented\n    at eval (eval at evaluate (:311:30), <anonymous>:2:58)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "name": "side-eye: visible motion, seamless loop, transparent safe area",
+      "status": "FAIL",
+      "error": "page.evaluate: Error: renderReaction is not implemented\n    at eval (eval at evaluate (:311:30), <anonymous>:2:58)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "name": "shrug: visible motion, seamless loop, transparent safe area",
+      "status": "FAIL",
+      "error": "page.evaluate: Error: renderReaction is not implemented\n    at eval (eval at evaluate (:311:30), <anonymous>:2:58)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "name": "celebrate: visible motion, seamless loop, transparent safe area",
+      "status": "FAIL",
+      "error": "page.evaluate: Error: renderReaction is not implemented\n    at eval (eval at evaluate (:311:30), <anonymous>:2:58)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "name": "presenting: visible motion, seamless loop, transparent safe area",
+      "status": "FAIL",
+      "error": "page.evaluate: Error: renderReaction is not implemented\n    at eval (eval at evaluate (:311:30), <anonymous>:2:58)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "name": "unknown reaction IDs and invalid times are rejected",
+      "status": "FAIL",
+      "error": "page.evaluate: Error: renderReaction is not implemented\n    at eval (eval at evaluate (:311:30), <anonymous>:2:58)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "name": "background selection preserves opaque and transparent exports",
+      "status": "FAIL",
+      "error": "page.evaluate: Error: renderReaction is not implemented\n    at eval (eval at evaluate (:311:30), <anonymous>:1:57)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "name": "renderer loads without browser errors or missing resources",
+      "status": "FAIL",
+      "error": "Expected values to be strictly deep-equal:\n\u001b[32m+ actual\u001b[39m \u001b[31m- expected\u001b[39m\n\n\u001b[32m+\u001b[39m [\n\u001b[32m+\u001b[39m   {\n\u001b[32m+\u001b[39m     status: 404,\n\u001b[32m+\u001b[39m     url: 'http://127.0.0.1:8766/reactions/renderer.js'\n\u001b[32m+\u001b[39m   }\n\u001b[32m+\u001b[39m ]\n\u001b[31m-\u001b[39m []\n"
+    }
+  ],
+  "pageErrors": [],
+  "badResponses": [
+    {
+      "url": "http://127.0.0.1:8766/reactions/renderer.js",
+      "status": 404
+    }
+  ],
+  "finishedAt": "2026-09-29T02:22:02.927Z",
+  "summary": {
+    "passed": 0,
+    "failed": 11
+  }
+}

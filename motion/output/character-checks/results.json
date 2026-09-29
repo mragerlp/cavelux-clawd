@@ -1,12 +1,12 @@
 {
-  "startedAt": "2026-09-29T02:08:38.249Z",
+  "startedAt": "2026-09-29T02:30:19.277Z",
   "url": "http://127.0.0.1:8766/?export",
   "browser": "Microsoft Edge / Playwright headless",
   "sourceHashes": {
     "film.js": "56904950df434bf7ae17097ef5b34eec9bcc5f022c8698d7584cc3ac64c3de9d",
     "player.js": "bcb7370e94beadac183c214b1ccad3666c636d881ed2bf69374f2f7ae1767a7c",
     "index.html": "6f2d095f4850115e7b7d3695153320ac32b44c5b92d0d09eb06437368d98a62b",
-    "assets.html": "794b5505a2cec104d810901d768b8705a057e04bf1dfe99d35c0be6df003c30c",
+    "assets.html": "8ab792861c1050e4515385e833a6646646b0ec95edeb0ecb21eacced8d1352f7",
     "state-previews.js": "ef137d30c08eab6e798aada3a4ba27994f70ef0184e8e0145fd2ed616679acdd",
     "sprites/06-normal.png": "a3c6fe2437d4b75cc39ebe96d8f8f07f134eba695f15a1679784a2a04d6aad1c",
     "sprites/01-idle.png": "b3783681219e905dfa922f753aff5d9496e11333cef9cde4b0f6e433166ae074",
@@ -1166,7 +1166,7 @@
         "film.js": "56904950df434bf7ae17097ef5b34eec9bcc5f022c8698d7584cc3ac64c3de9d",
         "player.js": "bcb7370e94beadac183c214b1ccad3666c636d881ed2bf69374f2f7ae1767a7c",
         "index.html": "6f2d095f4850115e7b7d3695153320ac32b44c5b92d0d09eb06437368d98a62b",
-        "assets.html": "794b5505a2cec104d810901d768b8705a057e04bf1dfe99d35c0be6df003c30c",
+        "assets.html": "8ab792861c1050e4515385e833a6646646b0ec95edeb0ecb21eacced8d1352f7",
         "state-previews.js": "ef137d30c08eab6e798aada3a4ba27994f70ef0184e8e0145fd2ed616679acdd",
         "sprites/06-normal.png": "a3c6fe2437d4b75cc39ebe96d8f8f07f134eba695f15a1679784a2a04d6aad1c",
         "sprites/01-idle.png": "b3783681219e905dfa922f753aff5d9496e11333cef9cde4b0f6e433166ae074",
@@ -4086,7 +4086,7 @@
   "pageErrors": [],
   "badResponses": [],
   "browserVersion": "154.0.4258.37",
-  "finishedAt": "2026-09-29T02:08:40.282Z",
+  "finishedAt": "2026-09-29T02:30:21.318Z",
   "summary": {
     "passed": 26,
     "failed": 0

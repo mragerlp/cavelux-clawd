@@ -11,10 +11,12 @@
     "test:backend": "node --test charming/backend.test.mjs",
     "test:studio": "node charming/verify-ui.mjs",
     "test:exports": "node charming/verify-export.mjs",
-    "test": "node --test charming/backend.test.mjs && node scripts/check-motion.mjs && node charming/verify-ui.mjs && node charming/verify-export.mjs",
+    "test": "node --test charming/backend.test.mjs && node scripts/check-motion.mjs && node charming/verify-ui.mjs && node charming/verify-export.mjs && node scripts/check-reactions.mjs",
     "render": "node motion/render.mjs",
     "verify:video": "node motion/verify.mjs",
-    "test:motion": "node scripts/check-motion.mjs"
+    "test:motion": "node scripts/check-motion.mjs",
+    "render:reactions": "node motion/reactions/render.mjs",
+    "test:reactions": "node scripts/check-reactions.mjs"
   },
   "devDependencies": {
     "playwright": "1.62.1"

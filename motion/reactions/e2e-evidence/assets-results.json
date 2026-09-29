@@ -1,0 +1,290 @@
+{
+  "check": "reaction deliverables",
+  "passed": 26,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "share-break GIF motion, loop, transparency and size",
+      "status": "PASS",
+      "evidence": {
+        "frames": 48,
+        "distinctFrames": 34,
+        "durationMs": 2400,
+        "bytes": 1137801,
+        "loop": 0,
+        "seamDelta": 0.23725128173828125,
+        "maxStepDelta": 10.451618194580078
+      }
+    },
+    {
+      "name": "share-break transparent poster",
+      "status": "PASS",
+      "evidence": {
+        "size": [
+          512,
+          512
+        ],
+        "alpha": true
+      }
+    },
+    {
+      "name": "share-break MP4 format and full decode",
+      "status": "PASS",
+      "evidence": {
+        "codec": "h264",
+        "duration": 2.4,
+        "decodeExitCode": 0
+      }
+    },
+    {
+      "name": "typing GIF motion, loop, transparency and size",
+      "status": "PASS",
+      "evidence": {
+        "frames": 48,
+        "distinctFrames": 48,
+        "durationMs": 2400,
+        "bytes": 1068220,
+        "loop": 0,
+        "seamDelta": 8.137489318847656,
+        "maxStepDelta": 9.43930435180664
+      }
+    },
+    {
+      "name": "typing transparent poster",
+      "status": "PASS",
+      "evidence": {
+        "size": [
+          512,
+          512
+        ],
+        "alpha": true
+      }
+    },
+    {
+      "name": "typing MP4 format and full decode",
+      "status": "PASS",
+      "evidence": {
+        "codec": "h264",
+        "duration": 2.4,
+        "decodeExitCode": 0
+      }
+    },
+    {
+      "name": "approved GIF motion, loop, transparency and size",
+      "status": "PASS",
+      "evidence": {
+        "frames": 40,
+        "distinctFrames": 24,
+        "durationMs": 2000,
+        "bytes": 896238,
+        "loop": 0,
+        "seamDelta": 0.5384025573730469,
+        "maxStepDelta": 4.9754638671875
+      }
+    },
+    {
+      "name": "approved transparent poster",
+      "status": "PASS",
+      "evidence": {
+        "size": [
+          512,
+          512
+        ],
+        "alpha": true
+      }
+    },
+    {
+      "name": "approved MP4 format and full decode",
+      "status": "PASS",
+      "evidence": {
+        "codec": "h264",
+        "duration": 2.0,
+        "decodeExitCode": 0
+      }
+    },
+    {
+      "name": "panic GIF motion, loop, transparency and size",
+      "status": "PASS",
+      "evidence": {
+        "frames": 48,
+        "distinctFrames": 21,
+        "durationMs": 2400,
+        "bytes": 1098825,
+        "loop": 0,
+        "seamDelta": 0.0,
+        "maxStepDelta": 17.24431610107422
+      }
+    },
+    {
+      "name": "panic transparent poster",
+      "status": "PASS",
+      "evidence": {
+        "size": [
+          512,
+          512
+        ],
+        "alpha": true
+      }
+    },
+    {
+      "name": "panic MP4 format and full decode",
+      "status": "PASS",
+      "evidence": {
+        "codec": "h264",
+        "duration": 2.4,
+        "decodeExitCode": 0
+      }
+    },
+    {
+      "name": "side-eye GIF motion, loop, transparency and size",
+      "status": "PASS",
+      "evidence": {
+        "frames": 48,
+        "distinctFrames": 13,
+        "durationMs": 2400,
+        "bytes": 1176177,
+        "loop": 0,
+        "seamDelta": 0.09816741943359375,
+        "maxStepDelta": 0.69451904296875
+      }
+    },
+    {
+      "name": "side-eye transparent poster",
+      "status": "PASS",
+      "evidence": {
+        "size": [
+          512,
+          512
+        ],
+        "alpha": true
+      }
+    },
+    {
+      "name": "side-eye MP4 format and full decode",
+      "status": "PASS",
+      "evidence": {
+        "codec": "h264",
+        "duration": 2.4,
+        "decodeExitCode": 0
+      }
+    },
+    {
+      "name": "shrug GIF motion, loop, transparency and size",
+      "status": "PASS",
+      "evidence": {
+        "frames": 48,
+        "distinctFrames": 25,
+        "durationMs": 2400,
+        "bytes": 1092789,
+        "loop": 0,
+        "seamDelta": 4.590400695800781,
+        "maxStepDelta": 5.992866516113281
+      }
+    },
+    {
+      "name": "shrug transparent poster",
+      "status": "PASS",
+      "evidence": {
+        "size": [
+          512,
+          512
+        ],
+        "alpha": true
+      }
+    },
+    {
+      "name": "shrug MP4 format and full decode",
+      "status": "PASS",
+      "evidence": {
+        "codec": "h264",
+        "duration": 2.4,
+        "decodeExitCode": 0
+      }
+    },
+    {
+      "name": "celebrate GIF motion, loop, transparency and size",
+      "status": "PASS",
+      "evidence": {
+        "frames": 48,
+        "distinctFrames": 48,
+        "durationMs": 2400,
+        "bytes": 600652,
+        "loop": 0,
+        "seamDelta": 1.9710350036621094,
+        "maxStepDelta": 20.492801666259766
+      }
+    },
+    {
+      "name": "celebrate transparent poster",
+      "status": "PASS",
+      "evidence": {
+        "size": [
+          512,
+          512
+        ],
+        "alpha": true
+      }
+    },
+    {
+      "name": "celebrate MP4 format and full decode",
+      "status": "PASS",
+      "evidence": {
+        "codec": "h264",
+        "duration": 2.4,
+        "decodeExitCode": 0
+      }
+    },
+    {
+      "name": "presenting GIF motion, loop, transparency and size",
+      "status": "PASS",
+      "evidence": {
+        "frames": 48,
+        "distinctFrames": 27,
+        "durationMs": 2400,
+        "bytes": 1027663,
+        "loop": 0,
+        "seamDelta": 1.1766128540039062,
+        "maxStepDelta": 21.661174774169922
+      }
+    },
+    {
+      "name": "presenting transparent poster",
+      "status": "PASS",
+      "evidence": {
+        "size": [
+          512,
+          512
+        ],
+        "alpha": true
+      }
+    },
+    {
+      "name": "presenting MP4 format and full decode",
+      "status": "PASS",
+      "evidence": {
+        "codec": "h264",
+        "duration": 2.4,
+        "decodeExitCode": 0
+      }
+    },
+    {
+      "name": "complete reusable master archive",
+      "status": "PASS",
+      "evidence": {
+        "members": 404,
+        "masterFrames": 376
+      }
+    },
+    {
+      "name": "exports match current animation sources and manifest",
+      "status": "PASS",
+      "evidence": {
+        "sourceFiles": 6,
+        "exportFiles": 24
+      }
+    }
+  ],
+  "unverified": [
+    "Physical iMessage sending, Apple transcoding, and rendering on an iPhone"
+  ]
+}

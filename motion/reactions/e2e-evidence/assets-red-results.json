@@ -1,0 +1,140 @@
+{
+  "check": "reaction deliverables",
+  "passed": 0,
+  "failed": 26,
+  "checks": [
+    {
+      "name": "share-break GIF motion, loop, transparency and size",
+      "status": "FAIL",
+      "error": "Finished GIF has not been produced"
+    },
+    {
+      "name": "share-break transparent poster",
+      "status": "FAIL",
+      "error": "[Errno 2] No such file or directory: 'C:\\\\Users\\\\jared\\\\.codex\\\\visualizations\\\\2026\\\\09\\\\29\\\\01a0ea97-8016-7c91-8112-655302cb1db6\\\\cavelux-clawd\\\\motion\\\\reactions\\\\output\\\\share-break.png'"
+    },
+    {
+      "name": "share-break MP4 format and full decode",
+      "status": "FAIL",
+      "error": "Command '['ffprobe', '-v', 'error', '-show_streams', '-of', 'json', 'C:\\\\Users\\\\jared\\\\.codex\\\\visualizations\\\\2026\\\\09\\\\29\\\\01a0ea97-8016-7c91-8112-655302cb1db6\\\\cavelux-clawd\\\\motion\\\\reactions\\\\output\\\\share-break.mp4']' returned non-zero exit status 1."
+    },
+    {
+      "name": "typing GIF motion, loop, transparency and size",
+      "status": "FAIL",
+      "error": "Finished GIF has not been produced"
+    },
+    {
+      "name": "typing transparent poster",
+      "status": "FAIL",
+      "error": "[Errno 2] No such file or directory: 'C:\\\\Users\\\\jared\\\\.codex\\\\visualizations\\\\2026\\\\09\\\\29\\\\01a0ea97-8016-7c91-8112-655302cb1db6\\\\cavelux-clawd\\\\motion\\\\reactions\\\\output\\\\typing.png'"
+    },
+    {
+      "name": "typing MP4 format and full decode",
+      "status": "FAIL",
+      "error": "Command '['ffprobe', '-v', 'error', '-show_streams', '-of', 'json', 'C:\\\\Users\\\\jared\\\\.codex\\\\visualizations\\\\2026\\\\09\\\\29\\\\01a0ea97-8016-7c91-8112-655302cb1db6\\\\cavelux-clawd\\\\motion\\\\reactions\\\\output\\\\typing.mp4']' returned non-zero exit status 1."
+    },
+    {
+      "name": "approved GIF motion, loop, transparency and size",
+      "status": "FAIL",
+      "error": "Finished GIF has not been produced"
+    },
+    {
+      "name": "approved transparent poster",
+      "status": "FAIL",
+      "error": "[Errno 2] No such file or directory: 'C:\\\\Users\\\\jared\\\\.codex\\\\visualizations\\\\2026\\\\09\\\\29\\\\01a0ea97-8016-7c91-8112-655302cb1db6\\\\cavelux-clawd\\\\motion\\\\reactions\\\\output\\\\approved.png'"
+    },
+    {
+      "name": "approved MP4 format and full decode",
+      "status": "FAIL",
+      "error": "Command '['ffprobe', '-v', 'error', '-show_streams', '-of', 'json', 'C:\\\\Users\\\\jared\\\\.codex\\\\visualizations\\\\2026\\\\09\\\\29\\\\01a0ea97-8016-7c91-8112-655302cb1db6\\\\cavelux-clawd\\\\motion\\\\reactions\\\\output\\\\approved.mp4']' returned non-zero exit status 1."
+    },
+    {
+      "name": "panic GIF motion, loop, transparency and size",
+      "status": "FAIL",
+      "error": "Finished GIF has not been produced"
+    },
+    {
+      "name": "panic transparent poster",
+      "status": "FAIL",
+      "error": "[Errno 2] No such file or directory: 'C:\\\\Users\\\\jared\\\\.codex\\\\visualizations\\\\2026\\\\09\\\\29\\\\01a0ea97-8016-7c91-8112-655302cb1db6\\\\cavelux-clawd\\\\motion\\\\reactions\\\\output\\\\panic.png'"
+    },
+    {
+      "name": "panic MP4 format and full decode",
+      "status": "FAIL",
+      "error": "Command '['ffprobe', '-v', 'error', '-show_streams', '-of', 'json', 'C:\\\\Users\\\\jared\\\\.codex\\\\visualizations\\\\2026\\\\09\\\\29\\\\01a0ea97-8016-7c91-8112-655302cb1db6\\\\cavelux-clawd\\\\motion\\\\reactions\\\\output\\\\panic.mp4']' returned non-zero exit status 1."
+    },
+    {
+      "name": "side-eye GIF motion, loop, transparency and size",
+      "status": "FAIL",
+      "error": "Finished GIF has not been produced"
+    },
+    {
+      "name": "side-eye transparent poster",
+      "status": "FAIL",
+      "error": "[Errno 2] No such file or directory: 'C:\\\\Users\\\\jared\\\\.codex\\\\visualizations\\\\2026\\\\09\\\\29\\\\01a0ea97-8016-7c91-8112-655302cb1db6\\\\cavelux-clawd\\\\motion\\\\reactions\\\\output\\\\side-eye.png'"
+    },
+    {
+      "name": "side-eye MP4 format and full decode",
+      "status": "FAIL",
+      "error": "Command '['ffprobe', '-v', 'error', '-show_streams', '-of', 'json', 'C:\\\\Users\\\\jared\\\\.codex\\\\visualizations\\\\2026\\\\09\\\\29\\\\01a0ea97-8016-7c91-8112-655302cb1db6\\\\cavelux-clawd\\\\motion\\\\reactions\\\\output\\\\side-eye.mp4']' returned non-zero exit status 1."
+    },
+    {
+      "name": "shrug GIF motion, loop, transparency and size",
+      "status": "FAIL",
+      "error": "Finished GIF has not been produced"
+    },
+    {
+      "name": "shrug transparent poster",
+      "status": "FAIL",
+      "error": "[Errno 2] No such file or directory: 'C:\\\\Users\\\\jared\\\\.codex\\\\visualizations\\\\2026\\\\09\\\\29\\\\01a0ea97-8016-7c91-8112-655302cb1db6\\\\cavelux-clawd\\\\motion\\\\reactions\\\\output\\\\shrug.png'"
+    },
+    {
+      "name": "shrug MP4 format and full decode",
+      "status": "FAIL",
+      "error": "Command '['ffprobe', '-v', 'error', '-show_streams', '-of', 'json', 'C:\\\\Users\\\\jared\\\\.codex\\\\visualizations\\\\2026\\\\09\\\\29\\\\01a0ea97-8016-7c91-8112-655302cb1db6\\\\cavelux-clawd\\\\motion\\\\reactions\\\\output\\\\shrug.mp4']' returned non-zero exit status 1."
+    },
+    {
+      "name": "celebrate GIF motion, loop, transparency and size",
+      "status": "FAIL",
+      "error": "Finished GIF has not been produced"
+    },
+    {
+      "name": "celebrate transparent poster",
+      "status": "FAIL",
+      "error": "[Errno 2] No such file or directory: 'C:\\\\Users\\\\jared\\\\.codex\\\\visualizations\\\\2026\\\\09\\\\29\\\\01a0ea97-8016-7c91-8112-655302cb1db6\\\\cavelux-clawd\\\\motion\\\\reactions\\\\output\\\\celebrate.png'"
+    },
+    {
+      "name": "celebrate MP4 format and full decode",
+      "status": "FAIL",
+      "error": "Command '['ffprobe', '-v', 'error', '-show_streams', '-of', 'json', 'C:\\\\Users\\\\jared\\\\.codex\\\\visualizations\\\\2026\\\\09\\\\29\\\\01a0ea97-8016-7c91-8112-655302cb1db6\\\\cavelux-clawd\\\\motion\\\\reactions\\\\output\\\\celebrate.mp4']' returned non-zero exit status 1."
+    },
+    {
+      "name": "presenting GIF motion, loop, transparency and size",
+      "status": "FAIL",
+      "error": "Finished GIF has not been produced"
+    },
+    {
+      "name": "presenting transparent poster",
+      "status": "FAIL",
+      "error": "[Errno 2] No such file or directory: 'C:\\\\Users\\\\jared\\\\.codex\\\\visualizations\\\\2026\\\\09\\\\29\\\\01a0ea97-8016-7c91-8112-655302cb1db6\\\\cavelux-clawd\\\\motion\\\\reactions\\\\output\\\\presenting.png'"
+    },
+    {
+      "name": "presenting MP4 format and full decode",
+      "status": "FAIL",
+      "error": "Command '['ffprobe', '-v', 'error', '-show_streams', '-of', 'json', 'C:\\\\Users\\\\jared\\\\.codex\\\\visualizations\\\\2026\\\\09\\\\29\\\\01a0ea97-8016-7c91-8112-655302cb1db6\\\\cavelux-clawd\\\\motion\\\\reactions\\\\output\\\\presenting.mp4']' returned non-zero exit status 1."
+    },
+    {
+      "name": "complete reusable master archive",
+      "status": "FAIL",
+      "error": "[Errno 2] No such file or directory: 'C:\\\\Users\\\\jared\\\\.codex\\\\visualizations\\\\2026\\\\09\\\\29\\\\01a0ea97-8016-7c91-8112-655302cb1db6\\\\cavelux-clawd\\\\motion\\\\reactions\\\\output\\\\cavelux-clawd-pack-01.zip'"
+    },
+    {
+      "name": "exports match current animation sources and manifest",
+      "status": "FAIL",
+      "error": "[Errno 2] No such file or directory: 'C:\\\\Users\\\\jared\\\\.codex\\\\visualizations\\\\2026\\\\09\\\\29\\\\01a0ea97-8016-7c91-8112-655302cb1db6\\\\cavelux-clawd\\\\motion\\\\reactions\\\\output\\\\manifest.json'"
+    }
+  ],
+  "unverified": [
+    "Physical iMessage sending, Apple transcoding, and rendering on an iPhone"
+  ]
+}

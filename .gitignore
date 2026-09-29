@@ -9,4 +9,4 @@ Thumbs.db
 *.tmp
 *.log
 motion/output/.*.rendering.mp4
-charming/.local/
+motion/reactions/.frames/

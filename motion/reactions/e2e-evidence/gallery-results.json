@@ -1,0 +1,130 @@
+{
+  "surface": "Local Edge browser, real reaction renderer and local downloadable files",
+  "url": "http://127.0.0.1:8766/reactions/index.html",
+  "startedAt": "2026-09-29T02:30:39.773Z",
+  "checks": [
+    {
+      "name": "gallery is available as an actual page",
+      "status": "PASS",
+      "evidence": {
+        "status": 200
+      }
+    },
+    {
+      "name": "all eight reactions are selectable and the first preview is paused",
+      "status": "PASS",
+      "evidence": {
+        "time": "1.2",
+        "width": 512,
+        "height": 512,
+        "visible": 48262
+      }
+    },
+    {
+      "name": "selecting typing changes the visible character and download destinations",
+      "status": "PASS",
+      "evidence": {
+        "title": "In the zone",
+        "time": "1"
+      }
+    },
+    {
+      "name": "play advances actual frames and pause freezes them",
+      "status": "PASS",
+      "evidence": {
+        "pausedTime": "1.25"
+      }
+    },
+    {
+      "name": "scrubbing chooses an exact paused reaction moment",
+      "status": "PASS",
+      "evidence": {
+        "time": "1.15"
+      }
+    },
+    {
+      "name": "background controls render transparent, dark and light canvas pixels",
+      "status": "PASS",
+      "evidence": {
+        "transparent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "dark": [
+          16,
+          18,
+          16,
+          255
+        ],
+        "light": [
+          238,
+          239,
+          229,
+          255
+        ]
+      }
+    },
+    {
+      "name": "switching reactions while playing pauses at the selected poster",
+      "status": "PASS",
+      "evidence": {
+        "time": 0.8
+      }
+    },
+    {
+      "name": "desktop controls are labelled and keyboard focus is visible",
+      "status": "PASS",
+      "evidence": {
+        "labelled": 11
+      }
+    },
+    {
+      "name": "375px reduced-motion view starts paused and has no horizontal overflow",
+      "status": "PASS",
+      "evidence": {
+        "viewport": 375,
+        "scroll": 375
+      }
+    },
+    {
+      "name": "RTL layout retains visible reachable controls without horizontal overflow",
+      "status": "PASS",
+      "evidence": {
+        "viewport": 375,
+        "scroll": 375,
+        "dir": "rtl"
+      }
+    },
+    {
+      "name": "typing GIF is actually downloaded after selection, playback, pause and scrub",
+      "status": "PASS",
+      "evidence": {
+        "filename": "typing.gif",
+        "bytes": 1068220
+      }
+    },
+    {
+      "name": "gallery has no uncaught browser errors",
+      "status": "PASS",
+      "evidence": []
+    }
+  ],
+  "screenshots": [
+    "gallery-desktop.png",
+    "gallery-mobile.png",
+    "gallery-rtl.png"
+  ],
+  "errors": [],
+  "unverified": [
+    "Physical iMessage device import or playback",
+    "Translated interface: English only; RTL layout is tested separately"
+  ],
+  "finishedAt": "2026-09-29T02:31:06.955Z",
+  "summary": {
+    "passed": 12,
+    "failed": 0,
+    "skipped": 0
+  }
+}
