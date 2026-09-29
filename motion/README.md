@@ -10,7 +10,7 @@ Run `node server.mjs`, then open http://127.0.0.1:8766/ in a browser. Press Play
 
 Run `node render.mjs --stills-only` for storyboard captures, or `node render.mjs` for the full video. Run `node verify.mjs` to check the resulting MP4.
 
-The renderer and current presentation use output/cavelux-engineered-to-deliver-v5.mp4. Earlier film exports remain available as history. Verify the new output after rendering before treating it as a finished delivery.
+The renderer and current presentation use output/cavelux-engineered-to-deliver-v6.mp4. Earlier film exports remain available as history. Verify the new output after rendering before treating it as a finished delivery.
 
 Run `node validate-editorial.mjs` with the preview server running to check the copy actually drawn on canvas, headline ink bounds, player title, and chapter labels. `node validate-ui.mjs` exercises playback, the Throughput chapter jump, desktop and mobile layout, and the asset-library flow. Editorial evidence is written to output/editorial-checks/.
 

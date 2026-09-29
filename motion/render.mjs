@@ -14,8 +14,8 @@ const WIDTH = 1080;
 const HEIGHT = 1920;
 const BASE_URL = `http://${HOST}:${PORT}`;
 const OUTPUT_DIRECTORY = path.join(ROOT, 'output');
-const OUTPUT = path.join(OUTPUT_DIRECTORY, 'cavelux-engineered-to-deliver-v5.mp4');
-const TEMP_OUTPUT = path.join(OUTPUT_DIRECTORY, '.cavelux-engineered-to-deliver-v5.rendering.mp4');
+const OUTPUT = path.join(OUTPUT_DIRECTORY, 'cavelux-engineered-to-deliver-v6.mp4');
+const TEMP_OUTPUT = path.join(OUTPUT_DIRECTORY, '.cavelux-engineered-to-deliver-v6.rendering.mp4');
 const AUDIO = path.join(ROOT, 'audio', 'master.wav');
 const flags = new Set(process.argv.slice(2));
 for (const flag of flags) {

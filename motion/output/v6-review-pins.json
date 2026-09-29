@@ -1,0 +1,62 @@
+{
+  "createdAt": "2026-09-29T09:10:59.398289+00:00",
+  "status": "REVIEW_CANDIDATE",
+  "files": {
+    "motion/output/cavelux-engineered-to-deliver-v6.mp4": {
+      "sha256": "6780061750e7e8684d6aa9bfd36ec65aaf6129ec9e78b0ccc56ad8899b12790f",
+      "bytes": 9990342
+    },
+    "motion/output/cavelux-engineered-to-deliver-v5.mp4": {
+      "sha256": "011e5dd04333fff6e4350ec899b2b752f8896021e58fa1683e98ce15905496f6",
+      "bytes": 11447110
+    },
+    "motion/film.js": {
+      "sha256": "8eaecfa2182010a19bd82142352f442e9f091cf32b09655d1cb8810650fdb5e8",
+      "bytes": 29285
+    },
+    "motion/DELIVERY.json": {
+      "sha256": "8056b9342d85836fe79852ff1b24272fc7f808c13d9ac5fb0b4f522025e828b7",
+      "bytes": 5188
+    },
+    "motion/audio/master.wav": {
+      "sha256": "a54be14ec09fe572801451f23689c9b18e2361b272e40bfed55f34ff20c69f62",
+      "bytes": 12960102
+    },
+    "motion/audio/score.wav": {
+      "sha256": "efd73aa3ec134feb41b4c2751da416e0a759ea95ede05a62cbc340b92ebb9b2e",
+      "bytes": 12960044
+    },
+    "motion/audio/sfx.wav": {
+      "sha256": "0b36604696eecb8e371d5816f7582da5d7b1ed4f82ba8e3a5331874ed7a0b21e",
+      "bytes": 12960044
+    },
+    "motion/output/v6-render.txt": {
+      "sha256": "52535190050638339324bd9588cc0b39d6252cac8add3a5c4e4859b996921beb",
+      "bytes": 1141
+    },
+    "motion/output/v6-tests.txt": {
+      "sha256": "e7d3ce66d28863b54856a9964633f42243db752f4e91bea25f2d64dcff50b1cf",
+      "bytes": 15986
+    },
+    "motion/output/v6-ffprobe.json": {
+      "sha256": "085bd97809e7c00176bc951a9480652a96a05c4a430374df79c7fece2ebb1bcf",
+      "bytes": 4771
+    },
+    "motion/output/v6-verify.json": {
+      "sha256": "2c78b141523b627c9332d2c8d128c375d5a6fa9386fb9c68a6d44cddf32c7778",
+      "bytes": 634
+    },
+    "motion/output/work-eye-checks/results.json": {
+      "sha256": "3ac4c290eb35bb74277efe360d38b5c46536d1001b12700ef938eb49efbecc05",
+      "bytes": 51186
+    },
+    "performance-evidence/candidate.json": {
+      "sha256": "fc08573ced952ca07c2d0411eee559266256c76deff940409ccb691b7dea6256",
+      "bytes": 34554
+    },
+    "architecture-conformance/activity-eyes.json": {
+      "sha256": "a0508ff2e47da36b3556993affe98dc9599077d37d056477dc068ff5607db564",
+      "bytes": 2458
+    }
+  }
+}

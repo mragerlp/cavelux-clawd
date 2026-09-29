@@ -18,6 +18,8 @@
     working:{eyeMode:'friendly-spiral',aura:'green-code',sprite:'working'},
     ultracode:{eyeMode:'friendly-spiral',aura:'flowing-rainbow',sprite:'spectrum'},
   };
+  const workWindows=[null,[2,5.5],[1.5,5.5],[1,5.5],[.5,4.5],null];
+  const workingNow=(chapter,time)=>{const window=workWindows[chapter];return Boolean(window&&time>=window[0]&&time<window[1]);};
   const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
   const mix=(a,b,t)=>a+(b-a)*t;
   const smooth=t=>{t=clamp(t);return t*t*(3-2*t);};
@@ -159,7 +161,7 @@
     return {matte,ink,paint,g:paint.getContext('2d',{willReadFrequently:true}),time:null};
   }
   function flowingSpectrum(x,y,w,t,options={}){
-    const a=assets.spectrum;if(!a?.wave)return;const b=a.bounds,h=w*b.h/b.w;
+    const a=options.workingActive===false?assets.normal:assets.spectrum;if(!a?.wave)return;const b=a.bounds,h=w*b.h/b.w;
     const wave=a.wave,g=wave.g;
     if(wave.time!==t){
       g.globalCompositeOperation='source-over';g.clearRect(0,0,b.w,b.h);
@@ -180,23 +182,25 @@
     ctx.drawImage(wave.paint,-w/2,-h/2,w,h);ctx.restore();
   }
   function character(state,x,y,w,t,options={}){
-    const spec=characterStates[state];
-    if(state==='working'&&options.aura!==false)codeAura(x,y,w,t,options);
+    const spec=characterStates[state],workingActive=state!=='normal'&&(options.workingActive??true);
+    const assetName=workingActive?spec.sprite:'normal';
+    if(state==='working'&&workingActive&&options.aura!==false)codeAura(x,y,w,t,options);
     if(state==='ultracode')flowingSpectrum(x,y,w,t,options);
-    else sprite(spec.sprite,x,y,w,options);
-    if(state!=='normal')hypnoticEyes(assets[spec.sprite],x,y,w,t,options);
+    else sprite(assetName,x,y,w,options);
+    if(workingActive)hypnoticEyes(assets[spec.sprite],x,y,w,t,options);
     if(options.hero){
-      const b=assets[spec.sprite]?.bounds,h=b?w*b.h/b.w:0;
+      const b=assets[assetName]?.bounds,h=b?w*b.h/b.w:0;
       const eyeSpeed=options.eyeSpeed??1,eyeScale=b?w/b.w:0;
-      const eyeBounds=assets[spec.sprite]?.hypnosis?.eyes.map(eye=>({x:x+(eye.cx-b.w/2-eye.diameter/2)*eyeScale,y:y+(eye.cy-b.h/2-eye.diameter/2)*eyeScale,width:eye.diameter*eyeScale,height:eye.diameter*eyeScale}))??null;
-      window.characterState={...window.characterState,state,...spec,
-        aura:state==='working'&&options.aura===false?'none':spec.aura,
-        eyeMotion:state==='normal'?'none':'counter-rotating-pixel-spirals',eyeSpeed,
-        eyePhase:state==='normal'?0:(t*1.7*eyeSpeed)%(Math.PI*2),eyeBounds,
+      const eyeBounds=assets[assetName]?.hypnosis?.eyes.map(eye=>({x:x+(eye.cx-b.w/2-eye.diameter/2)*eyeScale,y:y+(eye.cy-b.h/2-eye.diameter/2)*eyeScale,width:eye.diameter*eyeScale,height:eye.diameter*eyeScale}))??null;
+      window.characterState={...window.characterState,state,...spec,sprite:assetName,workingActive,
+        eyeMode:workingActive?'friendly-spiral':'rectangular',
+        aura:state==='working'&&(!workingActive||options.aura===false)?'none':spec.aura,
+        eyeMotion:workingActive?'counter-rotating-pixel-spirals':'none',eyeSpeed,
+        eyePhase:workingActive?(t*1.7*eyeSpeed)%(Math.PI*2):0,eyeBounds,
         rainbowPhase:state==='ultracode'?(t*.16)%1:0,
-        auraPhase:state==='working'&&options.aura!==false?(t*.8)%(Math.PI*2):0,
+        auraPhase:state==='working'&&workingActive&&options.aura!==false?(t*.8)%(Math.PI*2):0,
         heroBounds:{x:x-w/2,y:y-h/2,width:w,height:h},
-        auraBounds:state==='working'&&options.aura!==false?{x:x-w*.9,y:y-h,width:w*1.8,height:h*2}:null,
+        auraBounds:state==='working'&&workingActive&&options.aura!==false?{x:x-w*.9,y:y-h,width:w*1.8,height:h*2}:null,
         opacity:options.alpha??1};
     }
   }
@@ -240,16 +244,16 @@
     ctx.restore();
   }
   function build(t){
-    base(true);title(['SYSTEMS,','BUILT RIGHT.'],104,440,132,t,INK);
+    const active=workingNow(1,t);base(true);title(['SYSTEMS,','BUILT RIGHT.'],104,440,132,t,INK);
     micro('02 / SKILLS + MCPs + WORKFLOWS',110,718,INK,.55);
     terminal(110,770,760,143,.35,t,'SKILLS');terminal(160,948,760,143,1.05,t,'MCPs');terminal(210,1126,710,143,1.75,t,'WORKFLOWS');
     const p=(t*.65)%3;const py=844+178*Math.floor(p);line(84,800,84,1220,INK,1,.18);rect(78,py,12,12,'#497d1c');
     for(let i=0;i<3;i++){line(86,842+i*178,102+i*50,842+i*178,INK,1,.35);}
-    const tx=mix(810,655,smooth((t-3)/3));character('working',tx,1420+Math.sin(t*5)*4,250,t,{hero:true,auraInk:'#3f8f18',rotation:Math.sin(t*1.5)*.035,alpha:out((t-2)/.7)});
+    const tx=mix(810,655,smooth((t-3)/3));character('working',tx,1420+Math.sin(t*5)*4,250,t,{hero:true,workingActive:active,auraInk:'#3f8f18',rotation:Math.sin(t*1.5)*.035,alpha:out((t-2)/.7)});
     text('BUILD.',110,1410,68,INK,{alpha:out((t-2.8)/.6)});text('TEST.',110,1480,68,INK,{alpha:out((t-3.4)/.6)});text('REFINE.',110,1550,68,INK,{alpha:out((t-4)/.6)});
   }
   function swarm(t){
-    base();title(['ONE BRIEF.','MANY AGENTS.'],104,433,125,t);
+    const active=workingNow(2,t);base();title(['ONE BRIEF.','MANY AGENTS.'],104,433,125,t);
     const expand=smooth((t-.4)/2.6);const spin=t*.12;const nodes=[];
     for(let i=0;i<19;i++){
       const ring=i===0?0:i<7?1:2;const count=ring===1?6:12;const j=ring===1?i-1:i-7;
@@ -257,38 +261,38 @@
       nodes.push({x:540+Math.cos(a)*r,y:1000+Math.sin(a)*r*.87,w:ring===0?240:ring===1?117:78,a:ring===0?1:ring===1?.9:.6});
     }
     for(let i=1;i<nodes.length;i++){const n=nodes[i],p=nodes[i<7?0:1+(i%6)];line(p.x,p.y,n.x,n.y,LIME,1,.16*expand);
-      const r=(t*.55+i*.173)%1;rect(mix(p.x,n.x,r)-3,mix(p.y,n.y,r)-3,6,6,LIME,.7*expand);}
+      const r=(t*.55+i*.173)%1;if(active)rect(mix(p.x,n.x,r)-3,mix(p.y,n.y,r)-3,6,6,LIME,.7*expand);}
     circle(540,1000,205*expand,LIME,.14);circle(540,1000,385*expand,PAPER,.09);
-    nodes.forEach((n,i)=>{character('working',n.x,n.y+Math.sin(t*4+i)*4,n.w,t,{hero:i===0,seed:i,auraCount:i===0?5:i%3===0?1:0,alpha:n.a*(i===0?1:expand),rotation:Math.sin(t*.9+i)*.04});});
+    nodes.forEach((n,i)=>{character('working',n.x,n.y+Math.sin(t*4+i)*4,n.w,t,{hero:i===0,workingActive:active,seed:i,auraCount:i===0?5:i%3===0?1:0,alpha:n.a*(i===0?1:expand),rotation:Math.sin(t*.9+i)*.04});});
     micro('COORDINATED EXECUTION.',110,1480,PAPER,.75);micro('SHARED CONTEXT.',110,1520,LIME,.9);
     text(String(Math.floor(mix(1,19,expand))).padStart(2,'0'),822,1518,90,PAPER,{align:'right',alpha:.22});
   }
   function rotate3(p,a,b){let x=p.x*Math.cos(a)-p.z*Math.sin(a),z=p.x*Math.sin(a)+p.z*Math.cos(a);const y=p.y*Math.cos(b)-z*Math.sin(b);z=p.y*Math.sin(b)+z*Math.cos(b);return {x,y,z};}
   function project(p){const s=760/(760+p.z);return{x:540+p.x*s,y:995+p.y*s,scale:s,z:p.z};}
   function sync(t){
-    base();title(['COMPLEXITY.','UNDER CONTROL.'],104,430,112,t);
+    const active=workingNow(3,t);base();title(['COMPLEXITY.','UNDER CONTROL.'],104,430,112,t);
     const grow=out(t/1.1);const a=t*.42,b=.34+Math.sin(t*.35)*.2;
     for(let axis=0;axis<3;axis++){
       ctx.beginPath();for(let j=0;j<=160;j++){const ang=j/160*Math.PI*2,r=322*grow;let p=axis===0?{x:Math.cos(ang)*r,y:Math.sin(ang)*r,z:0}:axis===1?{x:Math.cos(ang)*r,y:0,z:Math.sin(ang)*r}:{x:0,y:Math.cos(ang)*r,z:Math.sin(ang)*r};const q=project(rotate3(p,a,b));if(j===0)ctx.moveTo(q.x,q.y);else ctx.lineTo(q.x,q.y);}
       ctx.strokeStyle=axis===1?'#556448':'#323a30';ctx.lineWidth=1.3;ctx.stroke();
     }
     const arr=[];for(let i=0;i<42;i++){const yy=1-2*(i+.5)/42,rr=Math.sqrt(1-yy*yy),ang=i*2.399963;const q=rotate3({x:Math.cos(ang)*rr*320*grow,y:yy*320*grow,z:Math.sin(ang)*rr*320*grow},a,b);arr.push({...project(q),i});}
-    arr.sort((p,q)=>q.z-p.z).forEach(p=>{character('working',p.x,p.y,53*p.scale,t,{seed:p.i,auraCount:p.i%5===0?1:0,alpha:mix(.23,.97,clamp((320-p.z)/640)),rotation:Math.sin(t*.5+p.i)*.08});});
-    character('working',540,995,190,t,{hero:true,alpha:.95});
+    arr.sort((p,q)=>q.z-p.z).forEach(p=>{character('working',p.x,p.y,53*p.scale,t,{workingActive:active,seed:p.i,auraCount:p.i%5===0?1:0,alpha:mix(.23,.97,clamp((320-p.z)/640)),rotation:Math.sin(t*.5+p.i)*.08});});
+    character('working',540,995,190,t,{hero:true,workingActive:active,alpha:.95});
     bracket(123,617,834,760,PAPER,.17);
     micro('INTEGRATION / SHARED CONTROL',110,1488,LIME,.8);
     for(let i=0;i<100;i++){const x=110+i*8.5;const y=1570+Math.sin(i*.12+t*3)*Math.sin(i/100*Math.PI)*19;rect(x,y,4,2,PAPER,.28);}
   }
   function spectrum(t){
-    base();const burst=out(t/1.4),power=1+.025*pulse(t);
+    const active=workingNow(4,t);base();const burst=out(t/1.4),power=1+.025*pulse(t);
     for(let i=0;i<8;i++){
       const x=80+i*130;const h=(70+Math.sin(t*1.9+i*.7)*30)*burst;
       rect(x,1640-h,24,h,SPECTRUM[i],.28);rect(x+33,1640-h*.6,8,h*.6,SPECTRUM[i],.15);
     }
     title(['FULL','THROUGHPUT.'],104,435,130,t,PAPER,.1);
     const w=650*mix(.75,1,burst)*power,y=1000+Math.sin(t*2)*10;
-    character('working',540,y,w,t,{aura:false});
-    const sweep=clamp((t-.35)/1.5);ctx.save();ctx.beginPath();ctx.rect(90,680,900,640*sweep);ctx.clip();character('ultracode',540,y,w,t,{hero:true});ctx.restore();
+    character('working',540,y,w,t,{workingActive:active,aura:false});
+    const sweep=clamp((t-.35)/1.5);ctx.save();ctx.beginPath();ctx.rect(90,680,900,640*sweep);ctx.clip();character('ultracode',540,y,w,t,{hero:true,workingActive:active});ctx.restore();
     const r=414;for(let i=0;i<64;i++){const a=i/64*Math.PI*2+t*.08;const length=(i%8===0?32:10)*burst;line(540+Math.cos(a)*r,1000+Math.sin(a)*r*.81,540+Math.cos(a)*(r+length),1000+Math.sin(a)*(r+length)*.81,SPECTRUM[Math.floor(i/8)],i%8===0?4:1,.42);}
     micro('COORDINATED SYSTEMS.',110,1418,PAPER,.65);micro('DELIVERY IN MOTION.',110,1458,SPECTRUM[6],.85);
     if(t<1.8){const yy=mix(740,1230,sweep);line(150,yy,930,yy,PAPER,2,(1-sweep)*.6);}
@@ -333,7 +337,7 @@
     if(!Number.isFinite(frame))throw new TypeError('frame must be finite');
     const f=Math.max(0,Math.min(DURATION-1,Math.floor(frame))),t=f/FPS,index=Math.min(5,Math.floor(t/7.5)),local=t-index*7.5;
     const state=index===0||index===5?'normal':index===4?'ultracode':'working';
-    window.characterState={state,...characterStates[state],frame:f,chapter:index,rainbowPhase:0,auraPhase:0,heroBounds:null,auraBounds:null,opacity:0};
+    window.characterState={state,...characterStates[state],workingActive:workingNow(index,local),eyeMode:workingNow(index,local)?'friendly-spiral':'rectangular',frame:f,chapter:index,rainbowPhase:0,auraPhase:0,heroBounds:null,auraBounds:null,opacity:0};
     ctx.setTransform(1,0,0,1,0,0);ctx.globalAlpha=1;ctx.globalCompositeOperation='source-over';
     // The first cut frame is fully covered by the outgoing picture.
     // Skip the invisible incoming scene to avoid rendering both compositions.
@@ -345,11 +349,11 @@
     if(!characterStates[state])throw new TypeError('Unknown character state: '+state);
     if(!Number.isFinite(time))throw new TypeError('Preview time must be finite seconds');
     if(!targetCanvas||typeof targetCanvas.getContext!=='function'||!targetCanvas.width||!targetCanvas.height)throw new TypeError('Preview needs a sized canvas');
-    const background=options.background??'dark',requestedScale=options.scale??1,requestedSpeed=options.eyeSpeed??1,aura=options.aura??true;
+    const background=options.background??'dark',requestedScale=options.scale??1,requestedSpeed=options.eyeSpeed??1,aura=options.aura??true,workingActive=options.workingActive??(state!=='normal');
     if(!['dark','light','transparent'].includes(background))throw new TypeError('Unknown preview background: '+background);
-    if(!Number.isFinite(requestedScale)||!Number.isFinite(requestedSpeed)||typeof aura!=='boolean')throw new TypeError('Preview scale/eyeSpeed must be finite numbers and aura must be boolean');
+    if(!Number.isFinite(requestedScale)||!Number.isFinite(requestedSpeed)||typeof aura!=='boolean'||typeof workingActive!=='boolean')throw new TypeError('Preview scale/eyeSpeed must be finite numbers and aura/workingActive must be boolean');
     const scale=clamp(requestedScale,.4,1.4),eyeSpeed=clamp(requestedSpeed,0,3);
-    const spec=characterStates[state],a=assets[spec.sprite];
+    const spec=characterStates[state],a=assets[workingActive?spec.sprite:'normal'];
     if(!a)throw new Error('Await filmReady before rendering a character preview');
     const previousContext=ctx,previousState=window.characterState;
     ctx=targetCanvas.getContext('2d',{alpha:true,willReadFrequently:true});
@@ -365,7 +369,7 @@
       }
       const aspect=a.bounds.h/a.bounds.w,w=Math.min(width*.62,height*.82/(aspect*1.75))*scale;
       window.characterState={state,...spec,frame:null,chapter:null,preview:true,rainbowPhase:0,auraPhase:0};
-      character(state,width/2,height/2,w,Math.max(0,time),{hero:true,eyeSpeed,aura,auraInk:background==='light'?'#3f8f18':LIME});
+      character(state,width/2,height/2,w,Math.max(0,time),{hero:true,eyeSpeed,aura,workingActive,auraInk:background==='light'?'#3f8f18':LIME});
       return {...window.characterState,background,scale,auraEnabled:aura};
     }finally{
       ctx.restore();ctx=previousContext;window.characterState=previousState;
@@ -377,8 +381,8 @@
   window.renderFrame=renderFrame;
   window.renderCharacterPreview=renderCharacterPreview;
   window.characterStates=Object.fromEntries(Object.entries(characterStates).map(([name,spec])=>[name,{...spec}]));
-  window.filmSpec={width:W,height:H,fps:FPS,durationInFrames:DURATION,chapters:['DEFINE','BUILD','ORCHESTRATE','INTEGRATE','THROUGHPUT','DELIVER']};
-  window.filmReady=Promise.all(Object.entries(files).map(([name,url])=>new Promise((resolve,reject)=>{const img=new Image();img.crossOrigin='anonymous';img.onload=()=>{try{assets[name]={img,bounds:name==='glyph'?null:bounds(img)};if(name==='working'||name==='spectrum')assets[name].hypnosis=makeHypnosisLayers(img,assets[name].bounds);if(name==='spectrum'){const a=assets[name];a.wave=makeSpectrumLayers(a.hypnosis.body,{x:0,y:0,w:a.bounds.w,h:a.bounds.h});}resolve();}catch(error){reject(error);}};img.onerror=()=>reject(new Error('Failed asset '+url));img.src=url;}))).then(()=>{if(!characterOnly)renderFrame(90);return window.filmSpec;});
+  window.filmSpec={width:W,height:H,fps:FPS,durationInFrames:DURATION,workWindows,chapters:['DEFINE','BUILD','ORCHESTRATE','INTEGRATE','THROUGHPUT','DELIVER']};
+  window.filmReady=Promise.all(Object.entries(files).map(([name,url])=>new Promise((resolve,reject)=>{const img=new Image();img.crossOrigin='anonymous';img.onload=()=>{try{assets[name]={img,bounds:name==='glyph'?null:bounds(img)};if(name==='working'||name==='spectrum')assets[name].hypnosis=makeHypnosisLayers(img,assets[name].bounds);if(name==='spectrum'){const a=assets[name];a.wave=makeSpectrumLayers(a.hypnosis.body,{x:0,y:0,w:a.bounds.w,h:a.bounds.h});}if(name==='normal')assets[name].wave=makeSpectrumLayers(img,assets[name].bounds);resolve();}catch(error){reject(error);}};img.onerror=()=>reject(new Error('Failed asset '+url));img.src=url;}))).then(()=>{if(!characterOnly)renderFrame(90);return window.filmSpec;});
 })();
 
 await window.filmReady;

@@ -1,6 +1,6 @@
 {
   "frames": 1350,
-  "drawCalls": 19722,
+  "drawCalls": 16737,
   "entries": [
     {
       "method": "fillText",
@@ -281,41 +281,6 @@
       "firstFrame": 226,
       "lastFrame": 449,
       "calls": 224
-    },
-    {
-      "method": "fillText",
-      "text": "{}",
-      "firstFrame": 226,
-      "lastFrame": 899,
-      "calls": 2912
-    },
-    {
-      "method": "fillText",
-      "text": "</>",
-      "firstFrame": 226,
-      "lastFrame": 899,
-      "calls": 896
-    },
-    {
-      "method": "fillText",
-      "text": "[]",
-      "firstFrame": 226,
-      "lastFrame": 899,
-      "calls": 896
-    },
-    {
-      "method": "fillText",
-      "text": "::",
-      "firstFrame": 226,
-      "lastFrame": 899,
-      "calls": 1120
-    },
-    {
-      "method": "fillText",
-      "text": "<>",
-      "firstFrame": 226,
-      "lastFrame": 899,
-      "calls": 896
     },
     {
       "method": "fillText",
@@ -610,6 +575,41 @@
       "firstFrame": 283,
       "lastFrame": 449,
       "calls": 167
+    },
+    {
+      "method": "fillText",
+      "text": "{}",
+      "firstFrame": 285,
+      "lastFrame": 839,
+      "calls": 1695
+    },
+    {
+      "method": "fillText",
+      "text": "</>",
+      "firstFrame": 285,
+      "lastFrame": 839,
+      "calls": 480
+    },
+    {
+      "method": "fillText",
+      "text": "[]",
+      "firstFrame": 285,
+      "lastFrame": 839,
+      "calls": 480
+    },
+    {
+      "method": "fillText",
+      "text": "::",
+      "firstFrame": 285,
+      "lastFrame": 839,
+      "calls": 600
+    },
+    {
+      "method": "fillText",
+      "text": "<>",
+      "firstFrame": 285,
+      "lastFrame": 839,
+      "calls": 480
     },
     {
       "method": "fillText",

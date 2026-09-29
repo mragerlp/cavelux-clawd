@@ -1,11 +1,11 @@
 {
-  "startedAt": "2026-09-29T08:49:47.347Z",
+  "startedAt": "2026-09-29T09:08:18.695Z",
   "url": "http://127.0.0.1:8766/?export",
   "browser": "Microsoft Edge / Playwright headless",
   "sourceHashes": {
-    "film.js": "65b01474358fe7aa08b9155dc0d3cc9f4ce562b5f42ee8e5598f0e01048eb286",
+    "film.js": "8eaecfa2182010a19bd82142352f442e9f091cf32b09655d1cb8810650fdb5e8",
     "player.js": "bcb7370e94beadac183c214b1ccad3666c636d881ed2bf69374f2f7ae1767a7c",
-    "index.html": "3a1c2738ded411d517ce5ad1f6ba24cfe93f0ad46abb7cecef5c99bec223baf2",
+    "index.html": "c8f3560f914b7d9419054ce52f23c12f7f81d7a47157efcf78c98a8da2ffc204",
     "assets.html": "b3cc0e2d490149970ef9ad28c8498f1db2a243948d3cd29600a3b56447cfb9b8",
     "state-previews.js": "ef137d30c08eab6e798aada3a4ba27994f70ef0184e8e0145fd2ed616679acdd",
     "sprites/06-normal.png": "a3c6fe2437d4b75cc39ebe96d8f8f07f134eba695f15a1679784a2a04d6aad1c",
@@ -43,6 +43,7 @@
           "eyeMode": "rectangular",
           "aura": "none",
           "sprite": "normal",
+          "workingActive": false,
           "frame": 90,
           "chapter": 0,
           "rainbowPhase": 0,
@@ -103,6 +104,7 @@
           "eyeMode": "friendly-spiral",
           "aura": "green-code",
           "sprite": "working",
+          "workingActive": true,
           "frame": 315,
           "chapter": 1,
           "rainbowPhase": 0,
@@ -181,6 +183,7 @@
           "eyeMode": "friendly-spiral",
           "aura": "green-code",
           "sprite": "working",
+          "workingActive": true,
           "frame": 540,
           "chapter": 2,
           "rainbowPhase": 0,
@@ -259,6 +262,7 @@
           "eyeMode": "friendly-spiral",
           "aura": "green-code",
           "sprite": "working",
+          "workingActive": true,
           "frame": 765,
           "chapter": 3,
           "rainbowPhase": 0,
@@ -337,6 +341,7 @@
           "eyeMode": "friendly-spiral",
           "aura": "flowing-rainbow",
           "sprite": "spectrum",
+          "workingActive": true,
           "frame": 990,
           "chapter": 4,
           "rainbowPhase": 0.48,
@@ -410,6 +415,7 @@
           "eyeMode": "friendly-spiral",
           "aura": "flowing-rainbow",
           "sprite": "spectrum",
+          "workingActive": true,
           "frame": 1020,
           "chapter": 4,
           "rainbowPhase": 0.64,
@@ -480,67 +486,55 @@
       "evidence": {
         "descriptor": {
           "state": "ultracode",
-          "eyeMode": "friendly-spiral",
+          "eyeMode": "rectangular",
           "aura": "flowing-rainbow",
-          "sprite": "spectrum",
+          "sprite": "normal",
+          "workingActive": false,
           "frame": 1050,
           "chapter": 4,
           "rainbowPhase": 0.8,
           "auraPhase": 0,
           "heroBounds": {
             "x": 214.92359605426907,
-            "y": 794.418320172866,
+            "y": 795.220484584762,
             "width": 650.1528078914619,
-            "height": 400.2829374364808
+            "height": 398.67860861268883
           },
           "auraBounds": null,
           "opacity": 1,
-          "eyeMotion": "counter-rotating-pixel-spirals",
+          "eyeMotion": "none",
           "eyeSpeed": 1,
-          "eyePhase": 2.2168146928204138,
-          "eyeBounds": [
-            {
-              "x": 300.2599891580587,
-              "y": 809.4596268710159,
-              "width": 245.57235425550968,
-              "height": 245.57235425550968
-            },
-            {
-              "x": 533.5537257007928,
-              "y": 809.4596268710159,
-              "width": 245.57235425550968,
-              "height": 245.57235425550968
-            }
-          ]
+          "eyePhase": 0,
+          "eyeBounds": null
         },
-        "imageDrawCount": 6,
+        "imageDrawCount": 2,
         "eyeMetrics": [
           {
             "crop": {
               "x": 319,
-              "y": 834,
+              "y": 835,
               "w": 208,
-              "h": 196
+              "h": 195
             },
             "largestDarkComponent": {
-              "area": 16842,
-              "width": 177,
-              "height": 177,
-              "rectangularFill": 0.5375849851575217
+              "area": 2340,
+              "width": 36,
+              "height": 65,
+              "rectangularFill": 1
             }
           },
           {
             "crop": {
               "x": 553,
-              "y": 834,
+              "y": 835,
               "w": 208,
-              "h": 196
+              "h": 195
             },
             "largestDarkComponent": {
-              "area": 16764,
-              "width": 177,
-              "height": 177,
-              "rectangularFill": 0.5350952791343484
+              "area": 2340,
+              "width": 36,
+              "height": 65,
+              "rectangularFill": 1
             }
           }
         ],
@@ -561,6 +555,7 @@
           "preview": true,
           "rainbowPhase": 0,
           "auraPhase": 0,
+          "workingActive": false,
           "eyeMotion": "none",
           "eyeSpeed": 1,
           "eyePhase": 0,
@@ -594,6 +589,7 @@
           "preview": true,
           "rainbowPhase": 0,
           "auraPhase": 2.4000000000000004,
+          "workingActive": true,
           "eyeMotion": "counter-rotating-pixel-spirals",
           "eyeSpeed": 1,
           "eyePhase": 5.1,
@@ -645,6 +641,7 @@
           "preview": true,
           "rainbowPhase": 0,
           "auraPhase": 3.2,
+          "workingActive": true,
           "eyeMotion": "counter-rotating-pixel-spirals",
           "eyeSpeed": 1,
           "eyePhase": 0.5168146928204136,
@@ -696,6 +693,7 @@
           "preview": true,
           "rainbowPhase": 0,
           "auraPhase": 4,
+          "workingActive": true,
           "eyeMotion": "counter-rotating-pixel-spirals",
           "eyeSpeed": 1,
           "eyePhase": 2.2168146928204138,
@@ -747,6 +745,7 @@
           "preview": true,
           "rainbowPhase": 0.48,
           "auraPhase": 0,
+          "workingActive": true,
           "eyeMotion": "counter-rotating-pixel-spirals",
           "eyeSpeed": 1,
           "eyePhase": 5.1,
@@ -793,6 +792,7 @@
           "preview": true,
           "rainbowPhase": 0.64,
           "auraPhase": 0,
+          "workingActive": true,
           "eyeMotion": "counter-rotating-pixel-spirals",
           "eyeSpeed": 1,
           "eyePhase": 0.5168146928204136,
@@ -839,6 +839,7 @@
           "preview": true,
           "rainbowPhase": 0.8,
           "auraPhase": 0,
+          "workingActive": true,
           "eyeMotion": "counter-rotating-pixel-spirals",
           "eyeSpeed": 1,
           "eyePhase": 2.2168146928204138,
@@ -1163,9 +1164,9 @@
       "name": "tested source and sprite hashes remain unchanged",
       "status": "PASS",
       "evidence": {
-        "film.js": "65b01474358fe7aa08b9155dc0d3cc9f4ce562b5f42ee8e5598f0e01048eb286",
+        "film.js": "8eaecfa2182010a19bd82142352f442e9f091cf32b09655d1cb8810650fdb5e8",
         "player.js": "bcb7370e94beadac183c214b1ccad3666c636d881ed2bf69374f2f7ae1767a7c",
-        "index.html": "3a1c2738ded411d517ce5ad1f6ba24cfe93f0ad46abb7cecef5c99bec223baf2",
+        "index.html": "c8f3560f914b7d9419054ce52f23c12f7f81d7a47157efcf78c98a8da2ffc204",
         "assets.html": "b3cc0e2d490149970ef9ad28c8498f1db2a243948d3cd29600a3b56447cfb9b8",
         "state-previews.js": "ef137d30c08eab6e798aada3a4ba27994f70ef0184e8e0145fd2ed616679acdd",
         "sprites/06-normal.png": "a3c6fe2437d4b75cc39ebe96d8f8f07f134eba695f15a1679784a2a04d6aad1c",
@@ -1183,6 +1184,7 @@
         "eyeMode": "rectangular",
         "aura": "none",
         "sprite": "normal",
+        "workingActive": false,
         "frame": 90,
         "chapter": 0,
         "rainbowPhase": 0,
@@ -1250,6 +1252,7 @@
         "eyeMode": "friendly-spiral",
         "aura": "green-code",
         "sprite": "working",
+        "workingActive": true,
         "frame": 315,
         "chapter": 1,
         "rainbowPhase": 0,
@@ -1353,6 +1356,7 @@
         "eyeMode": "friendly-spiral",
         "aura": "green-code",
         "sprite": "working",
+        "workingActive": true,
         "frame": 540,
         "chapter": 2,
         "rainbowPhase": 0,
@@ -1942,6 +1946,7 @@
         "eyeMode": "friendly-spiral",
         "aura": "green-code",
         "sprite": "working",
+        "workingActive": true,
         "frame": 765,
         "chapter": 3,
         "rainbowPhase": 0,
@@ -3179,6 +3184,7 @@
         "eyeMode": "friendly-spiral",
         "aura": "flowing-rainbow",
         "sprite": "spectrum",
+        "workingActive": true,
         "frame": 990,
         "chapter": 4,
         "rainbowPhase": 0.48,
@@ -3304,6 +3310,7 @@
         "eyeMode": "friendly-spiral",
         "aura": "flowing-rainbow",
         "sprite": "spectrum",
+        "workingActive": true,
         "frame": 1020,
         "chapter": 4,
         "rainbowPhase": 0.64,
@@ -3426,92 +3433,44 @@
       "file": "ultracode-1050.png",
       "descriptor": {
         "state": "ultracode",
-        "eyeMode": "friendly-spiral",
+        "eyeMode": "rectangular",
         "aura": "flowing-rainbow",
-        "sprite": "spectrum",
+        "sprite": "normal",
+        "workingActive": false,
         "frame": 1050,
         "chapter": 4,
         "rainbowPhase": 0.8,
         "auraPhase": 0,
         "heroBounds": {
           "x": 214.92359605426907,
-          "y": 794.418320172866,
+          "y": 795.220484584762,
           "width": 650.1528078914619,
-          "height": 400.2829374364808
+          "height": 398.67860861268883
         },
         "auraBounds": null,
         "opacity": 1,
-        "eyeMotion": "counter-rotating-pixel-spirals",
+        "eyeMotion": "none",
         "eyeSpeed": 1,
-        "eyePhase": 2.2168146928204138,
-        "eyeBounds": [
-          {
-            "x": 300.2599891580587,
-            "y": 809.4596268710159,
-            "width": 245.57235425550968,
-            "height": 245.57235425550968
-          },
-          {
-            "x": 533.5537257007928,
-            "y": 809.4596268710159,
-            "width": 245.57235425550968,
-            "height": 245.57235425550968
-          }
-        ]
+        "eyePhase": 0,
+        "eyeBounds": null
       },
       "draws": [
         {
-          "source": "canvas:generated",
+          "source": "http://127.0.0.1:8766/sprites/06-normal.png",
           "bounds": {
             "x": 214.92359605426907,
-            "y": 795.150942845583,
+            "y": 795.2205101467806,
             "width": 650.1528078914619,
-            "height": 398.81774321508385
-          }
-        },
-        {
-          "source": "canvas:generated",
-          "bounds": {
-            "x": 301.2462427691388,
-            "y": 809.8830393531226,
-            "width": 243.37876228152675,
-            "height": 243.37876228152675
-          }
-        },
-        {
-          "source": "canvas:generated",
-          "bounds": {
-            "x": 535.3749949493345,
-            "y": 809.8830393531226,
-            "width": 243.37876228152675,
-            "height": 243.37876228152675
+            "height": 398.6786086126889
           }
         },
         {
           "source": "canvas:generated",
           "bounds": {
             "x": 214.92359605426907,
-            "y": 794.4183457348846,
+            "y": 795.2205101467806,
             "width": 650.1528078914619,
-            "height": 400.2829374364809
-          }
-        },
-        {
-          "source": "canvas:generated",
-          "bounds": {
-            "x": 300.25998915805866,
-            "y": 809.4596524330345,
-            "width": 245.57235425550965,
-            "height": 245.5723542555097
-          }
-        },
-        {
-          "source": "canvas:generated",
-          "bounds": {
-            "x": 533.5537257007928,
-            "y": 809.4596524330345,
-            "width": 245.5723542555097,
-            "height": 245.5723542555097
+            "height": 398.6786086126889
           }
         }
       ],
@@ -3519,29 +3478,29 @@
         {
           "crop": {
             "x": 319,
-            "y": 834,
+            "y": 835,
             "w": 208,
-            "h": 196
+            "h": 195
           },
           "largestDarkComponent": {
-            "area": 16842,
-            "width": 177,
-            "height": 177,
-            "rectangularFill": 0.5375849851575217
+            "area": 2340,
+            "width": 36,
+            "height": 65,
+            "rectangularFill": 1
           }
         },
         {
           "crop": {
             "x": 553,
-            "y": 834,
+            "y": 835,
             "w": 208,
-            "h": 196
+            "h": 195
           },
           "largestDarkComponent": {
-            "area": 16764,
-            "width": 177,
-            "height": 177,
-            "rectangularFill": 0.5350952791343484
+            "area": 2340,
+            "width": 36,
+            "height": 65,
+            "rectangularFill": 1
           }
         }
       ]
@@ -3560,6 +3519,7 @@
         "preview": true,
         "rainbowPhase": 0,
         "auraPhase": 0,
+        "workingActive": false,
         "eyeMotion": "none",
         "eyeSpeed": 1,
         "eyePhase": 0,
@@ -3621,6 +3581,7 @@
         "preview": true,
         "rainbowPhase": 0,
         "auraPhase": 2.4000000000000004,
+        "workingActive": true,
         "eyeMotion": "counter-rotating-pixel-spirals",
         "eyeSpeed": 1,
         "eyePhase": 5.1,
@@ -3700,6 +3661,7 @@
         "preview": true,
         "rainbowPhase": 0,
         "auraPhase": 3.2,
+        "workingActive": true,
         "eyeMotion": "counter-rotating-pixel-spirals",
         "eyeSpeed": 1,
         "eyePhase": 0.5168146928204136,
@@ -3779,6 +3741,7 @@
         "preview": true,
         "rainbowPhase": 0,
         "auraPhase": 4,
+        "workingActive": true,
         "eyeMotion": "counter-rotating-pixel-spirals",
         "eyeSpeed": 1,
         "eyePhase": 2.2168146928204138,
@@ -3858,6 +3821,7 @@
         "preview": true,
         "rainbowPhase": 0.48,
         "auraPhase": 0,
+        "workingActive": true,
         "eyeMotion": "counter-rotating-pixel-spirals",
         "eyeSpeed": 1,
         "eyePhase": 5.1,
@@ -3932,6 +3896,7 @@
         "preview": true,
         "rainbowPhase": 0.64,
         "auraPhase": 0,
+        "workingActive": true,
         "eyeMotion": "counter-rotating-pixel-spirals",
         "eyeSpeed": 1,
         "eyePhase": 0.5168146928204136,
@@ -4006,6 +3971,7 @@
         "preview": true,
         "rainbowPhase": 0.8,
         "auraPhase": 0,
+        "workingActive": true,
         "eyeMotion": "counter-rotating-pixel-spirals",
         "eyeSpeed": 1,
         "eyePhase": 2.2168146928204138,
@@ -4086,7 +4052,7 @@
   "pageErrors": [],
   "badResponses": [],
   "browserVersion": "154.0.4258.37",
-  "finishedAt": "2026-09-29T08:49:49.468Z",
+  "finishedAt": "2026-09-29T09:08:21.025Z",
   "summary": {
     "passed": 26,
     "failed": 0

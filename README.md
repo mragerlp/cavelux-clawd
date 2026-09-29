@@ -7,8 +7,8 @@ The current film is **Engineered to deliver**. Start with the
 [FABLE review packet](docs/FABLE-REVIEW.md) for the rendered candidate and review boundaries.
 
 [Charming studio workspace](https://charm.ing/bloodwave/cavelux-clawd-studio)
-· [Attribution](ATTRIBUTION.md)
-· [Reproduction notes](docs/reproducibility.md)
+Â· [Attribution](ATTRIBUTION.md)
+Â· [Reproduction notes](docs/reproducibility.md)
 
 ## Run locally
 
@@ -73,8 +73,8 @@ npm run render
 npm run verify:video
 ```
 
-The output is `motion/output/cavelux-engineered-to-deliver-v5.mp4`: 45 seconds,
-1080 × 1920, 30 fps, H.264 with stereo audio. For stills, use
+The output is `motion/output/cavelux-engineered-to-deliver-v6.mp4`: 45 seconds,
+1080 Ã— 1920, 30 fps, H.264 with stereo audio. For stills, use
 `node motion/render.mjs --stills-only`. `npm run test:motion` checks the local
 composition, character behavior, and preview interface.
 
@@ -105,4 +105,4 @@ the source revision that produced them.
 
 This is an internal CAVELUX creative project. Clawd's original Anthropic
 provenance and the adaptation context are recorded in [ATTRIBUTION.md](ATTRIBUTION.md).
-The v5 film is a review candidate. V4 remains preserved, and no Instagram publication or hosted studio update is part of this polish pass.
+The v6 film is a review candidate. V4 and v5 remain preserved, and no Instagram publication or hosted studio update is part of this polish pass.

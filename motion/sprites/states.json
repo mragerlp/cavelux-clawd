@@ -1,5 +1,5 @@
 {
-  "revision": 3,
+  "revision": 4,
   "normal": {
     "base": "06-normal.png",
     "eyes": "two plain black rectangles",
@@ -8,13 +8,13 @@
   },
   "working": {
     "base": "01-idle.png",
-    "eyes": "friendly open spirals with counter-rotating pixel-grid hypnosis",
+    "eyes": "original counter-rotating spirals only during active work; approved regular rectangular eyes when inactive",
     "aura": "animated green code tokens and trails",
     "purpose": "skills, MCPs, workflows, and coordinated swarms"
   },
   "ultracode": {
     "base": "05-spectrum.png",
-    "eyes": "black spirals with counter-rotating pixel-grid hypnosis",
+    "eyes": "original counter-rotating spirals during active work; approved regular rectangular eyes during rainbow presentation and completion",
     "aura": "none",
     "body": "animated flowing rainbow wave",
     "purpose": "ultracode transformation"
@@ -22,10 +22,33 @@
   "animationSource": "../film.js",
   "previewEntryPoint": "renderCharacterPreview(state, time, targetCanvas, options = {})",
   "previewOptions": {
-    "background": {"values": ["dark", "light", "transparent"], "default": "dark"},
-    "scale": {"minimum": 0.4, "maximum": 1.4, "default": 1},
-    "eyeSpeed": {"minimum": 0, "maximum": 3, "default": 1},
-    "aura": {"default": true, "meaning": "toggle external green code aura; rainbow body animation remains active"}
+    "background": {
+      "values": [
+        "dark",
+        "light",
+        "transparent"
+      ],
+      "default": "dark"
+    },
+    "scale": {
+      "minimum": 0.4,
+      "maximum": 1.4,
+      "default": 1
+    },
+    "eyeSpeed": {
+      "minimum": 0,
+      "maximum": 3,
+      "default": 1
+    },
+    "aura": {
+      "default": true,
+      "meaning": "toggle external green code aura; rainbow body animation remains active"
+    },
+    "workingActive": {
+      "type": "boolean",
+      "default": "true for working/ultracode; false for normal",
+      "meaning": "False reuses the normal-eye sprite, suppresses the work aura and keeps any rainbow body wave; omitted preserves existing studio/reaction behavior"
+    }
   },
   "embedding": {
     "characterOnlyFlag": "CAVELUX_CHARACTER_ONLY = true",
@@ -33,5 +56,28 @@
     "readiness": "await window.filmReady",
     "details": "Set globals before loading film.js. Character-only mode needs no #film canvas, skips brand assets, and does not render the full film. Source PNG files remain unchanged."
   },
-  "retiredFromActiveUse": ["02-focused.png", "03-wink.png", "04-celebrate.png"]
+  "retiredFromActiveUse": [
+    "02-focused.png",
+    "03-wink.png",
+    "04-celebrate.png"
+  ],
+  "filmActiveWorkSeconds": {
+    "build": [
+      9.5,
+      13
+    ],
+    "orchestrate": [
+      16.5,
+      20.5
+    ],
+    "integrate": [
+      23.5,
+      28
+    ],
+    "ultracode": [
+      30.5,
+      34.5
+    ]
+  },
+  "filmTimingRule": "Intervals include the start and exclude the end. Ready/completed beats and opening/closing signatures use rectangular eyes."
 }

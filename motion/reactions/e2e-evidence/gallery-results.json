@@ -1,7 +1,7 @@
 {
   "surface": "Local Edge browser, real reaction renderer and local downloadable files",
   "url": "http://127.0.0.1:8766/reactions/index.html",
-  "startedAt": "2026-09-29T08:50:08.497Z",
+  "startedAt": "2026-09-29T09:08:45.059Z",
   "checks": [
     {
       "name": "gallery is available as an actual page",
@@ -121,7 +121,7 @@
     "Physical iMessage device import or playback",
     "Translated interface: English only; RTL layout is tested separately"
   ],
-  "finishedAt": "2026-09-29T08:50:34.486Z",
+  "finishedAt": "2026-09-29T09:09:11.726Z",
   "summary": {
     "passed": 12,
     "failed": 0,

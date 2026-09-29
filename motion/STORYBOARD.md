@@ -1,6 +1,6 @@
-# CAVELUX — Engineered to deliver.
+# CAVELUX â€” Engineered to deliver.
 
-45-second brand film · 1080 × 1920 · 9:16 · 30 fps · 1,350 frames.
+45-second brand film Â· 1080 Ã— 1920 Â· 9:16 Â· 30 fps Â· 1,350 frames.
 
 ## Direction
 
@@ -12,12 +12,12 @@ Reuse Cavelux's existing pixel-eye glyph, glitch wordmark, and eye/swirl logo la
 
 | Time | Frames | Movement | Image and motion | Typography |
 | --- | --- | --- | --- | --- |
-| 00.0–07.5 | 0000–0224 | Define | A horizontal trace resolves into normal Clawd with regular eyes. Calibration rings settle around a defined brief. | CLEAR / INTENT. |
-| 07.5–15.0 | 0225–0449 | Build | Switch to warm paper. Skills, MCPs and workflow modules step into place; spiral-eyed working Clawd carries a green code aura. | SYSTEMS, / BUILT RIGHT. |
-| 15.0–22.5 | 0450–0674 | Orchestrate | One working character becomes nineteen illustrative agents. Green code tokens circulate around active nodes while connections show coordinated execution and shared context. | ONE BRIEF. / MANY AGENTS. |
-| 22.5–30.0 | 0675–0899 | Integrate | Forty-two illustrative working Clawds orbit a central agent. Fine orbital planes express integration and shared control. | COMPLEXITY. / UNDER CONTROL. |
-| 30.0–37.5 | 0900–1124 | Throughput | Ultracode activates: rainbow color flows continuously through a subtle pixel-stepped body wave. Black spiral eyes remain readable. Throughput is a process theme, not a numerical benchmark. | FULL / THROUGHPUT. |
-| 37.5–45.0 | 1125–1349 | Deliver | Clawd settles back into its regular-eyed normal state as the Cavelux identity assembles. The final character signature stays normal. | cavelux.ai / ENGINEERED TO DELIVER. |
+| 00.0â€“07.5 | 0000â€“0224 | Define | A horizontal trace resolves into normal Clawd with regular eyes. Calibration rings settle around a defined brief. | CLEAR / INTENT. |
+| 07.5â€“15.0 | 0225â€“0449 | Build | Switch to warm paper. Skills, MCPs and workflow modules step into place; spiral-eyed working Clawd carries a green code aura. | SYSTEMS, / BUILT RIGHT. |
+| 15.0â€“22.5 | 0450â€“0674 | Orchestrate | One working character becomes nineteen illustrative agents. Green code tokens circulate around active nodes while connections show coordinated execution and shared context. | ONE BRIEF. / MANY AGENTS. |
+| 22.5â€“30.0 | 0675â€“0899 | Integrate | Forty-two illustrative working Clawds orbit a central agent. Fine orbital planes express integration and shared control. | COMPLEXITY. / UNDER CONTROL. |
+| 30.0â€“37.5 | 0900â€“1124 | Throughput | Ultracode activates: rainbow color flows continuously through a subtle pixel-stepped body wave. Black spiral eyes remain readable. Throughput is a process theme, not a numerical benchmark. | FULL / THROUGHPUT. |
+| 37.5â€“45.0 | 1125â€“1349 | Deliver | Clawd settles back into its regular-eyed normal state as the Cavelux identity assembles. The final character signature stays normal. | cavelux.ai / ENGINEERED TO DELIVER. |
 
 The build modules use the generic categories SKILLS, MCPs, and WORKFLOWS with the lines `define. build. verify.`, `tools -> context`, and `test. integrate. ship.`. These are process illustrations rather than claims about named integrations. Longer headlines use explicit type sizes: 132 px for Build, 112 px for Integrate, and 130 px for Throughput. The editorial validator measures actual rendered ink within the horizontal safe area.
 
@@ -53,6 +53,19 @@ No upload, publication, or website change is part of this local artifact.
 
 ## V5 finishing pass
 
-Chapter transitions retain the outgoing image under a 0.234375-second wipe (one eighth note at 128 BPM), avoiding a blank transition frame. The transition cache uses one reusable canvas. Throughput bars occupy y=1540–1640, below the captions. The closing business line uses 32 px at 90% opacity. From 42.0 to 42.9 seconds the secondary labels, frame marks and progress rails fade away; the final 2.1 seconds hold the identity, domain, business line and regular-eyed mascot. The original spiral renderer and audio bytes are unchanged.
+Chapter transitions retain the outgoing image under a 0.234375-second wipe (one eighth note at 128 BPM), avoiding a blank transition frame. The transition cache uses one reusable canvas. Throughput bars occupy y=1540â€“1640, below the captions. The closing business line uses 32 px at 90% opacity. From 42.0 to 42.9 seconds the secondary labels, frame marks and progress rails fade away; the final 2.1 seconds hold the identity, domain, business line and regular-eyed mascot. The original spiral renderer and audio bytes are unchanged.
 
 V4 is preserved. This new v5 is a review candidate and is distinguished by its delivery hash from the earlier rejected simplified-eye v5 in Git history. FABLE reviews non-character claims and delivery evidence; Codex performs implementation and rendering.
+
+## V6 activity-driven eyes
+
+Spiral eyes indicate active execution, not the whole chapter. At ready and completed beats, every agent returns to the approved regular eyes. The existing normal PNG supplies those eyes; the inactive rainbow version reuses the same body-color compositor with that PNG. Source artwork is unchanged. Work aura and travelling swarm packets stop outside the active windows.
+
+| Chapter | Active work, film seconds | Other frames |
+| --- | --- | --- |
+| Build | 9.5 to before 13.0 | Regular eyes |
+| Orchestrate | 16.5 to before 20.5 | Regular eyes |
+| Integrate | 23.5 to before 28.0 | Regular eyes |
+| Ultracode | 30.5 to before 34.5 | Regular eyes; rainbow wave retained |
+
+Define and Deliver remain regular-eyed throughout. Default standalone studio and reaction rendering retains the original active spirals. `workingActive: false` is an optional character-preview setting; it has no hosted UI toggle. The studio is not redeployed for this film revision. V5 and its source snapshot remain preserved.

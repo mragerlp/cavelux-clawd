@@ -1,0 +1,72 @@
+{
+  "gitBaseline": "0648bbd04394b7d1257be0cb61ac9a9c9e05297f",
+  "files": [
+    {
+      "path": "film.js",
+      "sha256": "65b01474358fe7aa08b9155dc0d3cc9f4ce562b5f42ee8e5598f0e01048eb286",
+      "bytes": 28196
+    },
+    {
+      "path": "index.html",
+      "sha256": "3a1c2738ded411d517ce5ad1f6ba24cfe93f0ad46abb7cecef5c99bec223baf2",
+      "bytes": 4621
+    },
+    {
+      "path": "render.mjs",
+      "sha256": "2204a9f5b5eb7d005fba3d206d0aa123edccd1a6b6ed71ca88b4d21455af26fb",
+      "bytes": 9474
+    },
+    {
+      "path": "verify.mjs",
+      "sha256": "e116f11a861f97521738046645d5f7910f0c47037807f54ad2232fbad8a73654",
+      "bytes": 3489
+    },
+    {
+      "path": "DELIVERY.json",
+      "sha256": "8c2a05f0135ac121fa90b93194ba9a50e559c68e57e7895f08c072ef1b7fbbbf",
+      "bytes": 5035
+    },
+    {
+      "path": "STORYBOARD.md",
+      "sha256": "d3293b4167cc8fcb3843c3d7555aaa0bbd823676a9af6196c0a5efef535fb404",
+      "bytes": 5951
+    },
+    {
+      "path": "output/cover.png",
+      "sha256": "58e95d46265d8e5520afffd3d8ae7be2f3893829a92bce07088b18c2c3474ee9",
+      "bytes": 393216
+    },
+    {
+      "path": "output/stills/keyframe-0090.png",
+      "sha256": "1f70adbd5aafc7189c65fd2c4a192f1beaaf2043a50dde6f4f1943055c6d5933",
+      "bytes": 304896
+    },
+    {
+      "path": "output/stills/keyframe-0315.png",
+      "sha256": "c70e7cb2c38010af0dfbfcb92203c228789f3bb527d9110f3c5fd7796c41d39b",
+      "bytes": 191752
+    },
+    {
+      "path": "output/stills/keyframe-0540.png",
+      "sha256": "79d0d3d3b704a3d757f1b1624977dcebc239986f629865e8bd639a7baf14bb30",
+      "bytes": 366426
+    },
+    {
+      "path": "output/stills/keyframe-0765.png",
+      "sha256": "b1bfd5062a546e2d8d8dcdfef854753b170b6834273df93c344731ea5cb662a6",
+      "bytes": 350579
+    },
+    {
+      "path": "output/stills/keyframe-0990.png",
+      "sha256": "24f352db474e82b75323288ac8124145a346bfc57ef58c86416e8c29cd74a8f4",
+      "bytes": 220400
+    },
+    {
+      "path": "output/stills/keyframe-1260.png",
+      "sha256": "8de87893b8ea207e0565d1daae211f3be36831dcbb77fc486fdd88ed5dbdfe9c",
+      "bytes": 393105
+    }
+  ],
+  "video": "../../motion/output/cavelux-engineered-to-deliver-v5.mp4",
+  "scope": "Partial snapshot; full project retained at gitBaseline. Shared sprites and audio unchanged."
+}

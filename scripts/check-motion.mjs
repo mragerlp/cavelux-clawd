@@ -19,6 +19,7 @@ try {
     ['motion/render.mjs','--check-only'],
     ['motion/validate-character-states.mjs'],
     ['motion/validate-hypnosis.mjs'],
+    ['motion/validate-work-eyes.mjs'],
     ['motion/validate-ui.mjs'],
     ['motion/validate-editorial.mjs'],
   ]) {

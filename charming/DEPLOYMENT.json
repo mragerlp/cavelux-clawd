@@ -46,8 +46,8 @@
   },
   "localCandidate": {
     "sourceBundle": "charming/dist/source.json",
-    "sha256": "3880a8cbcabe22512db5e0f5bdd0e4ffd37c9aef3b5927955c22a9ecb46ea9ba",
+    "sha256": "9e69f3c3f71ad85e959618c3e405ea5928db3a75b7ca63b148f03b38474019c4",
     "published": false,
-    "reason": "Film-only polish; hosted character app does not render the film"
+    "reason": "Showreel activity timing and optional workingActive flag; default hosted character behavior remains unchanged"
   }
 }

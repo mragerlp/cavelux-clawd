@@ -1,0 +1,1858 @@
+{
+  "startedAt": "2026-09-29T09:05:43.215Z",
+  "baseline": true,
+  "sourceSHA256": "65b01474358fe7aa08b9155dc0d3cc9f4ce562b5f42ee8e5598f0e01048eb286",
+  "checks": [
+    {
+      "name": "working: inactive descriptor preserves body state with rectangular eyes and no code aura",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\u001b[32m+ actual\u001b[39m \u001b[31m- expected\u001b[39m\n\n\u001b[32m+\u001b[39m undefined\n\u001b[31m- \u001b[39mfalse\n"
+    },
+    {
+      "name": "working: both full eye regions are plain rectangles without residual spiral ink",
+      "status": "FAIL",
+      "error": "Eye is not rectangular: {\"area\":5519,\"width\":109,\"height\":108,\"rectangularFill\":0.468824328916072}"
+    },
+    {
+      "name": "working: default active eyes retain original pixels and animate",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\u001b[32m+ actual\u001b[39m \u001b[31m- expected\u001b[39m\n\n\u001b[32m+\u001b[39m undefined\n\u001b[31m- \u001b[39mtrue\n"
+    },
+    {
+      "name": "working: body behavior remains independent of inactive eyes",
+      "status": "FAIL",
+      "error": "Idle working preview should be still without aura\n\u001b[32mactual\u001b[39m \u001b[31mexpected\u001b[39m\n\n\u001b[39m'\u001b[39m\u001b[32m0\u001b[39m\u001b[31mb\u001b[39m\u001b[39mc\u001b[39m\u001b[32mc\u001b[39m\u001b[31m0\u001b[39m\u001b[31m3\u001b[39m\u001b[39m7\u001b[39m\u001b[31m3\u001b[39m\u001b[31m2\u001b[39m\u001b[31m2\u001b[39m\u001b[31m1\u001b[39m\u001b[39md\u001b[39m\u001b[32m8\u001b[39m\u001b[32mf\u001b[39m\u001b[39m3\u001b[39m\u001b[31m4\u001b[39m\u001b[31m7\u001b[39m\u001b[31mf\u001b[39m\u001b[39m8\u001b[39m\u001b[32ma\u001b[39m\u001b[32mb\u001b[39m\u001b[32me\u001b[39m\u001b[32m0\u001b[39m\u001b[32md\u001b[39m\u001b[32m5\u001b[39m\u001b[32m5\u001b[39m\u001b[39mf\u001b[39m\u001b[31m4\u001b[39m\u001b[39m5\u001b[39m\u001b[32me\u001b[39m\u001b[32m8\u001b[39m\u001b[31m1\u001b[39m\u001b[39m9\u001b[39m\u001b[32mf\u001b[39m\u001b[32ma\u001b[39m\u001b[32me\u001b[39m\u001b[32m9\u001b[39m\u001b[32ma\u001b[39m\u001b[32m3\u001b[39m\u001b[39m1\u001b[39m\u001b[39me\u001b[39m\u001b[32m0\u001b[39m\u001b[32m0\u001b[39m\u001b[31m3\u001b[39m\u001b[31mf\u001b[39m\u001b[39md\u001b[39m\u001b[32m2\u001b[39m\u001b[32m0\u001b[39m\u001b[32m5\u001b[39m\u001b[32m6\u001b[39m\u001b[32m0\u001b[39m\u001b[31mc\u001b[39m\u001b[31m9\u001b[39m\u001b[31m7\u001b[39m\u001b[31m1\u001b[39m\u001b[39mb\u001b[39m\u001b[39m8\u001b[39m\u001b[32m5\u001b[39m\u001b[32mf\u001b[39m\u001b[31m7\u001b[39m\u001b[39m2\u001b[39m\u001b[31mc\u001b[39m\u001b[39mf\u001b[39m\u001b[32m4\u001b[39m\u001b[32m4\u001b[39m\u001b[39mb\u001b[39m\u001b[32mc\u001b[39m\u001b[31m5\u001b[39m\u001b[39md\u001b[39m\u001b[32m3\u001b[39m\u001b[32m6\u001b[39m\u001b[31m1\u001b[39m\u001b[39md\u001b[39m\u001b[32m6\u001b[39m\u001b[32md\u001b[39m\u001b[32m7\u001b[39m\u001b[39m9\u001b[39m\u001b[31m6\u001b[39m\u001b[31mf\u001b[39m\u001b[31m0\u001b[39m\u001b[39mc\u001b[39m\u001b[31m6\u001b[39m\u001b[31m9\u001b[39m\u001b[31m7\u001b[39m\u001b[31m2\u001b[39m\u001b[39m0\u001b[39m\u001b[32m5\u001b[39m\u001b[31m8\u001b[39m\u001b[39m3\u001b[39m\u001b[39m2\u001b[39m\u001b[31mc\u001b[39m\u001b[31m7\u001b[39m\u001b[31m6\u001b[39m\u001b[39m5\u001b[39m\u001b[32ma\u001b[39m\u001b[32m9\u001b[39m\u001b[32m2\u001b[39m\u001b[31mb\u001b[39m\u001b[31m5\u001b[39m\u001b[31m7\u001b[39m\u001b[31m3\u001b[39m\u001b[31mc\u001b[39m\u001b[31m8\u001b[39m\u001b[31m5\u001b[39m\u001b[39m'\u001b[39m\n"
+    },
+    {
+      "name": "ultracode: inactive descriptor preserves body state with rectangular eyes and no code aura",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\u001b[32m+ actual\u001b[39m \u001b[31m- expected\u001b[39m\n\n\u001b[32m+\u001b[39m undefined\n\u001b[31m- \u001b[39mfalse\n"
+    },
+    {
+      "name": "ultracode: both full eye regions are plain rectangles without residual spiral ink",
+      "status": "FAIL",
+      "error": "Eye is not rectangular: {\"area\":5750,\"width\":109,\"height\":109,\"rectangularFill\":0.483965996128272}"
+    },
+    {
+      "name": "ultracode: default active eyes retain original pixels and animate",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\u001b[32m+ actual\u001b[39m \u001b[31m- expected\u001b[39m\n\n\u001b[32m+\u001b[39m undefined\n\u001b[31m- \u001b[39mtrue\n"
+    },
+    {
+      "name": "ultracode: body behavior remains independent of inactive eyes",
+      "status": "PASS",
+      "evidence": {
+        "sameImage": false
+      }
+    },
+    {
+      "name": "Build: hero eyes follow ready, active-work, and done timing",
+      "status": "FAIL",
+      "error": "Frame 255 activity\n\u001b[32m+ actual\u001b[39m \u001b[31m- expected\u001b[39m\n\n\u001b[32m+\u001b[39m undefined\n\u001b[31m- \u001b[39mfalse\n"
+    },
+    {
+      "name": "Orchestrate: hero eyes follow ready, active-work, and done timing",
+      "status": "FAIL",
+      "error": "Frame 473 activity\n\u001b[32m+ actual\u001b[39m \u001b[31m- expected\u001b[39m\n\n\u001b[32m+\u001b[39m undefined\n\u001b[31m- \u001b[39mfalse\n"
+    },
+    {
+      "name": "Integrate: hero eyes follow ready, active-work, and done timing",
+      "status": "FAIL",
+      "error": "Frame 690 activity\n\u001b[32m+ actual\u001b[39m \u001b[31m- expected\u001b[39m\n\n\u001b[32m+\u001b[39m undefined\n\u001b[31m- \u001b[39mfalse\n"
+    },
+    {
+      "name": "Ultracode: hero eyes follow ready, active-work, and done timing",
+      "status": "FAIL",
+      "error": "Frame 909 activity\n\u001b[32m+ actual\u001b[39m \u001b[31m- expected\u001b[39m\n\n\u001b[32m+\u001b[39m undefined\n\u001b[31m- \u001b[39mfalse\n"
+    },
+    {
+      "name": "opening and closing signatures keep normal rectangular eyes",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\u001b[32m+ actual\u001b[39m \u001b[31m- expected\u001b[39m\n\n\u001b[32m+\u001b[39m undefined\n\u001b[31m- \u001b[39mfalse\n"
+    },
+    {
+      "name": "browser has no rendering errors",
+      "status": "PASS",
+      "evidence": []
+    },
+    {
+      "name": "source remained fixed during capture",
+      "status": "PASS",
+      "evidence": "65b01474358fe7aa08b9155dc0d3cc9f4ce562b5f42ee8e5598f0e01048eb286"
+    }
+  ],
+  "previews": {
+    "working": {
+      "inactive3": {
+        "descriptor": {
+          "state": "working",
+          "eyeMode": "friendly-spiral",
+          "aura": "green-code",
+          "sprite": "working",
+          "frame": null,
+          "chapter": null,
+          "preview": true,
+          "rainbowPhase": 0,
+          "auraPhase": 2.4000000000000004,
+          "eyeMotion": "counter-rotating-pixel-spirals",
+          "eyeSpeed": 1,
+          "eyePhase": 5.1,
+          "eyeBounds": [
+            {
+              "x": 219.74396700534078,
+              "y": 141.51152148475967,
+              "width": 142.97299489092532,
+              "height": 142.97299489092532
+            },
+            {
+              "x": 357.28303810373393,
+              "y": 141.51152148475967,
+              "width": 142.97299489092532,
+              "height": 142.97299489092532
+            }
+          ],
+          "heroBounds": {
+            "x": 169.03367818622053,
+            "y": 132.85714285714283,
+            "width": 381.93264362755895,
+            "height": 234.28571428571433
+          },
+          "auraBounds": {
+            "x": 16.260620735196937,
+            "y": 15.714285714285666,
+            "width": 687.4787585296061,
+            "height": 468.57142857142867
+          },
+          "opacity": 1,
+          "background": "transparent",
+          "scale": 1,
+          "auraEnabled": true
+        },
+        "eyes": [
+          {
+            "box": {
+              "x": 230,
+              "y": 156,
+              "width": 122,
+              "height": 115
+            },
+            "components": [
+              {
+                "area": 5519,
+                "width": 109,
+                "height": 108,
+                "rectangularFill": 0.468824328916072
+              }
+            ],
+            "maskSHA256": "c65b1a980e5541fbec912a5ae56f3d885a9e76c421ace05f584f37f5994f014d"
+          },
+          {
+            "box": {
+              "x": 368,
+              "y": 156,
+              "width": 122,
+              "height": 115
+            },
+            "components": [
+              {
+                "area": 5519,
+                "width": 109,
+                "height": 108,
+                "rectangularFill": 0.468824328916072
+              }
+            ],
+            "maskSHA256": "93379885fd8dd72fc0a2b64615f027cf11706c936ee2e8fb4e6950054a3406e4"
+          }
+        ],
+        "outsideGreen": 470,
+        "coloredBodyPixels": 40563,
+        "pngSHA256": "0cc7d8f38abe0d55f5e89fae9a31e00d20560b85f2f44bcd36d6d79c05325a92"
+      },
+      "inactive4": {
+        "descriptor": {
+          "state": "working",
+          "eyeMode": "friendly-spiral",
+          "aura": "green-code",
+          "sprite": "working",
+          "frame": null,
+          "chapter": null,
+          "preview": true,
+          "rainbowPhase": 0,
+          "auraPhase": 3.2,
+          "eyeMotion": "counter-rotating-pixel-spirals",
+          "eyeSpeed": 1,
+          "eyePhase": 0.5168146928204136,
+          "eyeBounds": [
+            {
+              "x": 219.74396700534078,
+              "y": 141.51152148475967,
+              "width": 142.97299489092532,
+              "height": 142.97299489092532
+            },
+            {
+              "x": 357.28303810373393,
+              "y": 141.51152148475967,
+              "width": 142.97299489092532,
+              "height": 142.97299489092532
+            }
+          ],
+          "heroBounds": {
+            "x": 169.03367818622053,
+            "y": 132.85714285714283,
+            "width": 381.93264362755895,
+            "height": 234.28571428571433
+          },
+          "auraBounds": {
+            "x": 16.260620735196937,
+            "y": 15.714285714285666,
+            "width": 687.4787585296061,
+            "height": 468.57142857142867
+          },
+          "opacity": 1,
+          "background": "transparent",
+          "scale": 1,
+          "auraEnabled": true
+        },
+        "eyes": [
+          {
+            "box": {
+              "x": 230,
+              "y": 156,
+              "width": 122,
+              "height": 115
+            },
+            "components": [
+              {
+                "area": 5469,
+                "width": 109,
+                "height": 103,
+                "rectangularFill": 0.4871292420058787
+              }
+            ],
+            "maskSHA256": "9effdfa2330b323279875f06b640eab608db0cc3d7dbd7768bebdba83932d550"
+          },
+          {
+            "box": {
+              "x": 368,
+              "y": 156,
+              "width": 122,
+              "height": 115
+            },
+            "components": [
+              {
+                "area": 5475,
+                "width": 109,
+                "height": 103,
+                "rectangularFill": 0.48766366794335086
+              }
+            ],
+            "maskSHA256": "f295f15e862da48e2598d8ffe6767b07e81365f8daaa94008462a1805d8bb186"
+          }
+        ],
+        "outsideGreen": 459,
+        "coloredBodyPixels": 40657,
+        "pngSHA256": "bc0373221d347f8f45191e3fdc971b872cfb5d1d96f0c69720832c765b573c85"
+      },
+      "default3": {
+        "descriptor": {
+          "state": "working",
+          "eyeMode": "friendly-spiral",
+          "aura": "green-code",
+          "sprite": "working",
+          "frame": null,
+          "chapter": null,
+          "preview": true,
+          "rainbowPhase": 0,
+          "auraPhase": 2.4000000000000004,
+          "eyeMotion": "counter-rotating-pixel-spirals",
+          "eyeSpeed": 1,
+          "eyePhase": 5.1,
+          "eyeBounds": [
+            {
+              "x": 219.74396700534078,
+              "y": 141.51152148475967,
+              "width": 142.97299489092532,
+              "height": 142.97299489092532
+            },
+            {
+              "x": 357.28303810373393,
+              "y": 141.51152148475967,
+              "width": 142.97299489092532,
+              "height": 142.97299489092532
+            }
+          ],
+          "heroBounds": {
+            "x": 169.03367818622053,
+            "y": 132.85714285714283,
+            "width": 381.93264362755895,
+            "height": 234.28571428571433
+          },
+          "auraBounds": {
+            "x": 16.260620735196937,
+            "y": 15.714285714285666,
+            "width": 687.4787585296061,
+            "height": 468.57142857142867
+          },
+          "opacity": 1,
+          "background": "transparent",
+          "scale": 1,
+          "auraEnabled": true
+        },
+        "eyes": [
+          {
+            "box": {
+              "x": 230,
+              "y": 156,
+              "width": 122,
+              "height": 115
+            },
+            "components": [
+              {
+                "area": 5519,
+                "width": 109,
+                "height": 108,
+                "rectangularFill": 0.468824328916072
+              }
+            ],
+            "maskSHA256": "c65b1a980e5541fbec912a5ae56f3d885a9e76c421ace05f584f37f5994f014d"
+          },
+          {
+            "box": {
+              "x": 368,
+              "y": 156,
+              "width": 122,
+              "height": 115
+            },
+            "components": [
+              {
+                "area": 5519,
+                "width": 109,
+                "height": 108,
+                "rectangularFill": 0.468824328916072
+              }
+            ],
+            "maskSHA256": "93379885fd8dd72fc0a2b64615f027cf11706c936ee2e8fb4e6950054a3406e4"
+          }
+        ],
+        "outsideGreen": 470,
+        "coloredBodyPixels": 40563,
+        "pngSHA256": "0cc7d8f38abe0d55f5e89fae9a31e00d20560b85f2f44bcd36d6d79c05325a92"
+      },
+      "default4": {
+        "descriptor": {
+          "state": "working",
+          "eyeMode": "friendly-spiral",
+          "aura": "green-code",
+          "sprite": "working",
+          "frame": null,
+          "chapter": null,
+          "preview": true,
+          "rainbowPhase": 0,
+          "auraPhase": 3.2,
+          "eyeMotion": "counter-rotating-pixel-spirals",
+          "eyeSpeed": 1,
+          "eyePhase": 0.5168146928204136,
+          "eyeBounds": [
+            {
+              "x": 219.74396700534078,
+              "y": 141.51152148475967,
+              "width": 142.97299489092532,
+              "height": 142.97299489092532
+            },
+            {
+              "x": 357.28303810373393,
+              "y": 141.51152148475967,
+              "width": 142.97299489092532,
+              "height": 142.97299489092532
+            }
+          ],
+          "heroBounds": {
+            "x": 169.03367818622053,
+            "y": 132.85714285714283,
+            "width": 381.93264362755895,
+            "height": 234.28571428571433
+          },
+          "auraBounds": {
+            "x": 16.260620735196937,
+            "y": 15.714285714285666,
+            "width": 687.4787585296061,
+            "height": 468.57142857142867
+          },
+          "opacity": 1,
+          "background": "transparent",
+          "scale": 1,
+          "auraEnabled": true
+        },
+        "eyes": [
+          {
+            "box": {
+              "x": 230,
+              "y": 156,
+              "width": 122,
+              "height": 115
+            },
+            "components": [
+              {
+                "area": 5469,
+                "width": 109,
+                "height": 103,
+                "rectangularFill": 0.4871292420058787
+              }
+            ],
+            "maskSHA256": "9effdfa2330b323279875f06b640eab608db0cc3d7dbd7768bebdba83932d550"
+          },
+          {
+            "box": {
+              "x": 368,
+              "y": 156,
+              "width": 122,
+              "height": 115
+            },
+            "components": [
+              {
+                "area": 5475,
+                "width": 109,
+                "height": 103,
+                "rectangularFill": 0.48766366794335086
+              }
+            ],
+            "maskSHA256": "f295f15e862da48e2598d8ffe6767b07e81365f8daaa94008462a1805d8bb186"
+          }
+        ],
+        "outsideGreen": 459,
+        "coloredBodyPixels": 40657,
+        "pngSHA256": "bc0373221d347f8f45191e3fdc971b872cfb5d1d96f0c69720832c765b573c85"
+      },
+      "active3": {
+        "descriptor": {
+          "state": "working",
+          "eyeMode": "friendly-spiral",
+          "aura": "green-code",
+          "sprite": "working",
+          "frame": null,
+          "chapter": null,
+          "preview": true,
+          "rainbowPhase": 0,
+          "auraPhase": 2.4000000000000004,
+          "eyeMotion": "counter-rotating-pixel-spirals",
+          "eyeSpeed": 1,
+          "eyePhase": 5.1,
+          "eyeBounds": [
+            {
+              "x": 219.74396700534078,
+              "y": 141.51152148475967,
+              "width": 142.97299489092532,
+              "height": 142.97299489092532
+            },
+            {
+              "x": 357.28303810373393,
+              "y": 141.51152148475967,
+              "width": 142.97299489092532,
+              "height": 142.97299489092532
+            }
+          ],
+          "heroBounds": {
+            "x": 169.03367818622053,
+            "y": 132.85714285714283,
+            "width": 381.93264362755895,
+            "height": 234.28571428571433
+          },
+          "auraBounds": {
+            "x": 16.260620735196937,
+            "y": 15.714285714285666,
+            "width": 687.4787585296061,
+            "height": 468.57142857142867
+          },
+          "opacity": 1,
+          "background": "transparent",
+          "scale": 1,
+          "auraEnabled": true
+        },
+        "eyes": [
+          {
+            "box": {
+              "x": 230,
+              "y": 156,
+              "width": 122,
+              "height": 115
+            },
+            "components": [
+              {
+                "area": 5519,
+                "width": 109,
+                "height": 108,
+                "rectangularFill": 0.468824328916072
+              }
+            ],
+            "maskSHA256": "c65b1a980e5541fbec912a5ae56f3d885a9e76c421ace05f584f37f5994f014d"
+          },
+          {
+            "box": {
+              "x": 368,
+              "y": 156,
+              "width": 122,
+              "height": 115
+            },
+            "components": [
+              {
+                "area": 5519,
+                "width": 109,
+                "height": 108,
+                "rectangularFill": 0.468824328916072
+              }
+            ],
+            "maskSHA256": "93379885fd8dd72fc0a2b64615f027cf11706c936ee2e8fb4e6950054a3406e4"
+          }
+        ],
+        "outsideGreen": 470,
+        "coloredBodyPixels": 40563,
+        "pngSHA256": "0cc7d8f38abe0d55f5e89fae9a31e00d20560b85f2f44bcd36d6d79c05325a92"
+      }
+    },
+    "ultracode": {
+      "inactive3": {
+        "descriptor": {
+          "state": "ultracode",
+          "eyeMode": "friendly-spiral",
+          "aura": "flowing-rainbow",
+          "sprite": "spectrum",
+          "frame": null,
+          "chapter": null,
+          "preview": true,
+          "rainbowPhase": 0.48,
+          "auraPhase": 0,
+          "eyeMotion": "counter-rotating-pixel-spirals",
+          "eyeSpeed": 1,
+          "eyePhase": 5.1,
+          "eyeBounds": [
+            {
+              "x": 219.6801051709027,
+              "y": 141.66082383873794,
+              "width": 143.7335670464505,
+              "height": 143.7335670464505
+            },
+            {
+              "x": 356.2269938650307,
+              "y": 141.66082383873794,
+              "width": 143.7335670464505,
+              "height": 143.7335670464505
+            }
+          ],
+          "heroBounds": {
+            "x": 169.73269062226115,
+            "y": 132.85714285714283,
+            "width": 380.5346187554777,
+            "height": 234.28571428571433
+          },
+          "auraBounds": null,
+          "opacity": 1,
+          "background": "transparent",
+          "scale": 1,
+          "auraEnabled": true
+        },
+        "eyes": [
+          {
+            "box": {
+              "x": 231,
+              "y": 156,
+              "width": 122,
+              "height": 115
+            },
+            "components": [
+              {
+                "area": 5750,
+                "width": 109,
+                "height": 109,
+                "rectangularFill": 0.483965996128272
+              }
+            ],
+            "maskSHA256": "40723004bb2963da1eda9e561f9367e01465e72660ba5aa0d517d775f04623de"
+          },
+          {
+            "box": {
+              "x": 368,
+              "y": 156,
+              "width": 122,
+              "height": 115
+            },
+            "components": [
+              {
+                "area": 5687,
+                "width": 110,
+                "height": 109,
+                "rectangularFill": 0.4743119266055046
+              }
+            ],
+            "maskSHA256": "bd959207bfb381a9f5b85f98925afc58233f432acb93a6dd7e444e658320beff"
+          }
+        ],
+        "outsideGreen": 0,
+        "coloredBodyPixels": 39039,
+        "pngSHA256": "342c98d109f1c2479b226fb66d020e8fd406925d3b75c5d80142b16d73283b23"
+      },
+      "inactive4": {
+        "descriptor": {
+          "state": "ultracode",
+          "eyeMode": "friendly-spiral",
+          "aura": "flowing-rainbow",
+          "sprite": "spectrum",
+          "frame": null,
+          "chapter": null,
+          "preview": true,
+          "rainbowPhase": 0.64,
+          "auraPhase": 0,
+          "eyeMotion": "counter-rotating-pixel-spirals",
+          "eyeSpeed": 1,
+          "eyePhase": 0.5168146928204136,
+          "eyeBounds": [
+            {
+              "x": 219.6801051709027,
+              "y": 141.66082383873794,
+              "width": 143.7335670464505,
+              "height": 143.7335670464505
+            },
+            {
+              "x": 356.2269938650307,
+              "y": 141.66082383873794,
+              "width": 143.7335670464505,
+              "height": 143.7335670464505
+            }
+          ],
+          "heroBounds": {
+            "x": 169.73269062226115,
+            "y": 132.85714285714283,
+            "width": 380.5346187554777,
+            "height": 234.28571428571433
+          },
+          "auraBounds": null,
+          "opacity": 1,
+          "background": "transparent",
+          "scale": 1,
+          "auraEnabled": true
+        },
+        "eyes": [
+          {
+            "box": {
+              "x": 231,
+              "y": 156,
+              "width": 122,
+              "height": 115
+            },
+            "components": [
+              {
+                "area": 5648,
+                "width": 109,
+                "height": 103,
+                "rectangularFill": 0.503072949140465
+              }
+            ],
+            "maskSHA256": "d372d7530f271750fcab1d1a40d6cba07ae2866c781a153513b1673cae4c47ee"
+          },
+          {
+            "box": {
+              "x": 368,
+              "y": 156,
+              "width": 122,
+              "height": 115
+            },
+            "components": [
+              {
+                "area": 5668,
+                "width": 110,
+                "height": 103,
+                "rectangularFill": 0.5002647837599294
+              }
+            ],
+            "maskSHA256": "f1b3ad95256b4959e10904fea35bb083cd9c0e625313f906d7e6a9d58cc2fa23"
+          }
+        ],
+        "outsideGreen": 0,
+        "coloredBodyPixels": 39160,
+        "pngSHA256": "4067f5ca847403b1ba07fea0af68e8520a813c48786be24fa357fbef816b92df"
+      },
+      "default3": {
+        "descriptor": {
+          "state": "ultracode",
+          "eyeMode": "friendly-spiral",
+          "aura": "flowing-rainbow",
+          "sprite": "spectrum",
+          "frame": null,
+          "chapter": null,
+          "preview": true,
+          "rainbowPhase": 0.48,
+          "auraPhase": 0,
+          "eyeMotion": "counter-rotating-pixel-spirals",
+          "eyeSpeed": 1,
+          "eyePhase": 5.1,
+          "eyeBounds": [
+            {
+              "x": 219.6801051709027,
+              "y": 141.66082383873794,
+              "width": 143.7335670464505,
+              "height": 143.7335670464505
+            },
+            {
+              "x": 356.2269938650307,
+              "y": 141.66082383873794,
+              "width": 143.7335670464505,
+              "height": 143.7335670464505
+            }
+          ],
+          "heroBounds": {
+            "x": 169.73269062226115,
+            "y": 132.85714285714283,
+            "width": 380.5346187554777,
+            "height": 234.28571428571433
+          },
+          "auraBounds": null,
+          "opacity": 1,
+          "background": "transparent",
+          "scale": 1,
+          "auraEnabled": true
+        },
+        "eyes": [
+          {
+            "box": {
+              "x": 231,
+              "y": 156,
+              "width": 122,
+              "height": 115
+            },
+            "components": [
+              {
+                "area": 5750,
+                "width": 109,
+                "height": 109,
+                "rectangularFill": 0.483965996128272
+              }
+            ],
+            "maskSHA256": "40723004bb2963da1eda9e561f9367e01465e72660ba5aa0d517d775f04623de"
+          },
+          {
+            "box": {
+              "x": 368,
+              "y": 156,
+              "width": 122,
+              "height": 115
+            },
+            "components": [
+              {
+                "area": 5687,
+                "width": 110,
+                "height": 109,
+                "rectangularFill": 0.4743119266055046
+              }
+            ],
+            "maskSHA256": "bd959207bfb381a9f5b85f98925afc58233f432acb93a6dd7e444e658320beff"
+          }
+        ],
+        "outsideGreen": 0,
+        "coloredBodyPixels": 39039,
+        "pngSHA256": "342c98d109f1c2479b226fb66d020e8fd406925d3b75c5d80142b16d73283b23"
+      },
+      "default4": {
+        "descriptor": {
+          "state": "ultracode",
+          "eyeMode": "friendly-spiral",
+          "aura": "flowing-rainbow",
+          "sprite": "spectrum",
+          "frame": null,
+          "chapter": null,
+          "preview": true,
+          "rainbowPhase": 0.64,
+          "auraPhase": 0,
+          "eyeMotion": "counter-rotating-pixel-spirals",
+          "eyeSpeed": 1,
+          "eyePhase": 0.5168146928204136,
+          "eyeBounds": [
+            {
+              "x": 219.6801051709027,
+              "y": 141.66082383873794,
+              "width": 143.7335670464505,
+              "height": 143.7335670464505
+            },
+            {
+              "x": 356.2269938650307,
+              "y": 141.66082383873794,
+              "width": 143.7335670464505,
+              "height": 143.7335670464505
+            }
+          ],
+          "heroBounds": {
+            "x": 169.73269062226115,
+            "y": 132.85714285714283,
+            "width": 380.5346187554777,
+            "height": 234.28571428571433
+          },
+          "auraBounds": null,
+          "opacity": 1,
+          "background": "transparent",
+          "scale": 1,
+          "auraEnabled": true
+        },
+        "eyes": [
+          {
+            "box": {
+              "x": 231,
+              "y": 156,
+              "width": 122,
+              "height": 115
+            },
+            "components": [
+              {
+                "area": 5648,
+                "width": 109,
+                "height": 103,
+                "rectangularFill": 0.503072949140465
+              }
+            ],
+            "maskSHA256": "d372d7530f271750fcab1d1a40d6cba07ae2866c781a153513b1673cae4c47ee"
+          },
+          {
+            "box": {
+              "x": 368,
+              "y": 156,
+              "width": 122,
+              "height": 115
+            },
+            "components": [
+              {
+                "area": 5668,
+                "width": 110,
+                "height": 103,
+                "rectangularFill": 0.5002647837599294
+              }
+            ],
+            "maskSHA256": "f1b3ad95256b4959e10904fea35bb083cd9c0e625313f906d7e6a9d58cc2fa23"
+          }
+        ],
+        "outsideGreen": 0,
+        "coloredBodyPixels": 39160,
+        "pngSHA256": "4067f5ca847403b1ba07fea0af68e8520a813c48786be24fa357fbef816b92df"
+      },
+      "active3": {
+        "descriptor": {
+          "state": "ultracode",
+          "eyeMode": "friendly-spiral",
+          "aura": "flowing-rainbow",
+          "sprite": "spectrum",
+          "frame": null,
+          "chapter": null,
+          "preview": true,
+          "rainbowPhase": 0.48,
+          "auraPhase": 0,
+          "eyeMotion": "counter-rotating-pixel-spirals",
+          "eyeSpeed": 1,
+          "eyePhase": 5.1,
+          "eyeBounds": [
+            {
+              "x": 219.6801051709027,
+              "y": 141.66082383873794,
+              "width": 143.7335670464505,
+              "height": 143.7335670464505
+            },
+            {
+              "x": 356.2269938650307,
+              "y": 141.66082383873794,
+              "width": 143.7335670464505,
+              "height": 143.7335670464505
+            }
+          ],
+          "heroBounds": {
+            "x": 169.73269062226115,
+            "y": 132.85714285714283,
+            "width": 380.5346187554777,
+            "height": 234.28571428571433
+          },
+          "auraBounds": null,
+          "opacity": 1,
+          "background": "transparent",
+          "scale": 1,
+          "auraEnabled": true
+        },
+        "eyes": [
+          {
+            "box": {
+              "x": 231,
+              "y": 156,
+              "width": 122,
+              "height": 115
+            },
+            "components": [
+              {
+                "area": 5750,
+                "width": 109,
+                "height": 109,
+                "rectangularFill": 0.483965996128272
+              }
+            ],
+            "maskSHA256": "40723004bb2963da1eda9e561f9367e01465e72660ba5aa0d517d775f04623de"
+          },
+          {
+            "box": {
+              "x": 368,
+              "y": 156,
+              "width": 122,
+              "height": 115
+            },
+            "components": [
+              {
+                "area": 5687,
+                "width": 110,
+                "height": 109,
+                "rectangularFill": 0.4743119266055046
+              }
+            ],
+            "maskSHA256": "bd959207bfb381a9f5b85f98925afc58233f432acb93a6dd7e444e658320beff"
+          }
+        ],
+        "outsideGreen": 0,
+        "coloredBodyPixels": 39039,
+        "pngSHA256": "342c98d109f1c2479b226fb66d020e8fd406925d3b75c5d80142b16d73283b23"
+      }
+    }
+  },
+  "scenes": [
+    {
+      "name": "Build",
+      "observations": [
+        {
+          "frame": 255,
+          "local": 1,
+          "expectedWorkingActive": false,
+          "descriptor": {
+            "state": "working",
+            "eyeMode": "friendly-spiral",
+            "aura": "green-code",
+            "sprite": "working",
+            "frame": 255,
+            "chapter": 1,
+            "rainbowPhase": 0,
+            "auraPhase": 0.8,
+            "heroBounds": {
+              "x": 685,
+              "y": 1339.4866091395327,
+              "width": 250,
+              "height": 153.3553875236295
+            },
+            "auraBounds": {
+              "x": 585,
+              "y": 1262.8089153777178,
+              "width": 450,
+              "height": 306.710775047259
+            },
+            "opacity": 0,
+            "eyeMotion": "counter-rotating-pixel-spirals",
+            "eyeSpeed": 1,
+            "eyePhase": 1.7,
+            "eyeBounds": [
+              {
+                "x": 718.1932146055119,
+                "y": 1345.1514683575208,
+                "width": 93.58521540145259,
+                "height": 93.58521540145259
+              },
+              {
+                "x": 808.2215699930355,
+                "y": 1345.1514683575208,
+                "width": 93.58521540145259,
+                "height": 93.58521540145259
+              }
+            ]
+          }
+        },
+        {
+          "frame": 285,
+          "local": 2,
+          "expectedWorkingActive": true,
+          "descriptor": {
+            "state": "working",
+            "eyeMode": "friendly-spiral",
+            "aura": "green-code",
+            "sprite": "working",
+            "frame": 285,
+            "chapter": 1,
+            "rainbowPhase": 0,
+            "auraPhase": 1.6,
+            "heroBounds": {
+              "x": 685,
+              "y": 1341.1462217946278,
+              "width": 250,
+              "height": 153.3553875236295
+            },
+            "auraBounds": {
+              "x": 585,
+              "y": 1264.4685280328129,
+              "width": 450,
+              "height": 306.710775047259
+            },
+            "opacity": 0,
+            "eyeMotion": "counter-rotating-pixel-spirals",
+            "eyeSpeed": 1,
+            "eyePhase": 3.4,
+            "eyeBounds": [
+              {
+                "x": 718.1932146055119,
+                "y": 1346.811081012616,
+                "width": 93.58521540145259,
+                "height": 93.58521540145259
+              },
+              {
+                "x": 808.2215699930355,
+                "y": 1346.811081012616,
+                "width": 93.58521540145259,
+                "height": 93.58521540145259
+              }
+            ]
+          }
+        },
+        {
+          "frame": 375,
+          "local": 5,
+          "expectedWorkingActive": true,
+          "descriptor": {
+            "state": "working",
+            "eyeMode": "friendly-spiral",
+            "aura": "green-code",
+            "sprite": "working",
+            "frame": 375,
+            "chapter": 1,
+            "rainbowPhase": 0,
+            "auraPhase": 4,
+            "heroBounds": {
+              "x": 570.1851851851852,
+              "y": 1342.7928992377942,
+              "width": 250,
+              "height": 153.3553875236295
+            },
+            "auraBounds": {
+              "x": 470.1851851851852,
+              "y": 1266.1152054759793,
+              "width": 450,
+              "height": 306.710775047259
+            },
+            "opacity": 1,
+            "eyeMotion": "counter-rotating-pixel-spirals",
+            "eyeSpeed": 1,
+            "eyePhase": 2.2168146928204138,
+            "eyeBounds": [
+              {
+                "x": 603.3783997906971,
+                "y": 1348.4577584557824,
+                "width": 93.58521540145259,
+                "height": 93.58521540145259
+              },
+              {
+                "x": 693.4067551782207,
+                "y": 1348.4577584557824,
+                "width": 93.58521540145259,
+                "height": 93.58521540145259
+              }
+            ]
+          }
+        },
+        {
+          "frame": 390,
+          "local": 5.5,
+          "expectedWorkingActive": false,
+          "descriptor": {
+            "state": "working",
+            "eyeMode": "friendly-spiral",
+            "aura": "green-code",
+            "sprite": "working",
+            "frame": 390,
+            "chapter": 1,
+            "rainbowPhase": 0,
+            "auraPhase": 4.4,
+            "heroBounds": {
+              "x": 541.4814814814815,
+              "y": 1346.1192663648058,
+              "width": 250,
+              "height": 153.3553875236295
+            },
+            "auraBounds": {
+              "x": 441.4814814814815,
+              "y": 1269.4415726029908,
+              "width": 450,
+              "height": 306.710775047259
+            },
+            "opacity": 1,
+            "eyeMotion": "counter-rotating-pixel-spirals",
+            "eyeSpeed": 1,
+            "eyePhase": 3.0668146928204134,
+            "eyeBounds": [
+              {
+                "x": 574.6746960869934,
+                "y": 1351.7841255827939,
+                "width": 93.58521540145259,
+                "height": 93.58521540145259
+              },
+              {
+                "x": 664.703051474517,
+                "y": 1351.7841255827939,
+                "width": 93.58521540145259,
+                "height": 93.58521540145259
+              }
+            ]
+          }
+        },
+        {
+          "frame": 420,
+          "local": 6.5,
+          "expectedWorkingActive": false,
+          "descriptor": {
+            "state": "working",
+            "eyeMode": "friendly-spiral",
+            "aura": "green-code",
+            "sprite": "working",
+            "frame": 420,
+            "chapter": 1,
+            "rainbowPhase": 0,
+            "auraPhase": 5.2,
+            "heroBounds": {
+              "x": 530,
+              "y": 1346.8577879323686,
+              "width": 250,
+              "height": 153.3553875236295
+            },
+            "auraBounds": {
+              "x": 430,
+              "y": 1270.1800941705537,
+              "width": 450,
+              "height": 306.710775047259
+            },
+            "opacity": 1,
+            "eyeMotion": "counter-rotating-pixel-spirals",
+            "eyeSpeed": 1,
+            "eyePhase": 4.766814692820413,
+            "eyeBounds": [
+              {
+                "x": 563.1932146055119,
+                "y": 1352.5226471503568,
+                "width": 93.58521540145259,
+                "height": 93.58521540145259
+              },
+              {
+                "x": 653.2215699930355,
+                "y": 1352.5226471503568,
+                "width": 93.58521540145259,
+                "height": 93.58521540145259
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Orchestrate",
+      "observations": [
+        {
+          "frame": 473,
+          "local": 0.75,
+          "expectedWorkingActive": false,
+          "descriptor": {
+            "state": "working",
+            "eyeMode": "friendly-spiral",
+            "aura": "green-code",
+            "sprite": "working",
+            "frame": 473,
+            "chapter": 2,
+            "rainbowPhase": 0,
+            "auraPhase": 0.6133333333333341,
+            "heroBounds": {
+              "x": 420,
+              "y": 926.6888375968776,
+              "width": 240,
+              "height": 147.2211720226843
+            },
+            "auraBounds": {
+              "x": 324,
+              "y": 853.0782515855354,
+              "width": 432,
+              "height": 294.4423440453686
+            },
+            "opacity": 1,
+            "eyeMotion": "counter-rotating-pixel-spirals",
+            "eyeSpeed": 1,
+            "eyePhase": 1.3033333333333348,
+            "eyeBounds": [
+              {
+                "x": 451.8654860212914,
+                "y": 932.1271024461463,
+                "width": 89.84180678539448,
+                "height": 89.84180678539448
+              },
+              {
+                "x": 538.2927071933141,
+                "y": 932.1271024461463,
+                "width": 89.84180678539448,
+                "height": 89.84180678539448
+              }
+            ]
+          }
+        },
+        {
+          "frame": 495,
+          "local": 1.5,
+          "expectedWorkingActive": true,
+          "descriptor": {
+            "state": "working",
+            "eyeMode": "friendly-spiral",
+            "aura": "green-code",
+            "sprite": "working",
+            "frame": 495,
+            "chapter": 2,
+            "rainbowPhase": 0,
+            "auraPhase": 1.2000000000000002,
+            "heroBounds": {
+              "x": 420,
+              "y": 925.2717519958621,
+              "width": 240,
+              "height": 147.2211720226843
+            },
+            "auraBounds": {
+              "x": 324,
+              "y": 851.66116598452,
+              "width": 432,
+              "height": 294.4423440453686
+            },
+            "opacity": 1,
+            "eyeMotion": "counter-rotating-pixel-spirals",
+            "eyeSpeed": 1,
+            "eyePhase": 2.55,
+            "eyeBounds": [
+              {
+                "x": 451.8654860212914,
+                "y": 930.7100168451309,
+                "width": 89.84180678539448,
+                "height": 89.84180678539448
+              },
+              {
+                "x": 538.2927071933141,
+                "y": 930.7100168451309,
+                "width": 89.84180678539448,
+                "height": 89.84180678539448
+              }
+            ]
+          }
+        },
+        {
+          "frame": 600,
+          "local": 5,
+          "expectedWorkingActive": true,
+          "descriptor": {
+            "state": "working",
+            "eyeMode": "friendly-spiral",
+            "aura": "green-code",
+            "sprite": "working",
+            "frame": 600,
+            "chapter": 2,
+            "rainbowPhase": 0,
+            "auraPhase": 4,
+            "heroBounds": {
+              "x": 420,
+              "y": 930.0411949915683,
+              "width": 240,
+              "height": 147.2211720226843
+            },
+            "auraBounds": {
+              "x": 324,
+              "y": 856.4306089802262,
+              "width": 432,
+              "height": 294.4423440453686
+            },
+            "opacity": 1,
+            "eyeMotion": "counter-rotating-pixel-spirals",
+            "eyeSpeed": 1,
+            "eyePhase": 2.2168146928204138,
+            "eyeBounds": [
+              {
+                "x": 451.8654860212914,
+                "y": 935.4794598408371,
+                "width": 89.84180678539448,
+                "height": 89.84180678539448
+              },
+              {
+                "x": 538.2927071933141,
+                "y": 935.4794598408371,
+                "width": 89.84180678539448,
+                "height": 89.84180678539448
+              }
+            ]
+          }
+        },
+        {
+          "frame": 615,
+          "local": 5.5,
+          "expectedWorkingActive": false,
+          "descriptor": {
+            "state": "working",
+            "eyeMode": "friendly-spiral",
+            "aura": "green-code",
+            "sprite": "working",
+            "frame": 615,
+            "chapter": 2,
+            "rainbowPhase": 0,
+            "auraPhase": 4.4,
+            "heroBounds": {
+              "x": 420,
+              "y": 926.3540087514962,
+              "width": 240,
+              "height": 147.2211720226843
+            },
+            "auraBounds": {
+              "x": 324,
+              "y": 852.7434227401541,
+              "width": 432,
+              "height": 294.4423440453686
+            },
+            "opacity": 1,
+            "eyeMotion": "counter-rotating-pixel-spirals",
+            "eyeSpeed": 1,
+            "eyePhase": 3.0668146928204134,
+            "eyeBounds": [
+              {
+                "x": 451.8654860212914,
+                "y": 931.7922736007649,
+                "width": 89.84180678539448,
+                "height": 89.84180678539448
+              },
+              {
+                "x": 538.2927071933141,
+                "y": 931.7922736007649,
+                "width": 89.84180678539448,
+                "height": 89.84180678539448
+              }
+            ]
+          }
+        },
+        {
+          "frame": 645,
+          "local": 6.5,
+          "expectedWorkingActive": false,
+          "descriptor": {
+            "state": "working",
+            "eyeMode": "friendly-spiral",
+            "aura": "green-code",
+            "sprite": "working",
+            "frame": 645,
+            "chapter": 2,
+            "rainbowPhase": 0,
+            "auraPhase": 5.2,
+            "heroBounds": {
+              "x": 420,
+              "y": 929.4396477905764,
+              "width": 240,
+              "height": 147.2211720226843
+            },
+            "auraBounds": {
+              "x": 324,
+              "y": 855.8290617792342,
+              "width": 432,
+              "height": 294.4423440453686
+            },
+            "opacity": 1,
+            "eyeMotion": "counter-rotating-pixel-spirals",
+            "eyeSpeed": 1,
+            "eyePhase": 4.766814692820413,
+            "eyeBounds": [
+              {
+                "x": 451.8654860212914,
+                "y": 934.877912639845,
+                "width": 89.84180678539448,
+                "height": 89.84180678539448
+              },
+              {
+                "x": 538.2927071933141,
+                "y": 934.877912639845,
+                "width": 89.84180678539448,
+                "height": 89.84180678539448
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Integrate",
+      "observations": [
+        {
+          "frame": 690,
+          "local": 0.5,
+          "expectedWorkingActive": false,
+          "descriptor": {
+            "state": "working",
+            "eyeMode": "friendly-spiral",
+            "aura": "green-code",
+            "sprite": "working",
+            "frame": 690,
+            "chapter": 3,
+            "rainbowPhase": 0,
+            "auraPhase": 0.4,
+            "heroBounds": {
+              "x": 445,
+              "y": 936.7249527410208,
+              "width": 190,
+              "height": 116.55009451795841
+            },
+            "auraBounds": {
+              "x": 369,
+              "y": 878.4499054820416,
+              "width": 342,
+              "height": 233.10018903591683
+            },
+            "opacity": 0.95,
+            "eyeMotion": "counter-rotating-pixel-spirals",
+            "eyeSpeed": 1,
+            "eyePhase": 0.85,
+            "eyeBounds": [
+              {
+                "x": 470.22684310018906,
+                "y": 941.0302457466919,
+                "width": 71.12476370510396,
+                "height": 71.12476370510396
+              },
+              {
+                "x": 538.648393194707,
+                "y": 941.0302457466919,
+                "width": 71.12476370510396,
+                "height": 71.12476370510396
+              }
+            ]
+          }
+        },
+        {
+          "frame": 705,
+          "local": 1,
+          "expectedWorkingActive": true,
+          "descriptor": {
+            "state": "working",
+            "eyeMode": "friendly-spiral",
+            "aura": "green-code",
+            "sprite": "working",
+            "frame": 705,
+            "chapter": 3,
+            "rainbowPhase": 0,
+            "auraPhase": 0.8,
+            "heroBounds": {
+              "x": 445,
+              "y": 936.7249527410208,
+              "width": 190,
+              "height": 116.55009451795841
+            },
+            "auraBounds": {
+              "x": 369,
+              "y": 878.4499054820416,
+              "width": 342,
+              "height": 233.10018903591683
+            },
+            "opacity": 0.95,
+            "eyeMotion": "counter-rotating-pixel-spirals",
+            "eyeSpeed": 1,
+            "eyePhase": 1.7,
+            "eyeBounds": [
+              {
+                "x": 470.22684310018906,
+                "y": 941.0302457466919,
+                "width": 71.12476370510396,
+                "height": 71.12476370510396
+              },
+              {
+                "x": 538.648393194707,
+                "y": 941.0302457466919,
+                "width": 71.12476370510396,
+                "height": 71.12476370510396
+              }
+            ]
+          }
+        },
+        {
+          "frame": 825,
+          "local": 5,
+          "expectedWorkingActive": true,
+          "descriptor": {
+            "state": "working",
+            "eyeMode": "friendly-spiral",
+            "aura": "green-code",
+            "sprite": "working",
+            "frame": 825,
+            "chapter": 3,
+            "rainbowPhase": 0,
+            "auraPhase": 4,
+            "heroBounds": {
+              "x": 445,
+              "y": 936.7249527410208,
+              "width": 190,
+              "height": 116.55009451795841
+            },
+            "auraBounds": {
+              "x": 369,
+              "y": 878.4499054820416,
+              "width": 342,
+              "height": 233.10018903591683
+            },
+            "opacity": 0.95,
+            "eyeMotion": "counter-rotating-pixel-spirals",
+            "eyeSpeed": 1,
+            "eyePhase": 2.2168146928204138,
+            "eyeBounds": [
+              {
+                "x": 470.22684310018906,
+                "y": 941.0302457466919,
+                "width": 71.12476370510396,
+                "height": 71.12476370510396
+              },
+              {
+                "x": 538.648393194707,
+                "y": 941.0302457466919,
+                "width": 71.12476370510396,
+                "height": 71.12476370510396
+              }
+            ]
+          }
+        },
+        {
+          "frame": 840,
+          "local": 5.5,
+          "expectedWorkingActive": false,
+          "descriptor": {
+            "state": "working",
+            "eyeMode": "friendly-spiral",
+            "aura": "green-code",
+            "sprite": "working",
+            "frame": 840,
+            "chapter": 3,
+            "rainbowPhase": 0,
+            "auraPhase": 4.4,
+            "heroBounds": {
+              "x": 445,
+              "y": 936.7249527410208,
+              "width": 190,
+              "height": 116.55009451795841
+            },
+            "auraBounds": {
+              "x": 369,
+              "y": 878.4499054820416,
+              "width": 342,
+              "height": 233.10018903591683
+            },
+            "opacity": 0.95,
+            "eyeMotion": "counter-rotating-pixel-spirals",
+            "eyeSpeed": 1,
+            "eyePhase": 3.0668146928204134,
+            "eyeBounds": [
+              {
+                "x": 470.22684310018906,
+                "y": 941.0302457466919,
+                "width": 71.12476370510396,
+                "height": 71.12476370510396
+              },
+              {
+                "x": 538.648393194707,
+                "y": 941.0302457466919,
+                "width": 71.12476370510396,
+                "height": 71.12476370510396
+              }
+            ]
+          }
+        },
+        {
+          "frame": 870,
+          "local": 6.5,
+          "expectedWorkingActive": false,
+          "descriptor": {
+            "state": "working",
+            "eyeMode": "friendly-spiral",
+            "aura": "green-code",
+            "sprite": "working",
+            "frame": 870,
+            "chapter": 3,
+            "rainbowPhase": 0,
+            "auraPhase": 5.2,
+            "heroBounds": {
+              "x": 445,
+              "y": 936.7249527410208,
+              "width": 190,
+              "height": 116.55009451795841
+            },
+            "auraBounds": {
+              "x": 369,
+              "y": 878.4499054820416,
+              "width": 342,
+              "height": 233.10018903591683
+            },
+            "opacity": 0.95,
+            "eyeMotion": "counter-rotating-pixel-spirals",
+            "eyeSpeed": 1,
+            "eyePhase": 4.766814692820413,
+            "eyeBounds": [
+              {
+                "x": 470.22684310018906,
+                "y": 941.0302457466919,
+                "width": 71.12476370510396,
+                "height": 71.12476370510396
+              },
+              {
+                "x": 538.648393194707,
+                "y": 941.0302457466919,
+                "width": 71.12476370510396,
+                "height": 71.12476370510396
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Ultracode",
+      "observations": [
+        {
+          "frame": 909,
+          "local": 0.3,
+          "expectedWorkingActive": false,
+          "descriptor": {
+            "state": "ultracode",
+            "eyeMode": "friendly-spiral",
+            "aura": "flowing-rainbow",
+            "sprite": "spectrum",
+            "frame": 909,
+            "chapter": 4,
+            "rainbowPhase": 0.04800000000000011,
+            "auraPhase": 0,
+            "heroBounds": {
+              "x": 254.33007015258295,
+              "y": 829.7665434681185,
+              "width": 571.3398596948341,
+              "height": 351.7597625316637
+            },
+            "auraBounds": null,
+            "opacity": 1,
+            "eyeMotion": "counter-rotating-pixel-spirals",
+            "eyeSpeed": 1,
+            "eyePhase": 0.5100000000000012,
+            "eyeBounds": [
+              {
+                "x": 329.3217986677689,
+                "y": 842.9845100049678,
+                "width": 215.8035352954992,
+                "height": 215.8035352954992
+              },
+              {
+                "x": 534.3351571984931,
+                "y": 842.9845100049678,
+                "width": 215.8035352954992,
+                "height": 215.8035352954992
+              }
+            ]
+          }
+        },
+        {
+          "frame": 915,
+          "local": 0.5,
+          "expectedWorkingActive": true,
+          "descriptor": {
+            "state": "ultracode",
+            "eyeMode": "friendly-spiral",
+            "aura": "flowing-rainbow",
+            "sprite": "spectrum",
+            "frame": 915,
+            "chapter": 4,
+            "rainbowPhase": 0.08,
+            "auraPhase": 0,
+            "heroBounds": {
+              "x": 231.8290381207687,
+              "y": 818.681501967759,
+              "width": 616.3419237584626,
+              "height": 379.46641576063985
+            },
+            "auraBounds": null,
+            "opacity": 1,
+            "eyeMotion": "counter-rotating-pixel-spirals",
+            "eyeSpeed": 1,
+            "eyePhase": 0.85,
+            "eyeBounds": [
+              {
+                "x": 312.72755313722416,
+                "y": 832.9405927440407,
+                "width": 232.80148206174226,
+                "height": 232.80148206174226
+              },
+              {
+                "x": 533.8889610958793,
+                "y": 832.9405927440407,
+                "width": 232.80148206174226,
+                "height": 232.80148206174226
+              }
+            ]
+          }
+        },
+        {
+          "frame": 1020,
+          "local": 4,
+          "expectedWorkingActive": true,
+          "descriptor": {
+            "state": "ultracode",
+            "eyeMode": "friendly-spiral",
+            "aura": "flowing-rainbow",
+            "sprite": "spectrum",
+            "frame": 1020,
+            "chapter": 4,
+            "rainbowPhase": 0.64,
+            "auraPhase": 0,
+            "heroBounds": {
+              "x": 214.80570693298972,
+              "y": 809.6795323437686,
+              "width": 650.3885861340206,
+              "height": 400.42810024493053
+            },
+            "auraBounds": null,
+            "opacity": 1,
+            "eyeMotion": "counter-rotating-pixel-spirals",
+            "eyeSpeed": 1,
+            "eyePhase": 0.5168146928204136,
+            "eyeBounds": [
+              {
+                "x": 300.1730473226298,
+                "y": 824.7262937793527,
+                "width": 245.6614111932089,
+                "height": 245.6614111932089
+              },
+              {
+                "x": 533.5513879561782,
+                "y": 824.7262937793527,
+                "width": 245.6614111932089,
+                "height": 245.6614111932089
+              }
+            ]
+          }
+        },
+        {
+          "frame": 1035,
+          "local": 4.5,
+          "expectedWorkingActive": false,
+          "descriptor": {
+            "state": "ultracode",
+            "eyeMode": "friendly-spiral",
+            "aura": "flowing-rainbow",
+            "sprite": "spectrum",
+            "frame": 1035,
+            "chapter": 4,
+            "rainbowPhase": 0.72,
+            "auraPhase": 0,
+            "heroBounds": {
+              "x": 214.87816093833362,
+              "y": 803.9517428616655,
+              "width": 650.2436781233328,
+              "height": 400.3388839815042
+            },
+            "auraBounds": null,
+            "opacity": 1,
+            "eyeMotion": "counter-rotating-pixel-spirals",
+            "eyeSpeed": 1,
+            "eyePhase": 1.3668146928204132,
+            "eyeBounds": [
+              {
+                "x": 300.22648129635365,
+                "y": 818.995151845633,
+                "width": 245.6066772892664,
+                "height": 245.6066772892664
+              },
+              {
+                "x": 533.5528247211568,
+                "y": 818.995151845633,
+                "width": 245.6066772892664,
+                "height": 245.6066772892664
+              }
+            ]
+          }
+        },
+        {
+          "frame": 1050,
+          "local": 5,
+          "expectedWorkingActive": false,
+          "descriptor": {
+            "state": "ultracode",
+            "eyeMode": "friendly-spiral",
+            "aura": "flowing-rainbow",
+            "sprite": "spectrum",
+            "frame": 1050,
+            "chapter": 4,
+            "rainbowPhase": 0.8,
+            "auraPhase": 0,
+            "heroBounds": {
+              "x": 214.92359605426907,
+              "y": 794.418320172866,
+              "width": 650.1528078914619,
+              "height": 400.2829374364808
+            },
+            "auraBounds": null,
+            "opacity": 1,
+            "eyeMotion": "counter-rotating-pixel-spirals",
+            "eyeSpeed": 1,
+            "eyePhase": 2.2168146928204138,
+            "eyeBounds": [
+              {
+                "x": 300.2599891580587,
+                "y": 809.4596268710159,
+                "width": 245.57235425550968,
+                "height": 245.57235425550968
+              },
+              {
+                "x": 533.5537257007928,
+                "y": 809.4596268710159,
+                "width": 245.57235425550968,
+                "height": 245.57235425550968
+              }
+            ]
+          }
+        },
+        {
+          "frame": 1095,
+          "local": 6.5,
+          "expectedWorkingActive": false,
+          "descriptor": {
+            "state": "ultracode",
+            "eyeMode": "friendly-spiral",
+            "aura": "flowing-rainbow",
+            "sprite": "spectrum",
+            "frame": 1095,
+            "chapter": 4,
+            "rainbowPhase": 0.040000000000000036,
+            "auraPhase": 0,
+            "heroBounds": {
+              "x": 214.9811590189496,
+              "y": 804.0956417378179,
+              "width": 650.0376819621008,
+              "height": 400.2120572608968
+            },
+            "auraBounds": null,
+            "opacity": 1,
+            "eyeMotion": "counter-rotating-pixel-spirals",
+            "eyeSpeed": 1,
+            "eyePhase": 4.766814692820413,
+            "eyeBounds": [
+              {
+                "x": 300.30244116506105,
+                "y": 819.1342849937872,
+                "width": 245.52886948521277,
+                "height": 245.52886948521277
+              },
+              {
+                "x": 533.5548671760132,
+                "y": 819.1342849937872,
+                "width": 245.52886948521277,
+                "height": 245.52886948521277
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "pageErrors": [],
+  "finishedAt": "2026-09-29T09:05:45.024Z",
+  "summary": {
+    "passed": 3,
+    "failed": 12
+  }
+}

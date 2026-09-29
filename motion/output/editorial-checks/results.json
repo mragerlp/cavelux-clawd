@@ -1,5 +1,5 @@
 {
-  "startedAt": "2026-09-29T08:49:55.542Z",
+  "startedAt": "2026-09-29T09:08:30.686Z",
   "checks": [
     {
       "name": "DEFINE: approved copy is drawn on canvas",
@@ -1233,8 +1233,8 @@
     }
   ],
   "pageErrors": [],
-  "sourceHash": "65b01474358fe7aa08b9155dc0d3cc9f4ce562b5f42ee8e5598f0e01048eb286",
-  "finishedAt": "2026-09-29T08:49:56.460Z",
+  "sourceHash": "8eaecfa2182010a19bd82142352f442e9f091cf32b09655d1cb8810650fdb5e8",
+  "finishedAt": "2026-09-29T09:08:31.885Z",
   "summary": {
     "passed": 15,
     "failed": 0

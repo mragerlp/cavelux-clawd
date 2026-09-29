@@ -1,0 +1,18 @@
+(node:28928) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Browser: C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe
+Flow PASS: 24 boundary samples; canvas 1080x1920; no console/page errors or non-finite canvas arguments.
+Stills PASS: six PNG keyframes in output/stills and output/cover.png (frame 1245).
+Render 150/1350 (11%); 3s elapsed.
+Render 300/1350 (22%); 5s elapsed.
+Render 450/1350 (33%); 7s elapsed.
+Render 600/1350 (44%); 10s elapsed.
+Render 750/1350 (56%); 13s elapsed.
+Render 900/1350 (67%); 16s elapsed.
+Render 1050/1350 (78%); 19s elapsed.
+Render 1200/1350 (89%); 22s elapsed.
+Render 1350/1350 (100%); 24s elapsed.
+Render complete: C:\Users\jared\.codex\visualizations\2026\09\29\01a0ea97-8016-7c91-8112-655302cb1db6\cavelux-clawd\motion\output\cavelux-engineered-to-deliver-v6.mp4
+ffmpeg warnings:
+[swscaler @ 000001f351d3c6c0] deprecated pixel format used, make sure you did set range correctly
+{"command":"node motion/render.mjs","exitCode":0,"finishedAt":"2026-09-29T09:08:32.2453835Z"}

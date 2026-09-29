@@ -1,0 +1,113 @@
+{
+  "title": "CAVELUX - Engineered to deliver",
+  "revision": 5,
+  "video": "output/cavelux-engineered-to-deliver-v5.mp4",
+  "durationSeconds": 45,
+  "width": 1080,
+  "height": 1920,
+  "framesPerSecond": 30,
+  "frames": 1350,
+  "videoCodec": "H264",
+  "pixelFormat": "yuv420p",
+  "colorRange": "limited",
+  "colorSpace": "BT.709",
+  "audio": "AAC stereo 48000 Hz",
+  "videoSha256": "011E5DD04333FFF6E4350EC899B2B752F8896021E58FA1683E98CE15905496F6",
+  "assets": {
+    "characterStates": 3,
+    "stateManifest": "sprites/states.json",
+    "normal": "Regular rectangular eyes; no aura",
+    "working": "Friendly counter-rotating spiral eyes; animated green code aura for skills, MCPs, workflows, and swarms",
+    "ultracode": "Animated rainbow wave through the body with counter-rotating black spiral eyes",
+    "editableSvgGraphics": 6,
+    "storyboardCaptures": 6,
+    "verticalCover": "output/cover.png",
+    "originalAudioStems": [
+      "audio/score.wav",
+      "audio/sfx.wav"
+    ],
+    "originalMaster": "audio/master.wav"
+  },
+  "checks": {
+    "command": "npm test",
+    "exitCode": 0,
+    "passed": 172,
+    "failed": 0,
+    "suites": {
+      "backend": 15,
+      "character": 26,
+      "hypnosis": 9,
+      "motionUI": 19,
+      "editorial": 15,
+      "studioUI": 18,
+      "nativeExportAdapter": 7,
+      "reactionPackaging": 2,
+      "reactionRenderer": 13,
+      "reactionAssets": 26,
+      "reactionUI": 12,
+      "audio": 10
+    },
+    "filmBoundarySamples": 24,
+    "render": "node motion/render.mjs: PASS exit0;1350frames; output/v5-render.txt",
+    "encodedMedia": "node motion/verify.mjs: PASS exit0; ffprobe and full FFmpeg audio/video decode exit0",
+    "visualReview": "Fresh storyboard captures and encoded Throughput/final-hold PNGs inspected. Independent read-only code and visual review found no concrete issue. Full subjective audiovisual approval remains the user decision.",
+    "documentation": "git diff --check: PASS exit0",
+    "reactions": "node motion/reactions/render.mjs: PASS exit0; eight reactions and376transparent frame masters regenerated",
+    "polish": {
+      "command": "node scripts/check-polish.mjs --candidate",
+      "exitCode": 0,
+      "passed": 11,
+      "failed": 0,
+      "textFrames": 1350,
+      "textDrawCalls": 19722,
+      "textViolations": 0,
+      "evidence": "../performance-evidence/candidate.json"
+    },
+    "preservation": "output/v5-preservation-check.json: PASS exit0; v4 video, character rendering and AAC retained",
+    "totalPassedIncludingPolish": 183
+  },
+  "unverified": [
+    "Full-length subjective audiovisual approval by the user",
+    "Instagram upload and platform transcoding",
+    "Physical-phone and other operating-system/browser playback"
+  ],
+  "videoBytes": 11447110,
+  "sources": {
+    "motion/film.js": "65b01474358fe7aa08b9155dc0d3cc9f4ce562b5f42ee8e5598f0e01048eb286",
+    "motion/audio/generate_audio.py": "76472bc539c624ac361f0ee5bf195b4422428e6c3650b5cb96d91476d3ecb721",
+    "motion/audio/master.wav": "a54be14ec09fe572801451f23689c9b18e2361b272e40bfed55f34ff20c69f62",
+    "motion/index.html": "3a1c2738ded411d517ce5ad1f6ba24cfe93f0ad46abb7cecef5c99bec223baf2",
+    "motion/render.mjs": "2204a9f5b5eb7d005fba3d206d0aa123edccd1a6b6ed71ca88b4d21455af26fb",
+    "motion/verify.mjs": "e116f11a861f97521738046645d5f7910f0c47037807f54ad2232fbad8a73654"
+  },
+  "soundtrack": {
+    "style": "Original driving electro: punch kick/snare, sixteenth-note hats and arps, FM/saw bass, harmonic stabs",
+    "bpm": 128,
+    "bars": 24,
+    "chapterSeconds": 7.5,
+    "masterIntegratedLUFS": -13.99,
+    "masterTruePeakDBTP": -1.45,
+    "encodedAACIntegratedLUFS": -14.02,
+    "encodedAACTruePeakDBTP": -1.02,
+    "measurement": "Independent FFmpeg loudnorm analysis of WAV and finished MP4; both exit0",
+    "v4AndV5EncodedAudioByteIdentical": true,
+    "encodedAudioADTSSHA256": "495413cdfca211319ae77c5f986018affc3d29e31d4f68ff6bb7526d48de2e7e"
+  },
+  "studio": {
+    "url": "https://charm.ing/bloodwave/cavelux-clawd-studio",
+    "revision": 8,
+    "readback": "Exact module/UI/styles match; hosted copy and all four saved presets observed",
+    "scope": "Hosted revision8 unchanged; local generated bundle includes film-only polish and is not published"
+  },
+  "handoff": "../docs/FABLE-REVIEW.md",
+  "previousRevision": "../archive/motion-v4/DELIVERY.json",
+  "status": "REVIEW_CANDIDATE",
+  "changes": [
+    "Outgoing image retained through an eighth-note chapter wipe; no blank cut frame",
+    "Throughput bars moved below captions",
+    "Closing business line increased to32px at90% opacity",
+    "Secondary labels and frame furniture fade42.0-42.9s for a2.1s clean closing hold",
+    "Generic agent identifier replaced with READY TO BUILD"
+  ],
+  "versionNote": "This v5 replaces the rejected simplified-eye iteration in the current checkout; that old candidate remains in Git history at5d0ec85. Identify this delivery bySHA256."
+}
