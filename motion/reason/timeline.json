@@ -9,36 +9,46 @@
     {"id": "B3", "name": "MODEL", "in": 7.4, "out": 11.0},
     {"id": "B4", "name": "EFFORT", "in": 11.0, "out": 14.4},
     {"id": "B5", "name": "AGENT", "in": 14.4, "out": 17.8},
-    {"id": "B6", "name": "DOOR", "in": 17.8, "out": 25.0},
-    {"id": "B7", "name": "BRIEF", "in": 25.0, "out": 28.2},
-    {"id": "B8", "name": "CLOSE", "in": 28.2, "out": 30.0}
+    {"id": "B6", "name": "DOOR", "in": 17.8, "out": 24.65},
+    {"id": "B7", "name": "BRIEF", "in": 24.65, "out": 27.85},
+    {"id": "B8", "name": "CLOSE", "in": 27.85, "out": 30.0}
   ],
-  "holdSeconds": 0.3,
+  "holdSeconds": 0.25,
   "captionFadeSeconds": 0.12,
   "captions": [
-    {"claim": "C1", "beat": "B1", "window": [0.30, 3.20]},
-    {"claim": "C2", "beat": "B2", "window": [3.75, 7.00]},
-    {"claim": "C3", "beat": "B3", "window": [7.55, 10.60]},
-    {"claim": "C4", "beat": "B4", "window": [11.15, 14.00]},
-    {"claim": "C5", "beat": "B5", "window": [14.55, 17.40]},
-    {"claim": "C6", "beat": "B6", "lineStarts": [18.75, 20.88, 23.01], "cps": 16},
-    {"claim": "C7", "beat": "B7", "window": [25.30, 27.80], "x": 150, "maxWidth": 780},
-    {"claim": "C8", "beat": "B8", "lineStarts": [28.75], "cps": 16, "layout": "center"}
+    {"claim": "C1", "beat": "B1", "window": [0.20, 3.10]},
+    {"claim": "C2", "beat": "B2", "window": [3.70, 6.90]},
+    {"claim": "C3", "beat": "B3", "window": [7.50, 10.50]},
+    {"claim": "C4", "beat": "B4", "window": [11.10, 13.90]},
+    {"claim": "C5", "beat": "B5", "window": [14.50, 17.30]},
+    {"claim": "C6", "beat": "B6", "lineStarts": [18.50, 20.52, 22.54], "cps": 18},
+    {"claim": "C7", "beat": "B7", "window": [24.90, 27.35], "x": 124, "maxWidth": 700, "top": 1110},
+    {"claim": "C8", "beat": "B8", "lineStarts": [27.97], "cps": 16, "layout": "center"}
   ],
+  "rowBreaks": {
+    "C1.0": ["In an argument, has anyone", "ever told you"],
+    "C2.0": ["A lawyer doesn't win", "by being loud."],
+    "C3.0": ["That is what a model does", "when it thinks."],
+    "C3.1": ["It works the problem", "before it answers."],
+    "C4.1": ["Higher: it thinks longer,", "and checks itself."],
+    "C5.1": ["An agent acts: tools, files, steps,", "until it is done."],
+    "C7.0": ["SUPERINTELLIGENCE", "is not a model."],
+    "C7.1": ["It is a person", "fluent with one."]
+  },
   "door": {
     "queueSeconds": 0.8,
-    "scanStarts": [0.8, 2.93, 5.06],
-    "scanLength": 2.13,
+    "scanStarts": [0.6, 2.62, 4.64],
+    "scanLength": 2.02,
     "advance": [0.0, 0.3],
     "sweepDown": [0.3, 0.55],
     "sweepUp": [0.55, 0.8],
     "ultracodeAt": 0.8,
     "doorOpen": [0.85, 1.15],
     "walkOut": [1.05, 1.85],
-    "doorClose": [1.85, 2.1],
+    "doorClose": [1.85, 2.0],
     "order": ["FABLE", "OPUS", "SONNET"],
     "slotsLeftToRight": ["SONNET", "OPUS", "FABLE"]
   },
-  "eyeBlinks": [1.35, 2.45, 29.40],
+  "eyeBlinks": [1.35, 2.45, 28.25],
   "blackFrom": 29.70
 }

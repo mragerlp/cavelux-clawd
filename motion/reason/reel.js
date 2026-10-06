@@ -8,10 +8,16 @@
   const LIME = '#92FA11', RED = '#FF2D3F', PANEL = '#0B0C0F', SIDEBAR = '#08090B', ROW = '#101216';
   const CAPTION_SIZE = 54, CAPTION_FONT = `500 ${CAPTION_SIZE}px Bahnschrift, Arial, sans-serif`;
   const MONO = size => `${size}px Consolas, monospace`;
-  const CAPTION_X = 96, CAPTION_MAX = 888, CAPTION_TOP = 1180, ROW_H = 68, LINE_GAP = 18;
+  // Captions stay inside the Reels safe zone and left of the right-side action rail (x > 936).
+  // CAPTION_X 84 = the chat panel's and card's left edge (one left edge across beats).
+  const CAPTION_X = 84, CAPTION_MAX = 800, CAPTION_TOP = 1180, ROW_H = 68, LINE_GAP = 18, CAPTION_RIGHT = 936, CAPTION_BOTTOM = 1490;
+  // The hook eye fills the empty space above the captions: the mark's visible part is about 760 px wide.
+  const EYE_HOOK = {x: 540, y: 712, w: 1160};
   const FLOOR = 1060, DOOR = {x0: 700, x1: 900, top: 640}, EYE_MOUNT = {x: 800, y: 474, w: 112};
   const canvas = document.getElementById('reel');
-  const ctx = canvas.getContext('2d', {alpha: false, willReadFrequently: true});
+  // alpha:true on purpose: Chromium draws subpixel (LCD) text on opaque canvases, and those colour fringes
+  // survive 4:2:0. Every frame is filled black first, so the output stays fully opaque.
+  const ctx = canvas.getContext('2d', {alpha: true, willReadFrequently: true});
   const clamp = (v, a = 0, b = 1) => Math.max(a, Math.min(b, v));
   const mix = (a, b, t) => a + (b - a) * t;
   const smooth = t => { t = clamp(t); return t * t * (3 - 2 * t); };
@@ -31,11 +37,17 @@
     if (window.reelText) window.reelText.push(s);
     return true;
   }
+  // Typography applied after the register check: curly quotes for ASCII ', and a hair space between
+  // 'r' and ':' (Bahnschrift's r arm otherwise fuses with the colon's top dot). The words never change.
+  function display(s) {
+    return s.replace(/(^|\s)'/g, '$1\u2018\u200A').replace(/'\?/g, '\u2019\u200A?').replace(/'/g, '\u2019').replace(/r:/g, 'r\u200A:');
+  }
   function write(s, x, y, font, color, alpha = 1, align = 'left') {
     if (!guard(s)) return;
     ctx.save(); ctx.globalAlpha = alpha * sceneAlpha; ctx.fillStyle = color; ctx.font = font;
-    ctx.textAlign = align; ctx.textBaseline = 'alphabetic'; ctx.fillText(s, x, y); ctx.restore();
+    ctx.textAlign = align; ctx.textBaseline = 'alphabetic'; ctx.fillText(display(s), x, y); ctx.restore();
   }
+  const measure = (s, font) => { ctx.save(); ctx.font = font; const w = ctx.measureText(display(s)).width; ctx.restore(); return w; };
   function rect(x, y, w, h, color, alpha = 1) { ctx.save(); ctx.globalAlpha = alpha * sceneAlpha; ctx.fillStyle = color; ctx.fillRect(x, y, w, h); ctx.restore(); }
   function line(x1, y1, x2, y2, color, width = 2, alpha = 1) {
     ctx.save(); ctx.globalAlpha = alpha * sceneAlpha; ctx.strokeStyle = color; ctx.lineWidth = width; ctx.lineCap = 'round';
@@ -89,15 +101,19 @@
   }
 
   // ---- typed captions ----
-  function wrap(text, font, maxWidth) {
-    ctx.save(); ctx.font = font; const words = text.split(' '), rows = []; let start = 0, current = '';
+  function wrap(text, font, maxWidth, breaks) {
+    if (breaks) { // hand-set phrase breaks from timeline.json; they must rebuild the line exactly
+      if (breaks.join(' ') !== text) throw new Error('Row breaks do not rebuild the line: ' + JSON.stringify(breaks));
+      let start = 0; return breaks.map(row => { const r = {text: row, start}; start += row.length + 1; return r; });
+    }
+    const words = text.split(' '), rows = []; let start = 0, current = '';
     words.forEach((word, i) => {
       const candidate = current ? current + ' ' + word : word;
-      if (current && ctx.measureText(candidate).width > maxWidth) { rows.push({text: current, start}); start += current.length + 1; current = word; }
+      if (current && measure(candidate, font) > maxWidth) { rows.push({text: current, start}); start += current.length + 1; current = word; }
       else current = candidate;
       if (i === words.length - 1) rows.push({text: current, start});
     });
-    ctx.restore(); return rows;
+    return rows;
   }
   function planCaptions() {
     plan = timeline.captions.map(cap => {
@@ -111,16 +127,21 @@
         for (const text of lines) { starts.push(t0); rates.push(rate); t0 += text.length / rate + timeline.holdSeconds; }
       } else { starts = cap.lineStarts.slice(); rates = lines.map(() => cap.cps); }
       const font = cap.layout === 'center' ? MONO(46) : CAPTION_FONT;
-      let y = CAPTION_TOP;
+      let y = cap.top ?? CAPTION_TOP;
       const planned = lines.map((text, i) => {
         const glyphFrames = [...text].map((_, c) => Math.ceil((starts[i] + c / rates[i]) * FPS - 1e-6));
         let rows;
         if (cap.layout === 'center') {
-          ctx.save(); ctx.font = font; const width = ctx.measureText(text).width; ctx.restore();
-          rows = [{text, start: 0, x: Math.round(540 - width / 2), y: 1052}];
+          rows = [{text, start: 0, x: Math.round(540 - measure(text, font) / 2), y: 1052}];
         } else {
-          rows = wrap(text, font, cap.maxWidth ?? CAPTION_MAX).map(row => { y += ROW_H; return {...row, x: cap.x ?? CAPTION_X, y: y - ROW_H + CAPTION_SIZE}; });
+          const breaks = timeline.rowBreaks?.[`${claim.id}.${i}`];
+          rows = wrap(text, font, cap.maxWidth ?? CAPTION_MAX, breaks).map(row => { y += ROW_H; return {...row, x: cap.x ?? CAPTION_X, y: y - ROW_H + CAPTION_SIZE}; });
           y += LINE_GAP;
+        }
+        for (const row of rows) {
+          row.right = Math.ceil(row.x + measure(row.text, font) + CAPTION_SIZE * .6); // includes the cursor block
+          if (row.right > CAPTION_RIGHT || row.y + 16 > CAPTION_BOTTOM || row.y - CAPTION_SIZE < 250 || measure(row.text, font) > (cap.maxWidth ?? CAPTION_MAX) + 1)
+            throw new Error(`${claim.id} row outside the Reels caption zone: ${JSON.stringify(row)}`);
         }
         return {text, rows, start: starts[i], rate: rates[i], glyphFrames, lastFrame: glyphFrames[glyphFrames.length - 1]};
       });
@@ -130,7 +151,8 @@
   function drawCaptions(f, t) {
     for (const cap of plan) {
       if (t < cap.beat.in || t >= cap.beat.out) continue;
-      const fade = cap.beat.id === 'B8' ? 1 : smooth((cap.beat.out - t) / timeline.captionFadeSeconds);
+      // captions fade on the same curve as the scene envelope (0.12 s at cuts, 0.1 s into the final black)
+      const fade = cap.beat.id === 'B8' ? smooth((timeline.blackFrom - t) / .1) : smooth((cap.beat.out - t) / timeline.captionFadeSeconds);
       let active = null;
       for (const ln of cap.lines) {
         let n = 0; while (n < ln.glyphFrames.length && ln.glyphFrames[n] <= f) n++;
@@ -141,8 +163,8 @@
       const {ln, n} = active, typing = f <= ln.lastFrame;
       if (!typing && Math.floor(t * 4) % 2 === 1) continue; // 2 Hz blink once the line is complete
       let row = ln.rows[0]; for (const r of ln.rows) if (n - r.start >= 0 && n - r.start <= r.text.length) row = r;
-      ctx.save(); ctx.font = cap.font; const visible = clamp(n - row.start, 0, row.text.length);
-      const x = row.x + ctx.measureText(row.text.slice(0, visible)).width + 6; ctx.restore();
+      const visible = clamp(n - row.start, 0, row.text.length);
+      const x = row.x + measure(row.text.slice(0, visible), cap.font) + 6;
       const size = cap.font === CAPTION_FONT ? CAPTION_SIZE : 46;
       rect(x, row.y - size * .78, size * .48, size * .92, INK, fade);
     }
@@ -159,9 +181,17 @@
 
   // ---- beats ----
   function eyeBlink(t) { let sy = 1; for (const at of timeline.eyeBlinks) { const p = (t - at) / .15; if (p > 0 && p < 1) sy = Math.min(sy, 1 - .9 * Math.sin(Math.PI * p)); } return sy; }
-  function hook(t, u) { image('eye', 540, 520, 200, smooth((u - .05) / .6), eyeBlink(t)); }
+  // Hard cut-in: the eye is at full brightness on frame 0 (the feed's first impression and the loop seam);
+  // only its scale settles.
+  function hook(t, u) {
+    const settle = mix(.94, 1, out3(u / 1.1));
+    image('eye', EYE_HOOK.x, EYE_HOOK.y, EYE_HOOK.w * settle, 1, eyeBlink(t));
+  }
 
-  function law(t, u) {
+  // raised 40 px and moved 66 px left: the gavel clears the action rail and the column base lands on x 84,
+  // the shared left edge of the captions, the chat panel and the card
+  function law(t, u) { ctx.save(); ctx.translate(-66, -40); lawArt(t, u); ctx.restore(); }
+  function lawArt(t, u) {
     const p = k => clamp((u - k) / .9);
     // column: shaft, capital, base, fluting
     stroke([[190, 470], [190, 1000]], p(.05)); stroke([[290, 470], [290, 1000]], p(.05));
@@ -171,7 +201,9 @@
     const settle = .2 * Math.exp(-1.7 * Math.max(0, u - .6)) * Math.cos(4.2 * Math.max(0, u - .6));
     const cx = 640, beamY = 520, half = 210, ca = Math.cos(settle), sa = Math.sin(settle);
     stroke([[cx, 480], [cx, 990]], p(.1), INK, 3); stroke([[cx - 110, 1030], [cx + 110, 1030], [cx + 60, 990], [cx - 60, 990], [cx - 110, 1030]], p(.2));
+    ctx.save(); ctx.beginPath(); ctx.moveTo(cx - 110, 1030); ctx.lineTo(cx + 110, 1030); ctx.lineTo(cx + 60, 990); ctx.lineTo(cx - 60, 990); ctx.closePath(); ctx.clip(); // hatch stays inside the base
     for (let i = 0; i < 6; i++) stroke([[cx - 92 + i * 30, 1026], [cx - 70 + i * 30, 996]], p(.45 + i * .04), INK, 1.1, .6);
+    ctx.restore();
     const L = [cx - half * ca, beamY - half * sa], R = [cx + half * ca, beamY + half * sa];
     stroke([L, R], p(.25), INK, 3); stroke(arcPoints(cx, 480, 14, 0, Math.PI * 2, 18), p(.25));
     for (const [px, py] of [L, R]) {
@@ -186,35 +218,37 @@
     stroke([[818, 960], [918, 960], [918, 1000], [818, 1000], [818, 960]], g); stroke([[918, 978], [990, 986]], g, INK, 3); stroke([[918, 990], [990, 994]], g, INK, 1.4, .7);
   }
 
+  // Chat panel spans x 84-920 so nothing framed sits under the Reels action rail (x > 936, y 1000-1700).
   function chatPanel(t, lines, extras = {}) {
-    roundRect(84, 300, 912, 820, 18, PANEL, BORDER, 1, 2);
+    roundRect(84, 300, 836, 820, 18, PANEL, BORDER, 1, 2);
     rect(84 + 2, 302, 178, 816, SIDEBAR, 1); line(264, 302, 264, 1118, BORDER, 1.5, .8);
     for (let i = 0; i < 5; i++) roundRect(108, 380 + i * 54, 120 - (i % 3) * 22, 14, 7, MUTED, null, .45);
     rect(110, 336, 10, 10, LIME, .9);
     for (let i = 0; i < 3; i++) rect(300 + i * 22, 330, 10, 10, BORDER, .9);
     // one user message, wordless
-    roundRect(560, 366, 404, 92, 16, ROW, BORDER, 1, 1.5);
-    roundRect(588, 394, 320, 12, 6, DIM, null, .55); roundRect(588, 422, 220, 12, 6, DIM, null, .55);
+    roundRect(500, 366, 380, 92, 16, ROW, BORDER, 1, 1.5);
+    roundRect(528, 394, 300, 12, 6, DIM, null, .55); roundRect(528, 422, 200, 12, 6, DIM, null, .55);
     // THINKING block
     const collapse = extras.collapse ?? 0, open = 1 - collapse;
-    const chevronY = 512; ctx.save(); ctx.globalAlpha = sceneAlpha; ctx.translate(312, chevronY - 9); ctx.rotate(open * Math.PI / 2);
-    ctx.fillStyle = DIM; ctx.beginPath(); ctx.moveTo(-6, -7); ctx.lineTo(7, 0); ctx.lineTo(-6, 7); ctx.closePath(); ctx.fill(); ctx.restore();
-    write('THINKING', 334, chevronY, MONO(26), DIM, .95);
-    const shown = lines * open;
-    line(318, 532, 318, 532 + Math.max(0, shown) * 36, BORDER, 2, .9 * open);
+    const chevronY = 516; ctx.save(); ctx.globalAlpha = sceneAlpha; ctx.translate(314, chevronY - 12); ctx.rotate(open * Math.PI / 2);
+    ctx.fillStyle = DIM; ctx.beginPath(); ctx.moveTo(-7, -6); ctx.lineTo(9, 0); ctx.lineTo(-7, 6); ctx.closePath(); ctx.fill(); ctx.restore(); // narrow (depth 16 > base 12): the 90-degree turn reads as one flip
+    write('THINKING', 338, chevronY, MONO(34), DIM, 1);
+    const shown = lines * open, top = 548, pitch = 32; // 32 px pitch leaves room above the EFFORT dial
+    line(318, top - 10, 318, top - 10 + Math.max(0, shown) * pitch, BORDER, 2, .9 * open);
     for (let i = 0; i < Math.ceil(shown); i++) {
-      const a = clamp(shown - i) * open, w = 180 + rng(i + 7) * 380;
-      roundRect(340, 544 + i * 36, w * clamp((shown - i) * 1.4), 12, 6, DIM, null, .5 * a);
+      const a = clamp(shown - i) * open, w = 180 + rng(i + 7) * 360;
+      roundRect(340, top + i * pitch, w * clamp((shown - i) * 1.4), 12, 6, DIM, null, .5 * a);
     }
-    if (extras.checking) { const y = 544 + Math.floor(shown) * 36 + 12; write('checking...', 340, y, MONO(26), DIM, extras.checking * open); rect(512, y - 14, 10, 10, LIME, extras.checking * open * (.6 + .4 * Math.sin(t * 9))); }
+    // 'checking...' always sits below the last bar drawn (ceil, the same count the bars use)
+    if (extras.checking > 0) { const y = top + Math.ceil(shown) * pitch + 18; write('checking...', 340, y, MONO(30), DIM, extras.checking); rect(540, y - 16, 12, 12, LIME, extras.checking * (.6 + .4 * Math.sin(t * 9))); }
   }
   function dial(t, position, alpha = 1) {
-    const y = 1040, x0 = 360, x1 = 920;
-    write('EFFORT', 300, 990, MONO(26), INK, alpha);
+    const y = 1030, x0 = 340, x1 = 860;
+    write('EFFORT', 300, 984, MONO(34), INK, alpha);
     line(x0, y, x1, y, BORDER, 4, alpha);
     for (let i = 0; i <= 8; i++) line(mix(x0, x1, i / 8), y - 10, mix(x0, x1, i / 8), y + 10, BORDER, 2, alpha * .8);
     line(x0, y, mix(x0, x1, position), y, LIME, 4, alpha);
-    write('LOW', x0, y + 50, MONO(22), DIM, alpha, 'center'); write('HIGH', x1, y + 50, MONO(22), DIM, alpha, 'center');
+    write('LOW', x0, y + 50, MONO(30), DIM, alpha, 'center'); write('HIGH', x1, y + 50, MONO(30), DIM, alpha, 'center');
     const kx = mix(x0, x1, position); roundRect(kx - 16, y - 16, 32, 32, 16, INK, null, alpha);
   }
   function model(t, u) { sceneAlpha = smooth(u / .2); chatPanel(t, clamp((u - .3) / 2.6) * 5); }
@@ -224,77 +258,101 @@
     dial(t, pos, smooth(u / .25));
   }
   function agent(t, u) {
-    const collapse = smooth(u / .35);
-    chatPanel(t, 10, {collapse, checking: 1});
+    // 'checking...' leaves first (0.1 s), then the thinking block collapses
+    const collapse = smooth((u - .08) / .35);
+    chatPanel(t, 10, {collapse, checking: 1 - smooth(u / .1)});
     dial(t, 1, mix(1, .35, collapse));
     ['read', 'run', 'edit', 'verify'].forEach((name, k) => {
-      const a = smooth((u - .25 - k * .5) / .25), y = 580 + k * 92; if (a <= 0) return;
-      roundRect(300, y + (1 - a) * 18, 664, 70, 10, ROW, BORDER, a, 1.5);
-      write(name, 330, y + 46 + (1 - a) * 18, MONO(30), INK, a);
-      roundRect(470, y + 30 + (1 - a) * 18, 160 + rng(k + 3) * 220, 12, 6, DIM, null, .45 * a);
-      const c = smooth((u - .6 - k * .5) / .2);
-      if (c > 0) stroke([[905, y + 36], [918, y + 50], [942, y + 20]], c, LIME, 5, a);
+      // rows start once the thinking block has finished collapsing (u ~ .43)
+      const a = smooth((u - .45 - k * .45) / .25), y = 580 + k * 92; if (a <= 0) return;
+      roundRect(300, y + (1 - a) * 18, 600, 70, 10, ROW, BORDER, a, 1.5);
+      write(name, 330, y + 48 + (1 - a) * 18, MONO(34), INK, a);
+      roundRect(480, y + 30 + (1 - a) * 18, 150 + rng(k + 3) * 150, 12, 6, DIM, null, .45 * a); // ends by x 780, clear of the tick
+      const c = smooth((u - .75 - k * .45) / .2);
+      if (c > 0) stroke([[846, y + 36], [859, y + 50], [883, y + 20]], c, LIME, 5, a);
     });
   }
 
   function doorScene(t, u) {
     const d = timeline.door;
-    line(84, FLOOR, 996, FLOOR, INK, 2, .35);
+    line(0, FLOOR, 920, FLOOR, INK, 2, .35); // from the left edge (mascots walk in on it) to the right post
     // the door leaf slides up into the lintel while open
     let open = 0;
     d.scanStarts.forEach(s0 => { const s = u - s0; open = Math.max(open, smooth((s - d.doorOpen[0]) / (d.doorOpen[1] - d.doorOpen[0])) * (1 - smooth((s - d.doorClose[0]) / (d.doorClose[1] - d.doorClose[0])))); });
     const leafH = (FLOOR - DOOR.top) * (1 - open);
     rect(DOOR.x0, DOOR.top, DOOR.x1 - DOOR.x0, leafH, '#15171B'); for (let i = 1; i < 6; i++) line(DOOR.x0 + 10, DOOR.top + leafH * i / 6, DOOR.x1 - 10, DOOR.top + leafH * i / 6, BORDER, 1.5, .8 * (1 - open));
     // mascots
-    const queueX = [610, 440, 250], enter = out3(u / d.queueSeconds), drawn = [];
+    // front slot 585 keeps even the wider rainbow sprite clear of the left post (x 684)
+    const queueX = [585, 405, 225], enter = out3(u / d.queueSeconds), drawn = [];
     for (const name of d.slotsLeftToRight) {
       // queue index k: 0 stands at the door; each later scan start moves everyone up one place
       const k = d.order.indexOf(name); let x = queueX[k], walking = u < d.queueSeconds;
       for (let j = 1; j <= k; j++) { const p = smooth((u - d.scanStarts[j] - d.advance[0]) / (d.advance[1] - d.advance[0])); x = mix(x, queueX[k - j], p); if (p > 0 && p < 1) walking = true; }
       x -= 760 * (1 - enter);
       const s = u - d.scanStarts[k], ultra = s >= d.ultracodeAt;
-      if (s >= d.walkOut[0]) { const p = clamp((s - d.walkOut[0]) / (d.walkOut[1] - d.walkOut[0])); x = mix(610, 1260, p * p); if (p < 1) walking = true; }
+      if (s >= d.walkOut[0]) { const p = clamp((s - d.walkOut[0]) / (d.walkOut[1] - d.walkOut[0])); x = mix(queueX[0], 1260, p * p); if (p < 1) walking = true; }
       if (x > 1200) continue;
       const bob = walking ? -Math.abs(Math.sin(u * 11 + k)) * 7 : 0;
-      ctx.save(); ctx.translate(0, bob); const box = clawd(ultra ? 'ultracode' : 'normal', t, x); ctx.restore();
-      pixelText(name, x, box.y + bob - 42, 3, INK, 1);
-      drawn.push({name, k, s, box: {...box, y: box.y + bob}});
+      // walking out, the mascot passes THROUGH the doorway: clipped at the opening's right edge (x 900),
+      // so it never runs past the floor or under the Reels action rail
+      ctx.save(); if (s >= d.walkOut[0]) { ctx.beginPath(); ctx.rect(0, 0, DOOR.x1, H); ctx.clip(); }
+      ctx.translate(0, bob); const box = clawd(ultra ? 'ultracode' : 'normal', t, x); ctx.restore();
+      // the name fades in as the queue arrives and out once its mascot turns ultracode, before the door posts
+      const labelAlpha = smooth((u - .35) / .35) * (1 - smooth((s - d.ultracodeAt) / .15));
+      drawn.push({name, k, s, labelAlpha, cx: x, box: {...box, y: box.y + bob}});
     }
-    // frame posts and lintel in front of the walk
-    rect(DOOR.x0 - 16, DOOR.top - 22, 16, FLOOR - DOOR.top + 22, INK, .9); rect(DOOR.x1, DOOR.top - 22, 16, FLOOR - DOOR.top + 22, INK, .9);
-    rect(DOOR.x0 - 16, DOOR.top - 22, DOOR.x1 - DOOR.x0 + 32, 16, INK, .9);
-    pixelText('SUPERINTELLIGENCE', 800, 570, 4, INK, 1);
-    image('eye', EYE_MOUNT.x, EYE_MOUNT.y, EYE_MOUNT.w, 1);
-    // red laser grid: down then up over the mascot at the door
+    // red laser grid: down then up over the mascot at the door. Drawn before the opaque posts (so the beams
+    // pass behind the door frame) and clipped above the floor (no glow below it).
+    ctx.save(); ctx.beginPath(); ctx.rect(0, 0, W, FLOOR - 1); ctx.clip();
+    let scanning = 0;
     for (const m of drawn) {
       const s = m.s; let p = -1;
       if (s >= d.sweepDown[0] && s < d.sweepDown[1]) p = (s - d.sweepDown[0]) / (d.sweepDown[1] - d.sweepDown[0]);
       else if (s >= d.sweepUp[0] && s < d.sweepUp[1]) p = 1 - (s - d.sweepUp[0]) / (d.sweepUp[1] - d.sweepUp[0]);
+      // the door eye glows red from just before the sweep until just after it
+      scanning = Math.max(scanning, smooth((s - d.sweepDown[0] + .08) / .08) * (1 - smooth((s - d.sweepUp[1]) / .12)));
       if (p < 0) continue;
-      const b = m.box, cy = mix(b.y - 16, b.y + b.h + 4, inout(p));
+      // fitted to the sprite: heroBounds already carries about 7 px of transparent margin, so +1 px here
+      // gives about 8 px from the visible pixels; lines stay between the sprite's top and the floor
+      const b = m.box, gx0 = b.x - 1, gx1 = b.x + b.w + 1, cy = mix(b.y + 12, b.y + b.h - 12, inout(p));
       ctx.save(); ctx.shadowColor = RED; ctx.shadowBlur = 14;
-      for (let i = 0; i < 4; i++) { const y = cy - 21 + i * 14; line(b.x - 24, y, b.x + b.w + 24, y, RED, 3, .95);
-        line(EYE_MOUNT.x, EYE_MOUNT.y + 30, b.x - 24, y, RED, 1, .22); line(EYE_MOUNT.x, EYE_MOUNT.y + 30, b.x + b.w + 24, y, RED, 1, .22); }
+      for (let i = 0; i < 4; i++) { const y = clamp(cy - 21 + i * 14, b.y + 2, FLOOR - 3); line(gx0, y, gx1, y, RED, 3, .95); }
       ctx.restore();
-      rect(b.x - 24, cy - 28, b.w + 48, 56, RED, .07);
+      const ty0 = clamp(cy - 28, b.y, FLOOR), ty1 = clamp(cy + 28, b.y, FLOOR);
+      rect(gx0, ty0, gx1 - gx0, ty1 - ty0, RED, .07);
     }
+    ctx.restore();
+    // frame posts and lintel in front of the walk and the beams, fully opaque so the pass-through is clean
+    rect(DOOR.x0 - 16, DOOR.top - 22, 16, FLOOR - DOOR.top + 22, INK, 1); rect(DOOR.x1, DOOR.top - 22, 16, FLOOR - DOOR.top + 22, INK, 1);
+    rect(DOOR.x0 - 16, DOOR.top - 22, DOOR.x1 - DOOR.x0 + 32, 16, INK, 1);
+    // names after the laser (never tinted by it), in ink-dim so the door label stays the dominant word
+    for (const m of drawn) if (m.labelAlpha > 0) pixelText(m.name, m.cx, m.box.y - 50, 4, DIM, m.labelAlpha);
+    pixelText('SUPERINTELLIGENCE', 800, 570, 4, INK, 1);
+    // a red backlight behind the door eye while it scans (drawn under the mark; the mark itself is untouched)
+    if (scanning > 0) {
+      const g = ctx.createRadialGradient(EYE_MOUNT.x, EYE_MOUNT.y, 8, EYE_MOUNT.x, EYE_MOUNT.y, 96);
+      g.addColorStop(0, 'rgba(255,45,63,0.75)'); g.addColorStop(1, 'rgba(255,45,63,0)');
+      ctx.save(); ctx.globalAlpha = scanning * sceneAlpha; ctx.fillStyle = g; ctx.fillRect(EYE_MOUNT.x - 96, EYE_MOUNT.y - 96, 192, 192); ctx.restore();
+    }
+    image('eye', EYE_MOUNT.x, EYE_MOUNT.y, EYE_MOUNT.w, 1);
   }
   function doorBeat(t, u) { sceneAlpha = smooth(u / .18); doorScene(t, u); }
 
   function brief(t, u) {
     const dx = 760 * (1 - out3(u / .35));
     ctx.save(); ctx.translate(dx, 0);
-    roundRect(110, 300, 860, 1190, 6, '#0C0D10', BORDER, 1, 2);
-    write('CAVELUX / BRIEF', 150, 384, MONO(34), INK, 1);
-    line(150, 412, 930, 412, BORDER, 2, 1);
+    // card shares the chat panel's frame (x 84-920): left of the Reels action rail, one left edge across beats
+    roundRect(84, 300, 836, 1190, 6, '#0C0D10', BORDER, 1, 2);
+    write('CAVELUX / BRIEF', 124, 384, MONO(34), INK, 1);
+    line(124, 412, 880, 412, BORDER, 2, 1);
     // stylised crest: the voxel eye inside a drawn ring
-    ctx.save(); ctx.globalAlpha = sceneAlpha; ctx.strokeStyle = BORDER; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(860, 520, 70, 0, Math.PI * 2); ctx.stroke();
-    ctx.beginPath(); ctx.arc(860, 520, 60, 0, Math.PI * 2); ctx.stroke(); ctx.restore();
-    image('eye', 860, 520, 96, 1);
-    for (let i = 0; i < 4; i++) roundRect(150, 470 + i * 40, 440 - rng(i + 21) * 160, 12, 6, MUTED, null, .5);
+    ctx.save(); ctx.globalAlpha = sceneAlpha; ctx.strokeStyle = BORDER; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(812, 520, 70, 0, Math.PI * 2); ctx.stroke();
+    ctx.beginPath(); ctx.arc(812, 520, 60, 0, Math.PI * 2); ctx.stroke(); ctx.restore();
+    image('eye', 812, 520, 96, 1);
+    for (let i = 0; i < 4; i++) roundRect(124, 470 + i * 40, 420 - rng(i + 21) * 150, 12, 6, MUTED, null, .5);
     const r1 = smooth((u - .35) / .15), r2 = smooth((u - .55) / .15);
-    rect(150, 680, 640 * r1, 46, INK, .92); rect(150, 750, 470 * r2, 46, INK, .92);
-    for (let i = 0; i < 5; i++) roundRect(150, 840 + i * 40, 700 - rng(i + 31) * 260, 12, 6, MUTED, null, .4);
+    rect(124, 680, 620 * r1, 46, INK, .92); rect(124, 750, 460 * r2, 46, INK, .92);
+    for (let i = 0; i < 5; i++) roundRect(124, 840 + i * 40, 680 - rng(i + 31) * 240, 12, 6, MUTED, null, .4);
     ctx.restore();
   }
 
@@ -312,7 +370,7 @@
   function beatAt(t) { return timeline.beats.find(b => t >= b.in && t < b.out) ?? timeline.beats[timeline.beats.length - 1]; }
   function envelope(b, t) {
     const fadeIn = ['B1', 'B4', 'B5'].includes(b.id) ? 1 : smooth((t - b.in) / .15);
-    const fadeOut = ['B3', 'B4'].includes(b.id) || b.id === 'B8' ? 1 : smooth((b.out - t) / .12);
+    const fadeOut = ['B3', 'B4'].includes(b.id) ? 1 : b.id === 'B8' ? smooth((timeline.blackFrom - t) / .1) : smooth((b.out - t) / .12);
     return Math.min(fadeIn, fadeOut);
   }
   function renderFrame(frame) {
@@ -335,7 +393,7 @@
       ln.glyphFrames.forEach((frame, c) => clicks.push({frame, time: frame / FPS, claim: cap.claim, line: i, char: ln.text[c]}));
       captions.push({claim: cap.claim, beat: cap.beat.id, line: i, text: ln.text, chars: ln.text.length,
         rateCharsPerSecond: Number(ln.rate.toFixed(3)), firstGlyph: ln.glyphFrames[0] / FPS, lastGlyph: ln.lastFrame / FPS,
-        out: cap.beat.id === 'B8' ? timeline.blackFrom : cap.beat.out, rows: ln.rows.map(r => ({text: r.text, x: r.x, baseline: r.y}))});
+        out: cap.beat.id === 'B8' ? timeline.blackFrom : cap.beat.out, rows: ln.rows.map(r => ({text: r.text, x: r.x, right: r.right, baseline: r.y}))});
     });
     const d = timeline.door, b6 = beats.get('B6').in, scans = d.scanStarts.map((s0, k) => ({mascot: d.order[k],
       sweeps: [b6 + s0 + d.sweepDown[0], b6 + s0 + d.sweepUp[0]], ultracode: b6 + s0 + d.ultracodeAt,
