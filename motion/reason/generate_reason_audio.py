@@ -62,23 +62,60 @@ def smoothstep(x):
     return x * x * (3 - 2 * x)
 
 
+WIDTH = 10 ** (-9 / 20)    # detuned width copies sit about 9 dB under the centred voice
+OCTAVE = 10 ** (-6 / 20)   # octave-up layer carries the chord on small speakers
+AIR = 10 ** (-24 / 20)     # a very faint two-octave layer (kept low: the key clicks live above 1 kHz)
+
+
 def pad(notes, start, end, bright, gain=1.0, fade=.35):
-    """Detuned additive pad; brightness(t) opens and closes the upper partials (a filter without a filter)."""
+    """Additive pad, mono-safe: a centred voice per chord tone carries the harmony; -4/+4 cent copies
+    (left/right) add width only; tones below MIDI 55 stay centred; a quiet octave-up layer keeps the
+    chord audible on phone speakers. brightness(t) opens the upper partials (a filter without a filter)."""
     t = axis(end - start + fade)
-    local = t / max(t[-1], 1e-9)
     env = smoothstep(t / fade) * smoothstep((end - start + fade - t) / fade)
     b = np.interp(t + start, bright[0], bright[1])
+
+    def voice(f, phase0, brightness):
+        phase = 2 * np.pi * f * t + phase0
+        v = np.zeros_like(t)
+        for k in range(1, 11):
+            v += np.sin(k * phase) / k * brightness ** (k - 1)
+        return v
     out = np.zeros((len(t), 2))
     for i, note in enumerate(notes):
-        for side, cents in ((0, -4), (1, 4)):
-            f = hz(note) * 2 ** (cents / 1200)
-            phase = 2 * np.pi * f * t + i * .7 + side * 1.3
-            voice = np.zeros_like(t)
-            for k in range(1, 11):
-                voice += np.sin(k * phase) / k * b ** (k - 1)
-            out[:, side] += voice * (1 + .04 * np.sin(2 * np.pi * (.13 + .05 * i) * t))
+        wobble = 1 + .04 * np.sin(2 * np.pi * (.13 + .05 * i) * t)
+        out += (voice(hz(note), i * .7, b) * wobble)[:, None]
+        if note >= 55:
+            out[:, 0] += WIDTH * voice(hz(note) * 2 ** (-4 / 1200), i * .7 + 1.3, b) * wobble
+            out[:, 1] += WIDTH * voice(hz(note) * 2 ** (4 / 1200), i * .7 + 2.1, b) * wobble
+        out += (OCTAVE * voice(hz(note + 12), i * .7 + .4, b * .85) * wobble)[:, None]
+        out += (AIR * voice(hz(note + 24), i * .7 + .9, b * .6) * wobble)[:, None]
     out *= env[:, None] / len(notes)
     return out * gain, start - fade / 2
+
+
+def bed_eq(signal):
+    """Broad bells on the bed only (zero-phase, FFT domain): a lift around 750 Hz keeps the chord present on
+    phone speakers; a cut around 2 kHz leaves room for the key clicks' body (1.6-2.3 kHz tone, 2-7 kHz tick)."""
+    spectrum = np.fft.rfft(signal, axis=0)
+    freqs = np.maximum(np.fft.rfftfreq(signal.shape[0], 1 / SR), 1.0)
+    db = 4.0 * np.exp(-.5 * (np.log2(freqs / 750) / .55) ** 2) - 6.0 * np.exp(-.5 * (np.log2(freqs / 2000) / .65) ** 2)
+    return np.fft.irfft(spectrum * (10 ** (db / 20))[:, None], n=signal.shape[0], axis=0)
+
+
+def band(signal, lo, hi):
+    spectrum = np.fft.rfft(signal, axis=0)
+    freqs = np.fft.rfftfreq(signal.shape[0], 1 / SR)
+    return np.fft.irfft(spectrum * ((freqs >= lo) & (freqs < hi))[:, None], n=signal.shape[0], axis=0)
+
+
+def low_shelf(signal, db=-5.0, f0=100.0, f1=200.0):
+    """Gentle low shelf: db below f0, unity above f1, smooth between (zero-phase, FFT domain)."""
+    spectrum = np.fft.rfft(signal, axis=0)
+    freqs = np.fft.rfftfreq(signal.shape[0], 1 / SR)
+    g = 10 ** (db / 20)
+    curve = g + (1 - g) * smoothstep((freqs - f0) / (f1 - f0))
+    return np.fft.irfft(spectrum * curve[:, None], n=signal.shape[0], axis=0)
 
 
 def pluck(note, duration=.32, brightness=.6):
@@ -189,7 +226,8 @@ def main():
 
     # ---- bed: key D minor, free time with a 96 BPM pulse in the middle ----
     bed = np.zeros((N, 2))
-    knots_t, knots_b = [0, beat['B2']['in'], beat['B3']['in'], beat['B5']['out'], beat['B7']['in'], SECONDS + 1], [.12, .16, .42, .55, .3, .2]
+    # brightness floors keep 500 Hz-3 kHz alive on phone speakers while the start and the close stay darker
+    knots_t, knots_b = [0, beat['B2']['in'], beat['B3']['in'], beat['B5']['out'], beat['B7']['in'], SECONDS + 1], [.45, .48, .55, .62, .50, .45]
     bright_t, bright_b = list(knots_t), list(knots_b)
     lands = transitions + ultras
     grid = np.linspace(0, SECONDS + 1, 3101)
@@ -216,7 +254,7 @@ def main():
         sheet.append((start, 'bed', label))
     # low anchor under every landing
     for land in lands:
-        add(bed, bloom(38, 1.6), land, .32)
+        add(bed, bloom(38, 1.6), land, .24)
     # risers land on the transitions and scans; the one into B5 is the long riser the storyboard asks for
     for land in lands:
         length = 2.0 if abs(land - beat['B5']['in']) < 1e-6 else .9
@@ -264,6 +302,7 @@ def main():
         start = click['frame'] / FPS
         v = int(RNG.integers(0, 3))
         add(clicks, variants[v], start, 10 ** (RNG.uniform(-1.5, 1.5) / 20), float(RNG.uniform(-.15, .15)))
+    bed = bed_eq(low_shelf(bed))
     for bus in (bed, sfx, clicks):
         bus -= bus.mean(axis=0, keepdims=True)
         bus *= fade[:, None]
@@ -293,6 +332,31 @@ def main():
     master = premaster_pre * gain
     write_pcm24(out / 'master.wav', master)
     final, final_log = loudness(out / 'master.wav')
+
+    # phone-speaker and mono checks: a mono-safe bed, and harmony that survives a 300 Hz high-pass
+    def filtered_i(af):
+        log = ffmpeg(['-i', str(out / 'master.wav'), '-af', af + ',loudnorm=I=-14:TP=-1.5:LRA=11:print_format=json', '-f', 'null', '-'])
+        start = log.rfind('{')
+        return float(json.loads(log[start:log.index('}', start) + 1])['input_i'])
+    mono = master.mean(axis=1)
+    power = np.abs(np.fft.rfft(mono)) ** 2
+    freqs = np.fft.rfftfreq(len(mono), 1 / SR)
+    phone = {'bedCorrelationLR': float(np.corrcoef(bed[:, 0], bed[:, 1])[0, 1]),
+             'masterCorrelationLR': float(np.corrcoef(master[:, 0], master[:, 1])[0, 1]),
+             'highpass300GapLU': float(final['input_i']) - filtered_i('highpass=f=300,highpass=f=300'),
+             'monoMinusStereoLU': filtered_i('pan=mono|c0=0.5*c0+0.5*c1') - float(final['input_i']),
+             'band1200to5000Db': 10 * math.log10(power[(freqs >= 1200) & (freqs < 5000)].sum() / power.sum())}
+    # key clicks must stay audible over the bed on a phone: per click, its 1-8 kHz peak (14 ms) over the
+    # bed+sfx 1-8 kHz RMS (+/-50 ms); one linear master gain scales both, so the ratio is gain-free
+    click_band, bed_band = band(clicks, 1000, 8000).mean(axis=1), band(bed + sfx, 1000, 8000).mean(axis=1)
+    margins = []
+    for click in cues['clicks']:
+        i = int(round(click['frame'] / FPS * SR))
+        peak = np.max(np.abs(click_band[i:i + int(.014 * SR)]))
+        lo, hi = max(0, i - int(.05 * SR)), min(N, i + int(.05 * SR))
+        margins.append(20 * math.log10(peak / (np.sqrt(np.mean(bed_band[lo:hi] ** 2)) + 1e-12) + 1e-12))
+    phone['clickOverBed1to8kHzMedianDb'] = float(np.median(margins))
+    phone['clickOverBed1to8kHzP10Db'] = float(np.percentile(margins, 10))
     rows, summary = short_term(out / 'master.wav')
     click_peak_db = 20 * math.log10(np.max(np.abs(clicks * gain)))
     (out / 'mastering-log.txt').write_text(f'linear master gain {20 * math.log10(gain):.3f} dB applied to premaster.wav\n\n' + final_log + '\nEBU R128 SUMMARY\n' + summary, encoding='utf-8')
@@ -333,11 +397,13 @@ def main():
                 'stems': ['bed.wav', 'clicks.wav', 'sfx.wav'], 'stemsNote': 'Pre-master stems share one gain; their sum is premaster.wav; master.wav = premaster.wav times one linear gain.',
                 'linearMasterGainDb': 20 * math.log10(gain), 'integratedLUFS': float(final['input_i']), 'truePeakDBTP': float(final['input_tp']),
                 'loudnessRangeLU': float(final['input_lra']), 'clickPeakDbfsInMaster': click_peak_db, 'masterLast50msPeak': master_last50,
-                'shortTermUnderCaptions': under, 'files': checks}
+                'phoneAndMono': phone, 'shortTermUnderCaptions': under, 'files': checks}
     (out / 'audio-manifest.json').write_text(json.dumps(manifest, indent=2) + '\n', encoding='utf-8')
     print(json.dumps({k: manifest[k] for k in ['integratedLUFS', 'truePeakDBTP', 'loudnessRangeLU', 'clickPeakDbfsInMaster', 'linearMasterGainDb', 'masterLast50msPeak']}, indent=2))
     print('short-term / momentary under captions:', ', '.join(f"{u['claim']}.{u['line']}={u['shortTermLUFS']:.1f}/{u['momentaryLUFS']:.1f}" for u in under))
+    print('phone and mono:', json.dumps(phone))
     ok = abs(float(final['input_i']) - TARGET_LUFS) <= .5 and float(final['input_tp']) <= TARGET_TP and master_last50 <= 1 / 8388608 and len(rows) > 100
+    ok = ok and phone['bedCorrelationLR'] >= .5 and phone['highpass300GapLU'] <= 4.5 and phone['clickOverBed1to8kHzMedianDb'] >= 8
     raise SystemExit(0 if ok else 1)
 
 

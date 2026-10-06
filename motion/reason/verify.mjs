@@ -4,8 +4,11 @@
 import assert from 'node:assert/strict';
 import path from 'node:path';
 import { spawn } from 'node:child_process';
+import { readFile } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
 
 const videoPath = path.resolve(process.argv[2] ?? '');
+const cuesPath = path.join(path.dirname(fileURLToPath(import.meta.url)), 'cues.json');
 function run(command, args, binary = false) {
   return new Promise((resolve, reject) => {
     const child = spawn(command, args, { windowsHide: true, stdio: ['ignore', 'pipe', 'pipe'] });
@@ -48,12 +51,27 @@ try {
     const values = [...stats.stderr.matchAll(/lavfi\.signalstats\.YMAX=(\d+)/g)].map(m => Number(m[1]));
     check(`safe zone ${name} empty on every frame`, values.length === 900 && Math.max(...values) <= 20, { frames: values.length, maxY: Math.max(...values) });
   }
-  // the CAVELUX eye is on screen by 3.0 s: lime pixels in the eye region at frames 21 and 90
-  for (const frame of [21, 90]) {
-    const raw = await run('ffmpeg', ['-hide_banner', '-v', 'error', '-i', videoPath, '-vf', `select=eq(n\\,${frame}),crop=240:240:420:400`, '-frames:v', '1', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'], true);
+  // the CAVELUX eye is on screen from frame 0 (first impression and loop seam) through 3.0 s:
+  // lime pixels around the hook eye's centre (540, 712) at frames 0, 21 and 90
+  for (const frame of [0, 21, 90]) {
+    const raw = await run('ffmpeg', ['-hide_banner', '-v', 'error', '-i', videoPath, '-vf', `select=eq(n\\,${frame}),crop=360:360:360:532`, '-frames:v', '1', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'], true);
     let lime = 0; for (let i = 0; i < raw.stdout.length; i += 3) { const r = raw.stdout[i], g = raw.stdout[i + 1], b = raw.stdout[i + 2]; if (g > 170 && r < 210 && b < 110 && g > r) lime++; }
-    check(`eye (lime) on screen at frame ${frame}`, lime > 300, { limePixels: lime, region: 'x420-660 y400-640' });
+    check(`eye (lime) on screen at frame ${frame}`, lime > 300, { limePixels: lime, region: 'x360-720 y532-892' });
   }
+  // mono safety for phone speakers: decoded MP4 audio L/R correlation
+  const pcm = await run('ffmpeg', ['-hide_banner', '-v', 'error', '-i', videoPath, '-map', '0:a:0', '-f', 'f32le', '-ac', '2', '-ar', '48000', '-'], true);
+  const f32 = new Float32Array(pcm.stdout.buffer, pcm.stdout.byteOffset, Math.floor(pcm.stdout.length / 4));
+  let sl = 0, sr = 0, sll = 0, srr = 0, slr = 0, n = 0;
+  for (let i = 0; i + 1 < f32.length; i += 2) { const l = f32[i], r = f32[i + 1]; sl += l; sr += r; sll += l * l; srr += r * r; slr += l * r; n++; }
+  const corr = (slr - sl * sr / n) / Math.sqrt((sll - sl * sl / n) * (srr - sr * sr / n));
+  check('audio is mono-safe (MP4 L/R correlation >= 0.5)', corr >= .5, { correlation: Number(corr.toFixed(3)) });
+  // Instagram layout, from the cue file that ships with this code: every caption row (cursor included)
+  // stays left of the right-side action rail and inside the caption band
+  const cues = JSON.parse(await readFile(cuesPath, 'utf8'));
+  const rows = cues.captions.flatMap(c => c.rows.map(r => ({ ...r, claim: c.claim })));
+  const maxRight = Math.max(...rows.map(r => r.right)), top = Math.min(...rows.map(r => r.baseline)) - 54, bottom = Math.max(...rows.map(r => r.baseline)) + 16;
+  check('captions clear of the Reels action rail (row right edge incl. cursor <= 936)', rows.every(r => Number.isFinite(r.right) && r.right <= 936), { rows: rows.length, maxRight });
+  check('caption rows inside y 250-1490', top >= 250 && bottom <= 1490, { top, bottom });
 } catch (error) { check('verification execution', false, String(error.stack ?? error)); }
 report.status = report.checks.every(c => c.status === 'PASS') ? 'PASS' : 'FAIL';
 console.log(JSON.stringify({ status: report.status, passed: report.checks.filter(c => c.status === 'PASS').length, failed: report.checks.filter(c => c.status === 'FAIL').length }));

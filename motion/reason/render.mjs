@@ -2,7 +2,7 @@
 // encode chain); a sibling file so the v6 renderer and its 1350-frame contract stay untouched.
 //   node motion/reason/render.mjs --cues                      write motion/reason/cues.json
 //   node motion/reason/render.mjs --stills DIR --frames a,b   PNG stills
-//   node motion/reason/render.mjs --out DIR --audio WAV       reason-reel_v1.mp4 + render-report.json
+//   node motion/reason/render.mjs --out DIR --audio WAV [--name FILE.mp4]   MP4 (default reason-reel_v1.mp4) + render-report.json
 import path from 'node:path';
 import { mkdir, rename, writeFile, access } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
@@ -57,15 +57,20 @@ async function capture(page, frame, format = 'image/png') {
 async function encode(page, outDir, audio) {
   await access(audio);
   await mkdir(outDir, { recursive: true });
-  const output = path.join(outDir, 'reason-reel_v1.mp4'), temp = path.join(outDir, '.reason-reel_v1.rendering.mp4');
+  const name = option('--name') ?? 'reason-reel_v1.mp4';
+  const output = path.join(outDir, name), temp = path.join(outDir, `.${name}.rendering.mp4`);
+  // Delivery master for Instagram: lossless PNG frames (no JPEG step), accurate BT.709 limited-range
+  // conversion with full chroma interpolation, x264 High 4.1 at CRF 14 / slower / animation tuning,
+  // a 1 s GOP, and AAC 320 kb/s 48 kHz stereo. The platform re-encodes; a clean source keeps text crisp.
   const ffArgs = ['-hide_banner', '-loglevel', 'warning', '-y',
-    '-f', 'image2pipe', '-framerate', String(FPS), '-vcodec', 'mjpeg', '-i', 'pipe:0',
+    '-f', 'image2pipe', '-framerate', String(FPS), '-vcodec', 'png', '-i', 'pipe:0',
     '-i', audio, '-map', '0:v:0', '-map', '1:a:0',
-    '-vf', 'scale=in_range=full:out_range=limited:in_color_matrix=bt470bg:out_color_matrix=bt709,format=yuv420p,setparams=range=limited:color_primaries=bt709:color_trc=bt709:colorspace=bt709',
-    '-c:v', 'libx264', '-profile:v', 'high', '-pix_fmt', 'yuv420p', '-crf', '18', '-preset', 'fast',
+    '-vf', 'scale=out_color_matrix=bt709:out_range=limited:flags=lanczos+accurate_rnd+full_chroma_int+full_chroma_inp,format=yuv420p,setparams=range=limited:color_primaries=bt709:color_trc=bt709:colorspace=bt709',
+    '-c:v', 'libx264', '-profile:v', 'high', '-level:v', '4.1', '-pix_fmt', 'yuv420p', '-crf', '14', '-preset', 'slower', '-tune', 'animation',
+    '-g', String(FPS), '-keyint_min', String(FPS), '-sc_threshold', '0',
     '-color_range', 'tv', '-colorspace', 'bt709', '-color_primaries', 'bt709', '-color_trc', 'bt709',
     '-r', String(FPS), '-frames:v', String(FRAMES), '-t', '30',
-    '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-ac', '2', '-movflags', '+faststart', temp];
+    '-c:a', 'aac', '-b:a', '320k', '-ar', '48000', '-ac', '2', '-movflags', '+faststart', temp];
   encoder = spawn('ffmpeg', ffArgs, { windowsHide: true, stdio: ['pipe', 'ignore', 'pipe'] });
   let stderr = '', stdinError;
   encoder.stderr.on('data', d => { stderr = (stderr + d.toString()).slice(-65536); });
@@ -74,7 +79,7 @@ async function encode(page, outDir, audio) {
   finished.catch(() => {});
   const corpus = new Map(), started = Date.now();
   for (let frame = 0; frame < FRAMES; frame++) {
-    const { bytes, text } = await capture(page, frame, 'image/jpeg');
+    const { bytes, text } = await capture(page, frame, 'image/png');
     for (const s of text) { const e = corpus.get(s) ?? { text: s, firstFrame: frame, lastFrame: frame, frames: 0 }; e.lastFrame = frame; e.frames++; corpus.set(s, e); }
     if (stdinError) throw stdinError;
     if (!encoder.stdin.write(bytes)) await Promise.race([once(encoder.stdin, 'drain'), finished.then(() => { throw new Error('ffmpeg closed early'); })]);
@@ -95,7 +100,8 @@ try {
     'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',
     'C:/Program Files/Google/Chrome/Application/chrome.exe'].find(c => c && existsSync(c));
   if (!executablePath) throw new Error('No installed Chromium browser found. Set CAVELUX_BROWSER_PATH.');
-  browser = await chromium.launch({ executablePath, headless: true });
+  // greyscale text antialiasing: LCD subpixel colour fringes would survive the 4:2:0 encode
+  browser = await chromium.launch({ executablePath, headless: true, args: ['--disable-lcd-text'] });
   console.log(`Browser: ${executablePath}`);
   const page = await browser.newPage({ viewport: { width: WIDTH, height: HEIGHT }, deviceScaleFactor: 1 });
   page.on('pageerror', e => browserErrors.push(e.message));
