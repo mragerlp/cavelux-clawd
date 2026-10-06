@@ -1,0 +1,44 @@
+{
+  "title": "REASON reel timeline",
+  "fps": 30,
+  "frames": 900,
+  "durationSeconds": 30,
+  "beats": [
+    {"id": "B1", "name": "HOOK", "in": 0.0, "out": 3.6},
+    {"id": "B2", "name": "LAW", "in": 3.6, "out": 7.4},
+    {"id": "B3", "name": "MODEL", "in": 7.4, "out": 11.0},
+    {"id": "B4", "name": "EFFORT", "in": 11.0, "out": 14.4},
+    {"id": "B5", "name": "AGENT", "in": 14.4, "out": 17.8},
+    {"id": "B6", "name": "DOOR", "in": 17.8, "out": 25.0},
+    {"id": "B7", "name": "BRIEF", "in": 25.0, "out": 28.2},
+    {"id": "B8", "name": "CLOSE", "in": 28.2, "out": 30.0}
+  ],
+  "holdSeconds": 0.3,
+  "captionFadeSeconds": 0.12,
+  "captions": [
+    {"claim": "C1", "beat": "B1", "window": [0.30, 3.20]},
+    {"claim": "C2", "beat": "B2", "window": [3.75, 7.00]},
+    {"claim": "C3", "beat": "B3", "window": [7.55, 10.60]},
+    {"claim": "C4", "beat": "B4", "window": [11.15, 14.00]},
+    {"claim": "C5", "beat": "B5", "window": [14.55, 17.40]},
+    {"claim": "C6", "beat": "B6", "lineStarts": [18.75, 20.88, 23.01], "cps": 16},
+    {"claim": "C7", "beat": "B7", "window": [25.30, 27.80], "x": 150, "maxWidth": 780},
+    {"claim": "C8", "beat": "B8", "lineStarts": [28.75], "cps": 16, "layout": "center"}
+  ],
+  "door": {
+    "queueSeconds": 0.8,
+    "scanStarts": [0.8, 2.93, 5.06],
+    "scanLength": 2.13,
+    "advance": [0.0, 0.3],
+    "sweepDown": [0.3, 0.55],
+    "sweepUp": [0.55, 0.8],
+    "ultracodeAt": 0.8,
+    "doorOpen": [0.85, 1.15],
+    "walkOut": [1.05, 1.85],
+    "doorClose": [1.85, 2.1],
+    "order": ["FABLE", "OPUS", "SONNET"],
+    "slotsLeftToRight": ["SONNET", "OPUS", "FABLE"]
+  },
+  "eyeBlinks": [1.35, 2.45, 29.40],
+  "blackFrom": 29.70
+}

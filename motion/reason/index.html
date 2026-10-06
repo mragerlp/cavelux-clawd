@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAVELUX - REASON</title>
+  <link rel="icon" href="/brand/CVL_eyeglyph.svg" type="image/svg+xml">
+  <style>
+    body { margin:0; background:#000; }
+    canvas { display:block; width:1080px; height:1920px; }
+  </style>
+</head>
+<body>
+<canvas id="reel" width="1080" height="1920" role="img" aria-label="CAVELUX REASON reel: typed captions on reasoning, effort and agents; three Clawd mascots pass the eye's laser scan at a door; a brief card closes."></canvas>
+<script>
+  // film.js in character-only mode supplies the Clawd renderer; sprite URLs are absolute because this page lives in /reason/.
+  window.CAVELUX_CHARACTER_ONLY = true;
+  window.CAVELUX_ASSET_URLS = {normal: '/sprites/06-normal.png', working: '/sprites/01-idle.png', spectrum: '/sprites/05-spectrum.png'};
+</script>
+<script src="/film.js"></script>
+<script src="reel.js"></script>
+</body>
+</html>
